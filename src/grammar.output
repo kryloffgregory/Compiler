@@ -1,0 +1,2433 @@
+Terminals unused in grammar
+
+   T_LESS
+   T_ASSIGN
+
+
+State 50 conflicts: 1 shift/reduce
+State 87 conflicts: 8 shift/reduce
+State 88 conflicts: 8 shift/reduce
+State 106 conflicts: 8 shift/reduce
+State 109 conflicts: 8 shift/reduce
+State 110 conflicts: 8 shift/reduce
+State 111 conflicts: 8 shift/reduce
+State 112 conflicts: 8 shift/reduce
+State 113 conflicts: 8 shift/reduce
+
+
+Grammar
+
+    0 $accept: Program $end
+
+    1 Program: MainClass ClassDeclList
+
+    2 ClassDeclList: %empty
+    3              | ClassDeclList ClassDecl
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    5 ClassDecl: T_CLASS Id '{' VarDeclList MethodDeclList '}'
+
+    6 StatementList: %empty
+    7              | StatementList Statement
+
+    8 VarDeclList: %empty
+    9            | VarDeclList VarDecl
+
+   10 MethodDeclList: %empty
+   11               | MethodDeclList MethodDecl
+
+   12 VarDecl: Type Id ';'
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+
+   14 Type: T_INT '[' ']'
+   15     | T_BOOL
+   16     | T_INT
+   17     | Id
+
+   18 ArgList: %empty
+   19        | Argument
+   20        | ArgList ',' Argument
+
+   21 Argument: Type Id
+
+   22 Statement: '{' StatementList '}'
+   23          | T_IF '(' Expression ')' Statement T_ELSE Statement
+   24          | T_WHILE '(' Expression ')' Statement
+   25          | T_PRINTLN '(' Expression ')' ';'
+   26          | Id '=' Expression ';'
+   27          | Id '[' Expression ']' '=' Expression ';'
+
+   28 Expression: Expression T_AND Expression
+   29           | Expression '<' Expression
+   30           | Expression '+' Expression
+   31           | Expression '-' Expression
+   32           | '-' Expression
+   33           | Expression '*' Expression
+   34           | Expression '/' Expression
+   35           | Expression '[' Expression ']'
+   36           | Expression '.' T_LENGTH
+   37           | Expression '.' Id '(' ExpressionList ')'
+   38           | Number
+   39           | T_TRUE
+   40           | T_FALSE
+   41           | Id
+   42           | T_THIS
+   43           | T_NEW T_INT '[' Expression ']'
+   44           | T_NEW Id '(' ')'
+   45           | '!' Expression
+   46           | '(' Expression ')'
+
+   47 ExpressionList: %empty
+   48               | Expression
+   49               | ExpressionList ',' Expression
+
+   50 Id: T_ID
+
+   51 Number: T_NUMBER
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+'!' (33) 45
+'(' (40) 4 13 23 24 25 37 44 46
+')' (41) 4 13 23 24 25 37 44 46
+'*' (42) 33
+'+' (43) 30
+',' (44) 20 49
+'-' (45) 31 32
+'.' (46) 36 37
+'/' (47) 34
+';' (59) 12 13 25 26 27
+'<' (60) 29
+'=' (61) 26 27
+'[' (91) 4 14 27 35 43
+']' (93) 4 14 27 35 43
+'{' (123) 4 5 13 22
+'}' (125) 4 5 13 22
+error (256)
+T_CLASS (258) 4 5
+T_PUBLIC (259) 4 13
+T_STATIC (260) 4
+T_MAIN (261) 4
+T_VOID (262) 4
+T_INT (263) 14 16 43
+T_BOOL (264) 15
+T_IF (265) 23
+T_ELSE (266) 23
+T_RETURN (267) 13
+T_LESS (268)
+T_PRINTLN (269) 25
+T_ASSIGN (270)
+T_STRING (271) 4
+T_AND (272) 28
+T_NEW (273) 43 44
+T_THIS (274) 42
+T_LENGTH (275) 36
+T_WHILE (276) 24
+T_TRUE (277) 39
+T_FALSE (278) 40
+T_NUMBER (279) 51
+T_ID (280) 50
+
+
+Nonterminals, with rules where they appear
+
+$accept (42)
+    on left: 0
+Program (43)
+    on left: 1, on right: 0
+ClassDeclList (44)
+    on left: 2 3, on right: 1 3
+MainClass (45)
+    on left: 4, on right: 1
+ClassDecl (46)
+    on left: 5, on right: 3
+StatementList (47)
+    on left: 6 7, on right: 4 7 13 22
+VarDeclList (48)
+    on left: 8 9, on right: 5 9 13
+MethodDeclList (49)
+    on left: 10 11, on right: 5 11
+VarDecl (50)
+    on left: 12, on right: 9
+MethodDecl (51)
+    on left: 13, on right: 11
+Type (52)
+    on left: 14 15 16 17, on right: 12 13 21
+ArgList (53)
+    on left: 18 19 20, on right: 13 20
+Argument (54)
+    on left: 21, on right: 19 20
+Statement (55)
+    on left: 22 23 24 25 26 27, on right: 7 23 24
+Expression (56)
+    on left: 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
+    46, on right: 13 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 43
+    45 46 48 49
+ExpressionList (57)
+    on left: 47 48 49, on right: 37 49
+Id (58)
+    on left: 50, on right: 4 5 12 13 17 21 26 27 37 41 44
+Number (59)
+    on left: 51, on right: 38
+
+
+State 0
+
+    0 $accept: . Program $end
+    1 Program: . MainClass ClassDeclList
+    4 MainClass: . T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    T_CLASS  shift, and go to state 1
+
+    Program    go to state 2
+    MainClass  go to state 3
+
+
+State 1
+
+    4 MainClass: T_CLASS . Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+   50 Id: . T_ID
+
+    T_ID  shift, and go to state 4
+
+    Id  go to state 5
+
+
+State 2
+
+    0 $accept: Program . $end
+
+    $end  shift, and go to state 6
+
+
+State 3
+
+    1 Program: MainClass . ClassDeclList
+    2 ClassDeclList: . %empty
+    3              | . ClassDeclList ClassDecl
+
+    $default  reduce using rule 2 (ClassDeclList)
+
+    ClassDeclList  go to state 7
+
+
+State 4
+
+   50 Id: T_ID .
+
+    $default  reduce using rule 50 (Id)
+
+
+State 5
+
+    4 MainClass: T_CLASS Id . '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    '{'  shift, and go to state 8
+
+
+State 6
+
+    0 $accept: Program $end .
+
+    $default  accept
+
+
+State 7
+
+    1 Program: MainClass ClassDeclList .  [$end]
+    3 ClassDeclList: ClassDeclList . ClassDecl
+    5 ClassDecl: . T_CLASS Id '{' VarDeclList MethodDeclList '}'
+
+    T_CLASS  shift, and go to state 9
+
+    $default  reduce using rule 1 (Program)
+
+    ClassDecl  go to state 10
+
+
+State 8
+
+    4 MainClass: T_CLASS Id '{' . T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    T_PUBLIC  shift, and go to state 11
+
+
+State 9
+
+    5 ClassDecl: T_CLASS . Id '{' VarDeclList MethodDeclList '}'
+   50 Id: . T_ID
+
+    T_ID  shift, and go to state 4
+
+    Id  go to state 12
+
+
+State 10
+
+    3 ClassDeclList: ClassDeclList ClassDecl .
+
+    $default  reduce using rule 3 (ClassDeclList)
+
+
+State 11
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC . T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    T_STATIC  shift, and go to state 13
+
+
+State 12
+
+    5 ClassDecl: T_CLASS Id . '{' VarDeclList MethodDeclList '}'
+
+    '{'  shift, and go to state 14
+
+
+State 13
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC . T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    T_VOID  shift, and go to state 15
+
+
+State 14
+
+    5 ClassDecl: T_CLASS Id '{' . VarDeclList MethodDeclList '}'
+    8 VarDeclList: . %empty
+    9            | . VarDeclList VarDecl
+
+    $default  reduce using rule 8 (VarDeclList)
+
+    VarDeclList  go to state 16
+
+
+State 15
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID . T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    T_MAIN  shift, and go to state 17
+
+
+State 16
+
+    5 ClassDecl: T_CLASS Id '{' VarDeclList . MethodDeclList '}'
+    9 VarDeclList: VarDeclList . VarDecl
+   10 MethodDeclList: . %empty  [T_PUBLIC, '}']
+   11               | . MethodDeclList MethodDecl
+   12 VarDecl: . Type Id ';'
+   14 Type: . T_INT '[' ']'
+   15     | . T_BOOL
+   16     | . T_INT
+   17     | . Id
+   50 Id: . T_ID
+
+    T_INT   shift, and go to state 18
+    T_BOOL  shift, and go to state 19
+    T_ID    shift, and go to state 4
+
+    $default  reduce using rule 10 (MethodDeclList)
+
+    MethodDeclList  go to state 20
+    VarDecl         go to state 21
+    Type            go to state 22
+    Id              go to state 23
+
+
+State 17
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN . '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    '('  shift, and go to state 24
+
+
+State 18
+
+   14 Type: T_INT . '[' ']'
+   16     | T_INT .  [T_ID]
+
+    '['  shift, and go to state 25
+
+    $default  reduce using rule 16 (Type)
+
+
+State 19
+
+   15 Type: T_BOOL .
+
+    $default  reduce using rule 15 (Type)
+
+
+State 20
+
+    5 ClassDecl: T_CLASS Id '{' VarDeclList MethodDeclList . '}'
+   11 MethodDeclList: MethodDeclList . MethodDecl
+   13 MethodDecl: . T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+
+    T_PUBLIC  shift, and go to state 26
+    '}'       shift, and go to state 27
+
+    MethodDecl  go to state 28
+
+
+State 21
+
+    9 VarDeclList: VarDeclList VarDecl .
+
+    $default  reduce using rule 9 (VarDeclList)
+
+
+State 22
+
+   12 VarDecl: Type . Id ';'
+   50 Id: . T_ID
+
+    T_ID  shift, and go to state 4
+
+    Id  go to state 29
+
+
+State 23
+
+   17 Type: Id .
+
+    $default  reduce using rule 17 (Type)
+
+
+State 24
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' . T_STRING '[' ']' Id ')' '{' StatementList '}' '}'
+
+    T_STRING  shift, and go to state 30
+
+
+State 25
+
+   14 Type: T_INT '[' . ']'
+
+    ']'  shift, and go to state 31
+
+
+State 26
+
+   13 MethodDecl: T_PUBLIC . Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+   14 Type: . T_INT '[' ']'
+   15     | . T_BOOL
+   16     | . T_INT
+   17     | . Id
+   50 Id: . T_ID
+
+    T_INT   shift, and go to state 18
+    T_BOOL  shift, and go to state 19
+    T_ID    shift, and go to state 4
+
+    Type  go to state 32
+    Id    go to state 23
+
+
+State 27
+
+    5 ClassDecl: T_CLASS Id '{' VarDeclList MethodDeclList '}' .
+
+    $default  reduce using rule 5 (ClassDecl)
+
+
+State 28
+
+   11 MethodDeclList: MethodDeclList MethodDecl .
+
+    $default  reduce using rule 11 (MethodDeclList)
+
+
+State 29
+
+   12 VarDecl: Type Id . ';'
+
+    ';'  shift, and go to state 33
+
+
+State 30
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING . '[' ']' Id ')' '{' StatementList '}' '}'
+
+    '['  shift, and go to state 34
+
+
+State 31
+
+   14 Type: T_INT '[' ']' .
+
+    $default  reduce using rule 14 (Type)
+
+
+State 32
+
+   13 MethodDecl: T_PUBLIC Type . Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+   50 Id: . T_ID
+
+    T_ID  shift, and go to state 4
+
+    Id  go to state 35
+
+
+State 33
+
+   12 VarDecl: Type Id ';' .
+
+    $default  reduce using rule 12 (VarDecl)
+
+
+State 34
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' . ']' Id ')' '{' StatementList '}' '}'
+
+    ']'  shift, and go to state 36
+
+
+State 35
+
+   13 MethodDecl: T_PUBLIC Type Id . '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+
+    '('  shift, and go to state 37
+
+
+State 36
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' . Id ')' '{' StatementList '}' '}'
+   50 Id: . T_ID
+
+    T_ID  shift, and go to state 4
+
+    Id  go to state 38
+
+
+State 37
+
+   13 MethodDecl: T_PUBLIC Type Id '(' . ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+   14 Type: . T_INT '[' ']'
+   15     | . T_BOOL
+   16     | . T_INT
+   17     | . Id
+   18 ArgList: . %empty  [')', ',']
+   19        | . Argument
+   20        | . ArgList ',' Argument
+   21 Argument: . Type Id
+   50 Id: . T_ID
+
+    T_INT   shift, and go to state 18
+    T_BOOL  shift, and go to state 19
+    T_ID    shift, and go to state 4
+
+    $default  reduce using rule 18 (ArgList)
+
+    Type      go to state 39
+    ArgList   go to state 40
+    Argument  go to state 41
+    Id        go to state 23
+
+
+State 38
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id . ')' '{' StatementList '}' '}'
+
+    ')'  shift, and go to state 42
+
+
+State 39
+
+   21 Argument: Type . Id
+   50 Id: . T_ID
+
+    T_ID  shift, and go to state 4
+
+    Id  go to state 43
+
+
+State 40
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList . ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+   20 ArgList: ArgList . ',' Argument
+
+    ')'  shift, and go to state 44
+    ','  shift, and go to state 45
+
+
+State 41
+
+   19 ArgList: Argument .
+
+    $default  reduce using rule 19 (ArgList)
+
+
+State 42
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' . '{' StatementList '}' '}'
+
+    '{'  shift, and go to state 46
+
+
+State 43
+
+   21 Argument: Type Id .
+
+    $default  reduce using rule 21 (Argument)
+
+
+State 44
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' . '{' VarDeclList StatementList T_RETURN Expression ';' '}'
+
+    '{'  shift, and go to state 47
+
+
+State 45
+
+   14 Type: . T_INT '[' ']'
+   15     | . T_BOOL
+   16     | . T_INT
+   17     | . Id
+   20 ArgList: ArgList ',' . Argument
+   21 Argument: . Type Id
+   50 Id: . T_ID
+
+    T_INT   shift, and go to state 18
+    T_BOOL  shift, and go to state 19
+    T_ID    shift, and go to state 4
+
+    Type      go to state 39
+    Argument  go to state 48
+    Id        go to state 23
+
+
+State 46
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' . StatementList '}' '}'
+    6 StatementList: . %empty
+    7              | . StatementList Statement
+
+    $default  reduce using rule 6 (StatementList)
+
+    StatementList  go to state 49
+
+
+State 47
+
+    8 VarDeclList: . %empty
+    9            | . VarDeclList VarDecl
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' . VarDeclList StatementList T_RETURN Expression ';' '}'
+
+    $default  reduce using rule 8 (VarDeclList)
+
+    VarDeclList  go to state 50
+
+
+State 48
+
+   20 ArgList: ArgList ',' Argument .
+
+    $default  reduce using rule 20 (ArgList)
+
+
+State 49
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList . '}' '}'
+    7 StatementList: StatementList . Statement
+   22 Statement: . '{' StatementList '}'
+   23          | . T_IF '(' Expression ')' Statement T_ELSE Statement
+   24          | . T_WHILE '(' Expression ')' Statement
+   25          | . T_PRINTLN '(' Expression ')' ';'
+   26          | . Id '=' Expression ';'
+   27          | . Id '[' Expression ']' '=' Expression ';'
+   50 Id: . T_ID
+
+    T_IF       shift, and go to state 51
+    T_PRINTLN  shift, and go to state 52
+    T_WHILE    shift, and go to state 53
+    T_ID       shift, and go to state 4
+    '{'        shift, and go to state 54
+    '}'        shift, and go to state 55
+
+    Statement  go to state 56
+    Id         go to state 57
+
+
+State 50
+
+    6 StatementList: . %empty  [T_IF, T_RETURN, T_PRINTLN, T_WHILE, T_ID, '{']
+    7              | . StatementList Statement
+    9 VarDeclList: VarDeclList . VarDecl
+   12 VarDecl: . Type Id ';'
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList . StatementList T_RETURN Expression ';' '}'
+   14 Type: . T_INT '[' ']'
+   15     | . T_BOOL
+   16     | . T_INT
+   17     | . Id
+   50 Id: . T_ID
+
+    T_INT   shift, and go to state 18
+    T_BOOL  shift, and go to state 19
+    T_ID    shift, and go to state 4
+
+    T_ID      [reduce using rule 6 (StatementList)]
+    $default  reduce using rule 6 (StatementList)
+
+    StatementList  go to state 58
+    VarDecl        go to state 21
+    Type           go to state 22
+    Id             go to state 23
+
+
+State 51
+
+   23 Statement: T_IF . '(' Expression ')' Statement T_ELSE Statement
+
+    '('  shift, and go to state 59
+
+
+State 52
+
+   25 Statement: T_PRINTLN . '(' Expression ')' ';'
+
+    '('  shift, and go to state 60
+
+
+State 53
+
+   24 Statement: T_WHILE . '(' Expression ')' Statement
+
+    '('  shift, and go to state 61
+
+
+State 54
+
+    6 StatementList: . %empty
+    7              | . StatementList Statement
+   22 Statement: '{' . StatementList '}'
+
+    $default  reduce using rule 6 (StatementList)
+
+    StatementList  go to state 62
+
+
+State 55
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' . '}'
+
+    '}'  shift, and go to state 63
+
+
+State 56
+
+    7 StatementList: StatementList Statement .
+
+    $default  reduce using rule 7 (StatementList)
+
+
+State 57
+
+   26 Statement: Id . '=' Expression ';'
+   27          | Id . '[' Expression ']' '=' Expression ';'
+
+    '['  shift, and go to state 64
+    '='  shift, and go to state 65
+
+
+State 58
+
+    7 StatementList: StatementList . Statement
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList . T_RETURN Expression ';' '}'
+   22 Statement: . '{' StatementList '}'
+   23          | . T_IF '(' Expression ')' Statement T_ELSE Statement
+   24          | . T_WHILE '(' Expression ')' Statement
+   25          | . T_PRINTLN '(' Expression ')' ';'
+   26          | . Id '=' Expression ';'
+   27          | . Id '[' Expression ']' '=' Expression ';'
+   50 Id: . T_ID
+
+    T_IF       shift, and go to state 51
+    T_RETURN   shift, and go to state 66
+    T_PRINTLN  shift, and go to state 52
+    T_WHILE    shift, and go to state 53
+    T_ID       shift, and go to state 4
+    '{'        shift, and go to state 54
+
+    Statement  go to state 56
+    Id         go to state 57
+
+
+State 59
+
+   23 Statement: T_IF '(' . Expression ')' Statement T_ELSE Statement
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 75
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 60
+
+   25 Statement: T_PRINTLN '(' . Expression ')' ';'
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 78
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 61
+
+   24 Statement: T_WHILE '(' . Expression ')' Statement
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 79
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 62
+
+    7 StatementList: StatementList . Statement
+   22 Statement: . '{' StatementList '}'
+   22          | '{' StatementList . '}'
+   23          | . T_IF '(' Expression ')' Statement T_ELSE Statement
+   24          | . T_WHILE '(' Expression ')' Statement
+   25          | . T_PRINTLN '(' Expression ')' ';'
+   26          | . Id '=' Expression ';'
+   27          | . Id '[' Expression ']' '=' Expression ';'
+   50 Id: . T_ID
+
+    T_IF       shift, and go to state 51
+    T_PRINTLN  shift, and go to state 52
+    T_WHILE    shift, and go to state 53
+    T_ID       shift, and go to state 4
+    '{'        shift, and go to state 54
+    '}'        shift, and go to state 80
+
+    Statement  go to state 56
+    Id         go to state 57
+
+
+State 63
+
+    4 MainClass: T_CLASS Id '{' T_PUBLIC T_STATIC T_VOID T_MAIN '(' T_STRING '[' ']' Id ')' '{' StatementList '}' '}' .
+
+    $default  reduce using rule 4 (MainClass)
+
+
+State 64
+
+   27 Statement: Id '[' . Expression ']' '=' Expression ';'
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 81
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 65
+
+   26 Statement: Id '=' . Expression ';'
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 82
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 66
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN . Expression ';' '}'
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 83
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 67
+
+   43 Expression: T_NEW . T_INT '[' Expression ']'
+   44           | T_NEW . Id '(' ')'
+   50 Id: . T_ID
+
+    T_INT  shift, and go to state 84
+    T_ID   shift, and go to state 4
+
+    Id  go to state 85
+
+
+State 68
+
+   42 Expression: T_THIS .
+
+    $default  reduce using rule 42 (Expression)
+
+
+State 69
+
+   39 Expression: T_TRUE .
+
+    $default  reduce using rule 39 (Expression)
+
+
+State 70
+
+   40 Expression: T_FALSE .
+
+    $default  reduce using rule 40 (Expression)
+
+
+State 71
+
+   51 Number: T_NUMBER .
+
+    $default  reduce using rule 51 (Number)
+
+
+State 72
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   46           | '(' . Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 86
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 73
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   32           | '-' . Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 87
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 74
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   45           | '!' . Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 88
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 75
+
+   23 Statement: T_IF '(' Expression . ')' Statement T_ELSE Statement
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ')'    shift, and go to state 91
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 76
+
+   41 Expression: Id .
+
+    $default  reduce using rule 41 (Expression)
+
+
+State 77
+
+   38 Expression: Number .
+
+    $default  reduce using rule 38 (Expression)
+
+
+State 78
+
+   25 Statement: T_PRINTLN '(' Expression . ')' ';'
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ')'    shift, and go to state 98
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 79
+
+   24 Statement: T_WHILE '(' Expression . ')' Statement
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ')'    shift, and go to state 99
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 80
+
+   22 Statement: '{' StatementList '}' .
+
+    $default  reduce using rule 22 (Statement)
+
+
+State 81
+
+   27 Statement: Id '[' Expression . ']' '=' Expression ';'
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ']'    shift, and go to state 100
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 82
+
+   26 Statement: Id '=' Expression . ';'
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ';'    shift, and go to state 101
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 83
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression . ';' '}'
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ';'    shift, and go to state 102
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 84
+
+   43 Expression: T_NEW T_INT . '[' Expression ']'
+
+    '['  shift, and go to state 103
+
+
+State 85
+
+   44 Expression: T_NEW Id . '(' ')'
+
+    '('  shift, and go to state 104
+
+
+State 86
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+   46           | '(' Expression . ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ')'    shift, and go to state 105
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 87
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   32           | '-' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 32 (Expression)]
+    '['       [reduce using rule 32 (Expression)]
+    '<'       [reduce using rule 32 (Expression)]
+    '+'       [reduce using rule 32 (Expression)]
+    '-'       [reduce using rule 32 (Expression)]
+    '*'       [reduce using rule 32 (Expression)]
+    '/'       [reduce using rule 32 (Expression)]
+    '.'       [reduce using rule 32 (Expression)]
+    $default  reduce using rule 32 (Expression)
+
+
+State 88
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+   45           | '!' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 45 (Expression)]
+    '['       [reduce using rule 45 (Expression)]
+    '<'       [reduce using rule 45 (Expression)]
+    '+'       [reduce using rule 45 (Expression)]
+    '-'       [reduce using rule 45 (Expression)]
+    '*'       [reduce using rule 45 (Expression)]
+    '/'       [reduce using rule 45 (Expression)]
+    '.'       [reduce using rule 45 (Expression)]
+    $default  reduce using rule 45 (Expression)
+
+
+State 89
+
+   28 Expression: . Expression T_AND Expression
+   28           | Expression T_AND . Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 106
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 90
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   35           | Expression '[' . Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 107
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 91
+
+   22 Statement: . '{' StatementList '}'
+   23          | . T_IF '(' Expression ')' Statement T_ELSE Statement
+   23          | T_IF '(' Expression ')' . Statement T_ELSE Statement
+   24          | . T_WHILE '(' Expression ')' Statement
+   25          | . T_PRINTLN '(' Expression ')' ';'
+   26          | . Id '=' Expression ';'
+   27          | . Id '[' Expression ']' '=' Expression ';'
+   50 Id: . T_ID
+
+    T_IF       shift, and go to state 51
+    T_PRINTLN  shift, and go to state 52
+    T_WHILE    shift, and go to state 53
+    T_ID       shift, and go to state 4
+    '{'        shift, and go to state 54
+
+    Statement  go to state 108
+    Id         go to state 57
+
+
+State 92
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   29           | Expression '<' . Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 109
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 93
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   30           | Expression '+' . Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 110
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 94
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   31           | Expression '-' . Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 111
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 95
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   33           | Expression '*' . Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 112
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 96
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   34           | Expression '/' . Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 113
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 97
+
+   36 Expression: Expression '.' . T_LENGTH
+   37           | Expression '.' . Id '(' ExpressionList ')'
+   50 Id: . T_ID
+
+    T_LENGTH  shift, and go to state 114
+    T_ID      shift, and go to state 4
+
+    Id  go to state 115
+
+
+State 98
+
+   25 Statement: T_PRINTLN '(' Expression ')' . ';'
+
+    ';'  shift, and go to state 116
+
+
+State 99
+
+   22 Statement: . '{' StatementList '}'
+   23          | . T_IF '(' Expression ')' Statement T_ELSE Statement
+   24          | . T_WHILE '(' Expression ')' Statement
+   24          | T_WHILE '(' Expression ')' . Statement
+   25          | . T_PRINTLN '(' Expression ')' ';'
+   26          | . Id '=' Expression ';'
+   27          | . Id '[' Expression ']' '=' Expression ';'
+   50 Id: . T_ID
+
+    T_IF       shift, and go to state 51
+    T_PRINTLN  shift, and go to state 52
+    T_WHILE    shift, and go to state 53
+    T_ID       shift, and go to state 4
+    '{'        shift, and go to state 54
+
+    Statement  go to state 117
+    Id         go to state 57
+
+
+State 100
+
+   27 Statement: Id '[' Expression ']' . '=' Expression ';'
+
+    '='  shift, and go to state 118
+
+
+State 101
+
+   26 Statement: Id '=' Expression ';' .
+
+    $default  reduce using rule 26 (Statement)
+
+
+State 102
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' . '}'
+
+    '}'  shift, and go to state 119
+
+
+State 103
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   43           | T_NEW T_INT '[' . Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 120
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 104
+
+   44 Expression: T_NEW Id '(' . ')'
+
+    ')'  shift, and go to state 121
+
+
+State 105
+
+   46 Expression: '(' Expression ')' .
+
+    $default  reduce using rule 46 (Expression)
+
+
+State 106
+
+   28 Expression: Expression . T_AND Expression
+   28           | Expression T_AND Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 28 (Expression)]
+    '['       [reduce using rule 28 (Expression)]
+    '<'       [reduce using rule 28 (Expression)]
+    '+'       [reduce using rule 28 (Expression)]
+    '-'       [reduce using rule 28 (Expression)]
+    '*'       [reduce using rule 28 (Expression)]
+    '/'       [reduce using rule 28 (Expression)]
+    '.'       [reduce using rule 28 (Expression)]
+    $default  reduce using rule 28 (Expression)
+
+
+State 107
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   35           | Expression '[' Expression . ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ']'    shift, and go to state 122
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 108
+
+   23 Statement: T_IF '(' Expression ')' Statement . T_ELSE Statement
+
+    T_ELSE  shift, and go to state 123
+
+
+State 109
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   29           | Expression '<' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 29 (Expression)]
+    '['       [reduce using rule 29 (Expression)]
+    '<'       [reduce using rule 29 (Expression)]
+    '+'       [reduce using rule 29 (Expression)]
+    '-'       [reduce using rule 29 (Expression)]
+    '*'       [reduce using rule 29 (Expression)]
+    '/'       [reduce using rule 29 (Expression)]
+    '.'       [reduce using rule 29 (Expression)]
+    $default  reduce using rule 29 (Expression)
+
+
+State 110
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   30           | Expression '+' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 30 (Expression)]
+    '['       [reduce using rule 30 (Expression)]
+    '<'       [reduce using rule 30 (Expression)]
+    '+'       [reduce using rule 30 (Expression)]
+    '-'       [reduce using rule 30 (Expression)]
+    '*'       [reduce using rule 30 (Expression)]
+    '/'       [reduce using rule 30 (Expression)]
+    '.'       [reduce using rule 30 (Expression)]
+    $default  reduce using rule 30 (Expression)
+
+
+State 111
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   31           | Expression '-' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 31 (Expression)]
+    '['       [reduce using rule 31 (Expression)]
+    '<'       [reduce using rule 31 (Expression)]
+    '+'       [reduce using rule 31 (Expression)]
+    '-'       [reduce using rule 31 (Expression)]
+    '*'       [reduce using rule 31 (Expression)]
+    '/'       [reduce using rule 31 (Expression)]
+    '.'       [reduce using rule 31 (Expression)]
+    $default  reduce using rule 31 (Expression)
+
+
+State 112
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   33           | Expression '*' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 33 (Expression)]
+    '['       [reduce using rule 33 (Expression)]
+    '<'       [reduce using rule 33 (Expression)]
+    '+'       [reduce using rule 33 (Expression)]
+    '-'       [reduce using rule 33 (Expression)]
+    '*'       [reduce using rule 33 (Expression)]
+    '/'       [reduce using rule 33 (Expression)]
+    '.'       [reduce using rule 33 (Expression)]
+    $default  reduce using rule 33 (Expression)
+
+
+State 113
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   34           | Expression '/' Expression .  [T_AND, '[', ']', ')', ';', ',', '<', '+', '-', '*', '/', '.']
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    T_AND     [reduce using rule 34 (Expression)]
+    '['       [reduce using rule 34 (Expression)]
+    '<'       [reduce using rule 34 (Expression)]
+    '+'       [reduce using rule 34 (Expression)]
+    '-'       [reduce using rule 34 (Expression)]
+    '*'       [reduce using rule 34 (Expression)]
+    '/'       [reduce using rule 34 (Expression)]
+    '.'       [reduce using rule 34 (Expression)]
+    $default  reduce using rule 34 (Expression)
+
+
+State 114
+
+   36 Expression: Expression '.' T_LENGTH .
+
+    $default  reduce using rule 36 (Expression)
+
+
+State 115
+
+   37 Expression: Expression '.' Id . '(' ExpressionList ')'
+
+    '('  shift, and go to state 124
+
+
+State 116
+
+   25 Statement: T_PRINTLN '(' Expression ')' ';' .
+
+    $default  reduce using rule 25 (Statement)
+
+
+State 117
+
+   24 Statement: T_WHILE '(' Expression ')' Statement .
+
+    $default  reduce using rule 24 (Statement)
+
+
+State 118
+
+   27 Statement: Id '[' Expression ']' '=' . Expression ';'
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 125
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 119
+
+   13 MethodDecl: T_PUBLIC Type Id '(' ArgList ')' '{' VarDeclList StatementList T_RETURN Expression ';' '}' .
+
+    $default  reduce using rule 13 (MethodDecl)
+
+
+State 120
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+   43           | T_NEW T_INT '[' Expression . ']'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ']'    shift, and go to state 126
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 121
+
+   44 Expression: T_NEW Id '(' ')' .
+
+    $default  reduce using rule 44 (Expression)
+
+
+State 122
+
+   35 Expression: Expression '[' Expression ']' .
+
+    $default  reduce using rule 35 (Expression)
+
+
+State 123
+
+   22 Statement: . '{' StatementList '}'
+   23          | . T_IF '(' Expression ')' Statement T_ELSE Statement
+   23          | T_IF '(' Expression ')' Statement T_ELSE . Statement
+   24          | . T_WHILE '(' Expression ')' Statement
+   25          | . T_PRINTLN '(' Expression ')' ';'
+   26          | . Id '=' Expression ';'
+   27          | . Id '[' Expression ']' '=' Expression ';'
+   50 Id: . T_ID
+
+    T_IF       shift, and go to state 51
+    T_PRINTLN  shift, and go to state 52
+    T_WHILE    shift, and go to state 53
+    T_ID       shift, and go to state 4
+    '{'        shift, and go to state 54
+
+    Statement  go to state 127
+    Id         go to state 57
+
+
+State 124
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   37           | Expression '.' Id '(' . ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   47 ExpressionList: . %empty  [')', ',']
+   48               | . Expression
+   49               | . ExpressionList ',' Expression
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    $default  reduce using rule 47 (ExpressionList)
+
+    Expression      go to state 128
+    ExpressionList  go to state 129
+    Id              go to state 76
+    Number          go to state 77
+
+
+State 125
+
+   27 Statement: Id '[' Expression ']' '=' Expression . ';'
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    ';'    shift, and go to state 130
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+
+State 126
+
+   43 Expression: T_NEW T_INT '[' Expression ']' .
+
+    $default  reduce using rule 43 (Expression)
+
+
+State 127
+
+   23 Statement: T_IF '(' Expression ')' Statement T_ELSE Statement .
+
+    $default  reduce using rule 23 (Statement)
+
+
+State 128
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+   48 ExpressionList: Expression .  [')', ',']
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    $default  reduce using rule 48 (ExpressionList)
+
+
+State 129
+
+   37 Expression: Expression '.' Id '(' ExpressionList . ')'
+   49 ExpressionList: ExpressionList . ',' Expression
+
+    ')'  shift, and go to state 131
+    ','  shift, and go to state 132
+
+
+State 130
+
+   27 Statement: Id '[' Expression ']' '=' Expression ';' .
+
+    $default  reduce using rule 27 (Statement)
+
+
+State 131
+
+   37 Expression: Expression '.' Id '(' ExpressionList ')' .
+
+    $default  reduce using rule 37 (Expression)
+
+
+State 132
+
+   28 Expression: . Expression T_AND Expression
+   29           | . Expression '<' Expression
+   30           | . Expression '+' Expression
+   31           | . Expression '-' Expression
+   32           | . '-' Expression
+   33           | . Expression '*' Expression
+   34           | . Expression '/' Expression
+   35           | . Expression '[' Expression ']'
+   36           | . Expression '.' T_LENGTH
+   37           | . Expression '.' Id '(' ExpressionList ')'
+   38           | . Number
+   39           | . T_TRUE
+   40           | . T_FALSE
+   41           | . Id
+   42           | . T_THIS
+   43           | . T_NEW T_INT '[' Expression ']'
+   44           | . T_NEW Id '(' ')'
+   45           | . '!' Expression
+   46           | . '(' Expression ')'
+   49 ExpressionList: ExpressionList ',' . Expression
+   50 Id: . T_ID
+   51 Number: . T_NUMBER
+
+    T_NEW     shift, and go to state 67
+    T_THIS    shift, and go to state 68
+    T_TRUE    shift, and go to state 69
+    T_FALSE   shift, and go to state 70
+    T_NUMBER  shift, and go to state 71
+    T_ID      shift, and go to state 4
+    '('       shift, and go to state 72
+    '-'       shift, and go to state 73
+    '!'       shift, and go to state 74
+
+    Expression  go to state 133
+    Id          go to state 76
+    Number      go to state 77
+
+
+State 133
+
+   28 Expression: Expression . T_AND Expression
+   29           | Expression . '<' Expression
+   30           | Expression . '+' Expression
+   31           | Expression . '-' Expression
+   33           | Expression . '*' Expression
+   34           | Expression . '/' Expression
+   35           | Expression . '[' Expression ']'
+   36           | Expression . '.' T_LENGTH
+   37           | Expression . '.' Id '(' ExpressionList ')'
+   49 ExpressionList: ExpressionList ',' Expression .  [')', ',']
+
+    T_AND  shift, and go to state 89
+    '['    shift, and go to state 90
+    '<'    shift, and go to state 92
+    '+'    shift, and go to state 93
+    '-'    shift, and go to state 94
+    '*'    shift, and go to state 95
+    '/'    shift, and go to state 96
+    '.'    shift, and go to state 97
+
+    $default  reduce using rule 49 (ExpressionList)
