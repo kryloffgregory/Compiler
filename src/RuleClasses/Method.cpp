@@ -10,7 +10,8 @@ CMethodDecl::CMethodDecl(
         std::vector<IArg*>& _argList,
         std::vector<IVarDecl*>& _varList,
         std::deque<IStatement*>& _statementList,
-        IExp* _returnExpr
+        IExp* _returnExpr,
+        CLocation &_location
 ) :
         type( _type ),
         methodName( _methodName),
@@ -19,6 +20,7 @@ CMethodDecl::CMethodDecl(
         statementList( _statementList ),
         returnExpr( _returnExpr )
 {
+    location = _location;
 }
 
 

@@ -20,4 +20,4 @@ FILE(GLOB SRCFILES "*.cpp" "*.h" "src/*.cpp" "src/*.h"
         "scr/AST/*")
 
 add_executable(Compiler ${SRCFILES}
-        ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/AST/ASTPrinter.cpp src/AST/ASTPrinter.h)
+        ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/AST/ASTPrinter.cpp src/AST/ASTPrinter.h )

@@ -11,7 +11,7 @@
 int yylex(void);
 void yyerror(IProgram* root, const char *);
 int yydebug = 1;
-extern Location location;
+extern CLocation location;
 
 extern "C" int yywrap()
 {
@@ -84,6 +84,15 @@ extern "C" int yywrap()
 %token<intVal> T_NUMBER
 %token<val> T_ID
 
+%right '='
+%left T_AND
+%left '<'
+%left '+' '-'
+%left '*' '/'
+%left '!'
+%left '.'
+%right '(' '['
+
 %type <programVal> Program
 %type <mainClassDeclarationVal> MainClass
 %type <classDeclarationListVal> ClassDeclList
@@ -102,11 +111,12 @@ extern "C" int yywrap()
 %type <intVal> Number
 %type <val> Id
 
+%locations
 %%
 Program:
     MainClass ClassDeclList {
         printf("kek");
-        root = new CProgram($1, *$2);
+        root = new CProgram($1, *$2, location);
     }
 
 ;
@@ -123,7 +133,7 @@ MainClass:
         StatementList '}' '}' {
 
         std::cerr<<"mainClass\n";
-        $$ = new CMainClass( *$2, *$12, *$15);
+        $$ = new CMainClass( *$2, *$12, *$15, location);
     }
 ;
 ClassDecl :
@@ -131,7 +141,7 @@ ClassDecl :
         VarDeclList
         MethodDeclList
     '}' {
-        $$ = new CClassDecl(*$2, *$4, *$5);
+        $$ = new CClassDecl(*$2, *$4, *$5, location);
     }
 ;
 
@@ -169,7 +179,7 @@ VarDecl :
     Type Id ';' {
 
         std::cerr<<"VarDecl\n"<<"\n";
-        $$ = new CVarDecl($1, *$2);
+        $$ = new CVarDecl($1, *$2, location);
     }
 
  ;
@@ -180,22 +190,22 @@ MethodDecl :
         StatementList
         T_RETURN Expression ';'
     '}' {
-        $$ = new CMethodDecl($2, *$3, *$5, *$8, *$9, $11);
+        $$ = new CMethodDecl($2, *$3, *$5, *$8, *$9, $11, location);
     }
 ;
 
 Type:
     T_INT '[' ']' {
-        $$ = new CStandardType( CStandardType::StandardType::INT_ARRAY);
+        $$ = new CStandardType( CStandardType::StandardType::INT_ARRAY, location);
     }
     | T_BOOL {
-        $$ = new CStandardType( CStandardType::StandardType::BOOL);
+        $$ = new CStandardType( CStandardType::StandardType::BOOL, location);
     }
     | T_INT {
-        $$ = new CStandardType( CStandardType::StandardType::INT );
+        $$ = new CStandardType( CStandardType::StandardType::INT, location );
     }
     | Id {
-        $$ = new CUserType( *$1);
+        $$ = new CUserType( *$1, location);
     }
 
 
@@ -216,91 +226,91 @@ ArgList :
 ;
 
 Argument :
-    Type Id { $$ = new CArg($1, *$2);}
+    Type Id { $$ = new CArg($1, *$2, location);}
     ;
 
 
 Statement:
 	'{' StatementList '}' {
-		$$ = new CStatementListStatement( *$2);
+		$$ = new CStatementListStatement( *$2, location);
 	}
 	| T_IF '(' Expression ')' Statement T_ELSE Statement {
-		$$ = new CIfStatement( $3, $5, $7);
+		$$ = new CIfStatement( $3, $5, $7, location);
 	}
 	| T_WHILE '(' Expression ')' Statement {
-		$$ = new CWhileStatement( $3, $5);
+		$$ = new CWhileStatement( $3, $5, location);
 	}
 	| T_PRINTLN '(' Expression ')' ';' {
-		$$ = new CPrintStatement( $3);
+		$$ = new CPrintStatement( $3, location);
 	}
 	| Id '=' Expression ';' {
 	    std::cerr<<"ex=ex"<<"\n";
-		$$ = new CAssignStatement( *$1, $3);
+		$$ = new CAssignStatement( *$1, $3, location);
 	}
 	| Id '[' Expression ']' '=' Expression ';' {
-		$$ = new CArrayAssignStatement( *$1, $3, $6);
+		$$ = new CArrayAssignStatement( *$1, $3, $6, location);
 }
 ;
 
 Expression:
 	Expression T_AND Expression {
-		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::AND, $3);
+		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::AND, $3, location);
 	}
 	| Expression '<' Expression {
-		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::LESS, $3);
+		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::LESS, $3, location);
 	}
 	| Expression '+' Expression {
-		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::PLUS, $3);
+		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::PLUS, $3, location);
 	}
 	| Expression '-' Expression {
-		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::MINUS, $3);
+		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::MINUS, $3, location);
 	}
 	| '-' Expression  {
-		$$ = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::MINUS, $2);
+		$$ = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::MINUS, $2, location);
 	}
 	| Expression '*' Expression {
-		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::TIMES, $3);
+		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::TIMES, $3, location);
 	}
 	| Expression '/' Expression {
-		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::DIVIDE, $3);
+		$$ = new CBinOpExpression( $1, CBinOpExpression::BinOp::DIVIDE, $3, location);
 	}
 	| Expression '[' Expression ']' {
-		$$ = new CIndexExpression( $1, $3);
+		$$ = new CIndexExpression( $1, $3, location);
 	}
 	| Expression '.' T_LENGTH {
-		$$ = new CLenghtExpression( $1);
+		$$ = new CLenghtExpression( $1, location);
 	}
 	| Expression '.' Id '(' ExpressionList ')' {
-		$$ = new CMethodExpression( $1, *$3, *$5);
+		$$ = new CMethodExpression( $1, *$3, *$5, location);
 	}
 	| Number {
-	    $$ = new CIntLiteralExpression($1);
+	    $$ = new CIntLiteralExpression($1, location);
 	}
 	| T_TRUE {
-	    $$ = new CBoolLiteralExpression(true);
+	    $$ = new CBoolLiteralExpression(true, location);
 	}
 	| T_FALSE {
-	    $$ = new CBoolLiteralExpression(false);
+	    $$ = new CBoolLiteralExpression(false, location);
 	}
 
 	| Id {
 	    std::cerr<<"expr-id"<<"\n";
-		$$ = new CIdentifierExpression( *$1);
+		$$ = new CIdentifierExpression( *$1, location);
 	}
 	| T_THIS {
-		$$ = new CThisExpression( );
+		$$ = new CThisExpression(location );
 	}
 	| T_NEW T_INT '[' Expression ']' {
-		$$ = new CNewIntArrayExpression( $4 );
+		$$ = new CNewIntArrayExpression( $4, location );
 	}
 	| T_NEW Id'(' ')' {
-		$$ = new CNewExpression( *$2);
+		$$ = new CNewExpression( *$2, location);
 	}
 	| '!' Expression  {
-		$$ = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::NOT, $2);
+		$$ = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::NOT, $2, location);
 	}
 	| '(' Expression ')' {
-		$$ = new CBracesExpression( $2);
+		$$ = new CBracesExpression( $2, location);
 };
 
 ExpressionList:

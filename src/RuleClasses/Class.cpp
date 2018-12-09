@@ -5,12 +5,14 @@
 
 #include "RuleClasses.h"
 
-CClassDecl::CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList ) :
+CClassDecl::CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList ,
+        CLocation &_location) :
 
         className(  _className ),
         varList( _varList ),
         methodList( _methodList )
 {
+    location = _location;
 }
 
 

@@ -4,10 +4,11 @@
 
 #include "RuleClasses.h"
 
-CProgram::CProgram( IMainClass* _mainClass, std::vector<IClassDecl*>& _classList) :
+CProgram::CProgram( IMainClass* _mainClass, std::vector<IClassDecl*>& _classList, CLocation &_location) :
         mainClass( _mainClass ),
         classList( _classList )
 {
+    location = _location;
 }
 
 

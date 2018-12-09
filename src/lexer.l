@@ -7,7 +7,7 @@
 #include "Location/Location.h"
 
 int yycolumnno = 0;
-Location location;
+CLocation location;
 
 #define YY_USER_ACTION { \
     if (yylineno != location.lineNumber) { \

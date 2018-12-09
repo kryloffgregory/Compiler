@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     IProgram* root;
     yyparse(root);
     ASTPrinter printer("out.dot");
-    printer.Visit(static_cast<CProgram* >(root));
+    printer.Visit(dynamic_cast<CProgram* >(root));
 
 
     return 0;

@@ -5,12 +5,15 @@
 #pragma once
 
 #include "../Visitor.h"
+#include "../Location/Location.h"
 
 class IItem {
 public:
     virtual ~IItem( ) = default;
 
     virtual void Accept( IVisitor* visitor ) const = 0;
+
+    CLocation location;
 };
 
 // Корневой интерфейс программы

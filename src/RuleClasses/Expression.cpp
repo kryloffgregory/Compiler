@@ -4,11 +4,12 @@
 
 #include "RuleClasses.h"
 
-CBinOpExpression::CBinOpExpression( IExp* _leftExp, BinOp _binOp, IExp* _rightExp) :
+CBinOpExpression::CBinOpExpression( IExp* _leftExp, BinOp _binOp, IExp* _rightExp, CLocation &_location) :
         leftExp( _leftExp ),
         rightExp( _rightExp ),
         binOp( _binOp )
 {
+    location = _location;
 }
 
 
@@ -19,10 +20,11 @@ void CBinOpExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CIndexExpression::CIndexExpression( IExp* _exp, IExp* _indexExp ) :
+CIndexExpression::CIndexExpression( IExp* _exp, IExp* _indexExp , CLocation &_location) :
         exp( _exp ),
         indexExp( _indexExp )
 {
+    location = _location;
 }
 
 
@@ -32,9 +34,10 @@ void CIndexExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CLenghtExpression::CLenghtExpression( IExp* _exp) :
+CLenghtExpression::CLenghtExpression( IExp* _exp, CLocation &_location) :
         exp( _exp )
 {
+    location = _location;
 }
 
 
@@ -44,12 +47,13 @@ void CLenghtExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CMethodExpression::CMethodExpression( IExp* _exp, const std::string& _identifier, std::vector<IExp*>& _expList) :
+CMethodExpression::CMethodExpression( IExp* _exp, const std::string& _identifier, std::vector<IExp*>& _expList, CLocation &_location) :
 
         exp( _exp ),
         expList( _expList ),
         identifier( _identifier )
 {
+    location = _location;
 }
 
 
@@ -61,9 +65,10 @@ void CMethodExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CIntLiteralExpression::CIntLiteralExpression( const int _val) :
+CIntLiteralExpression::CIntLiteralExpression( const int _val, CLocation &_location) :
         val( _val)
 {
+    location = _location;
 }
 
 
@@ -73,9 +78,10 @@ void CIntLiteralExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CBoolLiteralExpression::CBoolLiteralExpression( const bool _val) :
+CBoolLiteralExpression::CBoolLiteralExpression( const bool _val, CLocation &_location) :
         val(_val)
 {
+    location = _location;
 }
 
 
@@ -85,9 +91,10 @@ void CBoolLiteralExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CIdentifierExpression::CIdentifierExpression( const std::string& id ) :
+CIdentifierExpression::CIdentifierExpression( const std::string& id , CLocation &_location) :
         identifier(  id )
 {
+    location = _location;
 }
 
 
@@ -96,8 +103,9 @@ void CIdentifierExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CThisExpression::CThisExpression( )
+CThisExpression::CThisExpression( CLocation &_location)
 {
+    location = _location;
 }
 
 void CThisExpression::Accept( IVisitor* visitor ) const
@@ -105,9 +113,10 @@ void CThisExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CNewIntArrayExpression::CNewIntArrayExpression( IExp* _exp) :
+CNewIntArrayExpression::CNewIntArrayExpression( IExp* _exp, CLocation &_location) :
         exp( _exp )
 {
+    location = _location;
 }
 
 
@@ -116,9 +125,10 @@ void CNewIntArrayExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CNewExpression::CNewExpression( const std::string& id)  :
+CNewExpression::CNewExpression( const std::string& id, CLocation &_location)  :
         identifier( id  )
 {
+    location = _location;
 }
 
 
@@ -128,10 +138,11 @@ void CNewExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CUnaryOpExpression::CUnaryOpExpression( UnaryOp _op, IExp* _exp) :
+CUnaryOpExpression::CUnaryOpExpression( UnaryOp _op, IExp* _exp, CLocation &_location) :
         exp( _exp ),
         op( _op )
 {
+    location = _location;
 }
 
 
@@ -141,7 +152,7 @@ void CUnaryOpExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CBracesExpression::CBracesExpression( IExp* _exp) :
+CBracesExpression::CBracesExpression( IExp* _exp, CLocation &_location) :
         exp( _exp )
 {
 }

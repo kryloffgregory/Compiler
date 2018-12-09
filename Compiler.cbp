@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Compiler"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gregory/Compiler"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/gregory/Compiler"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Compiler">
+				<Option output="/home/gregory/Compiler/Compiler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gregory/Compiler"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gregory/Compiler/src"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 Compiler"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Compiler/fast">
+				<Option output="/home/gregory/Compiler/Compiler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gregory/Compiler"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/gregory/Compiler/src"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 Compiler/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gregory/Compiler"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gregory/Compiler/lexer.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/lexer.cpp.rule">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/parser.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/parser.cpp.rule">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/parser.hpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/AST/ASTPrinter.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/AST/ASTPrinter.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/Location/Location.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/Location/Location.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Arg.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Class.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Expression.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/MainClass.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Method.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Program.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/RuleClassInterfaces.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/RuleClasses.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Statement.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Type.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/RuleClasses/Var.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/SymbolTable/SymbolTable.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/Visitor.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/main.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

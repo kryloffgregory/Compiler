@@ -4,10 +4,11 @@
 
 #include "RuleClasses.h"
 
-CVarDecl::CVarDecl( IType* _type, const std::string& _identifier) :
+CVarDecl::CVarDecl( IType* _type, const std::string& _identifier, CLocation &_location) :
         type( _type ),
         identifier( _identifier )
 {
+    location = _location;
 }
 
 

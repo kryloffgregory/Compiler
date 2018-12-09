@@ -4,7 +4,7 @@
 
 #include "RuleClasses.h"
 
-CStandardType::CStandardType( StandardType _type ) :
+CStandardType::CStandardType( StandardType _type, CLocation &_location ) :
         type( _type )
 {
 }
@@ -25,8 +25,9 @@ void CStandardType::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CUserType::CUserType( const std::string& _type) :
+CUserType::CUserType( const std::string& _type, CLocation &_location) :
     type( _type ) {
+    location = _location;
 }
 
 bool CUserType::IsPODType() const

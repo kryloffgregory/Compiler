@@ -4,9 +4,14 @@
 
 #include "Location.h"
 
-Location& Location::operator=(const Location& other) {
+CLocation& CLocation::operator=(const CLocation& other) {
     lineNumber = other.lineNumber;
     firstColumn = other.firstColumn;
     lastColumn = other.lastColumn;
     return *this;
+}
+
+std::string CLocation::ToString() const {
+    return "Line: " + std::to_string(lineNumber) + "  Columns: "
+    + std::to_string(firstColumn)+"-"+ std::to_string(lastColumn);
 }

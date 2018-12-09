@@ -9,10 +9,11 @@
 #include <memory>
 #include <deque>
 #include "../Visitor.h"
+#include "../Location/Location.h"
 
 class CProgram : public IProgram{
 public:
-    CProgram( IMainClass* _mainClass, std::vector<IClassDecl*>& _classList);
+    CProgram( IMainClass* _mainClass, std::vector<IClassDecl*>& _classList, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -24,7 +25,7 @@ public:
 
 class CMainClass : public IMainClass {
 public:
-    CMainClass( std::string &_identifier, std::string &_arsId, std::deque<IStatement*>& _statements);
+    CMainClass( std::string &_identifier, std::string &_arsId, std::deque<IStatement*>& _statements, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -42,7 +43,8 @@ public:
             std::vector<IArg*>& _argList,
             std::vector<IVarDecl*>& _varList,
             std::deque<IStatement*>& _statementList,
-            IExp* _returnExpr
+            IExp* _returnExpr,
+            CLocation &location
             );
 
     void Accept( IVisitor* visitor ) const override;
@@ -58,7 +60,8 @@ public:
 
 class CClassDecl : public IClassDecl{
 public:
-    CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList );
+    CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList,
+            CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -71,7 +74,7 @@ public:
 
 class CVarDecl : public IVarDecl{
 public:
-    CVarDecl( IType* _type, const std::string& _identifier);
+    CVarDecl( IType* _type, const std::string& _identifier, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -85,7 +88,7 @@ class CStandardType : public IType {
 public:
     enum StandardType { INT = 0, INT_ARRAY, BOOL };
 
-    CStandardType( StandardType _type);
+    CStandardType( StandardType _type, CLocation &location);
 
     CStandardType( const CStandardType* other );
 
@@ -97,7 +100,7 @@ public:
 };
 class CUserType : public IType {
 public:
-    CUserType(const std::string& _type);
+    CUserType(const std::string& _type, CLocation &location);
 
 
     bool IsPODType() const override;
@@ -109,7 +112,7 @@ public:
 
 class CArg : public IArg {
 public:
-    CArg(IType* _type, const std::string& _id);
+    CArg(IType* _type, const std::string& _id, CLocation &location);
     void Accept( IVisitor*  visitor ) const override;
 
 
@@ -120,7 +123,7 @@ public:
 
 class CStatementListStatement : public IStatement{
 public:
-    CStatementListStatement( std::deque<IStatement*>& _statementList);
+    CStatementListStatement( std::deque<IStatement*>& _statementList, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -130,7 +133,7 @@ public:
 
 class CIfStatement : public IStatement{
 public:
-    CIfStatement( IExp* _condition, IStatement* _statementIfTrue, IStatement* _statementIfFalse);
+    CIfStatement( IExp* _condition, IStatement* _statementIfTrue, IStatement* _statementIfFalse, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -142,7 +145,7 @@ public:
 
 class CWhileStatement : public IStatement{
 public:
-    CWhileStatement( IExp* _condition, IStatement* _cycleBody);
+    CWhileStatement( IExp* _condition, IStatement* _cycleBody, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -153,7 +156,7 @@ public:
 
 class CPrintStatement : public IStatement {
 public:
-    CPrintStatement( IExp* _expression);
+    CPrintStatement( IExp* _expression, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -163,7 +166,7 @@ public:
 
 class CAssignStatement : public IStatement {
 public:
-    CAssignStatement( const std::string& _left, IExp* _right);
+    CAssignStatement( const std::string& _left, IExp* _right, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -174,7 +177,7 @@ public:
 
 class CArrayAssignStatement : public IStatement{
 public:
-    CArrayAssignStatement( const std::string& _arrayId, IExp* _elementNumber, IExp* _rightPart);
+    CArrayAssignStatement( const std::string& _arrayId, IExp* _elementNumber, IExp* _rightPart, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -188,7 +191,7 @@ class CBinOpExpression : public IExp{
 public:
     enum BinOp { AND, LESS, PLUS, MINUS, TIMES, DIVIDE };
 
-    CBinOpExpression( IExp* _leftExp, BinOp _binOp, IExp* _rightExp);
+    CBinOpExpression( IExp* _leftExp, BinOp _binOp, IExp* _rightExp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -200,7 +203,7 @@ public:
 
 class CIndexExpression : public IExp{
 public:
-    CIndexExpression( IExp* _exp, IExp* _indexExp);
+    CIndexExpression( IExp* _exp, IExp* _indexExp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -211,7 +214,7 @@ public:
 
 class CLenghtExpression : public IExp{
 public:
-    CLenghtExpression( IExp* _exp);
+    CLenghtExpression( IExp* _exp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -221,7 +224,7 @@ public:
 
 class CMethodExpression : public IExp{
 public:
-    CMethodExpression( IExp* _exp, const std::string& _identifier, std::vector<IExp*>& _expList);
+    CMethodExpression( IExp* _exp, const std::string& _identifier, std::vector<IExp*>& _expList, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -233,7 +236,7 @@ public:
 
 class CIntLiteralExpression : public IExp{
 public:
-    CIntLiteralExpression( const int _val);
+    CIntLiteralExpression( const int _val, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -243,7 +246,7 @@ public:
 
 class CBoolLiteralExpression : public IExp {
 public:
-    CBoolLiteralExpression( const bool _val);
+    CBoolLiteralExpression( const bool _val, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -253,7 +256,7 @@ public:
 
 class CIdentifierExpression : public IExp {
 public:
-    CIdentifierExpression( const std::string& id);
+    CIdentifierExpression( const std::string& id, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -263,14 +266,14 @@ public:
 
 class CThisExpression : public IExp{
 public:
-    CThisExpression();
+    CThisExpression(CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 };
 
 class CNewIntArrayExpression : public IExp{
 public:
-    CNewIntArrayExpression( IExp* _exp );
+    CNewIntArrayExpression( IExp* _exp,CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -280,7 +283,7 @@ public:
 
 class CNewExpression : public IExp{
 public:
-    CNewExpression( const std::string& id );
+    CNewExpression( const std::string& id ,CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -291,7 +294,7 @@ class CUnaryOpExpression : public IExp{
 public:
     enum UnaryOp { MINUS, NOT };
 
-    CUnaryOpExpression( UnaryOp _op, IExp* _exp);
+    CUnaryOpExpression( UnaryOp _op, IExp* _exp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
@@ -302,7 +305,7 @@ public:
 
 class CBracesExpression : public IExp {
 public:
-    CBracesExpression( IExp* _exp );
+    CBracesExpression( IExp* _exp , CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 

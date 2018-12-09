@@ -4,9 +4,12 @@
 
 #pragma once
 
-class Location {
+#include <string>
+
+class CLocation {
 public:
-    Location& operator=(const Location& other);
+    CLocation& operator=(const CLocation& other);
+    std::string ToString() const;
 
 public:
     int lineNumber;
