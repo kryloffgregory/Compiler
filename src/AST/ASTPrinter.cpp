@@ -65,11 +65,14 @@ void ASTPrinter::Visit(const CMethodDecl *methodDecl) {
         PrintEdge(head);
         statement->Accept(this);
     }
+    PrintEdge(head);
+    methodDecl->returnExpr->Accept(this);
 
 }
 void ASTPrinter::Visit(const CMainClass *mainClass) {
     int head = nodeNumber;
     PrintHead(head, "MainClass:" + mainClass->identifier);
+    PrintEdge(head);
     PrintLeaf(head, "String[]", mainClass->argsIdentifier);
     for(auto statement : mainClass -> statements) {
         PrintEdge(head);
