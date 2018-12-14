@@ -1,4 +1,5 @@
 #include <iostream>
+#include <SymbolTable/SymbolTableBuilder.h>
 //#include "../y.tab.h"
 #include "RuleClasses/RuleClasses.h"
 #include "AST/ASTPrinter.h"
@@ -20,6 +21,10 @@ int main(int argc, char *argv[]) {
     yyparse(root);
     ASTPrinter printer("out.dot");
     printer.Visit(dynamic_cast<CProgram* >(root));
+
+    STBuilder stBuilder;
+    stBuilder.Visit(dynamic_cast<CProgram* >(root));
+    auto table = stBuilder.GetSymbolsTable();
 
 
     return 0;

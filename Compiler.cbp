@@ -35,6 +35,14 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gregory/Compiler/src"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 Compiler"/>
@@ -51,6 +59,14 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/gregory/Compiler/src"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -f &quot;/home/gregory/Compiler/Makefile&quot;  VERBOSE=1 Compiler/fast"/>
@@ -89,6 +105,12 @@
 			<Option target="Compiler"/>
 		</Unit>
 		<Unit filename="/home/gregory/Compiler/src/AST/ASTPrinter.h">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h">
 			<Option target="Compiler"/>
 		</Unit>
 		<Unit filename="/home/gregory/Compiler/src/Location/Location.cpp">

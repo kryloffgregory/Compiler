@@ -17,7 +17,9 @@ include_directories(
 FILE(GLOB SRCFILES "*.cpp" "*.h" "src/*.cpp" "src/*.h"
         "src/RuleClasses/*.cpp" "src/RuleClasses/*.h"
         "src/Location/*"
-        "scr/AST/*")
+        "src/AST/*"
+        "src/SymbolTable/*"
+        "src/ErrorStorage/ErrorStorage.h"
+        "src/ErrorStorage/ErrorStorage.cpp")
 
-add_executable(Compiler ${SRCFILES}
-        ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/AST/ASTPrinter.cpp src/AST/ASTPrinter.h )
+add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} )

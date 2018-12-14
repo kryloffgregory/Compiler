@@ -21,6 +21,9 @@ CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o: src/RuleClasses/RuleClassInter
 CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o: src/RuleClasses/RuleClasses.h
 CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o: src/Visitor.h
 
+CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o: src/ErrorStorage/ErrorStorage.cpp
+CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o: src/ErrorStorage/ErrorStorage.h
+
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o: src/Location/Location.cpp
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o: src/Location/Location.h
 
@@ -78,11 +81,26 @@ CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/RuleClasses/RuleClasses.h
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/RuleClasses/Var.cpp
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/Visitor.h
 
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o: src/SymbolTable/SymbolTable.cpp
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o: src/SymbolTable/SymbolTable.h
+
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/ErrorStorage/ErrorStorage.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/SymbolTable/SymbolTableBuilder.cpp
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/SymbolTable/SymbolTableBuilder.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/Location/Location.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/RuleClasses/RuleClassInterfaces.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/RuleClasses/RuleClasses.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/Visitor.h
+
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/AST/ASTPrinter.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Location/Location.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/RuleClasses/RuleClassInterfaces.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/RuleClasses/RuleClasses.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Visitor.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/ErrorStorage/ErrorStorage.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/SymbolTableBuilder.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Visitor.h
 

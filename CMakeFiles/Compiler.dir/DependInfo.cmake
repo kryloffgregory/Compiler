@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gregory/Compiler/lexer.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/lexer.cpp.o"
   "/home/gregory/Compiler/parser.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/parser.cpp.o"
   "/home/gregory/Compiler/src/AST/ASTPrinter.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o"
+  "/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o"
   "/home/gregory/Compiler/src/Location/Location.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/Location/Location.cpp.o"
   "/home/gregory/Compiler/src/RuleClasses/Arg.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o"
   "/home/gregory/Compiler/src/RuleClasses/Class.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o"
@@ -17,6 +18,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gregory/Compiler/src/RuleClasses/Statement.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o"
   "/home/gregory/Compiler/src/RuleClasses/Type.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o"
   "/home/gregory/Compiler/src/RuleClasses/Var.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o"
+  "/home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
+  "/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
   "/home/gregory/Compiler/src/main.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2018.3.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/56/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/56/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/gregory/Compiler
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/56/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/opt/clion-2018.3.1/bin/cmake/linux/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/56/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -203,6 +203,33 @@ src/AST/ASTPrinter.s: src/AST/ASTPrinter.cpp.s
 src/AST/ASTPrinter.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.s
 .PHONY : src/AST/ASTPrinter.cpp.s
+
+src/ErrorStorage/ErrorStorage.o: src/ErrorStorage/ErrorStorage.cpp.o
+
+.PHONY : src/ErrorStorage/ErrorStorage.o
+
+# target to build an object file
+src/ErrorStorage/ErrorStorage.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o
+.PHONY : src/ErrorStorage/ErrorStorage.cpp.o
+
+src/ErrorStorage/ErrorStorage.i: src/ErrorStorage/ErrorStorage.cpp.i
+
+.PHONY : src/ErrorStorage/ErrorStorage.i
+
+# target to preprocess a source file
+src/ErrorStorage/ErrorStorage.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.i
+.PHONY : src/ErrorStorage/ErrorStorage.cpp.i
+
+src/ErrorStorage/ErrorStorage.s: src/ErrorStorage/ErrorStorage.cpp.s
+
+.PHONY : src/ErrorStorage/ErrorStorage.s
+
+# target to generate assembly for a file
+src/ErrorStorage/ErrorStorage.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.s
+.PHONY : src/ErrorStorage/ErrorStorage.cpp.s
 
 src/Location/Location.o: src/Location/Location.cpp.o
 
@@ -474,6 +501,60 @@ src/RuleClasses/Var.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.s
 .PHONY : src/RuleClasses/Var.cpp.s
 
+src/SymbolTable/SymbolTable.o: src/SymbolTable/SymbolTable.cpp.o
+
+.PHONY : src/SymbolTable/SymbolTable.o
+
+# target to build an object file
+src/SymbolTable/SymbolTable.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o
+.PHONY : src/SymbolTable/SymbolTable.cpp.o
+
+src/SymbolTable/SymbolTable.i: src/SymbolTable/SymbolTable.cpp.i
+
+.PHONY : src/SymbolTable/SymbolTable.i
+
+# target to preprocess a source file
+src/SymbolTable/SymbolTable.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.i
+.PHONY : src/SymbolTable/SymbolTable.cpp.i
+
+src/SymbolTable/SymbolTable.s: src/SymbolTable/SymbolTable.cpp.s
+
+.PHONY : src/SymbolTable/SymbolTable.s
+
+# target to generate assembly for a file
+src/SymbolTable/SymbolTable.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.s
+.PHONY : src/SymbolTable/SymbolTable.cpp.s
+
+src/SymbolTable/SymbolTableBuilder.o: src/SymbolTable/SymbolTableBuilder.cpp.o
+
+.PHONY : src/SymbolTable/SymbolTableBuilder.o
+
+# target to build an object file
+src/SymbolTable/SymbolTableBuilder.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o
+.PHONY : src/SymbolTable/SymbolTableBuilder.cpp.o
+
+src/SymbolTable/SymbolTableBuilder.i: src/SymbolTable/SymbolTableBuilder.cpp.i
+
+.PHONY : src/SymbolTable/SymbolTableBuilder.i
+
+# target to preprocess a source file
+src/SymbolTable/SymbolTableBuilder.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.i
+.PHONY : src/SymbolTable/SymbolTableBuilder.cpp.i
+
+src/SymbolTable/SymbolTableBuilder.s: src/SymbolTable/SymbolTableBuilder.cpp.s
+
+.PHONY : src/SymbolTable/SymbolTableBuilder.s
+
+# target to generate assembly for a file
+src/SymbolTable/SymbolTableBuilder.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.s
+.PHONY : src/SymbolTable/SymbolTableBuilder.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -519,6 +600,9 @@ help:
 	@echo "... src/AST/ASTPrinter.o"
 	@echo "... src/AST/ASTPrinter.i"
 	@echo "... src/AST/ASTPrinter.s"
+	@echo "... src/ErrorStorage/ErrorStorage.o"
+	@echo "... src/ErrorStorage/ErrorStorage.i"
+	@echo "... src/ErrorStorage/ErrorStorage.s"
 	@echo "... src/Location/Location.o"
 	@echo "... src/Location/Location.i"
 	@echo "... src/Location/Location.s"
@@ -549,6 +633,12 @@ help:
 	@echo "... src/RuleClasses/Var.o"
 	@echo "... src/RuleClasses/Var.i"
 	@echo "... src/RuleClasses/Var.s"
+	@echo "... src/SymbolTable/SymbolTable.o"
+	@echo "... src/SymbolTable/SymbolTable.i"
+	@echo "... src/SymbolTable/SymbolTable.s"
+	@echo "... src/SymbolTable/SymbolTableBuilder.o"
+	@echo "... src/SymbolTable/SymbolTableBuilder.i"
+	@echo "... src/SymbolTable/SymbolTableBuilder.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

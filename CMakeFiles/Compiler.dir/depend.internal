@@ -21,6 +21,9 @@ CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o
  src/RuleClasses/RuleClassInterfaces.h
  src/RuleClasses/RuleClasses.h
  src/Visitor.h
+CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o
+ /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp
+ /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o
  /home/gregory/Compiler/src/Location/Location.cpp
  /home/gregory/Compiler/src/Location/Location.h
@@ -78,6 +81,18 @@ CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o
  /home/gregory/Compiler/src/RuleClasses/RuleClasses.h
  /home/gregory/Compiler/src/RuleClasses/Var.cpp
  /home/gregory/Compiler/src/Visitor.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o
+ /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp
+ /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o
+ /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
+ /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+ /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp
+ /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h
+ src/Location/Location.h
+ src/RuleClasses/RuleClassInterfaces.h
+ src/RuleClasses/RuleClasses.h
+ src/Visitor.h
 CMakeFiles/Compiler.dir/src/main.cpp.o
  /home/gregory/Compiler/src/AST/ASTPrinter.h
  /home/gregory/Compiler/src/Location/Location.h
@@ -85,4 +100,7 @@ CMakeFiles/Compiler.dir/src/main.cpp.o
  /home/gregory/Compiler/src/RuleClasses/RuleClasses.h
  /home/gregory/Compiler/src/Visitor.h
  /home/gregory/Compiler/src/main.cpp
+ src/ErrorStorage/ErrorStorage.h
+ src/SymbolTable/SymbolTable.h
+ src/SymbolTable/SymbolTableBuilder.h
  src/Visitor.h
