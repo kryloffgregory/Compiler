@@ -171,7 +171,8 @@ void CTypeCheckerVisitor::Visit( const CAssignStatement* statement )
 
     SymbolsTable::CVarInfo* var = curMethod->GetVar( statement->left);
     if(var == nullptr) {
-        errorStorage.PutError( " Unreferenced variable " + statement->left + " " + statement->location.ToString());
+        errorStorage.PutError( " Unreferenced variable " + statement->left + " " + statement->location.ToString() );
+        return;
     }
     statement->right->Accept( this );
     std::string lastTypeValue = lastTypeValueStack.back();
@@ -352,6 +353,10 @@ void CTypeCheckerVisitor::Visit( const CMethodExpression* expr )
         lastTypeValueStack.emplace_back("int" );
     } else {
         SymbolsTable::CMethodInfo* usedMethod = usedClass->GetMethod( expr->identifier );
+        if(usedMethod == nullptr) {
+            errorStorage.PutError("Class " + usedClass->GetName() + " does not have method " + expr->identifier + expr->location.ToString());
+            return;
+        }
         if(!expr->expList.empty()) {
             int typeValuePointer = static_cast<int>(lastTypeValueStack.size());
             for(auto arg : expr->expList)

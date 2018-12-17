@@ -5,1279 +5,1274 @@ strict graph {
 2 -- 3
 3 [label="String[] : a"];
 2 -- 4
-4 [label="="];
+4 [label="System.out.Println"];
 4 -- 5
-5 [label="lvalue : d"];
-4 -- 6
-6 [label="const : 0"];
-2 -- 7
-7 [label="System.out.Println"];
+5 [label="call method"];
+5 -- 6
+6 [label="new"];
+6 [label="class : LL"];
+6 [label="method : Start"];
+0 -- 7
+7 [label="ClassDeclaration: Element"];
 7 -- 8
-8 [label="call method"];
+8 [label="Variable"];
 8 -- 9
-9 [label="new"];
-9 [label="class : LL"];
-9 [label="method : Start"];
-0 -- 10
-10 [label="ClassDeclaration: Element"];
+9 [label="Int"];
+9 [label="ID : Age"];
+7 -- 10
+10 [label="Variable"];
 10 -- 11
-11 [label="Variable"];
-11 -- 12
-12 [label="Int"];
-12 [label="ID : Age"];
-10 -- 13
-13 [label="Variable"];
-13 -- 14
-14 [label="Int"];
-14 [label="ID : Salary"];
-10 -- 15
-15 [label="Variable"];
-15 -- 16
-16 [label="Bool"];
-16 [label="ID : Married"];
-10 -- 17
-17 [label="Method: Init"];
-17 -- 18
-18 [label="Bool"];
-17 -- 19
-19 [label="argument"];
-19 -- 20
-20 [label="Int"];
-20 [label="ID : v_Age"];
-17 -- 21
-21 [label="argument"];
-21 -- 22
-22 [label="Int"];
-22 [label="ID : v_Salary"];
-17 -- 23
-23 [label="argument"];
-23 -- 24
-24 [label="Bool"];
-24 [label="ID : v_Married"];
-17 -- 25
+11 [label="Int"];
+11 [label="ID : Salary"];
+7 -- 12
+12 [label="Variable"];
+12 -- 13
+13 [label="Bool"];
+13 [label="ID : Married"];
+7 -- 14
+14 [label="Method: Init"];
+14 -- 15
+15 [label="Bool"];
+14 -- 16
+16 [label="argument"];
+16 -- 17
+17 [label="Int"];
+17 [label="ID : v_Age"];
+14 -- 18
+18 [label="argument"];
+18 -- 19
+19 [label="Int"];
+19 [label="ID : v_Salary"];
+14 -- 20
+20 [label="argument"];
+20 -- 21
+21 [label="Bool"];
+21 [label="ID : v_Married"];
+14 -- 22
+22 [label="="];
+22 -- 23
+23 [label="lvalue : Age"];
+22 -- 24
+24 [label="ID : v_Age"];
+14 -- 25
 25 [label="="];
 25 -- 26
-26 [label="lvalue : Age"];
+26 [label="lvalue : Salary"];
 25 -- 27
-27 [label="ID : v_Age"];
-17 -- 28
+27 [label="ID : v_Salary"];
+14 -- 28
 28 [label="="];
 28 -- 29
-29 [label="lvalue : Salary"];
+29 [label="lvalue : Married"];
 28 -- 30
-30 [label="ID : v_Salary"];
-17 -- 31
-31 [label="="];
-31 -- 32
-32 [label="lvalue : Married"];
-31 -- 33
-33 [label="ID : v_Married"];
-17 -- 34
-34 [label="const : 1"];
-10 -- 35
-35 [label="Method: GetAge"];
+30 [label="ID : v_Married"];
+14 -- 31
+31 [label="const : 1"];
+7 -- 32
+32 [label="Method: GetAge"];
+32 -- 33
+33 [label="Int"];
+32 -- 34
+34 [label="ID : Age"];
+7 -- 35
+35 [label="Method: GetSalary"];
 35 -- 36
 36 [label="Int"];
 35 -- 37
-37 [label="ID : Age"];
-10 -- 38
-38 [label="Method: GetSalary"];
+37 [label="ID : Salary"];
+7 -- 38
+38 [label="Method: GetMarried"];
 38 -- 39
-39 [label="Int"];
+39 [label="Bool"];
 38 -- 40
-40 [label="ID : Salary"];
-10 -- 41
-41 [label="Method: GetMarried"];
+40 [label="ID : Married"];
+7 -- 41
+41 [label="Method: Equal"];
 41 -- 42
 42 [label="Bool"];
 41 -- 43
-43 [label="ID : Married"];
-10 -- 44
-44 [label="Method: Equal"];
-44 -- 45
-45 [label="Bool"];
-44 -- 46
-46 [label="argument"];
-46 -- 47
-47 [label="type : Element"];
-47 [label="ID : other"];
-44 -- 48
-48 [label="Variable"];
-48 -- 49
-49 [label="Bool"];
-49 [label="ID : ret_val"];
-44 -- 50
-50 [label="Variable"];
-50 -- 51
-51 [label="Int"];
-51 [label="ID : aux01"];
-44 -- 52
-52 [label="Variable"];
-52 -- 53
-53 [label="Int"];
-53 [label="ID : aux02"];
-44 -- 54
-54 [label="Variable"];
-54 -- 55
-55 [label="Int"];
-55 [label="ID : nt"];
-44 -- 56
+43 [label="argument"];
+43 -- 44
+44 [label="type : Element"];
+44 [label="ID : other"];
+41 -- 45
+45 [label="Variable"];
+45 -- 46
+46 [label="Bool"];
+46 [label="ID : ret_val"];
+41 -- 47
+47 [label="Variable"];
+47 -- 48
+48 [label="Int"];
+48 [label="ID : aux01"];
+41 -- 49
+49 [label="Variable"];
+49 -- 50
+50 [label="Int"];
+50 [label="ID : aux02"];
+41 -- 51
+51 [label="Variable"];
+51 -- 52
+52 [label="Int"];
+52 [label="ID : nt"];
+41 -- 53
+53 [label="="];
+53 -- 54
+54 [label="lvalue : ret_val"];
+53 -- 55
+55 [label="const : 1"];
+41 -- 56
 56 [label="="];
 56 -- 57
-57 [label="lvalue : ret_val"];
+57 [label="lvalue : aux01"];
 56 -- 58
-58 [label="const : 1"];
-44 -- 59
-59 [label="="];
-59 -- 60
-60 [label="lvalue : aux01"];
-59 -- 61
-61 [label="call method"];
+58 [label="call method"];
+58 -- 59
+59 [label="ID : other"];
+59 [label="method : GetAge"];
+41 -- 60
+60 [label="if-then-else"];
+60 -- 61
+61 [label="not"];
+61 [label="-"];
 61 -- 62
-62 [label="ID : other"];
-62 [label="method : GetAge"];
-44 -- 63
-63 [label="if-then-else"];
+62 [label="()"];
+62 -- 63
+63 [label="call method"];
 63 -- 64
-64 [label="not"];
-64 [label="-"];
-64 -- 65
-65 [label="()"];
-65 -- 66
-66 [label="call method"];
-66 -- 67
-67 [label="this : "];
-67 [label="method : Compare"];
-66 -- 68
-68 [label="ID : aux01"];
-66 -- 69
-69 [label="ID : Age"];
-63 -- 70
-70 [label="="];
+64 [label="this : "];
+64 [label="method : Compare"];
+63 -- 65
+65 [label="ID : aux01"];
+63 -- 66
+66 [label="ID : Age"];
+60 -- 67
+67 [label="="];
+67 -- 68
+68 [label="lvalue : ret_val"];
+67 -- 69
+69 [label="const : 0"];
+60 -- 70
+70 [label="{   }"];
 70 -- 71
-71 [label="lvalue : ret_val"];
-70 -- 72
-72 [label="const : 0"];
-63 -- 73
-73 [label="{   }"];
+71 [label="="];
+71 -- 72
+72 [label="lvalue : aux02"];
+71 -- 73
+73 [label="call method"];
 73 -- 74
-74 [label="="];
-74 -- 75
-75 [label="lvalue : aux02"];
-74 -- 76
-76 [label="call method"];
+74 [label="ID : other"];
+74 [label="method : GetSalary"];
+70 -- 75
+75 [label="if-then-else"];
+75 -- 76
+76 [label="not"];
+76 [label="-"];
 76 -- 77
-77 [label="ID : other"];
-77 [label="method : GetSalary"];
-73 -- 78
-78 [label="if-then-else"];
-78 -- 79
-79 [label="not"];
-79 [label="-"];
-79 -- 80
-80 [label="call method"];
-80 -- 81
-81 [label="this : "];
-81 [label="method : Compare"];
-80 -- 82
-82 [label="ID : aux02"];
-80 -- 83
-83 [label="ID : Salary"];
-78 -- 84
-84 [label="="];
+77 [label="call method"];
+77 -- 78
+78 [label="this : "];
+78 [label="method : Compare"];
+77 -- 79
+79 [label="ID : aux02"];
+77 -- 80
+80 [label="ID : Salary"];
+75 -- 81
+81 [label="="];
+81 -- 82
+82 [label="lvalue : ret_val"];
+81 -- 83
+83 [label="const : 0"];
+75 -- 84
+84 [label="if-then-else"];
 84 -- 85
-85 [label="lvalue : ret_val"];
+85 [label="ID : Married"];
 84 -- 86
-86 [label="const : 0"];
-78 -- 87
-87 [label="if-then-else"];
+86 [label="if-then-else"];
+86 -- 87
+87 [label="not"];
+87 [label="-"];
 87 -- 88
-88 [label="ID : Married"];
-87 -- 89
-89 [label="if-then-else"];
-89 -- 90
-90 [label="not"];
-90 [label="-"];
+88 [label="call method"];
+88 -- 89
+89 [label="ID : other"];
+89 [label="method : GetMarried"];
+86 -- 90
+90 [label="="];
 90 -- 91
-91 [label="call method"];
-91 -- 92
-92 [label="ID : other"];
-92 [label="method : GetMarried"];
-89 -- 93
+91 [label="lvalue : ret_val"];
+90 -- 92
+92 [label="const : 0"];
+86 -- 93
 93 [label="="];
 93 -- 94
-94 [label="lvalue : ret_val"];
+94 [label="lvalue : nt"];
 93 -- 95
 95 [label="const : 0"];
-89 -- 96
-96 [label="="];
+84 -- 96
+96 [label="if-then-else"];
 96 -- 97
-97 [label="lvalue : nt"];
-96 -- 98
-98 [label="const : 0"];
-87 -- 99
-99 [label="if-then-else"];
+97 [label="call method"];
+97 -- 98
+98 [label="ID : other"];
+98 [label="method : GetMarried"];
+96 -- 99
+99 [label="="];
 99 -- 100
-100 [label="call method"];
-100 -- 101
-101 [label="ID : other"];
-101 [label="method : GetMarried"];
-99 -- 102
+100 [label="lvalue : ret_val"];
+99 -- 101
+101 [label="const : 0"];
+96 -- 102
 102 [label="="];
 102 -- 103
-103 [label="lvalue : ret_val"];
+103 [label="lvalue : nt"];
 102 -- 104
 104 [label="const : 0"];
-99 -- 105
-105 [label="="];
-105 -- 106
-106 [label="lvalue : nt"];
-105 -- 107
-107 [label="const : 0"];
-44 -- 108
-108 [label="ID : ret_val"];
-10 -- 109
-109 [label="Method: Compare"];
-109 -- 110
-110 [label="Bool"];
-109 -- 111
-111 [label="argument"];
-111 -- 112
-112 [label="Int"];
-112 [label="ID : num1"];
-109 -- 113
-113 [label="argument"];
-113 -- 114
-114 [label="Int"];
-114 [label="ID : num2"];
-109 -- 115
-115 [label="Variable"];
-115 -- 116
-116 [label="Bool"];
-116 [label="ID : retval"];
-109 -- 117
-117 [label="Variable"];
-117 -- 118
-118 [label="Int"];
-118 [label="ID : aux02"];
-109 -- 119
+41 -- 105
+105 [label="ID : ret_val"];
+7 -- 106
+106 [label="Method: Compare"];
+106 -- 107
+107 [label="Bool"];
+106 -- 108
+108 [label="argument"];
+108 -- 109
+109 [label="Int"];
+109 [label="ID : num1"];
+106 -- 110
+110 [label="argument"];
+110 -- 111
+111 [label="Int"];
+111 [label="ID : num2"];
+106 -- 112
+112 [label="Variable"];
+112 -- 113
+113 [label="Bool"];
+113 [label="ID : retval"];
+106 -- 114
+114 [label="Variable"];
+114 -- 115
+115 [label="Int"];
+115 [label="ID : aux02"];
+106 -- 116
+116 [label="="];
+116 -- 117
+117 [label="lvalue : retval"];
+116 -- 118
+118 [label="const : 0"];
+106 -- 119
 119 [label="="];
 119 -- 120
-120 [label="lvalue : retval"];
+120 [label="lvalue : aux02"];
 119 -- 121
-121 [label="const : 0"];
-109 -- 122
-122 [label="="];
-122 -- 123
-123 [label="lvalue : aux02"];
-122 -- 124
-124 [label="+"];
+121 [label="+"];
+121 -- 122
+122 [label="ID : num2"];
+121 -- 123
+123 [label="const : 1"];
+106 -- 124
+124 [label="if-then-else"];
 124 -- 125
-125 [label="ID : num2"];
-124 -- 126
-126 [label="const : 1"];
-109 -- 127
-127 [label="if-then-else"];
-127 -- 128
-128 [label="<"];
+125 [label="<"];
+125 -- 126
+126 [label="ID : num1"];
+125 -- 127
+127 [label="ID : num2"];
+124 -- 128
+128 [label="="];
 128 -- 129
-129 [label="ID : num1"];
+129 [label="lvalue : retval"];
 128 -- 130
-130 [label="ID : num2"];
-127 -- 131
-131 [label="="];
+130 [label="const : 0"];
+124 -- 131
+131 [label="if-then-else"];
 131 -- 132
-132 [label="lvalue : retval"];
-131 -- 133
-133 [label="const : 0"];
-127 -- 134
-134 [label="if-then-else"];
+132 [label="not"];
+132 [label="-"];
+132 -- 133
+133 [label="()"];
+133 -- 134
+134 [label="<"];
 134 -- 135
-135 [label="not"];
-135 [label="-"];
-135 -- 136
-136 [label="()"];
-136 -- 137
-137 [label="<"];
+135 [label="ID : num1"];
+134 -- 136
+136 [label="ID : aux02"];
+131 -- 137
+137 [label="="];
 137 -- 138
-138 [label="ID : num1"];
+138 [label="lvalue : retval"];
 137 -- 139
-139 [label="ID : aux02"];
-134 -- 140
+139 [label="const : 0"];
+131 -- 140
 140 [label="="];
 140 -- 141
 141 [label="lvalue : retval"];
 140 -- 142
-142 [label="const : 0"];
-134 -- 143
-143 [label="="];
-143 -- 144
-144 [label="lvalue : retval"];
-143 -- 145
-145 [label="const : 1"];
-109 -- 146
-146 [label="ID : retval"];
-0 -- 147
-147 [label="ClassDeclaration: List"];
+142 [label="const : 1"];
+106 -- 143
+143 [label="ID : retval"];
+0 -- 144
+144 [label="ClassDeclaration: List"];
+144 -- 145
+145 [label="Variable"];
+145 -- 146
+146 [label="type : Element"];
+146 [label="ID : elem"];
+144 -- 147
+147 [label="Variable"];
 147 -- 148
-148 [label="Variable"];
-148 -- 149
-149 [label="type : Element"];
-149 [label="ID : elem"];
-147 -- 150
-150 [label="Variable"];
-150 -- 151
-151 [label="type : List"];
-151 [label="ID : next"];
-147 -- 152
-152 [label="Variable"];
-152 -- 153
-153 [label="Bool"];
-153 [label="ID : end"];
-147 -- 154
-154 [label="Method: Init"];
-154 -- 155
-155 [label="Bool"];
-154 -- 156
-156 [label="="];
-156 -- 157
-157 [label="lvalue : end"];
-156 -- 158
-158 [label="const : 1"];
-154 -- 159
-159 [label="const : 1"];
-147 -- 160
-160 [label="Method: InitNew"];
-160 -- 161
-161 [label="Bool"];
-160 -- 162
-162 [label="argument"];
-162 -- 163
-163 [label="type : Element"];
-163 [label="ID : v_elem"];
-160 -- 164
-164 [label="argument"];
-164 -- 165
-165 [label="type : List"];
-165 [label="ID : v_next"];
-160 -- 166
-166 [label="argument"];
-166 -- 167
-167 [label="Bool"];
+148 [label="type : List"];
+148 [label="ID : next"];
+144 -- 149
+149 [label="Variable"];
+149 -- 150
+150 [label="Bool"];
+150 [label="ID : end"];
+144 -- 151
+151 [label="Method: Init"];
+151 -- 152
+152 [label="Bool"];
+151 -- 153
+153 [label="="];
+153 -- 154
+154 [label="lvalue : end"];
+153 -- 155
+155 [label="const : 1"];
+151 -- 156
+156 [label="const : 1"];
+144 -- 157
+157 [label="Method: InitNew"];
+157 -- 158
+158 [label="Bool"];
+157 -- 159
+159 [label="argument"];
+159 -- 160
+160 [label="type : Element"];
+160 [label="ID : v_elem"];
+157 -- 161
+161 [label="argument"];
+161 -- 162
+162 [label="type : List"];
+162 [label="ID : v_next"];
+157 -- 163
+163 [label="argument"];
+163 -- 164
+164 [label="Bool"];
+164 [label="ID : v_end"];
+157 -- 165
+165 [label="="];
+165 -- 166
+166 [label="lvalue : end"];
+165 -- 167
 167 [label="ID : v_end"];
-160 -- 168
+157 -- 168
 168 [label="="];
 168 -- 169
-169 [label="lvalue : end"];
+169 [label="lvalue : elem"];
 168 -- 170
-170 [label="ID : v_end"];
-160 -- 171
+170 [label="ID : v_elem"];
+157 -- 171
 171 [label="="];
 171 -- 172
-172 [label="lvalue : elem"];
+172 [label="lvalue : next"];
 171 -- 173
-173 [label="ID : v_elem"];
-160 -- 174
-174 [label="="];
-174 -- 175
-175 [label="lvalue : next"];
-174 -- 176
-176 [label="ID : v_next"];
-160 -- 177
-177 [label="const : 1"];
-147 -- 178
-178 [label="Method: Insert"];
-178 -- 179
-179 [label="type : List"];
-178 -- 180
-180 [label="argument"];
-180 -- 181
-181 [label="type : Element"];
-181 [label="ID : new_elem"];
-178 -- 182
-182 [label="Variable"];
-182 -- 183
-183 [label="Bool"];
-183 [label="ID : ret_val"];
-178 -- 184
-184 [label="Variable"];
-184 -- 185
-185 [label="type : List"];
-185 [label="ID : aux03"];
-178 -- 186
-186 [label="Variable"];
-186 -- 187
-187 [label="type : List"];
-187 [label="ID : aux02"];
-178 -- 188
+173 [label="ID : v_next"];
+157 -- 174
+174 [label="const : 1"];
+144 -- 175
+175 [label="Method: Insert"];
+175 -- 176
+176 [label="type : List"];
+175 -- 177
+177 [label="argument"];
+177 -- 178
+178 [label="type : Element"];
+178 [label="ID : new_elem"];
+175 -- 179
+179 [label="Variable"];
+179 -- 180
+180 [label="Bool"];
+180 [label="ID : ret_val"];
+175 -- 181
+181 [label="Variable"];
+181 -- 182
+182 [label="type : List"];
+182 [label="ID : aux03"];
+175 -- 183
+183 [label="Variable"];
+183 -- 184
+184 [label="type : List"];
+184 [label="ID : aux02"];
+175 -- 185
+185 [label="="];
+185 -- 186
+186 [label="lvalue : aux03"];
+185 -- 187
+187 [label="this : "];
+175 -- 188
 188 [label="="];
 188 -- 189
-189 [label="lvalue : aux03"];
+189 [label="lvalue : aux02"];
 188 -- 190
-190 [label="this : "];
-178 -- 191
+190 [label="new"];
+190 [label="class : List"];
+175 -- 191
 191 [label="="];
 191 -- 192
-192 [label="lvalue : aux02"];
+192 [label="lvalue : ret_val"];
 191 -- 193
-193 [label="new"];
-193 [label="class : List"];
-178 -- 194
-194 [label="="];
-194 -- 195
-195 [label="lvalue : ret_val"];
-194 -- 196
-196 [label="call method"];
-196 -- 197
-197 [label="ID : aux02"];
-197 [label="method : InitNew"];
-196 -- 198
-198 [label="ID : new_elem"];
-196 -- 199
-199 [label="ID : aux03"];
-196 -- 200
-200 [label="const : 0"];
-178 -- 201
-201 [label="ID : aux02"];
-147 -- 202
-202 [label="Method: SetNext"];
-202 -- 203
-203 [label="Bool"];
-202 -- 204
-204 [label="argument"];
-204 -- 205
-205 [label="type : List"];
+193 [label="call method"];
+193 -- 194
+194 [label="ID : aux02"];
+194 [label="method : InitNew"];
+193 -- 195
+195 [label="ID : new_elem"];
+193 -- 196
+196 [label="ID : aux03"];
+193 -- 197
+197 [label="const : 0"];
+175 -- 198
+198 [label="ID : aux02"];
+144 -- 199
+199 [label="Method: SetNext"];
+199 -- 200
+200 [label="Bool"];
+199 -- 201
+201 [label="argument"];
+201 -- 202
+202 [label="type : List"];
+202 [label="ID : v_next"];
+199 -- 203
+203 [label="="];
+203 -- 204
+204 [label="lvalue : next"];
+203 -- 205
 205 [label="ID : v_next"];
-202 -- 206
-206 [label="="];
-206 -- 207
-207 [label="lvalue : next"];
-206 -- 208
-208 [label="ID : v_next"];
-202 -- 209
-209 [label="const : 1"];
-147 -- 210
-210 [label="Method: Delete"];
-210 -- 211
-211 [label="type : List"];
-210 -- 212
-212 [label="argument"];
-212 -- 213
-213 [label="type : Element"];
-213 [label="ID : e"];
-210 -- 214
-214 [label="Variable"];
-214 -- 215
-215 [label="type : List"];
-215 [label="ID : my_head"];
-210 -- 216
-216 [label="Variable"];
-216 -- 217
-217 [label="Bool"];
-217 [label="ID : ret_val"];
-210 -- 218
-218 [label="Variable"];
-218 -- 219
-219 [label="Bool"];
-219 [label="ID : aux05"];
-210 -- 220
-220 [label="Variable"];
-220 -- 221
-221 [label="type : List"];
-221 [label="ID : aux01"];
-210 -- 222
-222 [label="Variable"];
-222 -- 223
-223 [label="type : List"];
-223 [label="ID : prev"];
-210 -- 224
-224 [label="Variable"];
-224 -- 225
-225 [label="Bool"];
-225 [label="ID : var_end"];
-210 -- 226
-226 [label="Variable"];
-226 -- 227
-227 [label="type : Element"];
-227 [label="ID : var_elem"];
-210 -- 228
-228 [label="Variable"];
-228 -- 229
-229 [label="Int"];
-229 [label="ID : aux04"];
-210 -- 230
-230 [label="Variable"];
-230 -- 231
-231 [label="Int"];
-231 [label="ID : nt"];
-210 -- 232
+199 -- 206
+206 [label="const : 1"];
+144 -- 207
+207 [label="Method: Delete"];
+207 -- 208
+208 [label="type : List"];
+207 -- 209
+209 [label="argument"];
+209 -- 210
+210 [label="type : Element"];
+210 [label="ID : e"];
+207 -- 211
+211 [label="Variable"];
+211 -- 212
+212 [label="type : List"];
+212 [label="ID : my_head"];
+207 -- 213
+213 [label="Variable"];
+213 -- 214
+214 [label="Bool"];
+214 [label="ID : ret_val"];
+207 -- 215
+215 [label="Variable"];
+215 -- 216
+216 [label="Bool"];
+216 [label="ID : aux05"];
+207 -- 217
+217 [label="Variable"];
+217 -- 218
+218 [label="type : List"];
+218 [label="ID : aux01"];
+207 -- 219
+219 [label="Variable"];
+219 -- 220
+220 [label="type : List"];
+220 [label="ID : prev"];
+207 -- 221
+221 [label="Variable"];
+221 -- 222
+222 [label="Bool"];
+222 [label="ID : var_end"];
+207 -- 223
+223 [label="Variable"];
+223 -- 224
+224 [label="type : Element"];
+224 [label="ID : var_elem"];
+207 -- 225
+225 [label="Variable"];
+225 -- 226
+226 [label="Int"];
+226 [label="ID : aux04"];
+207 -- 227
+227 [label="Variable"];
+227 -- 228
+228 [label="Int"];
+228 [label="ID : nt"];
+207 -- 229
+229 [label="="];
+229 -- 230
+230 [label="lvalue : my_head"];
+229 -- 231
+231 [label="this : "];
+207 -- 232
 232 [label="="];
 232 -- 233
-233 [label="lvalue : my_head"];
+233 [label="lvalue : ret_val"];
 232 -- 234
-234 [label="this : "];
-210 -- 235
+234 [label="const : 0"];
+207 -- 235
 235 [label="="];
 235 -- 236
-236 [label="lvalue : ret_val"];
+236 [label="lvalue : aux04"];
 235 -- 237
-237 [label="const : 0"];
-210 -- 238
-238 [label="="];
-238 -- 239
-239 [label="lvalue : aux04"];
-238 -- 240
-240 [label="-"];
+237 [label="-"];
+237 -- 238
+238 [label="const : 0"];
+237 -- 239
+239 [label="const : 1"];
+207 -- 240
+240 [label="="];
 240 -- 241
-241 [label="const : 0"];
+241 [label="lvalue : aux01"];
 240 -- 242
-242 [label="const : 1"];
-210 -- 243
+242 [label="this : "];
+207 -- 243
 243 [label="="];
 243 -- 244
-244 [label="lvalue : aux01"];
+244 [label="lvalue : prev"];
 243 -- 245
 245 [label="this : "];
-210 -- 246
+207 -- 246
 246 [label="="];
 246 -- 247
-247 [label="lvalue : prev"];
+247 [label="lvalue : var_end"];
 246 -- 248
-248 [label="this : "];
-210 -- 249
+248 [label="ID : end"];
+207 -- 249
 249 [label="="];
 249 -- 250
-250 [label="lvalue : var_end"];
+250 [label="lvalue : var_elem"];
 249 -- 251
-251 [label="ID : end"];
-210 -- 252
-252 [label="="];
+251 [label="ID : elem"];
+207 -- 252
+252 [label="while"];
 252 -- 253
-253 [label="lvalue : var_elem"];
-252 -- 254
-254 [label="ID : elem"];
-210 -- 255
-255 [label="while"];
+253 [label="AND"];
+253 -- 254
+254 [label="()"];
+254 -- 255
+255 [label="not"];
+255 [label="-"];
 255 -- 256
-256 [label="AND"];
-256 -- 257
+256 [label="ID : var_end"];
+253 -- 257
 257 [label="()"];
 257 -- 258
 258 [label="not"];
 258 [label="-"];
 258 -- 259
-259 [label="ID : var_end"];
-256 -- 260
-260 [label="()"];
+259 [label="ID : ret_val"];
+252 -- 260
+260 [label="{   }"];
 260 -- 261
-261 [label="not"];
-261 [label="-"];
+261 [label="if-then-else"];
 261 -- 262
-262 [label="ID : ret_val"];
-255 -- 263
-263 [label="{   }"];
-263 -- 264
-264 [label="if-then-else"];
-264 -- 265
-265 [label="call method"];
+262 [label="call method"];
+262 -- 263
+263 [label="ID : e"];
+263 [label="method : Equal"];
+262 -- 264
+264 [label="ID : var_elem"];
+261 -- 265
+265 [label="{   }"];
 265 -- 266
-266 [label="ID : e"];
-266 [label="method : Equal"];
-265 -- 267
-267 [label="ID : var_elem"];
-264 -- 268
-268 [label="{   }"];
-268 -- 269
-269 [label="="];
+266 [label="="];
+266 -- 267
+267 [label="lvalue : ret_val"];
+266 -- 268
+268 [label="const : 1"];
+265 -- 269
+269 [label="if-then-else"];
 269 -- 270
-270 [label="lvalue : ret_val"];
-269 -- 271
-271 [label="const : 1"];
-268 -- 272
-272 [label="if-then-else"];
-272 -- 273
-273 [label="<"];
+270 [label="<"];
+270 -- 271
+271 [label="ID : aux04"];
+270 -- 272
+272 [label="const : 0"];
+269 -- 273
+273 [label="{   }"];
 273 -- 274
-274 [label="ID : aux04"];
-273 -- 275
-275 [label="const : 0"];
-272 -- 276
-276 [label="{   }"];
+274 [label="="];
+274 -- 275
+275 [label="lvalue : my_head"];
+274 -- 276
+276 [label="call method"];
 276 -- 277
-277 [label="="];
-277 -- 278
-278 [label="lvalue : my_head"];
-277 -- 279
-279 [label="call method"];
+277 [label="ID : aux01"];
+277 [label="method : GetNext"];
+269 -- 278
+278 [label="{   }"];
+278 -- 279
+279 [label="System.out.Println"];
 279 -- 280
-280 [label="ID : aux01"];
-280 [label="method : GetNext"];
-272 -- 281
-281 [label="{   }"];
-281 -- 282
-282 [label="System.out.Println"];
-282 -- 283
-283 [label="-"];
+280 [label="-"];
+280 -- 281
+281 [label="const : 0"];
+280 -- 282
+282 [label="const : 555"];
+278 -- 283
+283 [label="="];
 283 -- 284
-284 [label="const : 0"];
+284 [label="lvalue : aux05"];
 283 -- 285
-285 [label="const : 555"];
-281 -- 286
-286 [label="="];
-286 -- 287
-287 [label="lvalue : aux05"];
-286 -- 288
-288 [label="call method"];
-288 -- 289
-289 [label="ID : prev"];
-289 [label="method : SetNext"];
-288 -- 290
-290 [label="call method"];
+285 [label="call method"];
+285 -- 286
+286 [label="ID : prev"];
+286 [label="method : SetNext"];
+285 -- 287
+287 [label="call method"];
+287 -- 288
+288 [label="ID : aux01"];
+288 [label="method : GetNext"];
+278 -- 289
+289 [label="System.out.Println"];
+289 -- 290
+290 [label="-"];
 290 -- 291
-291 [label="ID : aux01"];
-291 [label="method : GetNext"];
-281 -- 292
-292 [label="System.out.Println"];
-292 -- 293
-293 [label="-"];
+291 [label="const : 0"];
+290 -- 292
+292 [label="const : 555"];
+261 -- 293
+293 [label="="];
 293 -- 294
-294 [label="const : 0"];
+294 [label="lvalue : nt"];
 293 -- 295
-295 [label="const : 555"];
-264 -- 296
-296 [label="="];
+295 [label="const : 0"];
+260 -- 296
+296 [label="if-then-else"];
 296 -- 297
-297 [label="lvalue : nt"];
-296 -- 298
-298 [label="const : 0"];
-263 -- 299
-299 [label="if-then-else"];
+297 [label="not"];
+297 [label="-"];
+297 -- 298
+298 [label="ID : ret_val"];
+296 -- 299
+299 [label="{   }"];
 299 -- 300
-300 [label="not"];
-300 [label="-"];
+300 [label="="];
 300 -- 301
-301 [label="ID : ret_val"];
-299 -- 302
-302 [label="{   }"];
-302 -- 303
+301 [label="lvalue : prev"];
+300 -- 302
+302 [label="ID : aux01"];
+299 -- 303
 303 [label="="];
 303 -- 304
-304 [label="lvalue : prev"];
+304 [label="lvalue : aux01"];
 303 -- 305
-305 [label="ID : aux01"];
-302 -- 306
-306 [label="="];
-306 -- 307
-307 [label="lvalue : aux01"];
-306 -- 308
-308 [label="call method"];
-308 -- 309
-309 [label="ID : aux01"];
-309 [label="method : GetNext"];
-302 -- 310
-310 [label="="];
-310 -- 311
-311 [label="lvalue : var_end"];
-310 -- 312
-312 [label="call method"];
-312 -- 313
-313 [label="ID : aux01"];
-313 [label="method : GetEnd"];
-302 -- 314
-314 [label="="];
-314 -- 315
-315 [label="lvalue : var_elem"];
-314 -- 316
-316 [label="call method"];
-316 -- 317
-317 [label="ID : aux01"];
-317 [label="method : GetElem"];
-302 -- 318
+305 [label="call method"];
+305 -- 306
+306 [label="ID : aux01"];
+306 [label="method : GetNext"];
+299 -- 307
+307 [label="="];
+307 -- 308
+308 [label="lvalue : var_end"];
+307 -- 309
+309 [label="call method"];
+309 -- 310
+310 [label="ID : aux01"];
+310 [label="method : GetEnd"];
+299 -- 311
+311 [label="="];
+311 -- 312
+312 [label="lvalue : var_elem"];
+311 -- 313
+313 [label="call method"];
+313 -- 314
+314 [label="ID : aux01"];
+314 [label="method : GetElem"];
+299 -- 315
+315 [label="="];
+315 -- 316
+316 [label="lvalue : aux04"];
+315 -- 317
+317 [label="const : 1"];
+296 -- 318
 318 [label="="];
 318 -- 319
-319 [label="lvalue : aux04"];
+319 [label="lvalue : nt"];
 318 -- 320
-320 [label="const : 1"];
-299 -- 321
-321 [label="="];
-321 -- 322
-322 [label="lvalue : nt"];
-321 -- 323
-323 [label="const : 0"];
-210 -- 324
-324 [label="ID : my_head"];
-147 -- 325
-325 [label="Method: Search"];
-325 -- 326
-326 [label="Int"];
-325 -- 327
-327 [label="argument"];
-327 -- 328
-328 [label="type : Element"];
-328 [label="ID : e"];
-325 -- 329
-329 [label="Variable"];
-329 -- 330
-330 [label="Int"];
-330 [label="ID : int_ret_val"];
-325 -- 331
-331 [label="Variable"];
-331 -- 332
-332 [label="type : List"];
-332 [label="ID : aux01"];
-325 -- 333
-333 [label="Variable"];
-333 -- 334
-334 [label="type : Element"];
-334 [label="ID : var_elem"];
-325 -- 335
-335 [label="Variable"];
-335 -- 336
-336 [label="Bool"];
-336 [label="ID : var_end"];
-325 -- 337
-337 [label="Variable"];
-337 -- 338
-338 [label="Int"];
-338 [label="ID : nt"];
-325 -- 339
+320 [label="const : 0"];
+207 -- 321
+321 [label="ID : my_head"];
+144 -- 322
+322 [label="Method: Search"];
+322 -- 323
+323 [label="Int"];
+322 -- 324
+324 [label="argument"];
+324 -- 325
+325 [label="type : Element"];
+325 [label="ID : e"];
+322 -- 326
+326 [label="Variable"];
+326 -- 327
+327 [label="Int"];
+327 [label="ID : int_ret_val"];
+322 -- 328
+328 [label="Variable"];
+328 -- 329
+329 [label="type : List"];
+329 [label="ID : aux01"];
+322 -- 330
+330 [label="Variable"];
+330 -- 331
+331 [label="type : Element"];
+331 [label="ID : var_elem"];
+322 -- 332
+332 [label="Variable"];
+332 -- 333
+333 [label="Bool"];
+333 [label="ID : var_end"];
+322 -- 334
+334 [label="Variable"];
+334 -- 335
+335 [label="Int"];
+335 [label="ID : nt"];
+322 -- 336
+336 [label="="];
+336 -- 337
+337 [label="lvalue : int_ret_val"];
+336 -- 338
+338 [label="const : 0"];
+322 -- 339
 339 [label="="];
 339 -- 340
-340 [label="lvalue : int_ret_val"];
+340 [label="lvalue : aux01"];
 339 -- 341
-341 [label="const : 0"];
-325 -- 342
+341 [label="this : "];
+322 -- 342
 342 [label="="];
 342 -- 343
-343 [label="lvalue : aux01"];
+343 [label="lvalue : var_end"];
 342 -- 344
-344 [label="this : "];
-325 -- 345
+344 [label="ID : end"];
+322 -- 345
 345 [label="="];
 345 -- 346
-346 [label="lvalue : var_end"];
+346 [label="lvalue : var_elem"];
 345 -- 347
-347 [label="ID : end"];
-325 -- 348
-348 [label="="];
+347 [label="ID : elem"];
+322 -- 348
+348 [label="while"];
 348 -- 349
-349 [label="lvalue : var_elem"];
-348 -- 350
-350 [label="ID : elem"];
-325 -- 351
-351 [label="while"];
+349 [label="not"];
+349 [label="-"];
+349 -- 350
+350 [label="ID : var_end"];
+348 -- 351
+351 [label="{   }"];
 351 -- 352
-352 [label="not"];
-352 [label="-"];
+352 [label="if-then-else"];
 352 -- 353
-353 [label="ID : var_end"];
-351 -- 354
-354 [label="{   }"];
-354 -- 355
-355 [label="if-then-else"];
-355 -- 356
-356 [label="call method"];
+353 [label="call method"];
+353 -- 354
+354 [label="ID : e"];
+354 [label="method : Equal"];
+353 -- 355
+355 [label="ID : var_elem"];
+352 -- 356
+356 [label="{   }"];
 356 -- 357
-357 [label="ID : e"];
-357 [label="method : Equal"];
-356 -- 358
-358 [label="ID : var_elem"];
-355 -- 359
-359 [label="{   }"];
-359 -- 360
+357 [label="="];
+357 -- 358
+358 [label="lvalue : int_ret_val"];
+357 -- 359
+359 [label="const : 1"];
+352 -- 360
 360 [label="="];
 360 -- 361
-361 [label="lvalue : int_ret_val"];
+361 [label="lvalue : nt"];
 360 -- 362
-362 [label="const : 1"];
-355 -- 363
+362 [label="const : 0"];
+351 -- 363
 363 [label="="];
 363 -- 364
-364 [label="lvalue : nt"];
+364 [label="lvalue : aux01"];
 363 -- 365
-365 [label="const : 0"];
-354 -- 366
-366 [label="="];
-366 -- 367
-367 [label="lvalue : aux01"];
-366 -- 368
-368 [label="call method"];
-368 -- 369
-369 [label="ID : aux01"];
-369 [label="method : GetNext"];
-354 -- 370
-370 [label="="];
-370 -- 371
-371 [label="lvalue : var_end"];
-370 -- 372
-372 [label="call method"];
-372 -- 373
-373 [label="ID : aux01"];
-373 [label="method : GetEnd"];
-354 -- 374
-374 [label="="];
-374 -- 375
-375 [label="lvalue : var_elem"];
-374 -- 376
-376 [label="call method"];
+365 [label="call method"];
+365 -- 366
+366 [label="ID : aux01"];
+366 [label="method : GetNext"];
+351 -- 367
+367 [label="="];
+367 -- 368
+368 [label="lvalue : var_end"];
+367 -- 369
+369 [label="call method"];
+369 -- 370
+370 [label="ID : aux01"];
+370 [label="method : GetEnd"];
+351 -- 371
+371 [label="="];
+371 -- 372
+372 [label="lvalue : var_elem"];
+371 -- 373
+373 [label="call method"];
+373 -- 374
+374 [label="ID : aux01"];
+374 [label="method : GetElem"];
+322 -- 375
+375 [label="ID : int_ret_val"];
+144 -- 376
+376 [label="Method: GetEnd"];
 376 -- 377
-377 [label="ID : aux01"];
-377 [label="method : GetElem"];
-325 -- 378
-378 [label="ID : int_ret_val"];
-147 -- 379
-379 [label="Method: GetEnd"];
+377 [label="Bool"];
+376 -- 378
+378 [label="ID : end"];
+144 -- 379
+379 [label="Method: GetElem"];
 379 -- 380
-380 [label="Bool"];
+380 [label="type : Element"];
 379 -- 381
-381 [label="ID : end"];
-147 -- 382
-382 [label="Method: GetElem"];
+381 [label="ID : elem"];
+144 -- 382
+382 [label="Method: GetNext"];
 382 -- 383
-383 [label="type : Element"];
+383 [label="type : List"];
 382 -- 384
-384 [label="ID : elem"];
-147 -- 385
-385 [label="Method: GetNext"];
+384 [label="ID : next"];
+144 -- 385
+385 [label="Method: Print"];
 385 -- 386
-386 [label="type : List"];
+386 [label="Bool"];
 385 -- 387
-387 [label="ID : next"];
-147 -- 388
-388 [label="Method: Print"];
-388 -- 389
-389 [label="Bool"];
-388 -- 390
-390 [label="Variable"];
-390 -- 391
-391 [label="type : List"];
-391 [label="ID : aux01"];
-388 -- 392
-392 [label="Variable"];
-392 -- 393
-393 [label="Bool"];
-393 [label="ID : var_end"];
-388 -- 394
-394 [label="Variable"];
-394 -- 395
-395 [label="type : Element"];
-395 [label="ID : var_elem"];
-388 -- 396
+387 [label="Variable"];
+387 -- 388
+388 [label="type : List"];
+388 [label="ID : aux01"];
+385 -- 389
+389 [label="Variable"];
+389 -- 390
+390 [label="Bool"];
+390 [label="ID : var_end"];
+385 -- 391
+391 [label="Variable"];
+391 -- 392
+392 [label="type : Element"];
+392 [label="ID : var_elem"];
+385 -- 393
+393 [label="="];
+393 -- 394
+394 [label="lvalue : aux01"];
+393 -- 395
+395 [label="this : "];
+385 -- 396
 396 [label="="];
 396 -- 397
-397 [label="lvalue : aux01"];
+397 [label="lvalue : var_end"];
 396 -- 398
-398 [label="this : "];
-388 -- 399
+398 [label="ID : end"];
+385 -- 399
 399 [label="="];
 399 -- 400
-400 [label="lvalue : var_end"];
+400 [label="lvalue : var_elem"];
 399 -- 401
-401 [label="ID : end"];
-388 -- 402
-402 [label="="];
+401 [label="ID : elem"];
+385 -- 402
+402 [label="while"];
 402 -- 403
-403 [label="lvalue : var_elem"];
-402 -- 404
-404 [label="ID : elem"];
-388 -- 405
-405 [label="while"];
+403 [label="not"];
+403 [label="-"];
+403 -- 404
+404 [label="ID : var_end"];
+402 -- 405
+405 [label="{   }"];
 405 -- 406
-406 [label="not"];
-406 [label="-"];
+406 [label="System.out.Println"];
 406 -- 407
-407 [label="ID : var_end"];
-405 -- 408
-408 [label="{   }"];
-408 -- 409
-409 [label="System.out.Println"];
+407 [label="call method"];
+407 -- 408
+408 [label="ID : var_elem"];
+408 [label="method : GetAge"];
+405 -- 409
+409 [label="="];
 409 -- 410
-410 [label="call method"];
-410 -- 411
-411 [label="ID : var_elem"];
-411 [label="method : GetAge"];
-408 -- 412
-412 [label="="];
-412 -- 413
-413 [label="lvalue : aux01"];
-412 -- 414
-414 [label="call method"];
-414 -- 415
-415 [label="ID : aux01"];
-415 [label="method : GetNext"];
-408 -- 416
-416 [label="="];
-416 -- 417
-417 [label="lvalue : var_end"];
-416 -- 418
-418 [label="call method"];
-418 -- 419
-419 [label="ID : aux01"];
-419 [label="method : GetEnd"];
-408 -- 420
-420 [label="="];
-420 -- 421
-421 [label="lvalue : var_elem"];
-420 -- 422
-422 [label="call method"];
+410 [label="lvalue : aux01"];
+409 -- 411
+411 [label="call method"];
+411 -- 412
+412 [label="ID : aux01"];
+412 [label="method : GetNext"];
+405 -- 413
+413 [label="="];
+413 -- 414
+414 [label="lvalue : var_end"];
+413 -- 415
+415 [label="call method"];
+415 -- 416
+416 [label="ID : aux01"];
+416 [label="method : GetEnd"];
+405 -- 417
+417 [label="="];
+417 -- 418
+418 [label="lvalue : var_elem"];
+417 -- 419
+419 [label="call method"];
+419 -- 420
+420 [label="ID : aux01"];
+420 [label="method : GetElem"];
+385 -- 421
+421 [label="const : 1"];
+0 -- 422
+422 [label="ClassDeclaration: LL"];
 422 -- 423
-423 [label="ID : aux01"];
-423 [label="method : GetElem"];
-388 -- 424
-424 [label="const : 1"];
-0 -- 425
-425 [label="ClassDeclaration: LL"];
+423 [label="Method: Start"];
+423 -- 424
+424 [label="Int"];
+423 -- 425
+425 [label="Variable"];
 425 -- 426
-426 [label="Method: Start"];
-426 -- 427
-427 [label="Int"];
-426 -- 428
-428 [label="Variable"];
-428 -- 429
-429 [label="type : List"];
-429 [label="ID : head"];
-426 -- 430
-430 [label="Variable"];
-430 -- 431
-431 [label="type : List"];
-431 [label="ID : last_elem"];
-426 -- 432
-432 [label="Variable"];
-432 -- 433
-433 [label="Bool"];
-433 [label="ID : aux01"];
-426 -- 434
-434 [label="Variable"];
-434 -- 435
-435 [label="type : Element"];
-435 [label="ID : el01"];
-426 -- 436
-436 [label="Variable"];
-436 -- 437
-437 [label="type : Element"];
-437 [label="ID : el02"];
-426 -- 438
-438 [label="Variable"];
-438 -- 439
-439 [label="type : Element"];
-439 [label="ID : el03"];
-426 -- 440
+426 [label="type : List"];
+426 [label="ID : head"];
+423 -- 427
+427 [label="Variable"];
+427 -- 428
+428 [label="type : List"];
+428 [label="ID : last_elem"];
+423 -- 429
+429 [label="Variable"];
+429 -- 430
+430 [label="Bool"];
+430 [label="ID : aux01"];
+423 -- 431
+431 [label="Variable"];
+431 -- 432
+432 [label="type : Element"];
+432 [label="ID : el01"];
+423 -- 433
+433 [label="Variable"];
+433 -- 434
+434 [label="type : Element"];
+434 [label="ID : el02"];
+423 -- 435
+435 [label="Variable"];
+435 -- 436
+436 [label="type : Element"];
+436 [label="ID : el03"];
+423 -- 437
+437 [label="="];
+437 -- 438
+438 [label="lvalue : last_elem"];
+437 -- 439
+439 [label="new"];
+439 [label="class : List"];
+423 -- 440
 440 [label="="];
 440 -- 441
-441 [label="lvalue : last_elem"];
+441 [label="lvalue : aux01"];
 440 -- 442
-442 [label="new"];
-442 [label="class : List"];
-426 -- 443
-443 [label="="];
-443 -- 444
-444 [label="lvalue : aux01"];
-443 -- 445
-445 [label="call method"];
-445 -- 446
+442 [label="call method"];
+442 -- 443
+443 [label="ID : last_elem"];
+443 [label="method : Init"];
+423 -- 444
+444 [label="="];
+444 -- 445
+445 [label="lvalue : head"];
+444 -- 446
 446 [label="ID : last_elem"];
-446 [label="method : Init"];
-426 -- 447
+423 -- 447
 447 [label="="];
 447 -- 448
-448 [label="lvalue : head"];
+448 [label="lvalue : aux01"];
 447 -- 449
-449 [label="ID : last_elem"];
-426 -- 450
-450 [label="="];
-450 -- 451
-451 [label="lvalue : aux01"];
-450 -- 452
-452 [label="call method"];
-452 -- 453
-453 [label="ID : head"];
-453 [label="method : Init"];
-426 -- 454
-454 [label="="];
-454 -- 455
-455 [label="lvalue : aux01"];
-454 -- 456
-456 [label="call method"];
-456 -- 457
-457 [label="ID : head"];
-457 [label="method : Print"];
-426 -- 458
+449 [label="call method"];
+449 -- 450
+450 [label="ID : head"];
+450 [label="method : Init"];
+423 -- 451
+451 [label="="];
+451 -- 452
+452 [label="lvalue : aux01"];
+451 -- 453
+453 [label="call method"];
+453 -- 454
+454 [label="ID : head"];
+454 [label="method : Print"];
+423 -- 455
+455 [label="="];
+455 -- 456
+456 [label="lvalue : el01"];
+455 -- 457
+457 [label="new"];
+457 [label="class : Element"];
+423 -- 458
 458 [label="="];
 458 -- 459
-459 [label="lvalue : el01"];
+459 [label="lvalue : aux01"];
 458 -- 460
-460 [label="new"];
-460 [label="class : Element"];
-426 -- 461
-461 [label="="];
-461 -- 462
-462 [label="lvalue : aux01"];
-461 -- 463
-463 [label="call method"];
-463 -- 464
-464 [label="ID : el01"];
-464 [label="method : Init"];
-463 -- 465
-465 [label="const : 25"];
-463 -- 466
-466 [label="const : 37000"];
-463 -- 467
-467 [label="const : 0"];
-426 -- 468
-468 [label="="];
-468 -- 469
-469 [label="lvalue : head"];
-468 -- 470
-470 [label="call method"];
+460 [label="call method"];
+460 -- 461
+461 [label="ID : el01"];
+461 [label="method : Init"];
+460 -- 462
+462 [label="const : 25"];
+460 -- 463
+463 [label="const : 37000"];
+460 -- 464
+464 [label="const : 0"];
+423 -- 465
+465 [label="="];
+465 -- 466
+466 [label="lvalue : head"];
+465 -- 467
+467 [label="call method"];
+467 -- 468
+468 [label="ID : head"];
+468 [label="method : Insert"];
+467 -- 469
+469 [label="ID : el01"];
+423 -- 470
+470 [label="="];
 470 -- 471
-471 [label="ID : head"];
-471 [label="method : Insert"];
+471 [label="lvalue : aux01"];
 470 -- 472
-472 [label="ID : el01"];
-426 -- 473
-473 [label="="];
-473 -- 474
-474 [label="lvalue : aux01"];
-473 -- 475
-475 [label="call method"];
-475 -- 476
-476 [label="ID : head"];
-476 [label="method : Print"];
-426 -- 477
-477 [label="System.out.Println"];
-477 -- 478
-478 [label="const : 10000000"];
-426 -- 479
+472 [label="call method"];
+472 -- 473
+473 [label="ID : head"];
+473 [label="method : Print"];
+423 -- 474
+474 [label="System.out.Println"];
+474 -- 475
+475 [label="const : 10000000"];
+423 -- 476
+476 [label="="];
+476 -- 477
+477 [label="lvalue : el01"];
+476 -- 478
+478 [label="new"];
+478 [label="class : Element"];
+423 -- 479
 479 [label="="];
 479 -- 480
-480 [label="lvalue : el01"];
+480 [label="lvalue : aux01"];
 479 -- 481
-481 [label="new"];
-481 [label="class : Element"];
-426 -- 482
-482 [label="="];
-482 -- 483
-483 [label="lvalue : aux01"];
-482 -- 484
-484 [label="call method"];
-484 -- 485
-485 [label="ID : el01"];
-485 [label="method : Init"];
-484 -- 486
-486 [label="const : 39"];
-484 -- 487
-487 [label="const : 42000"];
-484 -- 488
-488 [label="const : 1"];
-426 -- 489
+481 [label="call method"];
+481 -- 482
+482 [label="ID : el01"];
+482 [label="method : Init"];
+481 -- 483
+483 [label="const : 39"];
+481 -- 484
+484 [label="const : 42000"];
+481 -- 485
+485 [label="const : 1"];
+423 -- 486
+486 [label="="];
+486 -- 487
+487 [label="lvalue : el02"];
+486 -- 488
+488 [label="ID : el01"];
+423 -- 489
 489 [label="="];
 489 -- 490
-490 [label="lvalue : el02"];
+490 [label="lvalue : head"];
 489 -- 491
-491 [label="ID : el01"];
-426 -- 492
-492 [label="="];
-492 -- 493
-493 [label="lvalue : head"];
-492 -- 494
-494 [label="call method"];
+491 [label="call method"];
+491 -- 492
+492 [label="ID : head"];
+492 [label="method : Insert"];
+491 -- 493
+493 [label="ID : el01"];
+423 -- 494
+494 [label="="];
 494 -- 495
-495 [label="ID : head"];
-495 [label="method : Insert"];
+495 [label="lvalue : aux01"];
 494 -- 496
-496 [label="ID : el01"];
-426 -- 497
-497 [label="="];
-497 -- 498
-498 [label="lvalue : aux01"];
-497 -- 499
-499 [label="call method"];
-499 -- 500
-500 [label="ID : head"];
-500 [label="method : Print"];
-426 -- 501
-501 [label="System.out.Println"];
-501 -- 502
-502 [label="const : 10000000"];
-426 -- 503
+496 [label="call method"];
+496 -- 497
+497 [label="ID : head"];
+497 [label="method : Print"];
+423 -- 498
+498 [label="System.out.Println"];
+498 -- 499
+499 [label="const : 10000000"];
+423 -- 500
+500 [label="="];
+500 -- 501
+501 [label="lvalue : el01"];
+500 -- 502
+502 [label="new"];
+502 [label="class : Element"];
+423 -- 503
 503 [label="="];
 503 -- 504
-504 [label="lvalue : el01"];
+504 [label="lvalue : aux01"];
 503 -- 505
-505 [label="new"];
-505 [label="class : Element"];
-426 -- 506
-506 [label="="];
-506 -- 507
-507 [label="lvalue : aux01"];
-506 -- 508
-508 [label="call method"];
-508 -- 509
-509 [label="ID : el01"];
-509 [label="method : Init"];
-508 -- 510
-510 [label="const : 22"];
-508 -- 511
-511 [label="const : 34000"];
-508 -- 512
-512 [label="const : 0"];
-426 -- 513
-513 [label="="];
-513 -- 514
-514 [label="lvalue : head"];
-513 -- 515
-515 [label="call method"];
+505 [label="call method"];
+505 -- 506
+506 [label="ID : el01"];
+506 [label="method : Init"];
+505 -- 507
+507 [label="const : 22"];
+505 -- 508
+508 [label="const : 34000"];
+505 -- 509
+509 [label="const : 0"];
+423 -- 510
+510 [label="="];
+510 -- 511
+511 [label="lvalue : head"];
+510 -- 512
+512 [label="call method"];
+512 -- 513
+513 [label="ID : head"];
+513 [label="method : Insert"];
+512 -- 514
+514 [label="ID : el01"];
+423 -- 515
+515 [label="="];
 515 -- 516
-516 [label="ID : head"];
-516 [label="method : Insert"];
+516 [label="lvalue : aux01"];
 515 -- 517
-517 [label="ID : el01"];
-426 -- 518
-518 [label="="];
-518 -- 519
-519 [label="lvalue : aux01"];
-518 -- 520
-520 [label="call method"];
-520 -- 521
-521 [label="ID : head"];
-521 [label="method : Print"];
-426 -- 522
+517 [label="call method"];
+517 -- 518
+518 [label="ID : head"];
+518 [label="method : Print"];
+423 -- 519
+519 [label="="];
+519 -- 520
+520 [label="lvalue : el03"];
+519 -- 521
+521 [label="new"];
+521 [label="class : Element"];
+423 -- 522
 522 [label="="];
 522 -- 523
-523 [label="lvalue : el03"];
+523 [label="lvalue : aux01"];
 522 -- 524
-524 [label="new"];
-524 [label="class : Element"];
-426 -- 525
-525 [label="="];
-525 -- 526
-526 [label="lvalue : aux01"];
-525 -- 527
-527 [label="call method"];
-527 -- 528
-528 [label="ID : el03"];
-528 [label="method : Init"];
-527 -- 529
-529 [label="const : 27"];
-527 -- 530
-530 [label="const : 34000"];
-527 -- 531
-531 [label="const : 0"];
-426 -- 532
-532 [label="System.out.Println"];
-532 -- 533
-533 [label="call method"];
+524 [label="call method"];
+524 -- 525
+525 [label="ID : el03"];
+525 [label="method : Init"];
+524 -- 526
+526 [label="const : 27"];
+524 -- 527
+527 [label="const : 34000"];
+524 -- 528
+528 [label="const : 0"];
+423 -- 529
+529 [label="System.out.Println"];
+529 -- 530
+530 [label="call method"];
+530 -- 531
+531 [label="ID : head"];
+531 [label="method : Search"];
+530 -- 532
+532 [label="ID : el02"];
+423 -- 533
+533 [label="System.out.Println"];
 533 -- 534
-534 [label="ID : head"];
-534 [label="method : Search"];
-533 -- 535
-535 [label="ID : el02"];
-426 -- 536
-536 [label="System.out.Println"];
-536 -- 537
-537 [label="call method"];
+534 [label="call method"];
+534 -- 535
+535 [label="ID : head"];
+535 [label="method : Search"];
+534 -- 536
+536 [label="ID : el03"];
+423 -- 537
+537 [label="System.out.Println"];
 537 -- 538
-538 [label="ID : head"];
-538 [label="method : Search"];
-537 -- 539
-539 [label="ID : el03"];
-426 -- 540
-540 [label="System.out.Println"];
-540 -- 541
-541 [label="const : 10000000"];
-426 -- 542
+538 [label="const : 10000000"];
+423 -- 539
+539 [label="="];
+539 -- 540
+540 [label="lvalue : el01"];
+539 -- 541
+541 [label="new"];
+541 [label="class : Element"];
+423 -- 542
 542 [label="="];
 542 -- 543
-543 [label="lvalue : el01"];
+543 [label="lvalue : aux01"];
 542 -- 544
-544 [label="new"];
-544 [label="class : Element"];
-426 -- 545
-545 [label="="];
-545 -- 546
-546 [label="lvalue : aux01"];
-545 -- 547
-547 [label="call method"];
-547 -- 548
-548 [label="ID : el01"];
-548 [label="method : Init"];
-547 -- 549
-549 [label="const : 28"];
-547 -- 550
-550 [label="const : 35000"];
-547 -- 551
-551 [label="const : 0"];
-426 -- 552
-552 [label="="];
-552 -- 553
-553 [label="lvalue : head"];
-552 -- 554
-554 [label="call method"];
+544 [label="call method"];
+544 -- 545
+545 [label="ID : el01"];
+545 [label="method : Init"];
+544 -- 546
+546 [label="const : 28"];
+544 -- 547
+547 [label="const : 35000"];
+544 -- 548
+548 [label="const : 0"];
+423 -- 549
+549 [label="="];
+549 -- 550
+550 [label="lvalue : head"];
+549 -- 551
+551 [label="call method"];
+551 -- 552
+552 [label="ID : head"];
+552 [label="method : Insert"];
+551 -- 553
+553 [label="ID : el01"];
+423 -- 554
+554 [label="="];
 554 -- 555
-555 [label="ID : head"];
-555 [label="method : Insert"];
+555 [label="lvalue : aux01"];
 554 -- 556
-556 [label="ID : el01"];
-426 -- 557
-557 [label="="];
-557 -- 558
-558 [label="lvalue : aux01"];
-557 -- 559
-559 [label="call method"];
-559 -- 560
-560 [label="ID : head"];
-560 [label="method : Print"];
-426 -- 561
-561 [label="System.out.Println"];
-561 -- 562
-562 [label="const : 2220000"];
-426 -- 563
-563 [label="="];
-563 -- 564
-564 [label="lvalue : head"];
-563 -- 565
-565 [label="call method"];
+556 [label="call method"];
+556 -- 557
+557 [label="ID : head"];
+557 [label="method : Print"];
+423 -- 558
+558 [label="System.out.Println"];
+558 -- 559
+559 [label="const : 2220000"];
+423 -- 560
+560 [label="="];
+560 -- 561
+561 [label="lvalue : head"];
+560 -- 562
+562 [label="call method"];
+562 -- 563
+563 [label="ID : head"];
+563 [label="method : Delete"];
+562 -- 564
+564 [label="ID : el02"];
+423 -- 565
+565 [label="="];
 565 -- 566
-566 [label="ID : head"];
-566 [label="method : Delete"];
+566 [label="lvalue : aux01"];
 565 -- 567
-567 [label="ID : el02"];
-426 -- 568
-568 [label="="];
-568 -- 569
-569 [label="lvalue : aux01"];
-568 -- 570
-570 [label="call method"];
-570 -- 571
-571 [label="ID : head"];
-571 [label="method : Print"];
-426 -- 572
-572 [label="System.out.Println"];
-572 -- 573
-573 [label="const : 33300000"];
-426 -- 574
-574 [label="="];
-574 -- 575
-575 [label="lvalue : head"];
-574 -- 576
-576 [label="call method"];
+567 [label="call method"];
+567 -- 568
+568 [label="ID : head"];
+568 [label="method : Print"];
+423 -- 569
+569 [label="System.out.Println"];
+569 -- 570
+570 [label="const : 33300000"];
+423 -- 571
+571 [label="="];
+571 -- 572
+572 [label="lvalue : head"];
+571 -- 573
+573 [label="call method"];
+573 -- 574
+574 [label="ID : head"];
+574 [label="method : Delete"];
+573 -- 575
+575 [label="ID : el01"];
+423 -- 576
+576 [label="="];
 576 -- 577
-577 [label="ID : head"];
-577 [label="method : Delete"];
+577 [label="lvalue : aux01"];
 576 -- 578
-578 [label="ID : el01"];
-426 -- 579
-579 [label="="];
-579 -- 580
-580 [label="lvalue : aux01"];
-579 -- 581
-581 [label="call method"];
-581 -- 582
-582 [label="ID : head"];
-582 [label="method : Print"];
-426 -- 583
-583 [label="System.out.Println"];
-583 -- 584
-584 [label="const : 44440000"];
-426 -- 585
-585 [label="const : 0"];
+578 [label="call method"];
+578 -- 579
+579 [label="ID : head"];
+579 [label="method : Print"];
+423 -- 580
+580 [label="System.out.Println"];
+580 -- 581
+581 [label="const : 44440000"];
+423 -- 582
+582 [label="const : 0"];
+}

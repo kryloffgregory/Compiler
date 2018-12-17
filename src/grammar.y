@@ -116,7 +116,6 @@ extern "C" int yywrap()
 %%
 Program:
     MainClass ClassDeclList {
-        printf("kek");
         root = new CProgram($1, *$2, location);
     }
 
@@ -156,7 +155,6 @@ ClassDecl :
 
 VarDeclList :
     %empty {
-        std::cerr<<"VarDecllist\n";
         $$ = new std::vector<IVarDecl *>();
     } | VarDeclList VarDecl {
         $1->push_back($2);

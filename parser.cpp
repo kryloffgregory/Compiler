@@ -514,12 +514,12 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   118,   118,   125,   127,   133,   141,   146,   158,   161,
-     167,   170,   177,   179,   186,   195,   205,   208,   211,   214,
-     222,   225,   228,   236,   241,   244,   247,   250,   253,   257,
-     263,   266,   269,   272,   275,   278,   281,   284,   287,   290,
-     293,   296,   299,   303,   307,   310,   313,   316,   319,   324,
-     327,   330,   335,   340
+       0,   118,   118,   124,   126,   132,   140,   145,   157,   159,
+     165,   168,   175,   177,   184,   193,   203,   206,   209,   212,
+     220,   223,   226,   234,   239,   242,   245,   248,   251,   255,
+     261,   264,   267,   270,   273,   276,   279,   282,   285,   288,
+     291,   294,   297,   301,   305,   308,   311,   314,   317,   322,
+     325,   328,   333,   338
 };
 #endif
 
@@ -1506,436 +1506,434 @@ yyreduce:
         case 2:
 #line 118 "src/grammar.y" /* yacc.c:1646  */
     {
-        printf("kek");
         root = new CProgram((yyvsp[-1].mainClassDeclarationVal), *(yyvsp[0].classDeclarationListVal), location);
     }
-#line 1513 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1512 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 125 "src/grammar.y" /* yacc.c:1646  */
+#line 124 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.classDeclarationListVal) = new std::vector<IClassDecl *>();
     }
-#line 1521 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1520 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 127 "src/grammar.y" /* yacc.c:1646  */
+#line 126 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyvsp[-1].classDeclarationListVal)->push_back((yyvsp[0].classDeclarationVal));
         (yyval.classDeclarationListVal) = (yyvsp[-1].classDeclarationListVal);
     }
-#line 1530 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1529 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 134 "src/grammar.y" /* yacc.c:1646  */
+#line 133 "src/grammar.y" /* yacc.c:1646  */
     {
 
         std::cerr<<"mainClass\n";
         (yyval.mainClassDeclarationVal) = new CMainClass( *(yyvsp[-15].val), *(yyvsp[-5].val), *(yyvsp[-2].statementListVal), location);
     }
-#line 1540 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1539 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 144 "src/grammar.y" /* yacc.c:1646  */
+#line 143 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.classDeclarationVal) = new CClassDecl(*(yyvsp[-4].val), *(yyvsp[-2].variableDeclarationListVal), *(yyvsp[-1].methodDeclarationListVal), false, "", location);
     }
-#line 1548 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1547 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 149 "src/grammar.y" /* yacc.c:1646  */
+#line 148 "src/grammar.y" /* yacc.c:1646  */
     {
             (yyval.classDeclarationVal) = new CClassDecl(*(yyvsp[-6].val), *(yyvsp[-2].variableDeclarationListVal), *(yyvsp[-1].methodDeclarationListVal), true, *(yyvsp[-4].val), location);
     }
-#line 1556 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1555 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 158 "src/grammar.y" /* yacc.c:1646  */
+#line 157 "src/grammar.y" /* yacc.c:1646  */
     {
-        std::cerr<<"VarDecllist\n";
         (yyval.variableDeclarationListVal) = new std::vector<IVarDecl *>();
     }
-#line 1565 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1563 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 161 "src/grammar.y" /* yacc.c:1646  */
+#line 159 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyvsp[-1].variableDeclarationListVal)->push_back((yyvsp[0].variableDeclarationVal));
         (yyval.variableDeclarationListVal) = (yyvsp[-1].variableDeclarationListVal);
     }
-#line 1574 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1572 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 167 "src/grammar.y" /* yacc.c:1646  */
+#line 165 "src/grammar.y" /* yacc.c:1646  */
     {
         std::cerr<<"Empty statement List\n";
         (yyval.statementListVal) = new std::deque<IStatement *> ();
     }
-#line 1583 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1581 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 170 "src/grammar.y" /* yacc.c:1646  */
+#line 168 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyvsp[0].statementListVal)->push_front((yyvsp[-1].statementVal));
         (yyval.statementListVal) = (yyvsp[0].statementListVal);
     }
-#line 1592 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1590 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 177 "src/grammar.y" /* yacc.c:1646  */
+#line 175 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.methodDeclarationListVal) = new std::vector<IMethodDecl*>();
     }
-#line 1600 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1598 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 179 "src/grammar.y" /* yacc.c:1646  */
+#line 177 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyvsp[-1].methodDeclarationListVal)->push_back((yyvsp[0].methodDeclarationVal));
         (yyval.methodDeclarationListVal) = (yyvsp[-1].methodDeclarationListVal);
     }
-#line 1609 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1607 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 186 "src/grammar.y" /* yacc.c:1646  */
+#line 184 "src/grammar.y" /* yacc.c:1646  */
     {
 
         std::cerr<<"VarDecl\n"<<"\n";
         (yyval.variableDeclarationVal) = new CVarDecl((yyvsp[-2].typeVal), *(yyvsp[-1].val), location);
     }
-#line 1619 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1617 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 199 "src/grammar.y" /* yacc.c:1646  */
+#line 197 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.methodDeclarationVal) = new CMethodDecl((yyvsp[-11].typeVal), *(yyvsp[-10].val), *(yyvsp[-8].formalListVal), *(yyvsp[-5].variableDeclarationListVal), *(yyvsp[-4].statementListVal), (yyvsp[-2].expressionVal), location);
     }
-#line 1627 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1625 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 205 "src/grammar.y" /* yacc.c:1646  */
+#line 203 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.typeVal) = new CStandardType( CStandardType::StandardType::INT_ARRAY, location);
     }
-#line 1635 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1633 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 208 "src/grammar.y" /* yacc.c:1646  */
+#line 206 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.typeVal) = new CStandardType( CStandardType::StandardType::BOOL, location);
     }
-#line 1643 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1641 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 211 "src/grammar.y" /* yacc.c:1646  */
+#line 209 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.typeVal) = new CStandardType( CStandardType::StandardType::INT, location );
     }
-#line 1651 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1649 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 214 "src/grammar.y" /* yacc.c:1646  */
+#line 212 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.typeVal) = new CUserType( *(yyvsp[0].val), location);
     }
-#line 1659 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1657 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 222 "src/grammar.y" /* yacc.c:1646  */
+#line 220 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.formalListVal) = new std::vector<IArg*>();
     }
-#line 1667 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1665 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 225 "src/grammar.y" /* yacc.c:1646  */
+#line 223 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.formalListVal) = new std::vector<IArg*>(1, (yyvsp[0].argVal));
     }
-#line 1675 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1673 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 228 "src/grammar.y" /* yacc.c:1646  */
+#line 226 "src/grammar.y" /* yacc.c:1646  */
     {
         std::cerr<<"ArgList\n";
         (yyvsp[-2].formalListVal)->push_back((yyvsp[0].argVal));
         (yyval.formalListVal) = (yyvsp[-2].formalListVal);
      }
-#line 1685 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1683 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 236 "src/grammar.y" /* yacc.c:1646  */
+#line 234 "src/grammar.y" /* yacc.c:1646  */
     { (yyval.argVal) = new CArg((yyvsp[-1].typeVal), *(yyvsp[0].val), location);}
-#line 1691 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1689 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 241 "src/grammar.y" /* yacc.c:1646  */
+#line 239 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.statementVal) = new CStatementListStatement( *(yyvsp[-1].statementListVal), location);
 	}
-#line 1699 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1697 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 244 "src/grammar.y" /* yacc.c:1646  */
+#line 242 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.statementVal) = new CIfStatement( (yyvsp[-4].expressionVal), (yyvsp[-2].statementVal), (yyvsp[0].statementVal), location);
 	}
-#line 1707 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1705 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 247 "src/grammar.y" /* yacc.c:1646  */
+#line 245 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.statementVal) = new CWhileStatement( (yyvsp[-2].expressionVal), (yyvsp[0].statementVal), location);
 	}
-#line 1715 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1713 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 250 "src/grammar.y" /* yacc.c:1646  */
+#line 248 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.statementVal) = new CPrintStatement( (yyvsp[-2].expressionVal), location);
 	}
-#line 1723 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1721 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 253 "src/grammar.y" /* yacc.c:1646  */
+#line 251 "src/grammar.y" /* yacc.c:1646  */
     {
 	    std::cerr<<"ex=ex"<<"\n";
 		(yyval.statementVal) = new CAssignStatement( *(yyvsp[-3].val), (yyvsp[-1].expressionVal), location);
 	}
-#line 1732 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1730 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 257 "src/grammar.y" /* yacc.c:1646  */
+#line 255 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.statementVal) = new CArrayAssignStatement( *(yyvsp[-6].val), (yyvsp[-4].expressionVal), (yyvsp[-1].expressionVal), location);
 }
-#line 1740 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1738 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 263 "src/grammar.y" /* yacc.c:1646  */
+#line 261 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::AND, (yyvsp[0].expressionVal), location);
 	}
-#line 1748 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1746 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 266 "src/grammar.y" /* yacc.c:1646  */
+#line 264 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::LESS, (yyvsp[0].expressionVal), location);
 	}
-#line 1756 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1754 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 32:
-#line 269 "src/grammar.y" /* yacc.c:1646  */
+#line 267 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::PLUS, (yyvsp[0].expressionVal), location);
 	}
-#line 1764 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1762 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 33:
-#line 272 "src/grammar.y" /* yacc.c:1646  */
+#line 270 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::MINUS, (yyvsp[0].expressionVal), location);
 	}
-#line 1772 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1770 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 34:
-#line 275 "src/grammar.y" /* yacc.c:1646  */
+#line 273 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::MINUS, (yyvsp[0].expressionVal), location);
 	}
-#line 1780 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1778 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 35:
-#line 278 "src/grammar.y" /* yacc.c:1646  */
+#line 276 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::TIMES, (yyvsp[0].expressionVal), location);
 	}
-#line 1788 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1786 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 36:
-#line 281 "src/grammar.y" /* yacc.c:1646  */
+#line 279 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::DIVIDE, (yyvsp[0].expressionVal), location);
 	}
-#line 1796 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1794 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 284 "src/grammar.y" /* yacc.c:1646  */
+#line 282 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CIndexExpression( (yyvsp[-3].expressionVal), (yyvsp[-1].expressionVal), location);
 	}
-#line 1804 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1802 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 38:
-#line 287 "src/grammar.y" /* yacc.c:1646  */
+#line 285 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CLenghtExpression( (yyvsp[-2].expressionVal), location);
 	}
-#line 1812 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1810 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 39:
-#line 290 "src/grammar.y" /* yacc.c:1646  */
+#line 288 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CMethodExpression( (yyvsp[-5].expressionVal), *(yyvsp[-3].val), *(yyvsp[-1].expressionListVal), location);
 	}
-#line 1820 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1818 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 40:
-#line 293 "src/grammar.y" /* yacc.c:1646  */
+#line 291 "src/grammar.y" /* yacc.c:1646  */
     {
 	    (yyval.expressionVal) = new CIntLiteralExpression((yyvsp[0].intVal), location);
 	}
-#line 1828 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1826 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 41:
-#line 296 "src/grammar.y" /* yacc.c:1646  */
+#line 294 "src/grammar.y" /* yacc.c:1646  */
     {
 	    (yyval.expressionVal) = new CBoolLiteralExpression(true, location);
 	}
-#line 1836 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1834 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 42:
-#line 299 "src/grammar.y" /* yacc.c:1646  */
+#line 297 "src/grammar.y" /* yacc.c:1646  */
     {
 	    (yyval.expressionVal) = new CBoolLiteralExpression(false, location);
 	}
-#line 1844 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1842 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 43:
-#line 303 "src/grammar.y" /* yacc.c:1646  */
+#line 301 "src/grammar.y" /* yacc.c:1646  */
     {
 	    std::cerr<<"expr-id"<<"\n";
 		(yyval.expressionVal) = new CIdentifierExpression( *(yyvsp[0].val), location);
 	}
-#line 1853 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1851 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 44:
-#line 307 "src/grammar.y" /* yacc.c:1646  */
+#line 305 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CThisExpression(location );
 	}
-#line 1861 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1859 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 45:
-#line 310 "src/grammar.y" /* yacc.c:1646  */
+#line 308 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CNewIntArrayExpression( (yyvsp[-1].expressionVal), location );
 	}
-#line 1869 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1867 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 46:
-#line 313 "src/grammar.y" /* yacc.c:1646  */
+#line 311 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CNewExpression( *(yyvsp[-2].val), location);
 	}
-#line 1877 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1875 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 47:
-#line 316 "src/grammar.y" /* yacc.c:1646  */
+#line 314 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::NOT, (yyvsp[0].expressionVal), location);
 	}
-#line 1885 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1883 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 48:
-#line 319 "src/grammar.y" /* yacc.c:1646  */
+#line 317 "src/grammar.y" /* yacc.c:1646  */
     {
 		(yyval.expressionVal) = new CBracesExpression( (yyvsp[-1].expressionVal), location);
 }
-#line 1893 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1891 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 49:
-#line 324 "src/grammar.y" /* yacc.c:1646  */
+#line 322 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.expressionListVal) = new std::vector<IExp*>();
     }
-#line 1901 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1899 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 50:
-#line 327 "src/grammar.y" /* yacc.c:1646  */
+#line 325 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.expressionListVal) = new std::vector<IExp*>(1, (yyvsp[0].expressionVal));
     }
-#line 1909 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1907 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 51:
-#line 330 "src/grammar.y" /* yacc.c:1646  */
+#line 328 "src/grammar.y" /* yacc.c:1646  */
     {
             (yyvsp[-2].expressionListVal)->push_back((yyvsp[0].expressionVal));
     		(yyval.expressionListVal) = (yyvsp[-2].expressionListVal);
     }
-#line 1918 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1916 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 52:
-#line 335 "src/grammar.y" /* yacc.c:1646  */
+#line 333 "src/grammar.y" /* yacc.c:1646  */
     {
         std::cerr<<"ID:" << *(yyvsp[0].val)<<"\n";
         (yyval.val) = (yyvsp[0].val);
     }
-#line 1927 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1925 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 53:
-#line 340 "src/grammar.y" /* yacc.c:1646  */
+#line 338 "src/grammar.y" /* yacc.c:1646  */
     {
         (yyval.intVal) = (yyvsp[0].intVal);
     }
-#line 1935 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1933 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
 
-#line 1939 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1937 "/home/gregory/Compiler/parser.cpp" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -2170,7 +2168,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 343 "src/grammar.y" /* yacc.c:1906  */
+#line 341 "src/grammar.y" /* yacc.c:1906  */
 
 
 void yyerror(IProgram * root, const char *s)
