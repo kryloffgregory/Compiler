@@ -25,7 +25,9 @@ int main(int argc, char *argv[]) {
     STBuilder stBuilder;
     stBuilder.Visit(dynamic_cast<CProgram* >(root));
     auto table = stBuilder.GetSymbolsTable();
-
+    for (auto error : stBuilder.GetErrorStorage().GetAllErrors()) {
+        std::cout << error <<std::endl;
+    }
 
     return 0;
 }

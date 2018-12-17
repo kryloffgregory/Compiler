@@ -60,16 +60,18 @@ public:
 
 class CClassDecl : public IClassDecl{
 public:
-    CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList,
+    CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList, bool isDerived,const  std::string baseClass,
             CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
-
+    bool isDerived;
+    const std::string baseClass;
     const std::string className;
     const std::vector<IVarDecl*> varList;
     const std::vector<IMethodDecl*>  methodList;
 };
+
 
 
 class CVarDecl : public IVarDecl{

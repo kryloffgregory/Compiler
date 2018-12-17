@@ -56,6 +56,7 @@ extern "C" int yywrap()
 
 %token T_CLASS
 %token T_PUBLIC
+%token T_EXTENDS
 %token T_STATIC
 %token T_MAIN
 %token T_VOID
@@ -141,8 +142,14 @@ ClassDecl :
         VarDeclList
         MethodDeclList
     '}' {
-        $$ = new CClassDecl(*$2, *$4, *$5, location);
+        $$ = new CClassDecl(*$2, *$4, *$5, false, "", location);
+    } | T_CLASS Id T_EXTENDS Id '{'
+        VarDeclList
+        MethodDeclList
+        '}' {
+            $$ = new CClassDecl(*$2, *$6, *$7, true, *$4, location);
     }
+
 ;
 
 

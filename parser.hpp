@@ -57,27 +57,28 @@ extern int yydebug;
   {
     T_CLASS = 258,
     T_PUBLIC = 259,
-    T_STATIC = 260,
-    T_MAIN = 261,
-    T_VOID = 262,
-    T_INT = 263,
-    T_BOOL = 264,
-    T_IF = 265,
-    T_ELSE = 266,
-    T_RETURN = 267,
-    T_LESS = 268,
-    T_PRINTLN = 269,
-    T_ASSIGN = 270,
-    T_STRING = 271,
-    T_AND = 272,
-    T_NEW = 273,
-    T_THIS = 274,
-    T_LENGTH = 275,
-    T_WHILE = 276,
-    T_TRUE = 277,
-    T_FALSE = 278,
-    T_NUMBER = 279,
-    T_ID = 280
+    T_EXTENDS = 260,
+    T_STATIC = 261,
+    T_MAIN = 262,
+    T_VOID = 263,
+    T_INT = 264,
+    T_BOOL = 265,
+    T_IF = 266,
+    T_ELSE = 267,
+    T_RETURN = 268,
+    T_LESS = 269,
+    T_PRINTLN = 270,
+    T_ASSIGN = 271,
+    T_STRING = 272,
+    T_AND = 273,
+    T_NEW = 274,
+    T_THIS = 275,
+    T_LENGTH = 276,
+    T_WHILE = 277,
+    T_TRUE = 278,
+    T_FALSE = 279,
+    T_NUMBER = 280,
+    T_ID = 281
   };
 #endif
 
@@ -107,7 +108,7 @@ union YYSTYPE
     std::vector<IExp*>* expressionListVal;
     std::deque<IStatement*>* statementListVal;
 
-#line 111 "/home/gregory/Compiler/parser.hpp" /* yacc.c:1909  */
+#line 112 "/home/gregory/Compiler/parser.hpp" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

@@ -48,6 +48,9 @@ void STBuilder::Visit(const CClassDecl *classDecl) {
 
     curClass = symbolsTable->GetClass( classDecl->className );
 
+    if(classDecl->isDerived) {
+        curClass->SetBaseClass( symbolsTable->GetClass( classDecl->baseClass) );
+    }
     for(auto varDecl : classDecl->varList) {
         varDecl->Accept(this);
     }

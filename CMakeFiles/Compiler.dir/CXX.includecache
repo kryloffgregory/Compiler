@@ -6,21 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/gregory/Compiler/src/AST/ASTPrinter.cpp
+/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
+string
+-
+vector
+-
+
+/home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+string
+-
+vector
+-
+
+/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp
+SymbolTableBuilder.h
+/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h
+iostream
+-
 RuleClasses/RuleClasses.h
 -
-ASTPrinter.h
-/home/gregory/Compiler/src/AST/ASTPrinter.h
 
-/home/gregory/Compiler/src/AST/ASTPrinter.h
+/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h
 string
 -
 Visitor.h
 -
-fstream
--
-iostream
--
+SymbolTable.h
+/home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+../ErrorStorage/ErrorStorage.h
+/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
 
 src/Location/Location.h
 string

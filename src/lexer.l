@@ -63,7 +63,9 @@ boolean {
 String {
     return T_STRING;
 }
-
+extends {
+    return T_EXTENDS;
+}
 if {
     return T_IF;
 }

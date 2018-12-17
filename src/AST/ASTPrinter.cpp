@@ -30,6 +30,10 @@ void ASTPrinter::Visit(const CProgram *program) {
 void ASTPrinter::Visit(const CClassDecl* classDecl) {
     int head = nodeNumber;
     PrintHead(head, "ClassDeclaration: " + classDecl->className);
+    if(classDecl->isDerived) {
+        PrintEdge(head);
+        PrintLeaf(head, "extends: ", classDecl->baseClass);
+    }
     for(auto varDecl : classDecl -> varList) {
         PrintEdge(head);
         varDecl->Accept(this);
