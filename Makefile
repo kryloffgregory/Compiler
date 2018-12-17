@@ -555,6 +555,33 @@ src/SymbolTable/SymbolTableBuilder.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.s
 .PHONY : src/SymbolTable/SymbolTableBuilder.cpp.s
 
+src/SymbolTable/TypeChecker.o: src/SymbolTable/TypeChecker.cpp.o
+
+.PHONY : src/SymbolTable/TypeChecker.o
+
+# target to build an object file
+src/SymbolTable/TypeChecker.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o
+.PHONY : src/SymbolTable/TypeChecker.cpp.o
+
+src/SymbolTable/TypeChecker.i: src/SymbolTable/TypeChecker.cpp.i
+
+.PHONY : src/SymbolTable/TypeChecker.i
+
+# target to preprocess a source file
+src/SymbolTable/TypeChecker.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.i
+.PHONY : src/SymbolTable/TypeChecker.cpp.i
+
+src/SymbolTable/TypeChecker.s: src/SymbolTable/TypeChecker.cpp.s
+
+.PHONY : src/SymbolTable/TypeChecker.s
+
+# target to generate assembly for a file
+src/SymbolTable/TypeChecker.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.s
+.PHONY : src/SymbolTable/TypeChecker.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -639,6 +666,9 @@ help:
 	@echo "... src/SymbolTable/SymbolTableBuilder.o"
 	@echo "... src/SymbolTable/SymbolTableBuilder.i"
 	@echo "... src/SymbolTable/SymbolTableBuilder.s"
+	@echo "... src/SymbolTable/TypeChecker.o"
+	@echo "... src/SymbolTable/TypeChecker.i"
+	@echo "... src/SymbolTable/TypeChecker.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

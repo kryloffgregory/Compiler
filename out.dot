@@ -1,1754 +1,1283 @@
 strict graph {
 0 [label="Program"];
 0 -- 2
-2 [label="MainClass:TreeVisitor"];
+2 [label="MainClass:LinkedList"];
 2 -- 3
 3 [label="String[] : a"];
 2 -- 4
-4 [label="System.out.Println"];
+4 [label="="];
 4 -- 5
-5 [label="call method"];
-5 -- 6
-6 [label="new"];
-6 [label="class : TV"];
-6 [label="method : Start"];
-0 -- 7
-7 [label="ClassDeclaration: TV"];
+5 [label="lvalue : d"];
+4 -- 6
+6 [label="const : 0"];
+2 -- 7
+7 [label="System.out.Println"];
 7 -- 8
-8 [label="Method: Start"];
+8 [label="call method"];
 8 -- 9
-9 [label="Int"];
-8 -- 10
-10 [label="Variable"];
+9 [label="new"];
+9 [label="class : LL"];
+9 [label="method : Start"];
+0 -- 10
+10 [label="ClassDeclaration: Element"];
 10 -- 11
-11 [label="type : Tree"];
-11 [label="ID : root"];
-8 -- 12
-12 [label="Variable"];
-12 -- 13
-13 [label="Bool"];
-13 [label="ID : ntb"];
-8 -- 14
-14 [label="Variable"];
-14 -- 15
-15 [label="Int"];
-15 [label="ID : nti"];
-8 -- 16
-16 [label="Variable"];
-16 -- 17
-17 [label="type : MyVisitor"];
-17 [label="ID : v"];
-8 -- 18
-18 [label="="];
-18 -- 19
-19 [label="lvalue : root"];
-18 -- 20
-20 [label="new"];
-20 [label="class : Tree"];
-8 -- 21
-21 [label="="];
+11 [label="Variable"];
+11 -- 12
+12 [label="Int"];
+12 [label="ID : Age"];
+10 -- 13
+13 [label="Variable"];
+13 -- 14
+14 [label="Int"];
+14 [label="ID : Salary"];
+10 -- 15
+15 [label="Variable"];
+15 -- 16
+16 [label="Bool"];
+16 [label="ID : Married"];
+10 -- 17
+17 [label="Method: Init"];
+17 -- 18
+18 [label="Bool"];
+17 -- 19
+19 [label="argument"];
+19 -- 20
+20 [label="Int"];
+20 [label="ID : v_Age"];
+17 -- 21
+21 [label="argument"];
 21 -- 22
-22 [label="lvalue : ntb"];
-21 -- 23
-23 [label="call method"];
+22 [label="Int"];
+22 [label="ID : v_Salary"];
+17 -- 23
+23 [label="argument"];
 23 -- 24
-24 [label="ID : root"];
-24 [label="method : Init"];
-23 -- 25
-25 [label="const : 16"];
-8 -- 26
-26 [label="="];
-26 -- 27
-27 [label="lvalue : ntb"];
-26 -- 28
-28 [label="call method"];
+24 [label="Bool"];
+24 [label="ID : v_Married"];
+17 -- 25
+25 [label="="];
+25 -- 26
+26 [label="lvalue : Age"];
+25 -- 27
+27 [label="ID : v_Age"];
+17 -- 28
+28 [label="="];
 28 -- 29
-29 [label="ID : root"];
-29 [label="method : Print"];
-8 -- 30
-30 [label="System.out.Println"];
-30 -- 31
-31 [label="const : 100000000"];
-8 -- 32
-32 [label="="];
-32 -- 33
-33 [label="lvalue : ntb"];
-32 -- 34
-34 [label="call method"];
-34 -- 35
-35 [label="ID : root"];
-35 [label="method : Insert"];
-34 -- 36
-36 [label="const : 8"];
-8 -- 37
-37 [label="="];
-37 -- 38
-38 [label="lvalue : ntb"];
-37 -- 39
-39 [label="call method"];
-39 -- 40
-40 [label="ID : root"];
-40 [label="method : Insert"];
-39 -- 41
-41 [label="const : 24"];
-8 -- 42
-42 [label="="];
-42 -- 43
-43 [label="lvalue : ntb"];
-42 -- 44
-44 [label="call method"];
+29 [label="lvalue : Salary"];
+28 -- 30
+30 [label="ID : v_Salary"];
+17 -- 31
+31 [label="="];
+31 -- 32
+32 [label="lvalue : Married"];
+31 -- 33
+33 [label="ID : v_Married"];
+17 -- 34
+34 [label="const : 1"];
+10 -- 35
+35 [label="Method: GetAge"];
+35 -- 36
+36 [label="Int"];
+35 -- 37
+37 [label="ID : Age"];
+10 -- 38
+38 [label="Method: GetSalary"];
+38 -- 39
+39 [label="Int"];
+38 -- 40
+40 [label="ID : Salary"];
+10 -- 41
+41 [label="Method: GetMarried"];
+41 -- 42
+42 [label="Bool"];
+41 -- 43
+43 [label="ID : Married"];
+10 -- 44
+44 [label="Method: Equal"];
 44 -- 45
-45 [label="ID : root"];
-45 [label="method : Insert"];
+45 [label="Bool"];
 44 -- 46
-46 [label="const : 4"];
-8 -- 47
-47 [label="="];
-47 -- 48
-48 [label="lvalue : ntb"];
-47 -- 49
-49 [label="call method"];
-49 -- 50
-50 [label="ID : root"];
-50 [label="method : Insert"];
-49 -- 51
-51 [label="const : 12"];
-8 -- 52
-52 [label="="];
+46 [label="argument"];
+46 -- 47
+47 [label="type : Element"];
+47 [label="ID : other"];
+44 -- 48
+48 [label="Variable"];
+48 -- 49
+49 [label="Bool"];
+49 [label="ID : ret_val"];
+44 -- 50
+50 [label="Variable"];
+50 -- 51
+51 [label="Int"];
+51 [label="ID : aux01"];
+44 -- 52
+52 [label="Variable"];
 52 -- 53
-53 [label="lvalue : ntb"];
-52 -- 54
-54 [label="call method"];
+53 [label="Int"];
+53 [label="ID : aux02"];
+44 -- 54
+54 [label="Variable"];
 54 -- 55
-55 [label="ID : root"];
-55 [label="method : Insert"];
-54 -- 56
-56 [label="const : 20"];
-8 -- 57
-57 [label="="];
-57 -- 58
-58 [label="lvalue : ntb"];
-57 -- 59
-59 [label="call method"];
+55 [label="Int"];
+55 [label="ID : nt"];
+44 -- 56
+56 [label="="];
+56 -- 57
+57 [label="lvalue : ret_val"];
+56 -- 58
+58 [label="const : 1"];
+44 -- 59
+59 [label="="];
 59 -- 60
-60 [label="ID : root"];
-60 [label="method : Insert"];
+60 [label="lvalue : aux01"];
 59 -- 61
-61 [label="const : 28"];
-8 -- 62
-62 [label="="];
-62 -- 63
-63 [label="lvalue : ntb"];
-62 -- 64
-64 [label="call method"];
+61 [label="call method"];
+61 -- 62
+62 [label="ID : other"];
+62 [label="method : GetAge"];
+44 -- 63
+63 [label="if-then-else"];
+63 -- 64
+64 [label="not"];
+64 [label="-"];
 64 -- 65
-65 [label="ID : root"];
-65 [label="method : Insert"];
-64 -- 66
-66 [label="const : 14"];
-8 -- 67
-67 [label="="];
-67 -- 68
-68 [label="lvalue : ntb"];
-67 -- 69
-69 [label="call method"];
-69 -- 70
-70 [label="ID : root"];
-70 [label="method : Print"];
-8 -- 71
-71 [label="System.out.Println"];
-71 -- 72
-72 [label="const : 100000000"];
-8 -- 73
-73 [label="="];
+65 [label="()"];
+65 -- 66
+66 [label="call method"];
+66 -- 67
+67 [label="this : "];
+67 [label="method : Compare"];
+66 -- 68
+68 [label="ID : aux01"];
+66 -- 69
+69 [label="ID : Age"];
+63 -- 70
+70 [label="="];
+70 -- 71
+71 [label="lvalue : ret_val"];
+70 -- 72
+72 [label="const : 0"];
+63 -- 73
+73 [label="{   }"];
 73 -- 74
-74 [label="lvalue : v"];
-73 -- 75
-75 [label="new"];
-75 [label="class : MyVisitor"];
-8 -- 76
-76 [label="System.out.Println"];
+74 [label="="];
+74 -- 75
+75 [label="lvalue : aux02"];
+74 -- 76
+76 [label="call method"];
 76 -- 77
-77 [label="const : 50000000"];
-8 -- 78
-78 [label="="];
+77 [label="ID : other"];
+77 [label="method : GetSalary"];
+73 -- 78
+78 [label="if-then-else"];
 78 -- 79
-79 [label="lvalue : nti"];
-78 -- 80
+79 [label="not"];
+79 [label="-"];
+79 -- 80
 80 [label="call method"];
 80 -- 81
-81 [label="ID : root"];
-81 [label="method : accept"];
+81 [label="this : "];
+81 [label="method : Compare"];
 80 -- 82
-82 [label="ID : v"];
-8 -- 83
-83 [label="System.out.Println"];
-83 -- 84
-84 [label="const : 100000000"];
-8 -- 85
-85 [label="System.out.Println"];
-85 -- 86
-86 [label="call method"];
-86 -- 87
-87 [label="ID : root"];
-87 [label="method : Search"];
-86 -- 88
-88 [label="const : 24"];
-8 -- 89
-89 [label="System.out.Println"];
+82 [label="ID : aux02"];
+80 -- 83
+83 [label="ID : Salary"];
+78 -- 84
+84 [label="="];
+84 -- 85
+85 [label="lvalue : ret_val"];
+84 -- 86
+86 [label="const : 0"];
+78 -- 87
+87 [label="if-then-else"];
+87 -- 88
+88 [label="ID : Married"];
+87 -- 89
+89 [label="if-then-else"];
 89 -- 90
-90 [label="call method"];
+90 [label="not"];
+90 [label="-"];
 90 -- 91
-91 [label="ID : root"];
-91 [label="method : Search"];
-90 -- 92
-92 [label="const : 12"];
-8 -- 93
-93 [label="System.out.Println"];
+91 [label="call method"];
+91 -- 92
+92 [label="ID : other"];
+92 [label="method : GetMarried"];
+89 -- 93
+93 [label="="];
 93 -- 94
-94 [label="call method"];
-94 -- 95
-95 [label="ID : root"];
-95 [label="method : Search"];
-94 -- 96
-96 [label="const : 16"];
-8 -- 97
-97 [label="System.out.Println"];
-97 -- 98
-98 [label="call method"];
-98 -- 99
-99 [label="ID : root"];
-99 [label="method : Search"];
-98 -- 100
-100 [label="const : 50"];
-8 -- 101
-101 [label="System.out.Println"];
-101 -- 102
-102 [label="call method"];
+94 [label="lvalue : ret_val"];
+93 -- 95
+95 [label="const : 0"];
+89 -- 96
+96 [label="="];
+96 -- 97
+97 [label="lvalue : nt"];
+96 -- 98
+98 [label="const : 0"];
+87 -- 99
+99 [label="if-then-else"];
+99 -- 100
+100 [label="call method"];
+100 -- 101
+101 [label="ID : other"];
+101 [label="method : GetMarried"];
+99 -- 102
+102 [label="="];
 102 -- 103
-103 [label="ID : root"];
-103 [label="method : Search"];
+103 [label="lvalue : ret_val"];
 102 -- 104
-104 [label="const : 12"];
-8 -- 105
+104 [label="const : 0"];
+99 -- 105
 105 [label="="];
 105 -- 106
-106 [label="lvalue : ntb"];
+106 [label="lvalue : nt"];
 105 -- 107
-107 [label="call method"];
-107 -- 108
-108 [label="ID : root"];
-108 [label="method : Delete"];
-107 -- 109
-109 [label="const : 12"];
-8 -- 110
-110 [label="="];
-110 -- 111
-111 [label="lvalue : ntb"];
-110 -- 112
-112 [label="call method"];
-112 -- 113
-113 [label="ID : root"];
-113 [label="method : Print"];
-8 -- 114
-114 [label="System.out.Println"];
-114 -- 115
-115 [label="call method"];
+107 [label="const : 0"];
+44 -- 108
+108 [label="ID : ret_val"];
+10 -- 109
+109 [label="Method: Compare"];
+109 -- 110
+110 [label="Bool"];
+109 -- 111
+111 [label="argument"];
+111 -- 112
+112 [label="Int"];
+112 [label="ID : num1"];
+109 -- 113
+113 [label="argument"];
+113 -- 114
+114 [label="Int"];
+114 [label="ID : num2"];
+109 -- 115
+115 [label="Variable"];
 115 -- 116
-116 [label="ID : root"];
-116 [label="method : Search"];
-115 -- 117
-117 [label="const : 12"];
-8 -- 118
-118 [label="const : 0"];
-0 -- 119
-119 [label="ClassDeclaration: Tree"];
+116 [label="Bool"];
+116 [label="ID : retval"];
+109 -- 117
+117 [label="Variable"];
+117 -- 118
+118 [label="Int"];
+118 [label="ID : aux02"];
+109 -- 119
+119 [label="="];
 119 -- 120
-120 [label="Variable"];
-120 -- 121
-121 [label="type : Tree"];
-121 [label="ID : left"];
-119 -- 122
-122 [label="Variable"];
+120 [label="lvalue : retval"];
+119 -- 121
+121 [label="const : 0"];
+109 -- 122
+122 [label="="];
 122 -- 123
-123 [label="type : Tree"];
-123 [label="ID : right"];
-119 -- 124
-124 [label="Variable"];
+123 [label="lvalue : aux02"];
+122 -- 124
+124 [label="+"];
 124 -- 125
-125 [label="Int"];
-125 [label="ID : key"];
-119 -- 126
-126 [label="Variable"];
-126 -- 127
-127 [label="Bool"];
-127 [label="ID : has_left"];
-119 -- 128
-128 [label="Variable"];
+125 [label="ID : num2"];
+124 -- 126
+126 [label="const : 1"];
+109 -- 127
+127 [label="if-then-else"];
+127 -- 128
+128 [label="<"];
 128 -- 129
-129 [label="Bool"];
-129 [label="ID : has_right"];
-119 -- 130
-130 [label="Variable"];
-130 -- 131
-131 [label="type : Tree"];
-131 [label="ID : my_null"];
-119 -- 132
-132 [label="Method: Init"];
-132 -- 133
-133 [label="Bool"];
-132 -- 134
-134 [label="argument"];
+129 [label="ID : num1"];
+128 -- 130
+130 [label="ID : num2"];
+127 -- 131
+131 [label="="];
+131 -- 132
+132 [label="lvalue : retval"];
+131 -- 133
+133 [label="const : 0"];
+127 -- 134
+134 [label="if-then-else"];
 134 -- 135
-135 [label="Int"];
-135 [label="ID : v_key"];
-132 -- 136
-136 [label="="];
+135 [label="not"];
+135 [label="-"];
+135 -- 136
+136 [label="()"];
 136 -- 137
-137 [label="lvalue : key"];
-136 -- 138
-138 [label="ID : v_key"];
-132 -- 139
-139 [label="="];
-139 -- 140
-140 [label="lvalue : has_left"];
-139 -- 141
-141 [label="const : 0"];
-132 -- 142
-142 [label="="];
-142 -- 143
-143 [label="lvalue : has_right"];
-142 -- 144
-144 [label="const : 0"];
-132 -- 145
+137 [label="<"];
+137 -- 138
+138 [label="ID : num1"];
+137 -- 139
+139 [label="ID : aux02"];
+134 -- 140
+140 [label="="];
+140 -- 141
+141 [label="lvalue : retval"];
+140 -- 142
+142 [label="const : 0"];
+134 -- 143
+143 [label="="];
+143 -- 144
+144 [label="lvalue : retval"];
+143 -- 145
 145 [label="const : 1"];
-119 -- 146
-146 [label="Method: SetRight"];
-146 -- 147
-147 [label="Bool"];
-146 -- 148
-148 [label="argument"];
+109 -- 146
+146 [label="ID : retval"];
+0 -- 147
+147 [label="ClassDeclaration: List"];
+147 -- 148
+148 [label="Variable"];
 148 -- 149
-149 [label="type : Tree"];
-149 [label="ID : rn"];
-146 -- 150
-150 [label="="];
+149 [label="type : Element"];
+149 [label="ID : elem"];
+147 -- 150
+150 [label="Variable"];
 150 -- 151
-151 [label="lvalue : right"];
-150 -- 152
-152 [label="ID : rn"];
-146 -- 153
-153 [label="const : 1"];
-119 -- 154
-154 [label="Method: SetLeft"];
+151 [label="type : List"];
+151 [label="ID : next"];
+147 -- 152
+152 [label="Variable"];
+152 -- 153
+153 [label="Bool"];
+153 [label="ID : end"];
+147 -- 154
+154 [label="Method: Init"];
 154 -- 155
 155 [label="Bool"];
 154 -- 156
-156 [label="argument"];
+156 [label="="];
 156 -- 157
-157 [label="type : Tree"];
-157 [label="ID : ln"];
-154 -- 158
-158 [label="="];
-158 -- 159
-159 [label="lvalue : left"];
-158 -- 160
-160 [label="ID : ln"];
-154 -- 161
-161 [label="const : 1"];
-119 -- 162
-162 [label="Method: GetRight"];
+157 [label="lvalue : end"];
+156 -- 158
+158 [label="const : 1"];
+154 -- 159
+159 [label="const : 1"];
+147 -- 160
+160 [label="Method: InitNew"];
+160 -- 161
+161 [label="Bool"];
+160 -- 162
+162 [label="argument"];
 162 -- 163
-163 [label="type : Tree"];
-162 -- 164
-164 [label="ID : right"];
-119 -- 165
-165 [label="Method: GetLeft"];
-165 -- 166
-166 [label="type : Tree"];
-165 -- 167
-167 [label="ID : left"];
-119 -- 168
-168 [label="Method: GetKey"];
+163 [label="type : Element"];
+163 [label="ID : v_elem"];
+160 -- 164
+164 [label="argument"];
+164 -- 165
+165 [label="type : List"];
+165 [label="ID : v_next"];
+160 -- 166
+166 [label="argument"];
+166 -- 167
+167 [label="Bool"];
+167 [label="ID : v_end"];
+160 -- 168
+168 [label="="];
 168 -- 169
-169 [label="Int"];
+169 [label="lvalue : end"];
 168 -- 170
-170 [label="ID : key"];
-119 -- 171
-171 [label="Method: SetKey"];
+170 [label="ID : v_end"];
+160 -- 171
+171 [label="="];
 171 -- 172
-172 [label="Bool"];
+172 [label="lvalue : elem"];
 171 -- 173
-173 [label="argument"];
-173 -- 174
-174 [label="Int"];
-174 [label="ID : v_key"];
-171 -- 175
-175 [label="="];
-175 -- 176
-176 [label="lvalue : key"];
-175 -- 177
-177 [label="ID : v_key"];
-171 -- 178
-178 [label="const : 1"];
-119 -- 179
-179 [label="Method: GetHas_Right"];
-179 -- 180
-180 [label="Bool"];
-179 -- 181
-181 [label="ID : has_right"];
-119 -- 182
-182 [label="Method: GetHas_Left"];
+173 [label="ID : v_elem"];
+160 -- 174
+174 [label="="];
+174 -- 175
+175 [label="lvalue : next"];
+174 -- 176
+176 [label="ID : v_next"];
+160 -- 177
+177 [label="const : 1"];
+147 -- 178
+178 [label="Method: Insert"];
+178 -- 179
+179 [label="type : List"];
+178 -- 180
+180 [label="argument"];
+180 -- 181
+181 [label="type : Element"];
+181 [label="ID : new_elem"];
+178 -- 182
+182 [label="Variable"];
 182 -- 183
 183 [label="Bool"];
-182 -- 184
-184 [label="ID : has_left"];
-119 -- 185
-185 [label="Method: SetHas_Left"];
-185 -- 186
-186 [label="Bool"];
-185 -- 187
-187 [label="argument"];
-187 -- 188
-188 [label="Bool"];
-188 [label="ID : val"];
-185 -- 189
-189 [label="="];
-189 -- 190
-190 [label="lvalue : has_left"];
-189 -- 191
-191 [label="ID : val"];
-185 -- 192
-192 [label="const : 1"];
-119 -- 193
-193 [label="Method: SetHas_Right"];
-193 -- 194
-194 [label="Bool"];
-193 -- 195
-195 [label="argument"];
-195 -- 196
-196 [label="Bool"];
-196 [label="ID : val"];
-193 -- 197
-197 [label="="];
-197 -- 198
-198 [label="lvalue : has_right"];
-197 -- 199
-199 [label="ID : val"];
-193 -- 200
-200 [label="const : 1"];
-119 -- 201
-201 [label="Method: Compare"];
-201 -- 202
-202 [label="Bool"];
-201 -- 203
-203 [label="argument"];
-203 -- 204
-204 [label="Int"];
-204 [label="ID : num1"];
-201 -- 205
-205 [label="argument"];
-205 -- 206
-206 [label="Int"];
-206 [label="ID : num2"];
-201 -- 207
-207 [label="Variable"];
-207 -- 208
-208 [label="Bool"];
-208 [label="ID : ntb"];
-201 -- 209
-209 [label="Variable"];
-209 -- 210
-210 [label="Int"];
-210 [label="ID : nti"];
-201 -- 211
-211 [label="="];
-211 -- 212
-212 [label="lvalue : ntb"];
-211 -- 213
-213 [label="const : 0"];
-201 -- 214
-214 [label="="];
+183 [label="ID : ret_val"];
+178 -- 184
+184 [label="Variable"];
+184 -- 185
+185 [label="type : List"];
+185 [label="ID : aux03"];
+178 -- 186
+186 [label="Variable"];
+186 -- 187
+187 [label="type : List"];
+187 [label="ID : aux02"];
+178 -- 188
+188 [label="="];
+188 -- 189
+189 [label="lvalue : aux03"];
+188 -- 190
+190 [label="this : "];
+178 -- 191
+191 [label="="];
+191 -- 192
+192 [label="lvalue : aux02"];
+191 -- 193
+193 [label="new"];
+193 [label="class : List"];
+178 -- 194
+194 [label="="];
+194 -- 195
+195 [label="lvalue : ret_val"];
+194 -- 196
+196 [label="call method"];
+196 -- 197
+197 [label="ID : aux02"];
+197 [label="method : InitNew"];
+196 -- 198
+198 [label="ID : new_elem"];
+196 -- 199
+199 [label="ID : aux03"];
+196 -- 200
+200 [label="const : 0"];
+178 -- 201
+201 [label="ID : aux02"];
+147 -- 202
+202 [label="Method: SetNext"];
+202 -- 203
+203 [label="Bool"];
+202 -- 204
+204 [label="argument"];
+204 -- 205
+205 [label="type : List"];
+205 [label="ID : v_next"];
+202 -- 206
+206 [label="="];
+206 -- 207
+207 [label="lvalue : next"];
+206 -- 208
+208 [label="ID : v_next"];
+202 -- 209
+209 [label="const : 1"];
+147 -- 210
+210 [label="Method: Delete"];
+210 -- 211
+211 [label="type : List"];
+210 -- 212
+212 [label="argument"];
+212 -- 213
+213 [label="type : Element"];
+213 [label="ID : e"];
+210 -- 214
+214 [label="Variable"];
 214 -- 215
-215 [label="lvalue : nti"];
-214 -- 216
-216 [label="+"];
+215 [label="type : List"];
+215 [label="ID : my_head"];
+210 -- 216
+216 [label="Variable"];
 216 -- 217
-217 [label="ID : num2"];
-216 -- 218
-218 [label="const : 1"];
-201 -- 219
-219 [label="if-then-else"];
-219 -- 220
-220 [label="<"];
+217 [label="Bool"];
+217 [label="ID : ret_val"];
+210 -- 218
+218 [label="Variable"];
+218 -- 219
+219 [label="Bool"];
+219 [label="ID : aux05"];
+210 -- 220
+220 [label="Variable"];
 220 -- 221
-221 [label="ID : num1"];
-220 -- 222
-222 [label="ID : num2"];
-219 -- 223
-223 [label="="];
-223 -- 224
-224 [label="lvalue : ntb"];
-223 -- 225
-225 [label="const : 0"];
-219 -- 226
-226 [label="if-then-else"];
+221 [label="type : List"];
+221 [label="ID : aux01"];
+210 -- 222
+222 [label="Variable"];
+222 -- 223
+223 [label="type : List"];
+223 [label="ID : prev"];
+210 -- 224
+224 [label="Variable"];
+224 -- 225
+225 [label="Bool"];
+225 [label="ID : var_end"];
+210 -- 226
+226 [label="Variable"];
 226 -- 227
-227 [label="not"];
-227 [label="-"];
-227 -- 228
-228 [label="()"];
+227 [label="type : Element"];
+227 [label="ID : var_elem"];
+210 -- 228
+228 [label="Variable"];
 228 -- 229
-229 [label="<"];
-229 -- 230
-230 [label="ID : num1"];
-229 -- 231
-231 [label="ID : nti"];
-226 -- 232
+229 [label="Int"];
+229 [label="ID : aux04"];
+210 -- 230
+230 [label="Variable"];
+230 -- 231
+231 [label="Int"];
+231 [label="ID : nt"];
+210 -- 232
 232 [label="="];
 232 -- 233
-233 [label="lvalue : ntb"];
+233 [label="lvalue : my_head"];
 232 -- 234
-234 [label="const : 0"];
-226 -- 235
+234 [label="this : "];
+210 -- 235
 235 [label="="];
 235 -- 236
-236 [label="lvalue : ntb"];
+236 [label="lvalue : ret_val"];
 235 -- 237
-237 [label="const : 1"];
-201 -- 238
-238 [label="ID : ntb"];
-119 -- 239
-239 [label="Method: Insert"];
-239 -- 240
-240 [label="Bool"];
-239 -- 241
-241 [label="argument"];
-241 -- 242
-242 [label="Int"];
-242 [label="ID : v_key"];
-239 -- 243
-243 [label="Variable"];
+237 [label="const : 0"];
+210 -- 238
+238 [label="="];
+238 -- 239
+239 [label="lvalue : aux04"];
+238 -- 240
+240 [label="-"];
+240 -- 241
+241 [label="const : 0"];
+240 -- 242
+242 [label="const : 1"];
+210 -- 243
+243 [label="="];
 243 -- 244
-244 [label="type : Tree"];
-244 [label="ID : new_node"];
-239 -- 245
-245 [label="Variable"];
-245 -- 246
-246 [label="Bool"];
-246 [label="ID : ntb"];
-239 -- 247
-247 [label="Variable"];
-247 -- 248
-248 [label="type : Tree"];
-248 [label="ID : current_node"];
-239 -- 249
-249 [label="Variable"];
+244 [label="lvalue : aux01"];
+243 -- 245
+245 [label="this : "];
+210 -- 246
+246 [label="="];
+246 -- 247
+247 [label="lvalue : prev"];
+246 -- 248
+248 [label="this : "];
+210 -- 249
+249 [label="="];
 249 -- 250
-250 [label="Bool"];
-250 [label="ID : cont"];
-239 -- 251
-251 [label="Variable"];
-251 -- 252
-252 [label="Int"];
-252 [label="ID : key_aux"];
-239 -- 253
-253 [label="="];
-253 -- 254
-254 [label="lvalue : new_node"];
-253 -- 255
-255 [label="new"];
-255 [label="class : Tree"];
-239 -- 256
-256 [label="="];
+250 [label="lvalue : var_end"];
+249 -- 251
+251 [label="ID : end"];
+210 -- 252
+252 [label="="];
+252 -- 253
+253 [label="lvalue : var_elem"];
+252 -- 254
+254 [label="ID : elem"];
+210 -- 255
+255 [label="while"];
+255 -- 256
+256 [label="AND"];
 256 -- 257
-257 [label="lvalue : ntb"];
-256 -- 258
-258 [label="call method"];
+257 [label="()"];
+257 -- 258
+258 [label="not"];
+258 [label="-"];
 258 -- 259
-259 [label="ID : new_node"];
-259 [label="method : Init"];
-258 -- 260
-260 [label="ID : v_key"];
-239 -- 261
-261 [label="="];
+259 [label="ID : var_end"];
+256 -- 260
+260 [label="()"];
+260 -- 261
+261 [label="not"];
+261 [label="-"];
 261 -- 262
-262 [label="lvalue : current_node"];
-261 -- 263
-263 [label="ID : this"];
-239 -- 264
-264 [label="="];
+262 [label="ID : ret_val"];
+255 -- 263
+263 [label="{   }"];
+263 -- 264
+264 [label="if-then-else"];
 264 -- 265
-265 [label="lvalue : cont"];
-264 -- 266
-266 [label="const : 1"];
-239 -- 267
-267 [label="while"];
-267 -- 268
-268 [label="ID : cont"];
-267 -- 269
-269 [label="{   }"];
+265 [label="call method"];
+265 -- 266
+266 [label="ID : e"];
+266 [label="method : Equal"];
+265 -- 267
+267 [label="ID : var_elem"];
+264 -- 268
+268 [label="{   }"];
+268 -- 269
+269 [label="="];
 269 -- 270
-270 [label="="];
-270 -- 271
-271 [label="lvalue : key_aux"];
-270 -- 272
-272 [label="call method"];
+270 [label="lvalue : ret_val"];
+269 -- 271
+271 [label="const : 1"];
+268 -- 272
+272 [label="if-then-else"];
 272 -- 273
-273 [label="ID : current_node"];
-273 [label="method : GetKey"];
-269 -- 274
-274 [label="if-then-else"];
-274 -- 275
-275 [label="<"];
-275 -- 276
-276 [label="ID : v_key"];
-275 -- 277
-277 [label="ID : key_aux"];
-274 -- 278
-278 [label="{   }"];
-278 -- 279
-279 [label="if-then-else"];
+273 [label="<"];
+273 -- 274
+274 [label="ID : aux04"];
+273 -- 275
+275 [label="const : 0"];
+272 -- 276
+276 [label="{   }"];
+276 -- 277
+277 [label="="];
+277 -- 278
+278 [label="lvalue : my_head"];
+277 -- 279
+279 [label="call method"];
 279 -- 280
-280 [label="call method"];
-280 -- 281
-281 [label="ID : current_node"];
-281 [label="method : GetHas_Left"];
-279 -- 282
-282 [label="="];
+280 [label="ID : aux01"];
+280 [label="method : GetNext"];
+272 -- 281
+281 [label="{   }"];
+281 -- 282
+282 [label="System.out.Println"];
 282 -- 283
-283 [label="lvalue : current_node"];
-282 -- 284
-284 [label="call method"];
-284 -- 285
-285 [label="ID : current_node"];
-285 [label="method : GetLeft"];
-279 -- 286
-286 [label="{   }"];
+283 [label="-"];
+283 -- 284
+284 [label="const : 0"];
+283 -- 285
+285 [label="const : 555"];
+281 -- 286
+286 [label="="];
 286 -- 287
-287 [label="="];
-287 -- 288
-288 [label="lvalue : cont"];
-287 -- 289
-289 [label="const : 0"];
-286 -- 290
-290 [label="="];
+287 [label="lvalue : aux05"];
+286 -- 288
+288 [label="call method"];
+288 -- 289
+289 [label="ID : prev"];
+289 [label="method : SetNext"];
+288 -- 290
+290 [label="call method"];
 290 -- 291
-291 [label="lvalue : ntb"];
-290 -- 292
-292 [label="call method"];
+291 [label="ID : aux01"];
+291 [label="method : GetNext"];
+281 -- 292
+292 [label="System.out.Println"];
 292 -- 293
-293 [label="ID : current_node"];
-293 [label="method : SetHas_Left"];
-292 -- 294
-294 [label="const : 1"];
-286 -- 295
-295 [label="="];
-295 -- 296
-296 [label="lvalue : ntb"];
-295 -- 297
-297 [label="call method"];
-297 -- 298
-298 [label="ID : current_node"];
-298 [label="method : SetLeft"];
-297 -- 299
-299 [label="ID : new_node"];
-274 -- 300
-300 [label="{   }"];
+293 [label="-"];
+293 -- 294
+294 [label="const : 0"];
+293 -- 295
+295 [label="const : 555"];
+264 -- 296
+296 [label="="];
+296 -- 297
+297 [label="lvalue : nt"];
+296 -- 298
+298 [label="const : 0"];
+263 -- 299
+299 [label="if-then-else"];
+299 -- 300
+300 [label="not"];
+300 [label="-"];
 300 -- 301
-301 [label="if-then-else"];
-301 -- 302
-302 [label="call method"];
+301 [label="ID : ret_val"];
+299 -- 302
+302 [label="{   }"];
 302 -- 303
-303 [label="ID : current_node"];
-303 [label="method : GetHas_Right"];
-301 -- 304
-304 [label="="];
-304 -- 305
-305 [label="lvalue : current_node"];
-304 -- 306
-306 [label="call method"];
+303 [label="="];
+303 -- 304
+304 [label="lvalue : prev"];
+303 -- 305
+305 [label="ID : aux01"];
+302 -- 306
+306 [label="="];
 306 -- 307
-307 [label="ID : current_node"];
-307 [label="method : GetRight"];
-301 -- 308
-308 [label="{   }"];
+307 [label="lvalue : aux01"];
+306 -- 308
+308 [label="call method"];
 308 -- 309
-309 [label="="];
-309 -- 310
-310 [label="lvalue : cont"];
-309 -- 311
-311 [label="const : 0"];
-308 -- 312
-312 [label="="];
+309 [label="ID : aux01"];
+309 [label="method : GetNext"];
+302 -- 310
+310 [label="="];
+310 -- 311
+311 [label="lvalue : var_end"];
+310 -- 312
+312 [label="call method"];
 312 -- 313
-313 [label="lvalue : ntb"];
-312 -- 314
-314 [label="call method"];
+313 [label="ID : aux01"];
+313 [label="method : GetEnd"];
+302 -- 314
+314 [label="="];
 314 -- 315
-315 [label="ID : current_node"];
-315 [label="method : SetHas_Right"];
+315 [label="lvalue : var_elem"];
 314 -- 316
-316 [label="const : 1"];
-308 -- 317
-317 [label="="];
-317 -- 318
-318 [label="lvalue : ntb"];
-317 -- 319
-319 [label="call method"];
-319 -- 320
-320 [label="ID : current_node"];
-320 [label="method : SetRight"];
-319 -- 321
-321 [label="ID : new_node"];
-239 -- 322
-322 [label="const : 1"];
-119 -- 323
-323 [label="Method: Delete"];
-323 -- 324
-324 [label="Bool"];
-323 -- 325
-325 [label="argument"];
+316 [label="call method"];
+316 -- 317
+317 [label="ID : aux01"];
+317 [label="method : GetElem"];
+302 -- 318
+318 [label="="];
+318 -- 319
+319 [label="lvalue : aux04"];
+318 -- 320
+320 [label="const : 1"];
+299 -- 321
+321 [label="="];
+321 -- 322
+322 [label="lvalue : nt"];
+321 -- 323
+323 [label="const : 0"];
+210 -- 324
+324 [label="ID : my_head"];
+147 -- 325
+325 [label="Method: Search"];
 325 -- 326
 326 [label="Int"];
-326 [label="ID : v_key"];
-323 -- 327
-327 [label="Variable"];
+325 -- 327
+327 [label="argument"];
 327 -- 328
-328 [label="type : Tree"];
-328 [label="ID : current_node"];
-323 -- 329
+328 [label="type : Element"];
+328 [label="ID : e"];
+325 -- 329
 329 [label="Variable"];
 329 -- 330
-330 [label="type : Tree"];
-330 [label="ID : parent_node"];
-323 -- 331
+330 [label="Int"];
+330 [label="ID : int_ret_val"];
+325 -- 331
 331 [label="Variable"];
 331 -- 332
-332 [label="Bool"];
-332 [label="ID : cont"];
-323 -- 333
+332 [label="type : List"];
+332 [label="ID : aux01"];
+325 -- 333
 333 [label="Variable"];
 333 -- 334
-334 [label="Bool"];
-334 [label="ID : found"];
-323 -- 335
+334 [label="type : Element"];
+334 [label="ID : var_elem"];
+325 -- 335
 335 [label="Variable"];
 335 -- 336
 336 [label="Bool"];
-336 [label="ID : ntb"];
-323 -- 337
+336 [label="ID : var_end"];
+325 -- 337
 337 [label="Variable"];
 337 -- 338
-338 [label="Bool"];
-338 [label="ID : is_root"];
-323 -- 339
-339 [label="Variable"];
+338 [label="Int"];
+338 [label="ID : nt"];
+325 -- 339
+339 [label="="];
 339 -- 340
-340 [label="Int"];
-340 [label="ID : key_aux"];
-323 -- 341
-341 [label="="];
-341 -- 342
-342 [label="lvalue : current_node"];
-341 -- 343
-343 [label="ID : this"];
-323 -- 344
-344 [label="="];
-344 -- 345
-345 [label="lvalue : parent_node"];
-344 -- 346
-346 [label="ID : this"];
-323 -- 347
-347 [label="="];
-347 -- 348
-348 [label="lvalue : cont"];
-347 -- 349
-349 [label="const : 1"];
-323 -- 350
-350 [label="="];
-350 -- 351
-351 [label="lvalue : found"];
-350 -- 352
-352 [label="const : 0"];
-323 -- 353
-353 [label="="];
-353 -- 354
-354 [label="lvalue : is_root"];
-353 -- 355
-355 [label="const : 1"];
-323 -- 356
-356 [label="while"];
+340 [label="lvalue : int_ret_val"];
+339 -- 341
+341 [label="const : 0"];
+325 -- 342
+342 [label="="];
+342 -- 343
+343 [label="lvalue : aux01"];
+342 -- 344
+344 [label="this : "];
+325 -- 345
+345 [label="="];
+345 -- 346
+346 [label="lvalue : var_end"];
+345 -- 347
+347 [label="ID : end"];
+325 -- 348
+348 [label="="];
+348 -- 349
+349 [label="lvalue : var_elem"];
+348 -- 350
+350 [label="ID : elem"];
+325 -- 351
+351 [label="while"];
+351 -- 352
+352 [label="not"];
+352 [label="-"];
+352 -- 353
+353 [label="ID : var_end"];
+351 -- 354
+354 [label="{   }"];
+354 -- 355
+355 [label="if-then-else"];
+355 -- 356
+356 [label="call method"];
 356 -- 357
-357 [label="ID : cont"];
+357 [label="ID : e"];
+357 [label="method : Equal"];
 356 -- 358
-358 [label="{   }"];
-358 -- 359
-359 [label="="];
+358 [label="ID : var_elem"];
+355 -- 359
+359 [label="{   }"];
 359 -- 360
-360 [label="lvalue : key_aux"];
-359 -- 361
-361 [label="call method"];
-361 -- 362
-362 [label="ID : current_node"];
-362 [label="method : GetKey"];
-358 -- 363
-363 [label="if-then-else"];
+360 [label="="];
+360 -- 361
+361 [label="lvalue : int_ret_val"];
+360 -- 362
+362 [label="const : 1"];
+355 -- 363
+363 [label="="];
 363 -- 364
-364 [label="<"];
-364 -- 365
-365 [label="ID : v_key"];
-364 -- 366
-366 [label="ID : key_aux"];
-363 -- 367
-367 [label="if-then-else"];
-367 -- 368
+364 [label="lvalue : nt"];
+363 -- 365
+365 [label="const : 0"];
+354 -- 366
+366 [label="="];
+366 -- 367
+367 [label="lvalue : aux01"];
+366 -- 368
 368 [label="call method"];
 368 -- 369
-369 [label="ID : current_node"];
-369 [label="method : GetHas_Left"];
-367 -- 370
-370 [label="{   }"];
+369 [label="ID : aux01"];
+369 [label="method : GetNext"];
+354 -- 370
+370 [label="="];
 370 -- 371
-371 [label="="];
-371 -- 372
-372 [label="lvalue : parent_node"];
-371 -- 373
-373 [label="ID : current_node"];
-370 -- 374
+371 [label="lvalue : var_end"];
+370 -- 372
+372 [label="call method"];
+372 -- 373
+373 [label="ID : aux01"];
+373 [label="method : GetEnd"];
+354 -- 374
 374 [label="="];
 374 -- 375
-375 [label="lvalue : current_node"];
+375 [label="lvalue : var_elem"];
 374 -- 376
 376 [label="call method"];
 376 -- 377
-377 [label="ID : current_node"];
-377 [label="method : GetLeft"];
-367 -- 378
-378 [label="="];
-378 -- 379
-379 [label="lvalue : cont"];
-378 -- 380
-380 [label="const : 0"];
-363 -- 381
-381 [label="if-then-else"];
-381 -- 382
-382 [label="<"];
+377 [label="ID : aux01"];
+377 [label="method : GetElem"];
+325 -- 378
+378 [label="ID : int_ret_val"];
+147 -- 379
+379 [label="Method: GetEnd"];
+379 -- 380
+380 [label="Bool"];
+379 -- 381
+381 [label="ID : end"];
+147 -- 382
+382 [label="Method: GetElem"];
 382 -- 383
-383 [label="ID : key_aux"];
+383 [label="type : Element"];
 382 -- 384
-384 [label="ID : v_key"];
-381 -- 385
-385 [label="if-then-else"];
+384 [label="ID : elem"];
+147 -- 385
+385 [label="Method: GetNext"];
 385 -- 386
-386 [label="call method"];
-386 -- 387
-387 [label="ID : current_node"];
-387 [label="method : GetHas_Right"];
-385 -- 388
-388 [label="{   }"];
+386 [label="type : List"];
+385 -- 387
+387 [label="ID : next"];
+147 -- 388
+388 [label="Method: Print"];
 388 -- 389
-389 [label="="];
-389 -- 390
-390 [label="lvalue : parent_node"];
-389 -- 391
-391 [label="ID : current_node"];
+389 [label="Bool"];
+388 -- 390
+390 [label="Variable"];
+390 -- 391
+391 [label="type : List"];
+391 [label="ID : aux01"];
 388 -- 392
-392 [label="="];
+392 [label="Variable"];
 392 -- 393
-393 [label="lvalue : current_node"];
-392 -- 394
-394 [label="call method"];
+393 [label="Bool"];
+393 [label="ID : var_end"];
+388 -- 394
+394 [label="Variable"];
 394 -- 395
-395 [label="ID : current_node"];
-395 [label="method : GetRight"];
-385 -- 396
+395 [label="type : Element"];
+395 [label="ID : var_elem"];
+388 -- 396
 396 [label="="];
 396 -- 397
-397 [label="lvalue : cont"];
+397 [label="lvalue : aux01"];
 396 -- 398
-398 [label="const : 0"];
-381 -- 399
-399 [label="{   }"];
+398 [label="this : "];
+388 -- 399
+399 [label="="];
 399 -- 400
-400 [label="if-then-else"];
-400 -- 401
-401 [label="ID : is_root"];
-400 -- 402
-402 [label="if-then-else"];
+400 [label="lvalue : var_end"];
+399 -- 401
+401 [label="ID : end"];
+388 -- 402
+402 [label="="];
 402 -- 403
-403 [label="AND"];
-403 -- 404
-404 [label="not"];
-404 [label="-"];
-404 -- 405
-405 [label="call method"];
+403 [label="lvalue : var_elem"];
+402 -- 404
+404 [label="ID : elem"];
+388 -- 405
+405 [label="while"];
 405 -- 406
-406 [label="ID : current_node"];
-406 [label="method : GetHas_Right"];
-403 -- 407
-407 [label="not"];
-407 [label="-"];
-407 -- 408
-408 [label="call method"];
+406 [label="not"];
+406 [label="-"];
+406 -- 407
+407 [label="ID : var_end"];
+405 -- 408
+408 [label="{   }"];
 408 -- 409
-409 [label="ID : current_node"];
-409 [label="method : GetHas_Left"];
-402 -- 410
-410 [label="="];
+409 [label="System.out.Println"];
+409 -- 410
+410 [label="call method"];
 410 -- 411
-411 [label="lvalue : ntb"];
-410 -- 412
-412 [label="const : 1"];
-402 -- 413
-413 [label="="];
-413 -- 414
-414 [label="lvalue : ntb"];
-413 -- 415
-415 [label="call method"];
-415 -- 416
-416 [label="ID : this"];
-416 [label="method : Remove"];
-415 -- 417
-417 [label="ID : parent_node"];
-415 -- 418
-418 [label="ID : current_node"];
-400 -- 419
-419 [label="="];
-419 -- 420
-420 [label="lvalue : ntb"];
-419 -- 421
-421 [label="call method"];
-421 -- 422
-422 [label="ID : this"];
-422 [label="method : Remove"];
-421 -- 423
-423 [label="ID : parent_node"];
-421 -- 424
-424 [label="ID : current_node"];
-399 -- 425
-425 [label="="];
+411 [label="ID : var_elem"];
+411 [label="method : GetAge"];
+408 -- 412
+412 [label="="];
+412 -- 413
+413 [label="lvalue : aux01"];
+412 -- 414
+414 [label="call method"];
+414 -- 415
+415 [label="ID : aux01"];
+415 [label="method : GetNext"];
+408 -- 416
+416 [label="="];
+416 -- 417
+417 [label="lvalue : var_end"];
+416 -- 418
+418 [label="call method"];
+418 -- 419
+419 [label="ID : aux01"];
+419 [label="method : GetEnd"];
+408 -- 420
+420 [label="="];
+420 -- 421
+421 [label="lvalue : var_elem"];
+420 -- 422
+422 [label="call method"];
+422 -- 423
+423 [label="ID : aux01"];
+423 [label="method : GetElem"];
+388 -- 424
+424 [label="const : 1"];
+0 -- 425
+425 [label="ClassDeclaration: LL"];
 425 -- 426
-426 [label="lvalue : found"];
-425 -- 427
-427 [label="const : 1"];
-399 -- 428
-428 [label="="];
+426 [label="Method: Start"];
+426 -- 427
+427 [label="Int"];
+426 -- 428
+428 [label="Variable"];
 428 -- 429
-429 [label="lvalue : cont"];
-428 -- 430
-430 [label="const : 0"];
-358 -- 431
-431 [label="="];
-431 -- 432
-432 [label="lvalue : is_root"];
-431 -- 433
-433 [label="const : 0"];
-323 -- 434
-434 [label="ID : found"];
-119 -- 435
-435 [label="Method: Remove"];
-435 -- 436
-436 [label="Bool"];
-435 -- 437
-437 [label="argument"];
-437 -- 438
-438 [label="type : Tree"];
-438 [label="ID : p_node"];
-435 -- 439
-439 [label="argument"];
-439 -- 440
-440 [label="type : Tree"];
-440 [label="ID : c_node"];
-435 -- 441
-441 [label="Variable"];
-441 -- 442
-442 [label="Bool"];
-442 [label="ID : ntb"];
-435 -- 443
-443 [label="Variable"];
+429 [label="type : List"];
+429 [label="ID : head"];
+426 -- 430
+430 [label="Variable"];
+430 -- 431
+431 [label="type : List"];
+431 [label="ID : last_elem"];
+426 -- 432
+432 [label="Variable"];
+432 -- 433
+433 [label="Bool"];
+433 [label="ID : aux01"];
+426 -- 434
+434 [label="Variable"];
+434 -- 435
+435 [label="type : Element"];
+435 [label="ID : el01"];
+426 -- 436
+436 [label="Variable"];
+436 -- 437
+437 [label="type : Element"];
+437 [label="ID : el02"];
+426 -- 438
+438 [label="Variable"];
+438 -- 439
+439 [label="type : Element"];
+439 [label="ID : el03"];
+426 -- 440
+440 [label="="];
+440 -- 441
+441 [label="lvalue : last_elem"];
+440 -- 442
+442 [label="new"];
+442 [label="class : List"];
+426 -- 443
+443 [label="="];
 443 -- 444
-444 [label="Int"];
-444 [label="ID : auxkey1"];
-435 -- 445
-445 [label="Variable"];
+444 [label="lvalue : aux01"];
+443 -- 445
+445 [label="call method"];
 445 -- 446
-446 [label="Int"];
-446 [label="ID : auxkey2"];
-435 -- 447
-447 [label="if-then-else"];
+446 [label="ID : last_elem"];
+446 [label="method : Init"];
+426 -- 447
+447 [label="="];
 447 -- 448
-448 [label="call method"];
-448 -- 449
-449 [label="ID : c_node"];
-449 [label="method : GetHas_Left"];
-447 -- 450
+448 [label="lvalue : head"];
+447 -- 449
+449 [label="ID : last_elem"];
+426 -- 450
 450 [label="="];
 450 -- 451
-451 [label="lvalue : ntb"];
+451 [label="lvalue : aux01"];
 450 -- 452
 452 [label="call method"];
 452 -- 453
-453 [label="ID : this"];
-453 [label="method : RemoveLeft"];
-452 -- 454
-454 [label="ID : p_node"];
-452 -- 455
-455 [label="ID : c_node"];
-447 -- 456
-456 [label="if-then-else"];
+453 [label="ID : head"];
+453 [label="method : Init"];
+426 -- 454
+454 [label="="];
+454 -- 455
+455 [label="lvalue : aux01"];
+454 -- 456
+456 [label="call method"];
 456 -- 457
-457 [label="call method"];
-457 -- 458
-458 [label="ID : c_node"];
-458 [label="method : GetHas_Right"];
-456 -- 459
-459 [label="="];
-459 -- 460
-460 [label="lvalue : ntb"];
-459 -- 461
-461 [label="call method"];
+457 [label="ID : head"];
+457 [label="method : Print"];
+426 -- 458
+458 [label="="];
+458 -- 459
+459 [label="lvalue : el01"];
+458 -- 460
+460 [label="new"];
+460 [label="class : Element"];
+426 -- 461
+461 [label="="];
 461 -- 462
-462 [label="ID : this"];
-462 [label="method : RemoveRight"];
+462 [label="lvalue : aux01"];
 461 -- 463
-463 [label="ID : p_node"];
-461 -- 464
-464 [label="ID : c_node"];
-456 -- 465
-465 [label="{   }"];
-465 -- 466
-466 [label="="];
-466 -- 467
-467 [label="lvalue : auxkey1"];
-466 -- 468
-468 [label="call method"];
+463 [label="call method"];
+463 -- 464
+464 [label="ID : el01"];
+464 [label="method : Init"];
+463 -- 465
+465 [label="const : 25"];
+463 -- 466
+466 [label="const : 37000"];
+463 -- 467
+467 [label="const : 0"];
+426 -- 468
+468 [label="="];
 468 -- 469
-469 [label="ID : c_node"];
-469 [label="method : GetKey"];
-465 -- 470
-470 [label="="];
+469 [label="lvalue : head"];
+468 -- 470
+470 [label="call method"];
 470 -- 471
-471 [label="lvalue : auxkey2"];
+471 [label="ID : head"];
+471 [label="method : Insert"];
 470 -- 472
-472 [label="call method"];
-472 -- 473
-473 [label="()"];
+472 [label="ID : el01"];
+426 -- 473
+473 [label="="];
 473 -- 474
-474 [label="call method"];
-474 -- 475
-475 [label="ID : p_node"];
-475 [label="method : GetLeft"];
-475 [label="method : GetKey"];
-465 -- 476
-476 [label="if-then-else"];
-476 -- 477
-477 [label="call method"];
+474 [label="lvalue : aux01"];
+473 -- 475
+475 [label="call method"];
+475 -- 476
+476 [label="ID : head"];
+476 [label="method : Print"];
+426 -- 477
+477 [label="System.out.Println"];
 477 -- 478
-478 [label="ID : this"];
-478 [label="method : Compare"];
-477 -- 479
-479 [label="ID : auxkey1"];
-477 -- 480
-480 [label="ID : auxkey2"];
-476 -- 481
-481 [label="{   }"];
-481 -- 482
+478 [label="const : 10000000"];
+426 -- 479
+479 [label="="];
+479 -- 480
+480 [label="lvalue : el01"];
+479 -- 481
+481 [label="new"];
+481 [label="class : Element"];
+426 -- 482
 482 [label="="];
 482 -- 483
-483 [label="lvalue : ntb"];
+483 [label="lvalue : aux01"];
 482 -- 484
 484 [label="call method"];
 484 -- 485
-485 [label="ID : p_node"];
-485 [label="method : SetLeft"];
+485 [label="ID : el01"];
+485 [label="method : Init"];
 484 -- 486
-486 [label="ID : my_null"];
-481 -- 487
-487 [label="="];
-487 -- 488
-488 [label="lvalue : ntb"];
-487 -- 489
-489 [label="call method"];
+486 [label="const : 39"];
+484 -- 487
+487 [label="const : 42000"];
+484 -- 488
+488 [label="const : 1"];
+426 -- 489
+489 [label="="];
 489 -- 490
-490 [label="ID : p_node"];
-490 [label="method : SetHas_Left"];
+490 [label="lvalue : el02"];
 489 -- 491
-491 [label="const : 0"];
-476 -- 492
-492 [label="{   }"];
+491 [label="ID : el01"];
+426 -- 492
+492 [label="="];
 492 -- 493
-493 [label="="];
-493 -- 494
-494 [label="lvalue : ntb"];
-493 -- 495
-495 [label="call method"];
-495 -- 496
-496 [label="ID : p_node"];
-496 [label="method : SetRight"];
-495 -- 497
-497 [label="ID : my_null"];
-492 -- 498
-498 [label="="];
-498 -- 499
-499 [label="lvalue : ntb"];
-498 -- 500
-500 [label="call method"];
-500 -- 501
-501 [label="ID : p_node"];
-501 [label="method : SetHas_Right"];
-500 -- 502
-502 [label="const : 0"];
-435 -- 503
-503 [label="const : 1"];
-119 -- 504
-504 [label="Method: RemoveRight"];
-504 -- 505
-505 [label="Bool"];
-504 -- 506
-506 [label="argument"];
+493 [label="lvalue : head"];
+492 -- 494
+494 [label="call method"];
+494 -- 495
+495 [label="ID : head"];
+495 [label="method : Insert"];
+494 -- 496
+496 [label="ID : el01"];
+426 -- 497
+497 [label="="];
+497 -- 498
+498 [label="lvalue : aux01"];
+497 -- 499
+499 [label="call method"];
+499 -- 500
+500 [label="ID : head"];
+500 [label="method : Print"];
+426 -- 501
+501 [label="System.out.Println"];
+501 -- 502
+502 [label="const : 10000000"];
+426 -- 503
+503 [label="="];
+503 -- 504
+504 [label="lvalue : el01"];
+503 -- 505
+505 [label="new"];
+505 [label="class : Element"];
+426 -- 506
+506 [label="="];
 506 -- 507
-507 [label="type : Tree"];
-507 [label="ID : p_node"];
-504 -- 508
-508 [label="argument"];
+507 [label="lvalue : aux01"];
+506 -- 508
+508 [label="call method"];
 508 -- 509
-509 [label="type : Tree"];
-509 [label="ID : c_node"];
-504 -- 510
-510 [label="Variable"];
-510 -- 511
-511 [label="Bool"];
-511 [label="ID : ntb"];
-504 -- 512
-512 [label="while"];
-512 -- 513
-513 [label="call method"];
+509 [label="ID : el01"];
+509 [label="method : Init"];
+508 -- 510
+510 [label="const : 22"];
+508 -- 511
+511 [label="const : 34000"];
+508 -- 512
+512 [label="const : 0"];
+426 -- 513
+513 [label="="];
 513 -- 514
-514 [label="ID : c_node"];
-514 [label="method : GetHas_Right"];
-512 -- 515
-515 [label="{   }"];
+514 [label="lvalue : head"];
+513 -- 515
+515 [label="call method"];
 515 -- 516
-516 [label="="];
-516 -- 517
-517 [label="lvalue : ntb"];
-516 -- 518
-518 [label="call method"];
+516 [label="ID : head"];
+516 [label="method : Insert"];
+515 -- 517
+517 [label="ID : el01"];
+426 -- 518
+518 [label="="];
 518 -- 519
-519 [label="ID : c_node"];
-519 [label="method : SetKey"];
+519 [label="lvalue : aux01"];
 518 -- 520
 520 [label="call method"];
 520 -- 521
-521 [label="()"];
-521 -- 522
-522 [label="call method"];
+521 [label="ID : head"];
+521 [label="method : Print"];
+426 -- 522
+522 [label="="];
 522 -- 523
-523 [label="ID : c_node"];
-523 [label="method : GetRight"];
-523 [label="method : GetKey"];
-515 -- 524
-524 [label="="];
-524 -- 525
-525 [label="lvalue : p_node"];
-524 -- 526
-526 [label="ID : c_node"];
-515 -- 527
-527 [label="="];
+523 [label="lvalue : el03"];
+522 -- 524
+524 [label="new"];
+524 [label="class : Element"];
+426 -- 525
+525 [label="="];
+525 -- 526
+526 [label="lvalue : aux01"];
+525 -- 527
+527 [label="call method"];
 527 -- 528
-528 [label="lvalue : c_node"];
+528 [label="ID : el03"];
+528 [label="method : Init"];
 527 -- 529
-529 [label="call method"];
-529 -- 530
-530 [label="ID : c_node"];
-530 [label="method : GetRight"];
-504 -- 531
-531 [label="="];
-531 -- 532
-532 [label="lvalue : ntb"];
-531 -- 533
+529 [label="const : 27"];
+527 -- 530
+530 [label="const : 34000"];
+527 -- 531
+531 [label="const : 0"];
+426 -- 532
+532 [label="System.out.Println"];
+532 -- 533
 533 [label="call method"];
 533 -- 534
-534 [label="ID : p_node"];
-534 [label="method : SetRight"];
+534 [label="ID : head"];
+534 [label="method : Search"];
 533 -- 535
-535 [label="ID : my_null"];
-504 -- 536
-536 [label="="];
+535 [label="ID : el02"];
+426 -- 536
+536 [label="System.out.Println"];
 536 -- 537
-537 [label="lvalue : ntb"];
-536 -- 538
-538 [label="call method"];
-538 -- 539
-539 [label="ID : p_node"];
-539 [label="method : SetHas_Right"];
-538 -- 540
-540 [label="const : 0"];
-504 -- 541
-541 [label="const : 1"];
-119 -- 542
-542 [label="Method: RemoveLeft"];
+537 [label="call method"];
+537 -- 538
+538 [label="ID : head"];
+538 [label="method : Search"];
+537 -- 539
+539 [label="ID : el03"];
+426 -- 540
+540 [label="System.out.Println"];
+540 -- 541
+541 [label="const : 10000000"];
+426 -- 542
+542 [label="="];
 542 -- 543
-543 [label="Bool"];
+543 [label="lvalue : el01"];
 542 -- 544
-544 [label="argument"];
-544 -- 545
-545 [label="type : Tree"];
-545 [label="ID : p_node"];
-542 -- 546
-546 [label="argument"];
-546 -- 547
-547 [label="type : Tree"];
-547 [label="ID : c_node"];
-542 -- 548
-548 [label="Variable"];
-548 -- 549
-549 [label="Bool"];
-549 [label="ID : ntb"];
-542 -- 550
-550 [label="while"];
-550 -- 551
-551 [label="call method"];
-551 -- 552
-552 [label="ID : c_node"];
-552 [label="method : GetHas_Left"];
-550 -- 553
-553 [label="{   }"];
-553 -- 554
-554 [label="="];
+544 [label="new"];
+544 [label="class : Element"];
+426 -- 545
+545 [label="="];
+545 -- 546
+546 [label="lvalue : aux01"];
+545 -- 547
+547 [label="call method"];
+547 -- 548
+548 [label="ID : el01"];
+548 [label="method : Init"];
+547 -- 549
+549 [label="const : 28"];
+547 -- 550
+550 [label="const : 35000"];
+547 -- 551
+551 [label="const : 0"];
+426 -- 552
+552 [label="="];
+552 -- 553
+553 [label="lvalue : head"];
+552 -- 554
+554 [label="call method"];
 554 -- 555
-555 [label="lvalue : ntb"];
+555 [label="ID : head"];
+555 [label="method : Insert"];
 554 -- 556
-556 [label="call method"];
-556 -- 557
-557 [label="ID : c_node"];
-557 [label="method : SetKey"];
-556 -- 558
-558 [label="call method"];
-558 -- 559
-559 [label="()"];
+556 [label="ID : el01"];
+426 -- 557
+557 [label="="];
+557 -- 558
+558 [label="lvalue : aux01"];
+557 -- 559
+559 [label="call method"];
 559 -- 560
-560 [label="call method"];
-560 -- 561
-561 [label="ID : c_node"];
-561 [label="method : GetLeft"];
-561 [label="method : GetKey"];
-553 -- 562
-562 [label="="];
-562 -- 563
-563 [label="lvalue : p_node"];
-562 -- 564
-564 [label="ID : c_node"];
-553 -- 565
-565 [label="="];
+560 [label="ID : head"];
+560 [label="method : Print"];
+426 -- 561
+561 [label="System.out.Println"];
+561 -- 562
+562 [label="const : 2220000"];
+426 -- 563
+563 [label="="];
+563 -- 564
+564 [label="lvalue : head"];
+563 -- 565
+565 [label="call method"];
 565 -- 566
-566 [label="lvalue : c_node"];
+566 [label="ID : head"];
+566 [label="method : Delete"];
 565 -- 567
-567 [label="call method"];
-567 -- 568
-568 [label="ID : c_node"];
-568 [label="method : GetLeft"];
-542 -- 569
-569 [label="="];
-569 -- 570
-570 [label="lvalue : ntb"];
-569 -- 571
-571 [label="call method"];
-571 -- 572
-572 [label="ID : p_node"];
-572 [label="method : SetLeft"];
-571 -- 573
-573 [label="ID : my_null"];
-542 -- 574
+567 [label="ID : el02"];
+426 -- 568
+568 [label="="];
+568 -- 569
+569 [label="lvalue : aux01"];
+568 -- 570
+570 [label="call method"];
+570 -- 571
+571 [label="ID : head"];
+571 [label="method : Print"];
+426 -- 572
+572 [label="System.out.Println"];
+572 -- 573
+573 [label="const : 33300000"];
+426 -- 574
 574 [label="="];
 574 -- 575
-575 [label="lvalue : ntb"];
+575 [label="lvalue : head"];
 574 -- 576
 576 [label="call method"];
 576 -- 577
-577 [label="ID : p_node"];
-577 [label="method : SetHas_Left"];
+577 [label="ID : head"];
+577 [label="method : Delete"];
 576 -- 578
-578 [label="const : 0"];
-542 -- 579
-579 [label="const : 1"];
-119 -- 580
-580 [label="Method: Search"];
-580 -- 581
-581 [label="Int"];
-580 -- 582
-582 [label="argument"];
-582 -- 583
-583 [label="Int"];
-583 [label="ID : v_key"];
-580 -- 584
-584 [label="Variable"];
-584 -- 585
-585 [label="type : Tree"];
-585 [label="ID : current_node"];
-580 -- 586
-586 [label="Variable"];
-586 -- 587
-587 [label="Int"];
-587 [label="ID : ifound"];
-580 -- 588
-588 [label="Variable"];
-588 -- 589
-589 [label="Bool"];
-589 [label="ID : cont"];
-580 -- 590
-590 [label="Variable"];
-590 -- 591
-591 [label="Int"];
-591 [label="ID : key_aux"];
-580 -- 592
-592 [label="="];
-592 -- 593
-593 [label="lvalue : current_node"];
-592 -- 594
-594 [label="ID : this"];
-580 -- 595
-595 [label="="];
-595 -- 596
-596 [label="lvalue : cont"];
-595 -- 597
-597 [label="const : 1"];
-580 -- 598
-598 [label="="];
-598 -- 599
-599 [label="lvalue : ifound"];
-598 -- 600
-600 [label="const : 0"];
-580 -- 601
-601 [label="while"];
-601 -- 602
-602 [label="ID : cont"];
-601 -- 603
-603 [label="{   }"];
-603 -- 604
-604 [label="="];
-604 -- 605
-605 [label="lvalue : key_aux"];
-604 -- 606
-606 [label="call method"];
-606 -- 607
-607 [label="ID : current_node"];
-607 [label="method : GetKey"];
-603 -- 608
-608 [label="if-then-else"];
-608 -- 609
-609 [label="<"];
-609 -- 610
-610 [label="ID : v_key"];
-609 -- 611
-611 [label="ID : key_aux"];
-608 -- 612
-612 [label="if-then-else"];
-612 -- 613
-613 [label="call method"];
-613 -- 614
-614 [label="ID : current_node"];
-614 [label="method : GetHas_Left"];
-612 -- 615
-615 [label="="];
-615 -- 616
-616 [label="lvalue : current_node"];
-615 -- 617
-617 [label="call method"];
-617 -- 618
-618 [label="ID : current_node"];
-618 [label="method : GetLeft"];
-612 -- 619
-619 [label="="];
-619 -- 620
-620 [label="lvalue : cont"];
-619 -- 621
-621 [label="const : 0"];
-608 -- 622
-622 [label="if-then-else"];
-622 -- 623
-623 [label="<"];
-623 -- 624
-624 [label="ID : key_aux"];
-623 -- 625
-625 [label="ID : v_key"];
-622 -- 626
-626 [label="if-then-else"];
-626 -- 627
-627 [label="call method"];
-627 -- 628
-628 [label="ID : current_node"];
-628 [label="method : GetHas_Right"];
-626 -- 629
-629 [label="="];
-629 -- 630
-630 [label="lvalue : current_node"];
-629 -- 631
-631 [label="call method"];
-631 -- 632
-632 [label="ID : current_node"];
-632 [label="method : GetRight"];
-626 -- 633
-633 [label="="];
-633 -- 634
-634 [label="lvalue : cont"];
-633 -- 635
-635 [label="const : 0"];
-622 -- 636
-636 [label="{   }"];
-636 -- 637
-637 [label="="];
-637 -- 638
-638 [label="lvalue : ifound"];
-637 -- 639
-639 [label="const : 1"];
-636 -- 640
-640 [label="="];
-640 -- 641
-641 [label="lvalue : cont"];
-640 -- 642
-642 [label="const : 0"];
-580 -- 643
-643 [label="ID : ifound"];
-119 -- 644
-644 [label="Method: Print"];
-644 -- 645
-645 [label="Bool"];
-644 -- 646
-646 [label="Variable"];
-646 -- 647
-647 [label="Bool"];
-647 [label="ID : ntb"];
-644 -- 648
-648 [label="Variable"];
-648 -- 649
-649 [label="type : Tree"];
-649 [label="ID : current_node"];
-644 -- 650
-650 [label="="];
-650 -- 651
-651 [label="lvalue : current_node"];
-650 -- 652
-652 [label="ID : this"];
-644 -- 653
-653 [label="="];
-653 -- 654
-654 [label="lvalue : ntb"];
-653 -- 655
-655 [label="call method"];
-655 -- 656
-656 [label="ID : this"];
-656 [label="method : RecPrint"];
-655 -- 657
-657 [label="ID : current_node"];
-644 -- 658
-658 [label="const : 1"];
-119 -- 659
-659 [label="Method: RecPrint"];
-659 -- 660
-660 [label="Bool"];
-659 -- 661
-661 [label="argument"];
-661 -- 662
-662 [label="type : Tree"];
-662 [label="ID : node"];
-659 -- 663
-663 [label="Variable"];
-663 -- 664
-664 [label="Bool"];
-664 [label="ID : ntb"];
-659 -- 665
-665 [label="if-then-else"];
-665 -- 666
-666 [label="call method"];
-666 -- 667
-667 [label="ID : node"];
-667 [label="method : GetHas_Left"];
-665 -- 668
-668 [label="{   }"];
-668 -- 669
-669 [label="="];
-669 -- 670
-670 [label="lvalue : ntb"];
-669 -- 671
-671 [label="call method"];
-671 -- 672
-672 [label="ID : this"];
-672 [label="method : RecPrint"];
-671 -- 673
-673 [label="call method"];
-673 -- 674
-674 [label="ID : node"];
-674 [label="method : GetLeft"];
-665 -- 675
-675 [label="="];
-675 -- 676
-676 [label="lvalue : ntb"];
-675 -- 677
-677 [label="const : 1"];
-659 -- 678
-678 [label="System.out.Println"];
-678 -- 679
-679 [label="call method"];
-679 -- 680
-680 [label="ID : node"];
-680 [label="method : GetKey"];
-659 -- 681
-681 [label="if-then-else"];
-681 -- 682
-682 [label="call method"];
-682 -- 683
-683 [label="ID : node"];
-683 [label="method : GetHas_Right"];
-681 -- 684
-684 [label="{   }"];
-684 -- 685
-685 [label="="];
-685 -- 686
-686 [label="lvalue : ntb"];
-685 -- 687
-687 [label="call method"];
-687 -- 688
-688 [label="ID : this"];
-688 [label="method : RecPrint"];
-687 -- 689
-689 [label="call method"];
-689 -- 690
-690 [label="ID : node"];
-690 [label="method : GetRight"];
-681 -- 691
-691 [label="="];
-691 -- 692
-692 [label="lvalue : ntb"];
-691 -- 693
-693 [label="const : 1"];
-659 -- 694
-694 [label="const : 1"];
-119 -- 695
-695 [label="Method: accept"];
-695 -- 696
-696 [label="Int"];
-695 -- 697
-697 [label="argument"];
-697 -- 698
-698 [label="type : Visitor"];
-698 [label="ID : v"];
-695 -- 699
-699 [label="Variable"];
-699 -- 700
-700 [label="Int"];
-700 [label="ID : nti"];
-695 -- 701
-701 [label="System.out.Println"];
-701 -- 702
-702 [label="const : 333"];
-695 -- 703
-703 [label="="];
-703 -- 704
-704 [label="lvalue : nti"];
-703 -- 705
-705 [label="call method"];
-705 -- 706
-706 [label="ID : v"];
-706 [label="method : visit"];
-705 -- 707
-707 [label="ID : this"];
-695 -- 708
-708 [label="const : 0"];
-0 -- 709
-709 [label="ClassDeclaration: Visitor"];
-709 -- 710
-710 [label="Variable"];
-710 -- 711
-711 [label="type : Tree"];
-711 [label="ID : l"];
-709 -- 712
-712 [label="Variable"];
-712 -- 713
-713 [label="type : Tree"];
-713 [label="ID : r"];
-709 -- 714
-714 [label="Method: visit"];
-714 -- 715
-715 [label="Int"];
-714 -- 716
-716 [label="argument"];
-716 -- 717
-717 [label="type : Tree"];
-717 [label="ID : n"];
-714 -- 718
-718 [label="Variable"];
-718 -- 719
-719 [label="Int"];
-719 [label="ID : nti"];
-714 -- 720
-720 [label="if-then-else"];
-720 -- 721
-721 [label="call method"];
-721 -- 722
-722 [label="ID : n"];
-722 [label="method : GetHas_Right"];
-720 -- 723
-723 [label="{   }"];
-723 -- 724
-724 [label="="];
-724 -- 725
-725 [label="lvalue : r"];
-724 -- 726
-726 [label="call method"];
-726 -- 727
-727 [label="ID : n"];
-727 [label="method : GetRight"];
-723 -- 728
-728 [label="="];
-728 -- 729
-729 [label="lvalue : nti"];
-728 -- 730
-730 [label="call method"];
-730 -- 731
-731 [label="ID : r"];
-731 [label="method : accept"];
-730 -- 732
-732 [label="ID : this"];
-720 -- 733
-733 [label="="];
-733 -- 734
-734 [label="lvalue : nti"];
-733 -- 735
-735 [label="const : 0"];
-714 -- 736
-736 [label="if-then-else"];
-736 -- 737
-737 [label="call method"];
-737 -- 738
-738 [label="ID : n"];
-738 [label="method : GetHas_Left"];
-736 -- 739
-739 [label="{   }"];
-739 -- 740
-740 [label="="];
-740 -- 741
-741 [label="lvalue : l"];
-740 -- 742
-742 [label="call method"];
-742 -- 743
-743 [label="ID : n"];
-743 [label="method : GetLeft"];
-739 -- 744
-744 [label="="];
-744 -- 745
-745 [label="lvalue : nti"];
-744 -- 746
-746 [label="call method"];
-746 -- 747
-747 [label="ID : l"];
-747 [label="method : accept"];
-746 -- 748
-748 [label="ID : this"];
-736 -- 749
-749 [label="="];
-749 -- 750
-750 [label="lvalue : nti"];
-749 -- 751
-751 [label="const : 0"];
-714 -- 752
-752 [label="const : 0"];
-0 -- 753
-753 [label="ClassDeclaration: MyVisitor"];
-753 -- 754
-754 [label="extends:  : Visitor"];
-753 -- 755
-755 [label="Method: visit"];
-755 -- 756
-756 [label="Int"];
-755 -- 757
-757 [label="argument"];
-757 -- 758
-758 [label="type : Tree"];
-758 [label="ID : n"];
-755 -- 759
-759 [label="Variable"];
-759 -- 760
-760 [label="Int"];
-760 [label="ID : nti"];
-755 -- 761
-761 [label="if-then-else"];
-761 -- 762
-762 [label="call method"];
-762 -- 763
-763 [label="ID : n"];
-763 [label="method : GetHas_Right"];
-761 -- 764
-764 [label="{   }"];
-764 -- 765
-765 [label="="];
-765 -- 766
-766 [label="lvalue : r"];
-765 -- 767
-767 [label="call method"];
-767 -- 768
-768 [label="ID : n"];
-768 [label="method : GetRight"];
-764 -- 769
-769 [label="="];
-769 -- 770
-770 [label="lvalue : nti"];
-769 -- 771
-771 [label="call method"];
-771 -- 772
-772 [label="ID : r"];
-772 [label="method : accept"];
-771 -- 773
-773 [label="ID : this"];
-761 -- 774
-774 [label="="];
-774 -- 775
-775 [label="lvalue : nti"];
-774 -- 776
-776 [label="const : 0"];
-755 -- 777
-777 [label="System.out.Println"];
-777 -- 778
-778 [label="call method"];
-778 -- 779
-779 [label="ID : n"];
-779 [label="method : GetKey"];
-755 -- 780
-780 [label="if-then-else"];
-780 -- 781
-781 [label="call method"];
-781 -- 782
-782 [label="ID : n"];
-782 [label="method : GetHas_Left"];
-780 -- 783
-783 [label="{   }"];
-783 -- 784
-784 [label="="];
-784 -- 785
-785 [label="lvalue : l"];
-784 -- 786
-786 [label="call method"];
-786 -- 787
-787 [label="ID : n"];
-787 [label="method : GetLeft"];
-783 -- 788
-788 [label="="];
-788 -- 789
-789 [label="lvalue : nti"];
-788 -- 790
-790 [label="call method"];
-790 -- 791
-791 [label="ID : l"];
-791 [label="method : accept"];
-790 -- 792
-792 [label="ID : this"];
-780 -- 793
-793 [label="="];
-793 -- 794
-794 [label="lvalue : nti"];
-793 -- 795
-795 [label="const : 0"];
-755 -- 796
-796 [label="const : 0"];
-}
+578 [label="ID : el01"];
+426 -- 579
+579 [label="="];
+579 -- 580
+580 [label="lvalue : aux01"];
+579 -- 581
+581 [label="call method"];
+581 -- 582
+582 [label="ID : head"];
+582 [label="method : Print"];
+426 -- 583
+583 [label="System.out.Println"];
+583 -- 584
+584 [label="const : 44440000"];
+426 -- 585
+585 [label="const : 0"];

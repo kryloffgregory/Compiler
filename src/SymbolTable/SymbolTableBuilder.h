@@ -11,6 +11,7 @@
 #include "SymbolTable.h"
 #include "../ErrorStorage/ErrorStorage.h"
 
+using namespace SymbolsTable;
 class CErrorStorage;
 class STBuilder : public IVisitor {
 public:

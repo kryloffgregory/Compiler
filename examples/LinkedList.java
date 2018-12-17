@@ -1,6 +1,7 @@
 class LinkedList{
     public static void main(String[] a){
     d = 0;
+
 	System.out.println(new LL().Start());
     }
 }

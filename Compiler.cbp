@@ -164,6 +164,12 @@
 		<Unit filename="/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h">
 			<Option target="Compiler"/>
 		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="/home/gregory/Compiler/src/SymbolTable/TypeChecker.h">
+			<Option target="Compiler"/>
+		</Unit>
 		<Unit filename="/home/gregory/Compiler/src/Visitor.h">
 			<Option target="Compiler"/>
 		</Unit>

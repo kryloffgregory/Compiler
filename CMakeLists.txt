@@ -22,4 +22,4 @@ FILE(GLOB SRCFILES "*.cpp" "*.h" "src/*.cpp" "src/*.h"
         "src/ErrorStorage/ErrorStorage.h"
         "src/ErrorStorage/ErrorStorage.cpp")
 
-add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} )
+add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/SymbolTable/TypeChecker.h src/SymbolTable/TypeChecker.cpp)

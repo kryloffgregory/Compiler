@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o"
   "CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
   "CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
+  "CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o"
   "CMakeFiles/Compiler.dir/src/main.cpp.o"
   "Compiler.pdb"
   "Compiler"

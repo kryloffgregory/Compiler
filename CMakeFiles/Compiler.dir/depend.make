@@ -93,10 +93,20 @@ CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/RuleClasse
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/RuleClasses/RuleClasses.h
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/Visitor.h
 
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/SymbolTable/TypeChecker.cpp
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/SymbolTable/TypeChecker.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/ErrorStorage/ErrorStorage.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/Location/Location.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/RuleClasses/RuleClassInterfaces.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/RuleClasses/RuleClasses.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/Visitor.h
+
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/AST/ASTPrinter.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Location/Location.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/RuleClasses/RuleClassInterfaces.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/RuleClasses/RuleClasses.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/TypeChecker.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Visitor.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/ErrorStorage/ErrorStorage.h

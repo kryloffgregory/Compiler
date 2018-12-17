@@ -6,35 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
-string
--
-vector
--
-
 /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
 string
 -
 vector
 -
 
-/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp
-SymbolTableBuilder.h
-/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h
-iostream
--
+/home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp
 RuleClasses/RuleClasses.h
 -
+set
+-
+TypeChecker.h
+/home/gregory/Compiler/src/SymbolTable/TypeChecker.h
 
-/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.h
-string
+/home/gregory/Compiler/src/SymbolTable/TypeChecker.h
+ErrorStorage/ErrorStorage.h
 -
-Visitor.h
--
+../Visitor.h
+/home/gregory/Compiler/src/Visitor.h
 SymbolTable.h
 /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
-../ErrorStorage/ErrorStorage.h
-/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
+
+src/ErrorStorage/ErrorStorage.h
+string
+-
+vector
+-
 
 src/Location/Location.h
 string

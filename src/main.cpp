@@ -3,7 +3,7 @@
 //#include "../y.tab.h"
 #include "RuleClasses/RuleClasses.h"
 #include "AST/ASTPrinter.h"
-
+#include "SymbolTable/TypeChecker.h"
 
 extern int yyparse(IProgram* &);
 extern FILE* yyin;
@@ -17,17 +17,23 @@ int main(int argc, char *argv[]) {
 
     yyin = input;
 
-    IProgram* root;
+    IProgram *root;
     yyparse(root);
     ASTPrinter printer("out.dot");
-    printer.Visit(dynamic_cast<CProgram* >(root));
+    printer.Visit(dynamic_cast<CProgram * >(root));
 
     STBuilder stBuilder;
-    stBuilder.Visit(dynamic_cast<CProgram* >(root));
+    stBuilder.Visit(dynamic_cast<CProgram * >(root));
     auto table = stBuilder.GetSymbolsTable();
     for (auto error : stBuilder.GetErrorStorage().GetAllErrors()) {
-        std::cout << error <<std::endl;
+        std::cout << error << std::endl;
     }
-
+    if (stBuilder.GetErrorStorage().GetAllErrors().empty()) {
+        CTypeCheckerVisitor typeChecker(table);
+        typeChecker.Visit(dynamic_cast<CProgram * >(root));
+        for (auto error : typeChecker.GetErrorStorage().GetAllErrors()) {
+            std::cout << error << std::endl;
+        }
+    }
     return 0;
 }

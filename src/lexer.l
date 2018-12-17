@@ -95,7 +95,9 @@ false {
 true {
     return T_TRUE;
 }
-
+this {
+    return T_THIS;
+}
 
 [a-zA-Z_][a-zA-Z_0-9]* {
     yylval.val= new std::string(yytext);

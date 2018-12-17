@@ -93,11 +93,21 @@ CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o
  src/RuleClasses/RuleClassInterfaces.h
  src/RuleClasses/RuleClasses.h
  src/Visitor.h
+CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o
+ /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+ /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp
+ /home/gregory/Compiler/src/SymbolTable/TypeChecker.h
+ src/ErrorStorage/ErrorStorage.h
+ src/Location/Location.h
+ src/RuleClasses/RuleClassInterfaces.h
+ src/RuleClasses/RuleClasses.h
+ src/Visitor.h
 CMakeFiles/Compiler.dir/src/main.cpp.o
  /home/gregory/Compiler/src/AST/ASTPrinter.h
  /home/gregory/Compiler/src/Location/Location.h
  /home/gregory/Compiler/src/RuleClasses/RuleClassInterfaces.h
  /home/gregory/Compiler/src/RuleClasses/RuleClasses.h
+ /home/gregory/Compiler/src/SymbolTable/TypeChecker.h
  /home/gregory/Compiler/src/Visitor.h
  /home/gregory/Compiler/src/main.cpp
  src/ErrorStorage/ErrorStorage.h

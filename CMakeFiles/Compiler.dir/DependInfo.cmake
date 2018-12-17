@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gregory/Compiler/src/RuleClasses/Var.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o"
   "/home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
   "/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
+  "/home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o"
   "/home/gregory/Compiler/src/main.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
