@@ -1,9 +1,10 @@
 #include <iostream>
 #include <SymbolTable/SymbolTableBuilder.h>
-//#include "../y.tab.h"
+#include <IRT/Translator.h>
 #include "RuleClasses/RuleClasses.h"
 #include "AST/ASTPrinter.h"
 #include "SymbolTable/TypeChecker.h"
+#include "IRT/IRTreePrinter.h"
 
 extern int yyparse(IProgram* &);
 extern FILE* yyin;
@@ -34,6 +35,17 @@ int main(int argc, char *argv[]) {
         for (auto error : typeChecker.GetErrorStorage().GetAllErrors()) {
             std::cout << error << std::endl;
         }
+    }
+
+    CTranslator irBuilder(table);
+    irBuilder.Visit(dynamic_cast<CProgram * >(root));
+    auto frames = irBuilder.GetFrames();
+    for( const auto& frame : irBuilder.GetFrames() ) {
+
+        std::shared_ptr<IRTree::IRTreePrinter> printer(
+                new IRTree::IRTreePrinter( std::string( "IRTree_" ) + frame.GetName()->GetString() + std::string( ".dot" ) ) );
+        frame.GetRootStm()->Accept( printer.get() );
+        printer->Flush();
     }
     return 0;
 }

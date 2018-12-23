@@ -24,6 +24,55 @@ CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o
  /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp
  /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o
+ /home/gregory/Compiler/src/IRT/Expression.cpp
+ /home/gregory/Compiler/src/IRT/Expression.h
+ /home/gregory/Compiler/src/IRT/IIRVisitor.h
+ /home/gregory/Compiler/src/IRT/Label.h
+ /home/gregory/Compiler/src/IRT/Statement.h
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o
+ /home/gregory/Compiler/src/IRT/Expression.h
+ /home/gregory/Compiler/src/IRT/Frame.cpp
+ /home/gregory/Compiler/src/IRT/Frame.h
+ /home/gregory/Compiler/src/IRT/IIRVisitor.h
+ /home/gregory/Compiler/src/IRT/Label.h
+ /home/gregory/Compiler/src/IRT/Statement.h
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
+ /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o
+ /home/gregory/Compiler/src/IRT/Expression.h
+ /home/gregory/Compiler/src/IRT/IIRVisitor.h
+ /home/gregory/Compiler/src/IRT/IRTreePrinter.cpp
+ /home/gregory/Compiler/src/IRT/IRTreePrinter.h
+ /home/gregory/Compiler/src/IRT/Label.h
+ /home/gregory/Compiler/src/IRT/Statement.h
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o
+ /home/gregory/Compiler/src/IRT/Label.cpp
+ /home/gregory/Compiler/src/IRT/Label.h
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o
+ /home/gregory/Compiler/src/IRT/Expression.h
+ /home/gregory/Compiler/src/IRT/IIRVisitor.h
+ /home/gregory/Compiler/src/IRT/Label.h
+ /home/gregory/Compiler/src/IRT/Statement.cpp
+ /home/gregory/Compiler/src/IRT/Statement.h
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o
+ /home/gregory/Compiler/src/IRT/Expression.h
+ /home/gregory/Compiler/src/IRT/Frame.h
+ /home/gregory/Compiler/src/IRT/IIRVisitor.h
+ /home/gregory/Compiler/src/IRT/Label.h
+ /home/gregory/Compiler/src/IRT/Statement.h
+ /home/gregory/Compiler/src/IRT/Translator.cpp
+ /home/gregory/Compiler/src/IRT/Translator.h
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
+ /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
+ src/Location/Location.h
+ src/RuleClasses/RuleClassInterfaces.h
+ src/RuleClasses/RuleClasses.h
+ src/Visitor.h
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o
  /home/gregory/Compiler/src/Location/Location.cpp
  /home/gregory/Compiler/src/Location/Location.h
@@ -81,6 +130,9 @@ CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o
  /home/gregory/Compiler/src/RuleClasses/RuleClasses.h
  /home/gregory/Compiler/src/RuleClasses/Var.cpp
  /home/gregory/Compiler/src/Visitor.h
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o
+ /home/gregory/Compiler/src/SymbolTable/Symbol.cpp
+ /home/gregory/Compiler/src/SymbolTable/Symbol.h
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o
  /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp
  /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
@@ -104,6 +156,8 @@ CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o
  src/Visitor.h
 CMakeFiles/Compiler.dir/src/main.cpp.o
  /home/gregory/Compiler/src/AST/ASTPrinter.h
+ /home/gregory/Compiler/src/IRT/IIRVisitor.h
+ /home/gregory/Compiler/src/IRT/IRTreePrinter.h
  /home/gregory/Compiler/src/Location/Location.h
  /home/gregory/Compiler/src/RuleClasses/RuleClassInterfaces.h
  /home/gregory/Compiler/src/RuleClasses/RuleClasses.h
@@ -111,6 +165,12 @@ CMakeFiles/Compiler.dir/src/main.cpp.o
  /home/gregory/Compiler/src/Visitor.h
  /home/gregory/Compiler/src/main.cpp
  src/ErrorStorage/ErrorStorage.h
+ src/IRT/Expression.h
+ src/IRT/Frame.h
+ src/IRT/Label.h
+ src/IRT/Statement.h
+ src/IRT/Translator.h
+ src/SymbolTable/Symbol.h
  src/SymbolTable/SymbolTable.h
  src/SymbolTable/SymbolTableBuilder.h
  src/Visitor.h

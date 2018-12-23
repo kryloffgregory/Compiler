@@ -200,7 +200,7 @@ void CTypeCheckerVisitor::Visit( const CIfStatement* statement )
     }
 
     if( statement->statementIfTrue != nullptr ) {
-        statement->statementIfFalse->Accept( this );
+        statement->statementIfTrue->Accept( this );
     }
     if( statement->statementIfFalse != nullptr ) {
         statement->statementIfFalse->Accept( this );
@@ -232,7 +232,7 @@ void CTypeCheckerVisitor::Visit( const CWhileStatement* statement )
 void CTypeCheckerVisitor::Visit( const CPrintStatement* statement )
 {
     if( curClass == nullptr || curMethod == nullptr ) {
-        errorStorage.PutError( "While statement out of scope " + statement->location.ToString() );
+        errorStorage.PutError( "Print statement out of scope " + statement->location.ToString() );
         return;
     }
 
@@ -255,7 +255,7 @@ void CTypeCheckerVisitor::Visit( const CBinOpExpression* expr )
         return;
     }
 
-    expr->rightExp->Accept( this );
+    expr->leftExp->Accept( this );
     auto left = lastTypeValueStack.back();
     lastTypeValueStack.pop_back();
     expr->rightExp->Accept( this );
@@ -355,6 +355,7 @@ void CTypeCheckerVisitor::Visit( const CMethodExpression* expr )
         SymbolsTable::CMethodInfo* usedMethod = usedClass->GetMethod( expr->identifier );
         if(usedMethod == nullptr) {
             errorStorage.PutError("Class " + usedClass->GetName() + " does not have method " + expr->identifier + expr->location.ToString());
+            lastTypeValueStack.emplace_back("int");
             return;
         }
         if(!expr->expList.empty()) {

@@ -24,6 +24,55 @@ CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o: src/Visitor.h
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o: src/ErrorStorage/ErrorStorage.cpp
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o: src/ErrorStorage/ErrorStorage.h
 
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/IRT/Expression.cpp
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/IRT/Expression.h
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/IRT/IIRVisitor.h
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/IRT/Statement.h
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/SymbolTable/Symbol.h
+
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/Expression.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/Frame.cpp
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/Frame.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/IIRVisitor.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/Statement.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/SymbolTable/Symbol.h
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/SymbolTable/SymbolTable.h
+
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/Expression.h
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/IIRVisitor.h
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/IRTreePrinter.cpp
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/IRTreePrinter.h
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/Statement.h
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/SymbolTable/Symbol.h
+
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o: src/IRT/Label.cpp
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o: src/SymbolTable/Symbol.h
+
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/IRT/Expression.h
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/IRT/IIRVisitor.h
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/IRT/Statement.cpp
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/IRT/Statement.h
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/SymbolTable/Symbol.h
+
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Expression.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Frame.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/IIRVisitor.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Statement.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Translator.cpp
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Translator.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/SymbolTable/Symbol.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/SymbolTable/SymbolTable.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/Location/Location.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/RuleClasses/RuleClassInterfaces.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/RuleClasses/RuleClasses.h
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/Visitor.h
+
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o: src/Location/Location.cpp
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o: src/Location/Location.h
 
@@ -81,6 +130,9 @@ CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/RuleClasses/RuleClasses.h
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/RuleClasses/Var.cpp
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/Visitor.h
 
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o: src/SymbolTable/Symbol.cpp
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o: src/SymbolTable/Symbol.h
+
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o: src/SymbolTable/SymbolTable.cpp
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o: src/SymbolTable/SymbolTable.h
 
@@ -103,6 +155,8 @@ CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/RuleClasses/RuleC
 CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/Visitor.h
 
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/AST/ASTPrinter.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/IIRVisitor.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/IRTreePrinter.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Location/Location.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/RuleClasses/RuleClassInterfaces.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/RuleClasses/RuleClasses.h
@@ -110,6 +164,12 @@ CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/TypeChecker.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Visitor.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/ErrorStorage/ErrorStorage.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/Expression.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/Frame.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/Label.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/Statement.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/IRT/Translator.h
+CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/Symbol.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/SymbolTable.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/SymbolTable/SymbolTableBuilder.h
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/Visitor.h

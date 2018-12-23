@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/56/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/clion-2018.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/56/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/gregory/Compiler
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/56/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/56/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -230,6 +230,168 @@ src/ErrorStorage/ErrorStorage.s: src/ErrorStorage/ErrorStorage.cpp.s
 src/ErrorStorage/ErrorStorage.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.s
 .PHONY : src/ErrorStorage/ErrorStorage.cpp.s
+
+src/IRT/Expression.o: src/IRT/Expression.cpp.o
+
+.PHONY : src/IRT/Expression.o
+
+# target to build an object file
+src/IRT/Expression.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o
+.PHONY : src/IRT/Expression.cpp.o
+
+src/IRT/Expression.i: src/IRT/Expression.cpp.i
+
+.PHONY : src/IRT/Expression.i
+
+# target to preprocess a source file
+src/IRT/Expression.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.i
+.PHONY : src/IRT/Expression.cpp.i
+
+src/IRT/Expression.s: src/IRT/Expression.cpp.s
+
+.PHONY : src/IRT/Expression.s
+
+# target to generate assembly for a file
+src/IRT/Expression.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.s
+.PHONY : src/IRT/Expression.cpp.s
+
+src/IRT/Frame.o: src/IRT/Frame.cpp.o
+
+.PHONY : src/IRT/Frame.o
+
+# target to build an object file
+src/IRT/Frame.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o
+.PHONY : src/IRT/Frame.cpp.o
+
+src/IRT/Frame.i: src/IRT/Frame.cpp.i
+
+.PHONY : src/IRT/Frame.i
+
+# target to preprocess a source file
+src/IRT/Frame.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.i
+.PHONY : src/IRT/Frame.cpp.i
+
+src/IRT/Frame.s: src/IRT/Frame.cpp.s
+
+.PHONY : src/IRT/Frame.s
+
+# target to generate assembly for a file
+src/IRT/Frame.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.s
+.PHONY : src/IRT/Frame.cpp.s
+
+src/IRT/IRTreePrinter.o: src/IRT/IRTreePrinter.cpp.o
+
+.PHONY : src/IRT/IRTreePrinter.o
+
+# target to build an object file
+src/IRT/IRTreePrinter.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o
+.PHONY : src/IRT/IRTreePrinter.cpp.o
+
+src/IRT/IRTreePrinter.i: src/IRT/IRTreePrinter.cpp.i
+
+.PHONY : src/IRT/IRTreePrinter.i
+
+# target to preprocess a source file
+src/IRT/IRTreePrinter.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.i
+.PHONY : src/IRT/IRTreePrinter.cpp.i
+
+src/IRT/IRTreePrinter.s: src/IRT/IRTreePrinter.cpp.s
+
+.PHONY : src/IRT/IRTreePrinter.s
+
+# target to generate assembly for a file
+src/IRT/IRTreePrinter.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.s
+.PHONY : src/IRT/IRTreePrinter.cpp.s
+
+src/IRT/Label.o: src/IRT/Label.cpp.o
+
+.PHONY : src/IRT/Label.o
+
+# target to build an object file
+src/IRT/Label.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o
+.PHONY : src/IRT/Label.cpp.o
+
+src/IRT/Label.i: src/IRT/Label.cpp.i
+
+.PHONY : src/IRT/Label.i
+
+# target to preprocess a source file
+src/IRT/Label.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Label.cpp.i
+.PHONY : src/IRT/Label.cpp.i
+
+src/IRT/Label.s: src/IRT/Label.cpp.s
+
+.PHONY : src/IRT/Label.s
+
+# target to generate assembly for a file
+src/IRT/Label.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Label.cpp.s
+.PHONY : src/IRT/Label.cpp.s
+
+src/IRT/Statement.o: src/IRT/Statement.cpp.o
+
+.PHONY : src/IRT/Statement.o
+
+# target to build an object file
+src/IRT/Statement.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o
+.PHONY : src/IRT/Statement.cpp.o
+
+src/IRT/Statement.i: src/IRT/Statement.cpp.i
+
+.PHONY : src/IRT/Statement.i
+
+# target to preprocess a source file
+src/IRT/Statement.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.i
+.PHONY : src/IRT/Statement.cpp.i
+
+src/IRT/Statement.s: src/IRT/Statement.cpp.s
+
+.PHONY : src/IRT/Statement.s
+
+# target to generate assembly for a file
+src/IRT/Statement.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.s
+.PHONY : src/IRT/Statement.cpp.s
+
+src/IRT/Translator.o: src/IRT/Translator.cpp.o
+
+.PHONY : src/IRT/Translator.o
+
+# target to build an object file
+src/IRT/Translator.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o
+.PHONY : src/IRT/Translator.cpp.o
+
+src/IRT/Translator.i: src/IRT/Translator.cpp.i
+
+.PHONY : src/IRT/Translator.i
+
+# target to preprocess a source file
+src/IRT/Translator.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.i
+.PHONY : src/IRT/Translator.cpp.i
+
+src/IRT/Translator.s: src/IRT/Translator.cpp.s
+
+.PHONY : src/IRT/Translator.s
+
+# target to generate assembly for a file
+src/IRT/Translator.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.s
+.PHONY : src/IRT/Translator.cpp.s
 
 src/Location/Location.o: src/Location/Location.cpp.o
 
@@ -501,6 +663,33 @@ src/RuleClasses/Var.cpp.s:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.s
 .PHONY : src/RuleClasses/Var.cpp.s
 
+src/SymbolTable/Symbol.o: src/SymbolTable/Symbol.cpp.o
+
+.PHONY : src/SymbolTable/Symbol.o
+
+# target to build an object file
+src/SymbolTable/Symbol.cpp.o:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o
+.PHONY : src/SymbolTable/Symbol.cpp.o
+
+src/SymbolTable/Symbol.i: src/SymbolTable/Symbol.cpp.i
+
+.PHONY : src/SymbolTable/Symbol.i
+
+# target to preprocess a source file
+src/SymbolTable/Symbol.cpp.i:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.i
+.PHONY : src/SymbolTable/Symbol.cpp.i
+
+src/SymbolTable/Symbol.s: src/SymbolTable/Symbol.cpp.s
+
+.PHONY : src/SymbolTable/Symbol.s
+
+# target to generate assembly for a file
+src/SymbolTable/Symbol.cpp.s:
+	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.s
+.PHONY : src/SymbolTable/Symbol.cpp.s
+
 src/SymbolTable/SymbolTable.o: src/SymbolTable/SymbolTable.cpp.o
 
 .PHONY : src/SymbolTable/SymbolTable.o
@@ -630,6 +819,24 @@ help:
 	@echo "... src/ErrorStorage/ErrorStorage.o"
 	@echo "... src/ErrorStorage/ErrorStorage.i"
 	@echo "... src/ErrorStorage/ErrorStorage.s"
+	@echo "... src/IRT/Expression.o"
+	@echo "... src/IRT/Expression.i"
+	@echo "... src/IRT/Expression.s"
+	@echo "... src/IRT/Frame.o"
+	@echo "... src/IRT/Frame.i"
+	@echo "... src/IRT/Frame.s"
+	@echo "... src/IRT/IRTreePrinter.o"
+	@echo "... src/IRT/IRTreePrinter.i"
+	@echo "... src/IRT/IRTreePrinter.s"
+	@echo "... src/IRT/Label.o"
+	@echo "... src/IRT/Label.i"
+	@echo "... src/IRT/Label.s"
+	@echo "... src/IRT/Statement.o"
+	@echo "... src/IRT/Statement.i"
+	@echo "... src/IRT/Statement.s"
+	@echo "... src/IRT/Translator.o"
+	@echo "... src/IRT/Translator.i"
+	@echo "... src/IRT/Translator.s"
 	@echo "... src/Location/Location.o"
 	@echo "... src/Location/Location.i"
 	@echo "... src/Location/Location.s"
@@ -660,6 +867,9 @@ help:
 	@echo "... src/RuleClasses/Var.o"
 	@echo "... src/RuleClasses/Var.i"
 	@echo "... src/RuleClasses/Var.s"
+	@echo "... src/SymbolTable/Symbol.o"
+	@echo "... src/SymbolTable/Symbol.i"
+	@echo "... src/SymbolTable/Symbol.s"
 	@echo "... src/SymbolTable/SymbolTable.o"
 	@echo "... src/SymbolTable/SymbolTable.i"
 	@echo "... src/SymbolTable/SymbolTable.s"

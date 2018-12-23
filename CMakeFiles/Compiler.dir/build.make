@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/56/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/clion-2018.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/56/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/clion-2018.3.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -65,243 +65,334 @@ parser.hpp: parser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate parser.hpp
 
 lexer.cpp: src/lexer.l
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][FlexLexer] Building scanner with flex 2.6.4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][FlexLexer] Building scanner with flex 2.6.0"
 	/usr/bin/flex -o/home/gregory/Compiler/lexer.cpp src/lexer.l
 
 CMakeFiles/Compiler.dir/lexer.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/lexer.cpp.o: lexer.cpp
 CMakeFiles/Compiler.dir/lexer.cpp.o: parser.hpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Compiler.dir/lexer.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/lexer.cpp.o -c /home/gregory/Compiler/lexer.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/lexer.cpp.o -c /home/gregory/Compiler/lexer.cpp
 
 CMakeFiles/Compiler.dir/lexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/lexer.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/lexer.cpp > CMakeFiles/Compiler.dir/lexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/lexer.cpp > CMakeFiles/Compiler.dir/lexer.cpp.i
 
 CMakeFiles/Compiler.dir/lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/lexer.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/lexer.cpp -o CMakeFiles/Compiler.dir/lexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/lexer.cpp -o CMakeFiles/Compiler.dir/lexer.cpp.s
 
 CMakeFiles/Compiler.dir/parser.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/parser.cpp.o: parser.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Compiler.dir/parser.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/parser.cpp.o -c /home/gregory/Compiler/parser.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/parser.cpp.o -c /home/gregory/Compiler/parser.cpp
 
 CMakeFiles/Compiler.dir/parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/parser.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/parser.cpp > CMakeFiles/Compiler.dir/parser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/parser.cpp > CMakeFiles/Compiler.dir/parser.cpp.i
 
 CMakeFiles/Compiler.dir/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/parser.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/parser.cpp -o CMakeFiles/Compiler.dir/parser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/parser.cpp -o CMakeFiles/Compiler.dir/parser.cpp.s
 
 CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o: src/AST/ASTPrinter.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o -c /home/gregory/Compiler/src/AST/ASTPrinter.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o -c /home/gregory/Compiler/src/AST/ASTPrinter.cpp
 
 CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/AST/ASTPrinter.cpp > CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/AST/ASTPrinter.cpp > CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.i
 
 CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/AST/ASTPrinter.cpp -o CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/AST/ASTPrinter.cpp -o CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.s
 
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o: src/ErrorStorage/ErrorStorage.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o -c /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o -c /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp
 
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp > CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp > CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.i
 
 CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp -o CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp -o CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.s
 
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.o: src/Location/Location.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Compiler.dir/src/Location/Location.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/Location/Location.cpp.o -c /home/gregory/Compiler/src/Location/Location.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/Location/Location.cpp.o -c /home/gregory/Compiler/src/Location/Location.cpp
 
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/Location/Location.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/Location/Location.cpp > CMakeFiles/Compiler.dir/src/Location/Location.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/Location/Location.cpp > CMakeFiles/Compiler.dir/src/Location/Location.cpp.i
 
 CMakeFiles/Compiler.dir/src/Location/Location.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/Location/Location.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/Location/Location.cpp -o CMakeFiles/Compiler.dir/src/Location/Location.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/Location/Location.cpp -o CMakeFiles/Compiler.dir/src/Location/Location.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o: src/RuleClasses/Arg.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Arg.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Arg.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Arg.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Arg.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Arg.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Arg.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o: src/RuleClasses/Class.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Class.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Class.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Class.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Class.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Class.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Class.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o: src/RuleClasses/Expression.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Expression.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Expression.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Expression.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Expression.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Expression.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Expression.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o: src/RuleClasses/MainClass.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o -c /home/gregory/Compiler/src/RuleClasses/MainClass.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o -c /home/gregory/Compiler/src/RuleClasses/MainClass.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/MainClass.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/MainClass.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/MainClass.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/MainClass.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o: src/RuleClasses/Method.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Method.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Method.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Method.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Method.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Method.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Method.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o: src/RuleClasses/Program.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Program.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Program.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Program.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Program.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Program.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Program.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o: src/RuleClasses/Statement.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Statement.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Statement.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Statement.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Statement.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Statement.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Statement.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o: src/RuleClasses/Type.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Type.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Type.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Type.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Type.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Type.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Type.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.s
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o: src/RuleClasses/Var.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Var.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o -c /home/gregory/Compiler/src/RuleClasses/Var.cpp
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Var.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/RuleClasses/Var.cpp > CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.i
 
 CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Var.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/RuleClasses/Var.cpp -o CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.s
+
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o: src/SymbolTable/Symbol.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o -c /home/gregory/Compiler/src/SymbolTable/Symbol.cpp
+
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/Symbol.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.i
+
+CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/Symbol.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.s
 
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o: src/SymbolTable/SymbolTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o -c /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o -c /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp
 
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.i
 
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.s
 
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o: src/SymbolTable/SymbolTableBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o -c /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o -c /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp
 
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.i
 
 CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.s
 
 CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o: src/SymbolTable/TypeChecker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o -c /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o -c /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp
 
 CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp > CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.i
 
 CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp -o CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.s
 
 CMakeFiles/Compiler.dir/src/main.cpp.o: CMakeFiles/Compiler.dir/flags.make
 CMakeFiles/Compiler.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Compiler.dir/src/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/main.cpp.o -c /home/gregory/Compiler/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Compiler.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/main.cpp.o -c /home/gregory/Compiler/src/main.cpp
 
 CMakeFiles/Compiler.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/main.cpp > CMakeFiles/Compiler.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/main.cpp > CMakeFiles/Compiler.dir/src/main.cpp.i
 
 CMakeFiles/Compiler.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/main.cpp -o CMakeFiles/Compiler.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/main.cpp -o CMakeFiles/Compiler.dir/src/main.cpp.s
+
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o: src/IRT/Expression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o -c /home/gregory/Compiler/src/IRT/Expression.cpp
+
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/IRT/Expression.cpp > CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.i
+
+CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/IRT/Expression.cpp -o CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.s
+
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o: src/IRT/Statement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o -c /home/gregory/Compiler/src/IRT/Statement.cpp
+
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/IRT/Statement.cpp > CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.i
+
+CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/IRT/Statement.cpp -o CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.s
+
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o: src/IRT/Translator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o -c /home/gregory/Compiler/src/IRT/Translator.cpp
+
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/IRT/Translator.cpp > CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.i
+
+CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/IRT/Translator.cpp -o CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.s
+
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o: src/IRT/Label.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o -c /home/gregory/Compiler/src/IRT/Label.cpp
+
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/IRT/Label.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/IRT/Label.cpp > CMakeFiles/Compiler.dir/src/IRT/Label.cpp.i
+
+CMakeFiles/Compiler.dir/src/IRT/Label.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/IRT/Label.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/IRT/Label.cpp -o CMakeFiles/Compiler.dir/src/IRT/Label.cpp.s
+
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o: src/IRT/Frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o -c /home/gregory/Compiler/src/IRT/Frame.cpp
+
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/IRT/Frame.cpp > CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.i
+
+CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/IRT/Frame.cpp -o CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.s
+
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: CMakeFiles/Compiler.dir/flags.make
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o: src/IRT/IRTreePrinter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o -c /home/gregory/Compiler/src/IRT/IRTreePrinter.cpp
+
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gregory/Compiler/src/IRT/IRTreePrinter.cpp > CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.i
+
+CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gregory/Compiler/src/IRT/IRTreePrinter.cpp -o CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.s
 
 # Object files for target Compiler
 Compiler_OBJECTS = \
@@ -319,10 +410,17 @@ Compiler_OBJECTS = \
 "CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o" \
 "CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o" \
 "CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o" \
+"CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o" \
 "CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o" \
 "CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o" \
 "CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o" \
-"CMakeFiles/Compiler.dir/src/main.cpp.o"
+"CMakeFiles/Compiler.dir/src/main.cpp.o" \
+"CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o" \
+"CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o" \
+"CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o" \
+"CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o" \
+"CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o" \
+"CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o"
 
 # External object files for target Compiler
 Compiler_EXTERNAL_OBJECTS =
@@ -341,13 +439,20 @@ Compiler: CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o
 Compiler: CMakeFiles/Compiler.dir/src/main.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o
+Compiler: CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o
 Compiler: CMakeFiles/Compiler.dir/build.make
 Compiler: CMakeFiles/Compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable Compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gregory/Compiler/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable Compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
