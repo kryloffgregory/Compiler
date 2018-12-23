@@ -1,1 +1,3 @@
 .idea*
+CMakeCache.txt
+build
