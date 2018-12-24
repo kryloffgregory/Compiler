@@ -27,8 +27,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o"
   "CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o"
   "CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o"
-  "Compiler.pdb"
-  "Compiler"
+  "bin/Compiler.pdb"
+  "bin/Compiler"
 )
 
 # Per-language clean rules from dependency scanning.

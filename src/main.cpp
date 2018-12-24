@@ -10,6 +10,11 @@ extern int yyparse(IProgram* &);
 extern FILE* yyin;
 
 int main(int argc, char *argv[]) {
+    if (argc != 4) {
+    	printf("Usage: %s input.java ast.dot ir_dir\n", argv[0]);
+        exit(1);
+    }
+	
     FILE *input = fopen(argv[1], "r");
     if (input == nullptr) {
         printf("Can not open file!\n");
@@ -20,7 +25,7 @@ int main(int argc, char *argv[]) {
 
     IProgram *root;
     yyparse(root);
-    ASTPrinter printer("out.dot");
+    ASTPrinter printer(argv[2]);
     printer.Visit(dynamic_cast<CProgram * >(root));
 
     STBuilder stBuilder;
@@ -43,7 +48,7 @@ int main(int argc, char *argv[]) {
     for( const auto& frame : irBuilder.GetFrames() ) {
 
         std::shared_ptr<IRTree::IRTreePrinter> printer(
-                new IRTree::IRTreePrinter( std::string( "IRTree_" ) + frame.GetName()->GetString() + std::string( ".dot" ) ) );
+                new IRTree::IRTreePrinter(std::string(argv[3]) + std::string("/") + frame.GetName()->GetString() + std::string( ".dot" ) ) );
         frame.GetRootStm()->Accept( printer.get() );
         printer->Flush();
     }
