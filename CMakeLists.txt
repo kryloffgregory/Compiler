@@ -40,9 +40,10 @@ add_custom_target(memcheck
 
 enable_testing()
  
-file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/tests/examples/test_*")
+file(GLOB files "tests/examples/test_*")
 set(validator ${CMAKE_CURRENT_SOURCE_DIR}/tests/examples/build_graph.sh)
 foreach(filename ${files})
+	message("${validator} ${filename}")
 	add_test(NAME "graph_${filename}"
         COMMAND ${validator} ${filename})
 endforeach()

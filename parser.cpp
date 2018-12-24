@@ -83,7 +83,7 @@ extern "C" int yywrap()
         return 1;
 }
 
-#line 87 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:339  */
+#line 87 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -103,8 +103,8 @@ extern "C" int yywrap()
 
 /* In a future release of Bison, this section will be replaced
    by #include "parser.hpp".  */
-#ifndef YY_YY_HOME_TNA0Y_DESKTOP_COMPILER_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_TNA0Y_DESKTOP_COMPILER_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_TNA0Y_DESKTOP_KRYLOFF_COMPILER_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_TNA0Y_DESKTOP_KRYLOFF_COMPILER_PARSER_HPP_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -121,7 +121,7 @@ extern int yydebug;
 	#include <deque>
 	//#include "Visitors/PrettyPrinterVisitor.h"
 
-#line 125 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:355  */
+#line 125 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:355  */
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -181,7 +181,7 @@ union YYSTYPE
     std::vector<IExp*>* expressionListVal;
     std::deque<IStatement*>* statementListVal;
 
-#line 185 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:355  */
+#line 185 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -208,11 +208,11 @@ extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
 int yyparse (IProgram*& root);
 
-#endif /* !YY_YY_HOME_TNA0Y_DESKTOP_COMPILER_PARSER_HPP_INCLUDED  */
+#endif /* !YY_YY_HOME_TNA0Y_DESKTOP_KRYLOFF_COMPILER_PARSER_HPP_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-#line 216 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:358  */
+#line 216 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1508,7 +1508,7 @@ yyreduce:
     {
         root = new CProgram((yyvsp[-1].mainClassDeclarationVal), *(yyvsp[0].classDeclarationListVal), location);
     }
-#line 1512 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1512 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 3:
@@ -1516,7 +1516,7 @@ yyreduce:
     {
         (yyval.classDeclarationListVal) = new std::vector<IClassDecl *>();
     }
-#line 1520 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1520 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 4:
@@ -1525,7 +1525,7 @@ yyreduce:
         (yyvsp[-1].classDeclarationListVal)->push_back((yyvsp[0].classDeclarationVal));
         (yyval.classDeclarationListVal) = (yyvsp[-1].classDeclarationListVal);
     }
-#line 1529 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1529 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 5:
@@ -1535,7 +1535,7 @@ yyreduce:
         std::cerr<<"mainClass\n";
         (yyval.mainClassDeclarationVal) = new CMainClass( *(yyvsp[-15].val), *(yyvsp[-5].val), *(yyvsp[-2].statementListVal), location);
     }
-#line 1539 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1539 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 6:
@@ -1543,7 +1543,7 @@ yyreduce:
     {
         (yyval.classDeclarationVal) = new CClassDecl(*(yyvsp[-4].val), *(yyvsp[-2].variableDeclarationListVal), *(yyvsp[-1].methodDeclarationListVal), false, "", location);
     }
-#line 1547 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1547 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 7:
@@ -1551,7 +1551,7 @@ yyreduce:
     {
             (yyval.classDeclarationVal) = new CClassDecl(*(yyvsp[-6].val), *(yyvsp[-2].variableDeclarationListVal), *(yyvsp[-1].methodDeclarationListVal), true, *(yyvsp[-4].val), location);
     }
-#line 1555 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1555 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 8:
@@ -1559,7 +1559,7 @@ yyreduce:
     {
         (yyval.variableDeclarationListVal) = new std::vector<IVarDecl *>();
     }
-#line 1563 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1563 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 9:
@@ -1568,7 +1568,7 @@ yyreduce:
         (yyvsp[-1].variableDeclarationListVal)->push_back((yyvsp[0].variableDeclarationVal));
         (yyval.variableDeclarationListVal) = (yyvsp[-1].variableDeclarationListVal);
     }
-#line 1572 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1572 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 10:
@@ -1577,7 +1577,7 @@ yyreduce:
         std::cerr<<"Empty statement List\n";
         (yyval.statementListVal) = new std::deque<IStatement *> ();
     }
-#line 1581 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1581 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 11:
@@ -1586,7 +1586,7 @@ yyreduce:
         (yyvsp[0].statementListVal)->push_front((yyvsp[-1].statementVal));
         (yyval.statementListVal) = (yyvsp[0].statementListVal);
     }
-#line 1590 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1590 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 12:
@@ -1594,7 +1594,7 @@ yyreduce:
     {
         (yyval.methodDeclarationListVal) = new std::vector<IMethodDecl*>();
     }
-#line 1598 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1598 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 13:
@@ -1603,7 +1603,7 @@ yyreduce:
         (yyvsp[-1].methodDeclarationListVal)->push_back((yyvsp[0].methodDeclarationVal));
         (yyval.methodDeclarationListVal) = (yyvsp[-1].methodDeclarationListVal);
     }
-#line 1607 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1607 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 14:
@@ -1613,7 +1613,7 @@ yyreduce:
         std::cerr<<"VarDecl\n"<<"\n";
         (yyval.variableDeclarationVal) = new CVarDecl((yyvsp[-2].typeVal), *(yyvsp[-1].val), location);
     }
-#line 1617 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1617 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 15:
@@ -1621,7 +1621,7 @@ yyreduce:
     {
         (yyval.methodDeclarationVal) = new CMethodDecl((yyvsp[-11].typeVal), *(yyvsp[-10].val), *(yyvsp[-8].formalListVal), *(yyvsp[-5].variableDeclarationListVal), *(yyvsp[-4].statementListVal), (yyvsp[-2].expressionVal), location);
     }
-#line 1625 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1625 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 16:
@@ -1629,7 +1629,7 @@ yyreduce:
     {
         (yyval.typeVal) = new CStandardType( CStandardType::StandardType::INT_ARRAY, location);
     }
-#line 1633 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1633 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 17:
@@ -1637,7 +1637,7 @@ yyreduce:
     {
         (yyval.typeVal) = new CStandardType( CStandardType::StandardType::BOOL, location);
     }
-#line 1641 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1641 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 18:
@@ -1645,7 +1645,7 @@ yyreduce:
     {
         (yyval.typeVal) = new CStandardType( CStandardType::StandardType::INT, location );
     }
-#line 1649 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1649 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 19:
@@ -1653,7 +1653,7 @@ yyreduce:
     {
         (yyval.typeVal) = new CUserType( *(yyvsp[0].val), location);
     }
-#line 1657 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1657 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 20:
@@ -1661,7 +1661,7 @@ yyreduce:
     {
         (yyval.formalListVal) = new std::vector<IArg*>();
     }
-#line 1665 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1665 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 21:
@@ -1669,7 +1669,7 @@ yyreduce:
     {
         (yyval.formalListVal) = new std::vector<IArg*>(1, (yyvsp[0].argVal));
     }
-#line 1673 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1673 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 22:
@@ -1679,13 +1679,13 @@ yyreduce:
         (yyvsp[-2].formalListVal)->push_back((yyvsp[0].argVal));
         (yyval.formalListVal) = (yyvsp[-2].formalListVal);
      }
-#line 1683 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1683 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 23:
 #line 234 "src/grammar.y" /* yacc.c:1646  */
     { (yyval.argVal) = new CArg((yyvsp[-1].typeVal), *(yyvsp[0].val), location);}
-#line 1689 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1689 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 24:
@@ -1693,7 +1693,7 @@ yyreduce:
     {
 		(yyval.statementVal) = new CStatementListStatement( *(yyvsp[-1].statementListVal), location);
 	}
-#line 1697 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1697 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 25:
@@ -1701,7 +1701,7 @@ yyreduce:
     {
 		(yyval.statementVal) = new CIfStatement( (yyvsp[-4].expressionVal), (yyvsp[-2].statementVal), (yyvsp[0].statementVal), location);
 	}
-#line 1705 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1705 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 26:
@@ -1709,7 +1709,7 @@ yyreduce:
     {
 		(yyval.statementVal) = new CWhileStatement( (yyvsp[-2].expressionVal), (yyvsp[0].statementVal), location);
 	}
-#line 1713 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1713 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 27:
@@ -1717,7 +1717,7 @@ yyreduce:
     {
 		(yyval.statementVal) = new CPrintStatement( (yyvsp[-2].expressionVal), location);
 	}
-#line 1721 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1721 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 28:
@@ -1726,7 +1726,7 @@ yyreduce:
 	    std::cerr<<"ex=ex"<<"\n";
 		(yyval.statementVal) = new CAssignStatement( *(yyvsp[-3].val), (yyvsp[-1].expressionVal), location);
 	}
-#line 1730 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1730 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 29:
@@ -1734,7 +1734,7 @@ yyreduce:
     {
 		(yyval.statementVal) = new CArrayAssignStatement( *(yyvsp[-6].val), (yyvsp[-4].expressionVal), (yyvsp[-1].expressionVal), location);
 }
-#line 1738 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1738 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 30:
@@ -1742,7 +1742,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::AND, (yyvsp[0].expressionVal), location);
 	}
-#line 1746 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1746 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 31:
@@ -1750,7 +1750,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::LESS, (yyvsp[0].expressionVal), location);
 	}
-#line 1754 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1754 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 32:
@@ -1758,7 +1758,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::PLUS, (yyvsp[0].expressionVal), location);
 	}
-#line 1762 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1762 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 33:
@@ -1766,7 +1766,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::MINUS, (yyvsp[0].expressionVal), location);
 	}
-#line 1770 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1770 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 34:
@@ -1774,7 +1774,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::MINUS, (yyvsp[0].expressionVal), location);
 	}
-#line 1778 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1778 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 35:
@@ -1782,7 +1782,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::TIMES, (yyvsp[0].expressionVal), location);
 	}
-#line 1786 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1786 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 36:
@@ -1790,7 +1790,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBinOpExpression( (yyvsp[-2].expressionVal), CBinOpExpression::BinOp::DIVIDE, (yyvsp[0].expressionVal), location);
 	}
-#line 1794 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1794 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 37:
@@ -1798,7 +1798,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CIndexExpression( (yyvsp[-3].expressionVal), (yyvsp[-1].expressionVal), location);
 	}
-#line 1802 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1802 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 38:
@@ -1806,7 +1806,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CLenghtExpression( (yyvsp[-2].expressionVal), location);
 	}
-#line 1810 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1810 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 39:
@@ -1814,7 +1814,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CMethodExpression( (yyvsp[-5].expressionVal), *(yyvsp[-3].val), *(yyvsp[-1].expressionListVal), location);
 	}
-#line 1818 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1818 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 40:
@@ -1822,7 +1822,7 @@ yyreduce:
     {
 	    (yyval.expressionVal) = new CIntLiteralExpression((yyvsp[0].intVal), location);
 	}
-#line 1826 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1826 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 41:
@@ -1830,7 +1830,7 @@ yyreduce:
     {
 	    (yyval.expressionVal) = new CBoolLiteralExpression(true, location);
 	}
-#line 1834 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1834 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 42:
@@ -1838,7 +1838,7 @@ yyreduce:
     {
 	    (yyval.expressionVal) = new CBoolLiteralExpression(false, location);
 	}
-#line 1842 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1842 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 43:
@@ -1847,7 +1847,7 @@ yyreduce:
 	    std::cerr<<"expr-id"<<"\n";
 		(yyval.expressionVal) = new CIdentifierExpression( *(yyvsp[0].val), location);
 	}
-#line 1851 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1851 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 44:
@@ -1855,7 +1855,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CThisExpression(location );
 	}
-#line 1859 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1859 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 45:
@@ -1863,7 +1863,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CNewIntArrayExpression( (yyvsp[-1].expressionVal), location );
 	}
-#line 1867 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1867 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 46:
@@ -1871,7 +1871,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CNewExpression( *(yyvsp[-2].val), location);
 	}
-#line 1875 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1875 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 47:
@@ -1879,7 +1879,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CUnaryOpExpression( CUnaryOpExpression::UnaryOp::NOT, (yyvsp[0].expressionVal), location);
 	}
-#line 1883 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1883 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 48:
@@ -1887,7 +1887,7 @@ yyreduce:
     {
 		(yyval.expressionVal) = new CBracesExpression( (yyvsp[-1].expressionVal), location);
 }
-#line 1891 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1891 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 49:
@@ -1895,7 +1895,7 @@ yyreduce:
     {
         (yyval.expressionListVal) = new std::vector<IExp*>();
     }
-#line 1899 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1899 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 50:
@@ -1903,7 +1903,7 @@ yyreduce:
     {
         (yyval.expressionListVal) = new std::vector<IExp*>(1, (yyvsp[0].expressionVal));
     }
-#line 1907 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1907 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 51:
@@ -1912,7 +1912,7 @@ yyreduce:
             (yyvsp[-2].expressionListVal)->push_back((yyvsp[0].expressionVal));
     		(yyval.expressionListVal) = (yyvsp[-2].expressionListVal);
     }
-#line 1916 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1916 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 52:
@@ -1921,7 +1921,7 @@ yyreduce:
         std::cerr<<"ID:" << *(yyvsp[0].val)<<"\n";
         (yyval.val) = (yyvsp[0].val);
     }
-#line 1925 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1925 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
   case 53:
@@ -1929,11 +1929,11 @@ yyreduce:
     {
         (yyval.intVal) = (yyvsp[0].intVal);
     }
-#line 1933 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1933 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
     break;
 
 
-#line 1937 "/home/tna0y/Desktop/Compiler/parser.cpp" /* yacc.c:1646  */
+#line 1937 "/home/tna0y/Desktop/kryloff/Compiler/parser.cpp" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

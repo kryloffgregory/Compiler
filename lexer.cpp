@@ -1,6 +1,6 @@
-#line 2 "/home/tna0y/Desktop/Compiler/lexer.cpp"
+#line 2 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
 
-#line 4 "/home/tna0y/Desktop/Compiler/lexer.cpp"
+#line 4 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -574,7 +574,7 @@ CLocation location;
 }
 
 void yyerror(char *s);
-#line 578 "/home/tna0y/Desktop/Compiler/lexer.cpp"
+#line 578 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
 
 #define INITIAL 0
 
@@ -794,7 +794,7 @@ YY_DECL
 	{
 #line 30 "src/lexer.l"
 
-#line 798 "/home/tna0y/Desktop/Compiler/lexer.cpp"
+#line 798 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -1061,7 +1061,7 @@ YY_RULE_SETUP
 #line 127 "src/lexer.l"
 ECHO;
 	YY_BREAK
-#line 1065 "/home/tna0y/Desktop/Compiler/lexer.cpp"
+#line 1065 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 

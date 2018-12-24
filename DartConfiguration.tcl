@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/tna0y/Desktop/Compiler
-BuildDirectory: /home/tna0y/Desktop/Compiler
+SourceDirectory: /home/tna0y/Desktop/kryloff/Compiler
+BuildDirectory: /home/tna0y/Desktop/kryloff/Compiler
 
 # Where to place the cost data store
 CostDataFile: 
@@ -36,7 +36,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/home/tna0y/Desktop/cmake-3.13.2-Linux-x86_64/bin/cmake" "/home/tna0y/Desktop/Compiler"
+ConfigureCommand: "/home/tna0y/Desktop/cmake-3.13.2-Linux-x86_64/bin/cmake" "/home/tna0y/Desktop/kryloff/Compiler"
 MakeCommand: /home/tna0y/Desktop/cmake-3.13.2-Linux-x86_64/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
