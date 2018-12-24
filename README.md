@@ -11,3 +11,7 @@
 ## cppcheck
 
 `$ make cppcheck`
+
+## valgrind (leak check)
+
+`$ make memcheck`
