@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20181224-0155-Experimental"
+	Name="VirtualBoxCompiler"
+	Generator="ctest-3.13.2"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="7.2.0"
+	OSName="Linux"
+	Hostname="VirtualBoxCompiler"
+	OSRelease="4.13.0-46-generic"
+	OSVersion="#51-Ubuntu SMP Tue Jun 12 12:36:29 UTC 2018"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="58"
+	ProcessorCacheSize="4096"
+	NumberOfLogicalCPU="1"
+	NumberOfPhysicalCPU="1"
+	TotalVirtualMemory="376"
+	TotalPhysicalMemory="1993"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="2893.41"
+	>
+	<DynamicAnalysis Checker="Valgrind">
+		<StartDateTime>Dec 24 05:05 MSK</StartDateTime>
+		<StartTestTime>1545617153</StartTestTime>
+		<TestList>
+			<Test>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial</Test>
+			<Test>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list</Test>
+			<Test>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch</Test>
+			<Test>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort</Test>
+			<Test>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java</Test>
+			<Test>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java</Test>
+			<Test>./good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial</Name>
+			<Path>.</Path>
+			<FullName>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.1.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_factorial"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztWNtu2kAQffdX7CNUJfauL2AHEoExUtRWqqqqL1UVre1NsFhf5LVTUFUpn9H+Xr6k60AExDhZu4lCaHnA3vHsMDPnzPGKvnvy4eO7vuyegMEAGlA1BwNgAneREQaCCEDg0tibMYBTAlgWUApSgr0pdikpntOYMW7x4tTnvvEFgIq0DsQ/OAPKXLPRZKRMLBBiysOBFt8p5yyVaeDKV5hepkHky1eXSUpojP3zkITelHizDg59Q+vQIMrnRyxub4d2Fzw0hDYc9ixwenq6DOsGkexjNt3tPBkNdVFnpCHYFXfWHFM4DcPUR4LOmqOPoa1YoOXy5nznLQyiNmjxznkdluE0O/IsVeltbpX6u1BFejNY0f7DqjiGowg3v6c5jrBzVxkicVhHqlbDeWILswuhoVqDXSPRbjwduxqKhvoS7NIce2KbfFxZlvp5AlrLK69VQ1VstMV1AyoKFNcNXVyRXkY3GiKrHZxuGKa4wj+bbuy/FKioGWH0/ScMPz9Ao8ZoQ2GFf5HRVtVmSBmvAqk6J719F2FoKM2g6j4I1VB9nverrcJxj0saT+vJaYCQisTBGnWFweKiraM657dDEu0tguk1CNZ7FVpQQ7UV1RA/E3TVf5YxyFSbMcY8vCM/nAwnwmj9Z5gow94ibUOVukqdP6OUQ9MlTbOH+3JGCWd+kFrAw1EUZ8DjKGQEcBPxsjhdgJvrX/I0DomcRVhZyGPCZlmcyHYcJgElqcwBzZhM5jhMKGG3y/MLXOwNMJXPPt1c/7bAhLsCMg+4q+RRzBhLsEekwOeP7nyls7G1Xiwd8mgWxd8jwBahG1ML/FjZk9ylgbe83/wu6i1tapUsX0uWb9I6I1xkgksu7UdyKv/sVpGr8gSya5csR7dBipbnGVnF2liVQ0Z5aBUD83josuW4op6fkhMm2YIPKydISKIMvOd47nArQLALkHdAfdcFcXiDKFtHqNGCrX28H8WG4lIX1vtxznE+X8W6vS237wtOx8Sj0hYzdyS4nReZJ2kn8Cvc+yv7EtjKIipy3B1z8HDMY57SgMy3qmgUv1ahbyr79ddDUZHHfcdOdZNFhmezaTsH5sFOViVVPZRli/S5eImO8oD6JLWkP2tJmDI=</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list</Name>
+			<Path>.</Path>
+			<FullName>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.2.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">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</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch</Name>
+			<Path>.</Path>
+			<FullName>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.3.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztWduO4kYQffdXdN6YJIzvXLzDjsCANEoirTJRXlbRypfexYsvyG12YVYj7Wckv7dfkrZhgo0vVHtMBkh4ANNUV1fXOXW6pufGfP3Lm59uePM1GgzEjqiogwHqI3MdYYIcH4nIdANrTpARYkQix3VRiA1rZpgujn93A0LoiBWENrUN3iNR4HaO6MuIkLBSdGk6EqYa8gyXukMtOpNfkpB3HZP/ZLgfQse3+U8fFiF2A8N+52HPmmFr3jY8u6O0Xcdfrq5JcJV1ba6pa1HUxWFPQ7e3txu3puPztkFmxcbT0VCFGkuKJHbhxsqkDw6j01dHQGNloo5FXdBQy6TJ+UxT6PhXqEUzZ7VJZITRtaXJQi89lbspQlVS68EqnT6swqQzEcDJ7ymTCdi4KwwlOKwjWWEwnupgdknSUGZg1wiajebYVVM05JdglzLRp3qfliuJQnu5QK3NJ92rIpWxUYfrhigIIlw3VLgivYxu1ERWuTjd6PThCn803Th9KZCleoRRT58wtH8QOwylLYIV/kVKW5brIdU5C6RYOr1TF2GxI9SDqlsJ1VA+zvmqy+K4RyWNhtU4DSRJluBgjbpgsKhoqxJL/3ZJop0hmMpAsN5ZaAGDagtyB94TdOX/LGOkvlyPMf3La/nF6XAKRut/hkEZ9qOkpFSpK7BcRgmXpkuKog9PpUfx5rYTasgyfD+IkEVRiDCiQ9iKgnCNvn39k58FHuYj3xDW/BiTeRQseD3wFo6LQ54CGhEerwxv4WKSfH1H00qwEVoz/u7Xb1//0tCUmiK8cqgpZ7kGIWRhWJhzbA397PjU9D4x5+7GWub70p/7wWcfkbVnBq6GvnCbiYul6TrW5jn9Hu83N6mVG3mbG/mD20VkxGEYOZOr0mjyC6a2d59s6h4QVX6B68TFfQxc7GXzkHfkLz0tLo/DDvMjr0r28MhNvEW0pqVJ6eBhP6JAkfzij0nK9RjSraN9eJ/2X7zMUwodP2IDie7ZxGHse/tU7P8V97sRjrHlcruFdk6I84BjF8kn0EH6PU3DjOODkGXDeEiCeGCgXGa+sVwJYkLa5KFOJuKZ0pMLCewCuvigZHxD8DvfSZKVfBbkKp0ivFqEbccGMRuvBnjFMW6yOtQ39DxJYt081CnqbFwl1dynr2dUbz6OrZT8I7MlArtdvteoljw3GlEChVNG2iMF1T3BoFTYIVAdVKHwb37aLKIy7uoRJpoN1FahPH6MfX5k0bTKGYN0LsrVNl3kZWCn1nrStWLTm0oXmWMMLpBlPChvawoP3rIF3xZtL3+kw2UFjAw4rT+wQwnsk2CVJDyrkA71IIc1I2NPI9qi+u8U2m6eSzYdRPJZp3tx3gdL345dbJ/qtkAv00VlUEgU0I/Ak48gV0BMBhkgD7sEojSAVUheX89TZZl76GOIMBRCpg56T1Qal+IqsPYyCsO9JOAyRAHl2jiX90e+a3r/ewiz8/yYWamqoRMRLLjCgluZQuFpvFe5qO6qEL1DqWug5zp0k9HkrQ/jnzXpqfN46vzMuiTYfV2mcPYvjaClCbxczOpJ4RUm6O4Kfv4eo9OrJENNHWr4NL+g7i3JSBnpv2eV2AY6tC381eu009HL9euo0fZ0UI4BjJ0V/U71GXESZyVT7bKjfEbXIflx7rf4/8ijpePaONS4vwEZJmEe====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort</Name>
+			<Path>.</Path>
+			<FullName>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.4.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztWt1y2kYUvtdTbO/sSbB+EaBAPCDDjCftTFp3epPJeCSxsRX0QyXhgDOdyWO0r5cn6UrCRSAJnV0kYzv1BRLrPWe/3fOdb//om29/ef+uz5tv0WAgqqLSHQxQD5mrCIfI9pCITMe3ZiEyAozCyHYcFGDDujVMB8f/d/wwJCWWH0xJXf8TEgVu44j8GRESloouTUbCREOu4RB36IRY8osw4B3b5O8M5yawvSl/dzMPsOMb02sXu9YttmYtw52qSsuxvcXyLPRPt12bK+JaFHVx2NXQ+fl56ta0PX5qhLfFlSejYRtaWVIksQOvrIx7YBhqrz0CVlbG7QtRFzR0YpLB+UKG0PZO0QkZOasVRkYQnVmaLHSzply/KKpSmy2s0tMPqzBWxwJ48LvKeAyu3BGGEjysI1mhqDzRweySpKFMwa4RdDTqYxejaMjHYJcy1id6j6RrGAXTxRydpE/SV0UqY6MO1w1REES4brThinQc3WCMrPLidEPtwRW+Md14+lIgS2yEaT99wpD1g6hSpLYIVvijpLYss0VKfRaRolnpPXURFlWBLVSdvaEays3Mr7osXnSJpBFYtdNAkmQJHqxRBxwsItptiWb99pJEe4tgbQqCdZ+FFlCotiCr8DVBR/5hGSP1OmyM6b28Jb84GU7A0fqfYVCGvZaUjCp1BJrDKOGl6ZKi6MOnskZxZ1M70JBleJ4fIYtEIcKIFGEr8oMV+v7tb/7WdzEfeYaw4i9wOIv8Oa/77tx2cMCTgEYhj5eGO3dwmHy9/nNhW7Pr0A8i/vK379/+0dCE1EV4aZO6nOUYYRjODQtz9lRDv8aVr0hd7vJC23xZeDPP/+KhcOWavqOhr1xqMl+Yjm2l79nPuKs5o5NcyYdcyUdug8WIMRi5KqelaPINZjp2lfToCoAq38BZ4uIqjlnsJX3JO/IWrhZnRrXDfMmbkj78xY3debQiWUmY4GIvQj+TuBVUi4dcj4O5drQb2LL+Pwye7UV04SG9NXEQe12/FXfgDfeHEVxgy+E2DW2chPY9jl0kT6CD7GeWgFuOK4O1DeM+AXFPQbYte2OxFMSErskLdCSgloOS8pSXl56d9DR5FnQ02z+8nActewoiJF4O8LJeqO/JDJBgTV9YcnEbV0kS9sgfRdJR9y5H3YdxLTZrrctTgSilRwMD/iDlhSq+Hqy8YL0uav6lUadQVzNxEkrjVKbUMGHaH5Gtug7+lNRNnvkgFXgP7JvbxCR9GQY3hdMFUNbuYk93TMJux6Y2k+nn2PQzk2nKkAJ67DdLrCJoixs7y/eilNfrN1pb6T9biRJynEjyQ0bJNDPO3s4OYBmQzaMyIc4ReL9G9rlSFsOV5ysHJG9WyHMLmbL2PtCA+wgavMpUyQKlGE3GGWdv6g2qIwRtJ5c4+1s8lIa55tgYlUvZR0CdbY4NNZhe64r7Y/mKfSlTKVcHJOUOdrZkLAvGbslPJQHb6WQZmH5WnuAxPX0MJjbkHLirfe6pBpbPdcXGdg1NptoO9uOk2k72VC8pgLn5g6cdaG14LHkubLfW9o6RFdR9Y2xpkA9z1aotS7SyhKXUtH6pI0DYXj1IIUPWNrHYbMg5ddY+HnEeK+2fQcIfvA2k7uOBLTILwNbByn7fxUd3VUdeZVvb/IkXINQtuEgUTC8Nd5NV4F4fdixygL5Qjw3FydGRTmBrOEkuPC2lPLeE7hdqOoqrYXouvPGAz8Vlg1jcWN3rL0iWNLWTYzg0oUrSIyVS1cXjoTessPvhrTu53XtO5n0FZBlXeGUOum6tdcNTcolXtQ5IzKQqatBgyM9bIAydGiHkr1FAEMSy3TYLBpkRQ7dGDAojHWqE0GYchnJ9pMegsmFQa4TQYYPQqxFClzESdWLI/xwDhKFdAaGpmS9fzv0e/xpytLCdKQ407l8P/xVb====</Log>
+		</Test>
+		<Test Status="failed">
+			<Name>graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor</Name>
+			<Path>.</Path>
+			<FullName>./graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.5.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">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</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.6.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2ReiPo8TD4/eY7H7NM73/8/L600nu2WoEC216tmM3St33RsrJiwFJdZ08tS5qCtftSa9YUSbZNUl0c3+u6bc2TrG5yU1s/MICbUyNzJXvGX2WIccDjBdsl2rRjM/OldWgbS5ep9ZLox6ascuvl8bkpdJ3kv3bFLtsW2dM82eVKznVZHV7v2vr279bp27F1FMah5y3M4pr88Mxm7/e7bCHxXD1ACKG9YOv1+n0ZaVlZedJuzxYjd7iiFoMjUJKLVSC6FG+AvGZEX9A7ewEnFsvI3kBoqmepkem3EbOsbtnMaJjN233S7M1PF9z9+OnN8hxfXj++8BJ8HXnxXfLvjAOfDpdEcOjFMvI6qGoH/1tV7GkbYvyy8khF1F0C4MooonsG93Eoz4jD6XgGqn50ycnRpTy6DwxG1xUA03PK2BNMMcA5PT5Imz7CLjJoBPZTVo3fCkx+AHLeNEoB2eEvo5Top5RzFUp1SXpj31OgeD+p3E+l8sUwdhkK2LhmWJll/XMMEAXSxQocsljGh9Gnb1jfi8mmDZ6r6BHCEdBhdk8qFYByT5yrDpx704sFEPsxWS3kohNhA52EjJ8wRHkizOlyfMavYup1yCdfyBCR+Ybyw/h1eBdqLnLqOmiqlaE/lqz0B8arTlM=</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.7.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2RehHBHA+D32++8zHL9P7Hz+9LK71nqxUoUHy1YjZL3/ZFy8qKAUt1nT21LGkK1u5LrVlTJNk2SXVx/F/XbWueZHWTm9r6gQHcnBqZK9kz/ipDjAMeL9gu0aYdm5k3rUPbWLpMrZdEPzZllVsvj89Noesk/7Urdtm2yJ7myS5Xcq7L6vB619a3f7dO346tozAOPW9hFtfkh2c2e7/fZQuJ5+oBQgjtBVuv1+/LSMvKypN2e7YYucMVtRgcgZJcrALRpXgD5DUj+oLe2Qs4sVhG9gZCUz1LjUy/jZhldctmRsNs3u6TZm8+uuDux1dvluf48vrxhZfg68iL75I/Zxz4dLgkgkMvlpHXQVU7+N+qYk/bEOOXlUcqou4SAFdGEd0zuI9DeUYcTsczUPWjS06OLuXRfWAwuq4AmJ5Txp5gigHO6fFB2vQRdpFBI7Cfsmr8VmDyA5DzplEKyA5/GaVEP6Wcq1CqS9Ib+54yv/2kcj+VyhfD2GUoYOOaYWWW9c8xQBRIFytwyGIZH0afvmF9LyabNniuokcIR0CH2T2pVGAS0Ylz1YFzb3qxAGI/JquFXHQibKCTkPEThihPhDldjs/4VUy9DvnkCxkiMt9QfrClo0XRqbnIqeugqVaG/liy0h8Z00yE====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.8.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKlL1aMZslb/u8ZUXFgCVlnT61TDc5a/dFWbIm1+lWJ2V+fF/WbWuepHWTmdr6gQHcnBqZS+8Zf5UhxgGPF2ynS9OOzcyX1qFtrLJIrBddPjZFlVkvj89NXtY6+7XLd+k2T5/mepcpOS+L6vB619a3f7dO3o6tozAOPW9hFtdkh2c2e7/fpQuJ5+oBQgjtBVuv1+/LSIrKynS7PVuM3OGKWgyOQEkuVoHoUrwB8poRfUHv7AWcWCwjewOhqZ4lRqbfRsyiumUzo2E6b/e62ZufLrj78dOb5Tm+vH584SX4OvLiu+TfGQc+HS6J4NCLZeR1UNUO/req2NM2xPhl5ZGKqLsEwJVRRPcM7uNQnhGH0/EMVP3okpOjS3l0HxiMrisApueUsSeYYoBzenyQNn2EXWTQCOynrBq/FZj8AOS8aZQCssNfRinRTynnKpTqkvTGvqdA8X5SuZ9K5Yth7DIUsHHNsDLL+ucYIAqkixU4ZLGMD6NP37C+F5NNGzxX0SOEI6DD7J5UKjCJ6MS56sC5N71YALEfk9VCLjoRNtBJyPgJQ5Qnwpwux2f8KqZeh3zyhQwRmW8oP9jS0aLo1Fzk1HXQVCtDfyxZ6Q+8Z06+====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.9.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2RehHBHA+D32++8zHL9P7Hz+9LK71nqxUocPhqxWyWvu2LlpUVA5bqOntqWdIUrN2XWrOmSLJtkuri+L+u29Y8yeomN7X1AwO4OTUyV7Jn/FWGGAc8XrBdok07NjNvWoe2sXSZWi+JfmzKKrdeHp+bQtdJ/mtX7LJtkT3Nk12u5FyX1eH1rq1v/26dvh1bR2Ecet7CLK7JD89s9n6/yxYSz9UDhBDaC7Zer9+XkZaVlSft9mwxcocrajE4AiW5WAWiS/EGyGtG9AW9sxdwYrGM7A2EpnqWGpl+GzHL6pbNjIbZvN0nzd58dMHdj6/eLM/x5fXjCy/B15EX3yV/zjjw6XBJBIdeLCOvg6p28L9VxZ62IcYvK49URN0lAK6MIrpncB+H8ow4nI5noOpHl5wcXcqj+8BgdF0BMD2njD3BFAOc0+ODtOkj7CKDRmA/ZdX4rcDkByDnTaMUkB3+MkqJfko5V6FUl6Q39j0FiveTyv1UKl8MY5ehgI1rhpVZ1j/HAFEgXazAIYtlfBh9+ob1vZhs2uC5ih4hHAEdZvekUoH5PXGuOnDuTS8WQOzHZLWQi06EDXQSMn7CEOWJMKfL8Rm/iqnXIZ98IUNE5hvKD7Z0tCg6NRc5dR001crQH0tW+gM6yUz2====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.10.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKHHu1YjZL3vZ5y4qKAUvKOn1qmW5y1u6LsmRNrtOtTsr8+L6s29Y8SesmM7X1AwO4OTUyl94z/ipDjAMeL9hOl6Ydm5kvrUPbWGWRWC+6fGyKKrNeHp+bvKx19muX79Jtnj7N9S5Tcl4W1eH1rq1v/26dvB1bR2Ecet7CLK7JDs9s9n6/SxcSz9UDhBDaC7Zer9+XkRSVlel2e7YYucMVtRgcgZJcrALRpXgD5DUj+oLe2Qs4sVhG9gZCUz1LjEy/jZhFdctmRsN03u51szc/XXD346c3y3N8ef34wkvwdeTFd8m/Mw58OlwSwaEXy8jroKod/G9VsadtiPHLyiMVUXcJgCujiO4Z3MehPCMOp+MZqPrRJSdHl/LoPjAYXVcATM8pY08wxQDn9PggbfoIu8igEdhPWTV+KzD5Ach50ygFZIe/jFKin1LOVSjVJemNfU+B4v2kcj+VyhfD2GUoYOOaYWWW9c8xQBRIFytwyGIZH0afvmF9LyabNniuokcIR0CH2T2pVGAS0Ylz1YFzb3qxAGI/JquFXHQibKCTkPEThihPhDldjs/4VUy9DvnkCxkiMt9QfrClo0XRqbnIqeugqVaG/liy0h/dXU8w====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.11.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKXL5aMZslb/u8ZUXFgCVlnT61TDc5a/dFWbIm1+lWJ2V+fF/WbWuepHWTmdr6gQHcnBqZS+8Zf5UhxgGPF2ynS9OOzcyX1qFtrLJIrBddPjZFlVkvj89NXtY6+7XLd+k2T5/mepcpOS+L6vB619a3f7dO3o6tozAOPW9hFtdkh2c2e7/fpQuJ5+oBQgjtBVuv1+/LSIrKynS7PVuM3OGKWgyOQEkuVoHoUrwB8poRfUHv7AWcWCwjewOhqZ4lRqbfRsyiumUzo2E6b/e62ZufLrj78dOb5Tm+vH584SX4OvLiu+TfGQc+HS6J4NCLZeR1UNUO/req2NM2xPhl5ZGKqLsEwJVRRPcM7uNQnhGH0/EMVP3okpOjS3l0HxiMrisApueUsSeYYoBzenyQNn2EXWTQCOynrBq/FZj8AOS8aZQCssNfRinRTynnKpTqkvTGvqdA8X5SuZ9K5Yth7DIUsHHNsDLL+ucYIAqkixU4ZLGMD6NP37C+F5NNGzxX0SOEI6DD7J5UKjCJ6MS56sC5N71YALEfk9VCLjoRNtBJyPgJQ5Qnwpwux2f8KqZeh3zyhQwRmW8oP9jS0aLo1Fzk1HXQVCtDfyxZ6Q9bv01o====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.12.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKXHu1YjZL3vZ5y4qKAUvKOn1qmW5y1u6LsmRNrtOtTsr8+L6s29Y8SesmM7X1AwO4OTUyl94z/ipDjAMeL9hOl6Ydm5kvrUPbWGWRWC+6fGyKKrNeHp+bvKx19muX79Jtnj7N9S5Tcl4W1eH1rq1v/26dvB1bR2Ecet7CLK7JDs9s9n6/SxcSz9UDhBDaC7Zer9+XkRSVlel2e7YYucMVtRgcgZJcrALRpXgD5DUj+oLe2Qs4sVhG9gZCUz1LjEy/jZhFdctmRsN03u51szc/XXD346c3y3N8ef34wkvwdeTFd8m/Mw58OlwSwaEXy8jroKod/G9VsadtiPHLyiMVUXcJgCujiO4Z3MehPCMOp+MZqPrRJSdHl/LoPjAYXVcATM8pY08wxQDn9PggbfoIu8igEdhPWTV+KzD5Ach50ygFZIe/jFKin1LOVSjVJemNfU+B4v2kcj+VyhfD2GUoYOOaYWWW9c8xQBRIFytwyGIZH0afvmF9LyabNniuokcIR0CH2T2pVGAS0Ylz1YFzb3qxAGI/JquFXHQibKCTkPEThihPhDldjs/4VUy9DvnkCxkiMt9QfrClo0XRqbnIqeugqVaG/liy0h/+U0+i====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.13.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN1uozAQhe/7FL5MpU3x2MbgKGkEBG5WK+0brMxPG1QHKki67duvo16kK0XVgJYNQeUGCYaRxfl85sjL9P7Hz+9LJ70nqxVIUHS1Ii5J3/ZFS8qKAElNnT21RDcFafelMaQpdLbVqSmO703dtvZJVje5ra0fCMDNqZG99J7QVxGxJKTJguy0se3IzH7pHNrGMWXqvGjz2JRV7rw8PjeFqXX+a1fssm2RPc31Lpdibsrq8HrX1rd/t07fjq3jKImUWtjFNfnhmcze73fZQrBz9QARRO6CrNfr92WkZeXkut2eLWbUoxJbDB5nAl0sQ96leAPoNTMWcHxnFVJksYjdDUS2epZamX5bMcvqlsyshtm83etmb386p/7HT2+W5/hS/fhil+DryEvgo39nEgZ4uAQDD18sYtVBVTf836qynrbBxy8rjWWM3SUAvohjvGfQgA3lGUk0Hc9gsh9dYnJ0SYX3gcHougJgek4Zd4IpBijFxwfh4kfYRQYNZ/2UleO3ApsfAJ03rVKAdvjLKMX7KeVdhVJdkt7Y9xRI2k8q/1OpAj6MXUYcNr4dVnZZ/xwDxjjDixV6aLGsD7MAv2EDlaBNG5Qv8RHC49Bhdk8qFdhEdOJcduBcTS8WQBIkaLUY5Z0IG+gkZPyEMSZOhHldjs/oVUy9DvnkCxkkMt+Y+GBLR4vCU3ORU9dBU62IgrFkpT98tU3a====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.14.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN1uozAQhe/7FL5MpU3x2MbgKGkEBG5WK+0brMxPG1QHKki67duvo16kK0XVgJYNQeUGCYaRxfl85sjL9P7Hz+9LJ70nqxVIUO5qRVySvu2LlpQVAZKaOntqiW4K0u5LY0hT6GyrU1Mc35u6be2TrG5yW1s/EICbUyN76T2hryJiSUiTBdlpY9uRmf3SObSNY8rUedHmsSmr3Hl5fG4KU+v8167YZdsie5rrXS7F3JTV4fWurW//bp2+HVvHURIptbCLa/LDM5m93++yhWDn6gEiiNwFWa/X78tIy8rJdbs9W8yoRyW2GDzOBLpYhrxL8QbQa2Ys4PjOKqTIYhG7G4hs9Sy1Mv22YpbVLZlZDbN5u9fN3v50Tv2Pn94sz/Gl+vHFLsHXkZfAR//OJAzwcAkGHr5YxKqDqm74v1VlPW2Dj19WGssYu0sAfBHHeM+gARvKM5JoOp7BZD+6xOTokgrvA4PRdQXA9Jwy7gRTDFCKjw/CxY+wiwwazvopK8dvBTY/ADpvWqUA7fCXUYr3U8q7CqW6JL2x7ymQtJ9U/qdSBXwYu4w4bHw7rOyy/jkGjHGGFyv00GJZH2YBfsMGKkGbNihf4iOEx6HD7J5UKrCJ6MS57MC5ml4sgCRI0GoxyjsRNtBJyPgJY0ycCPO6HJ/Rq5h6HfLJFzJIZL4x8cGWjhaFp+Yip66DploRBWPJSn8AH1hQFA==</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.15.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2ReiPo8TD4/eY7H7NM73/8/L600nu2WoFCzlcrZrP0bV+0rKwYsFTX2VPLkqZg7b7UmjVFkm2TVBfH97puW/Mkq5vc1NYPDODm1MhcyZ7xVxliHPB4wXaJNu3YzHxpHdrG0mVqvST6sSmr3Hp5fG4KXSf5r12xy7ZF9jRPdrmSc11Wh9e7tr79u3X6dmwdhXHoeQuzuCY/PLPZ+/0uW0g8Vw8QQmgv2Hq9fl9GWlZWnrTbs8XIHa6oxeAIlORiFYguxRsgrxnRF/TOXsCJxTKyNxCa6llqZPptxCyrWzYzGmbzdp80e/PTBXc/fnqzPMeX148vvARfR158l/w748CnwyURHHqxjLwOqtrB/1YVe9qGGL+sPFIRdZcAuDKK6J7BfRzKM+JwOp6Bqh9dcnJ0KY/uA4PRdQXA9Jwy9gRTDHBOjw/Spo+wiwwagf2UVeO3ApMfgJw3jVJAdvjLKCX6KeVchVJdkt7Y9xQo3k8q91OpfDGMXYYCNq4ZVmZZ/xwDRIF0sQKHLJbxYfTpG9b3YrJpg+cqeoRwBHSY3ZNKBSYRnThXHTj3phcLIPZjslrIRSfCBjoJGT9hiPJEmNPl+IxfxdTrkE++kCEi8w3lB1s6WhSdmoucug6aamXojyUr/QF1aEpK====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.16.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKub1aMZslb/u8ZUXFgCVlnT61TDc5a/dFWbIm1+lWJ2V+fF/WbWuepHWTmdr6gQHcnBqZS+8Zf5UhxgGPF2ynS9OOzcyX1qFtrLJIrBddPjZFlVkvj89NXtY6+7XLd+k2T5/mepcpOS+L6vB619a3f7dO3o6tozAOPW9hFtdkh2c2e7/fpQuJ5+oBQgjtBVuv1+/LSIrKynS7PVuM3OGKWgyOQEkuVoHoUrwB8poRfUHv7AWcWCwjewOhqZ4lRqbfRsyiumUzo2E6b/e62ZufLrj78dOb5Tm+vH584SX4OvLiu+TfGQc+HS6J4NCLZeR1UNUO/req2NM2xPhl5ZGKqLsEwJVRRPcM7uNQnhGH0/EMVP3okpOjS3l0HxiMrisApueUsSeYYoBzenyQNn2EXWTQCOynrBq/FZj8AOS8aZQCssNfRinRTynnKpTqkvTGvqdA8X5SuZ9K5Yth7DIUsHHNsDLL+ucYIAqkixU4ZLGMD6NP37C+F5NNGzxX0SOEI6DD7J5UKjCJ6MS56sC5N71YALEfk9VCLjoRNtBJyPgJQ5Qnwpwux2f8KqZeh3zyhQwRmW8oP9jS0aLo1Fzk1HXQVCtDfyxZ6Q8YC0yE====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.17.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2ReiPo8TD4/eY7H7NM73/8/L600nu2WoFC4KsVs1n6ti9aVlYMWKrr7KllSVOwdl9qzZoiybZJqovje123rXmS1U1uausHBnBzamSuZM/4qwwxDni8YLtEm3ZsZr60Dm1j6TK1XhL92JRVbr08PjeFrpP8167YZdsie5onu1zJuS6rw+tdW9/+3Tp9O7aOwjj0vIVZXJMfntns/X6XLSSeqwcIIbQXbL1evy8jLSsrT9rt2WLkDlfUYnAESnKxCkSX4g2Q14zoC3pnL+DEYhnZGwhN9Sw1Mv02YpbVLZsZDbN5u0+avfnpgrsfP71ZnuPL68cXXoKvIy++S/6dceDT4ZIIDr1YRl4HVe3gf6uKPW1DjF9WHqmIuksAXBlFdM/gPg7lGXE4Hc9A1Y8uOTm6lEf3gcHougJgek4Ze4IpBjinxwdp00fYRQaNwH7KqvFbgckPQM6bRikgO/xllBL9lHKuQqkuSW/sewoU7yeV+6lUvhjGLkMBG9cMK7Osf44BokC6WIFDFsv4MPr0Det7Mdm0wXMVPUI4AjrM7kmlApOITpyrDpx704sFEPsxWS3kohNhA52EjJ8wRHkizOlyfMavYup1yCdfyBCR+Ybygy0dLYpOzUVOXQdNtTL0x5KV/gCWXkq8====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.18.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKwV6tmM2St33esqJiwJKyTp9appuctfuiLFmT63SrkzI/vi/rtjVP0rrJTG39wABuTo3MpfeMv8oQ44DHC7bTpWnHZuZL69A2Vlkk1osuH5uiyqyXx+cmL2ud/drlu3Sbp09zvcuUnJdFdXi9a+vbv1snb8fWURiHnrcwi2uywzObvd/v0oXEc/UAIYT2gq3X6/dlJEVlZbrdni1G7nBFLQZHoCQXq0B0Kd4Aec2IvqB39gJOLJaRvYHQVM8SI9NvI2ZR3bKZ0TCdt3vd7M1PF9z9+OnN8hxfXj++8BJ8HXnxXfLvjAOfDpdEcOjFMvI6qGoH/1tV7GkbYvyy8khF1F0C4MooonsG93Eoz4jD6XgGqn50ycnRpTy6DwxG1xUA03PK2BNMMcA5PT5Imz7CLjJoBPZTVo3fCkx+AHLeNEoB2eEvo5Top5RzFUp1SXpj31OgeD+p3E+l8sUwdhkK2LhmWJll/XMMEAXSxQocsljGh9Gnb1jfi8mmDZ6r6BHCEdBhdk8qFZhEdOJcdeDcm14sgNiPyWohF50IG+gkZPyEIcoTYU6X4zN+FVOvQz75QoaIzDeUH2zpaFF0ai5y6jpoqpWhP5as9Ac5AUz2====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.19.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2ReiPo8TD4/eY7H7NM73/8/L600nu2WoFC5KsVs1n6ti9aVlYMWKrr7KllSVOwdl9qzZoiybZJqovje123rXmS1U1uausHBnBzamSuZM/4qwwxDni8YLtEm3ZsZr60Dm1j6TK1XhL92JRVbr08PjeFrpP8167YZdsie5onu1zJuS6rw+tdW9/+3Tp9O7aOwjj0vIVZXJMfntns/X6XLSSeqwcIIbQXbL1evy8jLSsrT9rt2WLkDlfUYnAESnKxCkSX4g2Q14zoC3pnL+DEYhnZGwhN9Sw1Mv02YpbVLZsZDbN5u0+avfnpgrsfP71ZnuPL68cXXoKvIy++S/6dceDT4ZIIDr1YRl4HVe3gf6uKPW1DjF9WHqmIuksAXBlFdM/gPg7lGXE4Hc9A1Y8uOTm6lEf3gcHougJgek4Ze4IpBjinxwdp00fYRQaNwH7KqvFbgckPQM6bRikgO/xllBL9lHKuQqkuSW/sewoU7yeV+6lUvhjGLkMBG9cMK7Osf44BokC6WIFDFsv4MPr0Det7Mdm0wXMVPUI4AjrM7kmlApOITpyrDpx704sFEPsxWS3kohNhA52EjJ8wRHkizOlyfMavYup1yCdfyBCR+Ybygy0dLYpOzUVOXQdNtTL0x5KV/gC3VEsu====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.20.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUK0V6tmM2St33esqJiwJKyTp9appuctfuiLFmT63SrkzI/vi/rtjVP0rrJTG39wABuTo3MpfeMv8oQ44DHC7bTpWnHZuZL69A2Vlkk1osuH5uiyqyXx+cmL2ud/drlu3Sbp09zvcuUnJdFdXi9a+vbv1snb8fWURiHnrcwi2uywzObvd/v0oXEc/UAIYT2gq3X6/dlJEVlZbrdni1G7nBFLQZHoCQXq0B0Kd4Aec2IvqB39gJOLJaRvYHQVM8SI9NvI2ZR3bKZ0TCdt3vd7M1PF9z9+OnN8hxfXj++8BJ8HXnxXfLvjAOfDpdEcOjFMvI6qGoH/1tV7GkbYvyy8khF1F0C4MooonsG93Eoz4jD6XgGqn50ycnRpTy6DwxG1xUA03PK2BNMMcA5PT5Imz7CLjJoBPZTVo3fCkx+AHLeNEoB2eEvo5Top5RzFUp1SXpj31OgeD+p3E+l8sUwdhkK2LhmWJll/XMMEAXSxQocsljGh9Gnb1jfi8mmDZ6r6BHCEdBhdk8qFZhEdOJcdeDcm14sgNiPyWohF50IG+gkZPyEIcoTYU6X4zN+FVOvQz75QoaIzDeUH2zpaFF0ai5y6jpoqpWhP5as9AdZ901o====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.21.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2ReiPo8TD4/eY7H7NM73/8/L600nu2WoFCwVcrZrP0bV+0rKwYsFTX2VPLkqZg7b7UmjVFkm2TVBfH97puW/Mkq5vc1NYPDODm1MhcyZ7xVxliHPB4wXaJNu3YzHxpHdrG0mVqvST6sSmr3Hp5fG4KXSf5r12xy7ZF9jRPdrmSc11Wh9e7tr79u3X6dmwdhXHoeQuzuCY/PLPZ+/0uW0g8Vw8QQmgv2Hq9fl9GWlZWnrTbs8XIHa6oxeAIlORiFYguxRsgrxnRF/TOXsCJxTKyNxCa6llqZPptxCyrWzYzGmbzdp80e/PTBXc/fnqzPMeX148vvARfR158l/w748CnwyURHHqxjLwOqtrB/1YVe9qGGL+sPFIRdZcAuDKK6J7BfRzKM+JwOp6Bqh9dcnJ0KY/uA4PRdQXA9Jwy9gRTDHBOjw/Spo+wiwwagf2UVeO3ApMfgJw3jVJAdvjLKCX6KeVchVJdkt7Y9xQo3k8q91OpfDGMXYYCNq4ZVmZZ/xwDRIF0sQKHLJbxYfTpG9b3YrJpg+cqeoRwBHSY3ZNKBSYRnThXHTj3phcLIPZjslrIRSfCBjoJGT9hiPJEmNPl+IxfxdTrkE++kCEi8w3lB1s6WhSdmoucug6aamXojyUr/QHYSkug====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.22.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLOOfNlKjRZNu+/Y7oRfpQihHWTdG6o2gx8Pg95vvfMwyuf/x8/vSSu7ZagUKhb1aMZslb/u8ZUXFgCVlnT61TDc5a/dFWbIm1+lWJ2V+fF/WbWuepHWTmdr6gQHcnBqZS+8Zf5UhxgGPF2ynS9OOzcyX1qFtrLJIrBddPjZFlVkvj89NXtY6+7XLd+k2T5/mepcpOS+L6vB619a3f7dO3o6tozAOPW9hFtdkh2c2e7/fpQuJ5+oBQgjtBVuv1+/LSIrKynS7PVuM3OGKWgyOQEkuVoHoUrwB8poRfUHv7AWcWCwjewOhqZ4lRqbfRsyiumUzo2E6b/e62ZufLrj78dOb5Tm+vH584SX4OvLiu+TfGQc+HS6J4NCLZeR1UNUO/req2NM2xPhl5ZGKqLsEwJVRRPcM7uNQnhGH0/EMVP3okpOjS3l0HxiMrisApueUsSeYYoBzenyQNn2EXWTQCOynrBq/FZj8AOS8aZQCssNfRinRTynnKpTqkvTGvqdA8X5SuZ9K5Yth7DIUsHHNsDLL+ucYIAqkixU4ZLGMD6NP37C+F5NNGzxX0SOEI6DD7J5UKjCJ6MS56sC5N71YALEfk9VCLjoRNtBJyPgJQ5Qnwpwux2f8KqZeh3zyhQwRmW8oP9jS0aLo1Fzk1HXQVCtDfyxZ6Q967U3a====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.23.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN9qo0AUxu/7FHOZwqbOOTOOGpIGNXqzLOwbLP5rI51o0aTbvv1O6EW6EMpR1o2ReiPo8TD4/eY7H7NM73/8/L600nu2WoFCyVcrZrP0bV+0rKwYsFTX2VPLkqZg7b7UmjVFkm2TVBfH97puW/Mkq5vc1NYPDODm1MhcyZ7xVxliHPB4wXaJNu3YzHxpHdrG0mVqvST6sSmr3Hp5fG4KXSf5r12xy7ZF9jRPdrmSc11Wh9e7tr79u3X6dmwdhXHoeQuzuCY/PLPZ+/0uW0g8Vw8QQmgv2Hq9fl9GWlZWnrTbs8XIHa6oxeAIlORiFYguxRsgrxnRF/TOXsCJxTKyNxCa6llqZPptxCyrWzYzGmbzdp80e/PTBXc/fnqzPMeX148vvARfR158l/w748CnwyURHHqxjLwOqtrB/1YVe9qGGL+sPFIRdZcAuDKK6J7BfRzKM+JwOp6Bqh9dcnJ0KY/uA4PRdQXA9Jwy9gRTDHBOjw/Spo+wiwwagf2UVeO3ApMfgJw3jVJAdvjLKCX6KeVchVJdkt7Y9xQo3k8q91OpfDGMXYYCNq4ZVmZZ/xwDRIF0sQKHLJbxYfTpG9b3YrJpg+cqeoRwBHSY3ZNKBSYRnThXHTj3phcLIPZjslrIRSfCBjoJGT9hiPJEmNPl+IxfxdTrkE++kCEi883cP0DDu1BzkVPXQVOtDP2xZKU/+UBMEg==</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java</Name>
+			<Path>.</Path>
+			<FullName>./bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.24.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" "1"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">11</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN1um0AQhe/zFHvpSHXYmV0WsOxYgOGmqtQ3qPhLjLKGCOw0efuulQunkhUNqNQYxTfIZhivON+eOdplev/j5/elld6z1QoUSnu1YjZL3/ZFy8qKAUt1nT21LGkK1u5LrVlTJNk2SXVxvK/rtjW/ZHWTm9r6gQHcnBqZT7Jn/FWGGAc8XrBdok07NjNPWoe2sXSZWi+JfmzKKrdeHp+bQtdJ/mtX7LJtkT3Nk12u5FyX1eH1rq1v/26dvh1bR2Ecet7CLK7JD89s9n69yxYSz9UDhBDaC7Zer9+XkZaVlSft9mwxcocrajE4AiW5WAWiS/EGyGtG9AW9sxdwYrGM7A2EpnqWGpl+GzHL6pbNjIbZvN0nzd68dMHdj4/eLM/x5fXjCy/B15EX3yW/zjjw6XBJBIdeLCOvg6p28L9VxZ62IcYvK49URN0lAK6MIrpncB+H8ow4nI5noOpHl5wcXcqj+8BgdF0BMD2njD3BFAOc0+ODtOkj7CKDRmA/ZdX4rcDkByDnTfMVyA5/GaVEP6Wcq1CqS9Ib+54CxftJ5X4qlS+GsctQwMY1w8os659jgCiQLlbgkMUyPow+fcP6Xkw2bfBcRY8QjoAOs3tSqcD86Ylz1YFzb3qxAGI/JquFXHQibKCTkPEThihPhDldjs/4VUy9DvnkCxkiMt9Qfhi/Du9CzUVOXQdNtTL0x5KV/gDNSk5U====</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.25.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmFFvmzAQx9/7KfyYSkuxz8ZAlDQCCi/TpH2DyQbWoDpQYdK1336u+tBO6qYzapUEjRckOE7m/j/f/2Ctr799/7oO9DXZbJiEkG42JCH6aWwsaTvCiDZ9dWeJGhpix9YYMjSq2iltmuf7prfWXan6oXax/U/C6MVrIneokdBHkUOZ0XJF9sq4dGThngwOdghMq4MHZW6HtquDh9v7oTG9qn/sm321a6q7pdrXUixN2x0er2x/+Wdq/eRSM5azNF6R7Xb7kla3XVAru3s/uMzSEBsMAliEDxZFgl6GTMIMGSyK8IbldEUW2hXnlyth212ShatctbSjGsarasVp/PbRi/V7qkI4TVY4fVlpIQuKLn4sigIdHNEU8LJmXHgElzmaLoCUe9CVYavxcXTJaXTx2dElE3wf+DS6zgCYiS4jjgGMKPIyf9bVjkN9uCeLl7N7VwF/AyzHGw2jlOGNJsRb2FGMhsM0ZcPTbwVufmDSQymG7vDHUYpPU0qehVI+k96p7ykm6TSpon9KlfLPaZc5ZzexMyu3rA/HAIADXqwsQovl+jCk+A2bJiW6abMklvgRIuLMw7tnNRWwmL1yHnlwHs9vLGBlWqLVAsq9CAOfD5U5EQYgphGWnIXpeYwn/4lBEvMFxBv3jajPPzE6N2qEyNNTGZV+A/28qDk=</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.26.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmM9uozAQxu99Ch9TqSn22BiIkkZA4VKt1DdYmT9tUB2oMOm2b7+uemhWaqsxapUELRckGEZmvp/nG1gWV79ub5ZecUVWKybBF6sViUjxMtSGNC1hpNBd+WCI6mtihkZr0teq3KhC16/3dWeMvVJ2fWVjuzvC6Nl7InuogdBnkUKe0HxBtkrbdGRmn/R2pvd0U3hPSt/3TVt5T/ePfa07Vf3e1ttyU5cPc7WtpJjrpt09X5ru/N/UxYtNzVjK4nBB1uv1W9qiab1Kmc3HwXkS+9hgEMACfLDIIvQyZOQnyGCR+dcspQsyK2xx/tgSNu05mdnKlXMzqH64LBechvuPni0/UhX8cbLC8ctKM5lRdPFDkWXo4IDGgJc14cIhOE/RdAHE3IGuBFuN76NLjqOLT44uGeH7wI/RdQLAjHQZcQhgRJbm6auuZuir3SOZvZ3tuwr4DLAUbzSMUoY3Gh9vYQcxGg7jlPWPvxXY+YFJB6UYusMfRik+Til5Ekq5THrHvqeYpOOkCr6UKuY/0y5Tzq5Da1Z2Wd+OAQAHvFhJgBbL9mGI8Rs2jnJ002ZRKPEjRMCZg3dPaipgwd5YEDhwHk5vLGB5nKPVAsqdCAOXD5UpEQYgxhEWnYTpOYwn/4lBEnMBYs99A+ryT4xOjRoh0vhYRqW/ke6p2A==</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.27.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmM9uozAQxu99Ch9TqSn22BiIkkZA4VKt1DdYmT9tUB2oMOm2b7+uemhWaqsxapUELRckGEZmvp/nG1gWV79ub5ZecUVWKybBD1crEpHiZagNaVrCSKG78sEQ1dfEDI3WpK9VuVGFrl/v684Ye6Xs+srGdneE0bP3RPZQA6HPIoU8ofmCbJW26cjMPuntTO/ppvCelL7vm7bynu4f+1p3qvq9rbflpi4f5mpbSTHXTbt7vjTd+b+pixebmrGUxeGCrNfrt7RF03qVMpuPg/Mk9rHBIIAF+GCRRehlyMhPkMEi869ZShdkVtji/LElbNpzMrOVK+dmUP1wWS44DfcfPVt+pCr442SF45eVZjKj6OKHIsvQwQGNAS9rwoVDcJ6i6QKIuQNdCbYa30eXHEcXnxxdMsL3gR+j6wSAGeky4hDAiCzN01ddzdBXu0cyezvbdxXwGWAp3mgYpQxvND7ewg5iNBzGKesffyuw8wOTDkoxdIc/jFJ8nFLyJJRymfSOfU8xScdJFXwpVcx/pl2mnF2H1qzssr4dAwAOeLGSAC2W7cMQ4zdsHOXops2iUOJHiIAzB++e1FTAgr2xIHDgPJzeWMDyOEerBZQ7EQYuHypTIgxAjCMsOgnTcxhP/hODJOYCxJ77BtTlnxidGjVCpPGxjEp/Afreq3A=</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.28.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/factorial.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmFFvmzAQx9/7KfyYSkuxz8ZAlDQCCi/TpH2DyQbWoDpQYdK1336u+tBO6qYzapUEjRckOE7m/j/f/2Ctr799/7oO9DXZbJgECZsNSYh+GhtL2o4wok1f3VmihobYsTWGDI2qdkqb5vm+6a11V6p+qF1s/5MwevGayB1qJPRR5FBmtFyRvTIuHVm4J4ODHQLT6uBBmduh7erg4fZ+aEyv6h/7Zl/tmupuqfa1FEvTdofHK9tf/plaP7nUjOUsjVdku92+pNVtF9TK7t4PLrM0xAaDABbhg0WRoJchkzBDBosivGE5XZGFdsX55UrYdpdk4SpXLe2ohvGqWnEav330Yv2eqhBOkxVOX1ZayIKiix+LokAHRzQFvKwZFx7BZY6mCyDlHnRl2Gp8HF1yGl18dnTJBN8HPo2uMwBmosuIYwAjirzMn3W141Af7sni5ezeVcDfAMvxRsMoZXijCfEWdhSj4TBN2fD0W4GbH5j0UIqhO/xxlOLTlJJnoZTPpHfqe4pJOk2q6J9Spfxz2mXO2U3szMot68MxAOCAFyuL0GK5PgwpfsOmSYlu2iyJJX6EiDjz8O5ZTQUsil45jzw4j+c3FrAyLdFqAeVehIHPh8qcCAMQ0whLzsL0PMaT/8QgifkC4o37RtTnnxidGzVC5OmpjEq/AWvAqXA=</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.29.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmFFvmzAQx9/7KfyYSkuxz8ZAlDQCCi/TpH2DyQbWoDpQYdK1336u+tBO6qYzapUEjRckOE7m/j/f/2Ctr799/7oO9DXZbJgEKTcbkhD9NDaWtB1hRJu+urNEDQ2xY2sMGRpV7ZQ2zfN901vrrlT9ULvY/idh9OI1kTvUSOijyKHMaLkie2VcOrJwTwYHOwSm1cGDMrdD29XBw+390Jhe1T/2zb7aNdXdUu1rKZam7Q6PV7a//DO1fnKpGctZGq/Idrt9SavbLqiV3b0fXGZpiA0GASzCB4siQS9DJmGGDBZFeMNyuiIL7Yrzy5Ww7S7JwlWuWtpRDeNVteI0fvvoxfo9VSGcJiucvqy0kAVFFz8WRYEOjmgKeFkzLjyCyxxNF0DKPejKsNX4OLrkNLr47OiSCb4PfBpdZwDMRJcRxwBGFHmZP+tqx6E+3JPFy9m9q4C/AZbjjYZRyvBGE+It7ChGw2GasuHptwI3PzDpoRRDd/jjKMWnKSXPQimfSe/U9xSTdJpU0T+lSvnntMucs5vYmZVb1odjAMABL1YWocVyfRhS/IZNkxLdtFkSS/wIEXHm4d2zmgpYzF45jzw4j+c3FrAyLdFqAeVehIHPh8qcCAMQ0whLzsL0PMaT/8QgifkC4o37RtTnnxidGzVC5OmpjEq/AbXVqwM=</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.30.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmM9uozAQxu99Ch9TqSn22BiIkkZA4VKt1DdYmT9tUB2oMOm2b7+uemhWaqsxapUELRckGEZmvp/nG1gWV79ub5ZecUVWKyYhoKsViUjxMtSGNC1hpNBd+WCI6mtihkZr0teq3KhC16/3dWeMvVJ2fWVjuzvC6Nl7InuogdBnkUKe0HxBtkrbdGRmn/R2pvd0U3hPSt/3TVt5T/ePfa07Vf3e1ttyU5cPc7WtpJjrpt09X5ru/N/UxYtNzVjK4nBB1uv1W9qiab1Kmc3HwXkS+9hgEMACfLDIIvQyZOQnyGCR+dcspQsyK2xx/tgSNu05mdnKlXMzqH64LBechvuPni0/UhX8cbLC8ctKM5lRdPFDkWXo4IDGgJc14cIhOE/RdAHE3IGuBFuN76NLjqOLT44uGeH7wI/RdQLAjHQZcQhgRJbm6auuZuir3SOZvZ3tuwr4DLAUbzSMUoY3Gh9vYQcxGg7jlPWPvxXY+YFJB6UYusMfRik+Til5Ekq5THrHvqeYpOOkCr6UKuY/0y5Tzq5Da1Z2Wd+OAQAHvFhJgBbL9mGI8Rs2jnJ002ZRKPEjRMCZg3dPaipgwd5YEDhwHk5vLGB5nKPVAsqdCAOXD5UpEQYgxhEWnYTpOYwn/4lBEnMBYs99A+ryT4xOjRoh0vhYRqW/XkKpDA==</Log>
+		</Test>
+		<Test Status="passed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.31.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">10</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmFFvmzAQx9/7KfyYSkuxz8ZAlDQCCi/TpH2DyQbWoDpQYdK1336u+tBO6qYzapUEjRckOE7m/j/f/2Ctr799/7oO9DXZbJiESGw2JCH6aWwsaTvCiDZ9dWeJGhpix9YYMjSq2iltmuf7prfWXan6oXax/U/C6MVrIneokdBHkUOZ0XJF9sq4dGThngwOdghMq4MHZW6HtquDh9v7oTG9qn/sm321a6q7pdrXUixN2x0er2x/+Wdq/eRSM5azNF6R7Xb7kla3XVAru3s/uMzSEBsMAliEDxZFgl6GTMIMGSyK8IbldEUW2hXnlyth212ShatctbSjGsarasVp/PbRi/V7qkI4TVY4fVlpIQuKLn4sigIdHNEU8LJmXHgElzmaLoCUe9CVYavxcXTJaXTx2dElE3wf+DS6zgCYiS4jjgGMKPIyf9bVjkN9uCeLl7N7VwF/AyzHGw2jlOGNJsRb2FGMhsM0ZcPTbwVufmDSQymG7vDHUYpPU0qehVI+k96p7ykm6TSpon9KlfLPaZc5ZzexMyu3rA/HAIADXqwsQovl+jCk+A2bJiW6abMklvgRIuLMw7tnNRWwKH7lPPLgPJ7fWMDKtESrBZR7EQY+HypzIgxATCMsOQvT8xhP/hODJOYLiDfuG1Gff2J0btQIkaenMir9BsEGqqM=</Log>
+		</Test>
+		<Test Status="failed">
+			<Name>good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java</Name>
+			<Path>.</Path>
+			<FullName>./good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--log-file=/home/tna0y/Desktop/Compiler/Testing/Temporary/MemoryChecker.32.log" "-q" "--tool=memcheck" "--leak-check=yes" "--show-reachable=yes" "--num-callers=50" "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" "0"</FullCommandLine>
+			<Results>
+				<Defect type="Potential Memory Leak">12</Defect>
+			</Results>
+			<Log compression="gzip" encoding="base64">eJztmN1uozAQhe/7FL5MpU3xjI0NUdIICNysVto3WPHXBpVABUm3fft11It0paga0LIhqNwgwTCyOJ+Pj71M7n/8/L60knu2WoFC7axWzGbJ2z5vWVExYElZp08ti5uctfuiLFmTx+k2Tsr8+L6s29Y8SesmM7X1AwO8OTUyV7xn/FUGGPk8WrBdXJp2bGa+tA5tY5VFYr3E5WNTVJn18vjc5GUdZ792+S7d5unTPN5lSs7Lojq83rX17d+tk7dj6zCIAtddmME12eGZzd7vd+lC4rl6gAACe8HW6/X7MJKisrK43Z4tRq65ohaDFijJxcoXXYo3QB4zoifonV2fE4tlaG8gMNWzxMj024hZVLdsZjRM5+0+bvbmpwvufPz0ZnmOL7cfX3gJvo68eA75d0a+R4dLImh6sQzdDqra/v9WFXvahhi/rDxUIXWWADgyDOmewT0cyjOiYDqegaofXXJydCmX7gOD0XUFwDj9gLEnB8xY7GhKEQZ7Zhg1wYwMnNOVlTY9IF0kxgjsp6wev2+YdArk3YxRCsj54TJKiX5KOVehVJd9xNjnFCjeTyr3U6k8MYxdBgI2jlnZzLD+OQaIAuli+ZoslvFh9OgT1nMjsmmD6yh63tACOqzdk8qcoPWJc9Xl6IxPLxdA5EVkuZCLTogNdNA2fsQQ5Qkx3QWxixzPDhlQvpAhIvMN5Yf1V/Mu1FzHoWuXWCsDbyxh6Q/3VvQx====</Log>
+		</Test>
+		<DefectList>
+			<Defect Type="Potential Memory Leak"/>
+		</DefectList>
+		<EndDateTime>Dec 24 05:06 MSK</EndDateTime>
+		<EndTestTime>1545617185</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</DynamicAnalysis>
+</Site>

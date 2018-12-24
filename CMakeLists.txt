@@ -6,6 +6,7 @@ project(Compiler)
 find_package(FLEX)
 find_package(BISON)
 
+include(CTest)
 
 FLEX_TARGET(FlexLexer  src/lexer.l  ${CMAKE_CURRENT_BINARY_DIR}/lexer.cpp)
 BISON_TARGET(BisonParser  src/grammar.y ${CMAKE_CURRENT_BINARY_DIR}/parser.cpp)
@@ -30,12 +31,14 @@ add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParse
 add_custom_target(cppcheck
 	COMMAND cppcheck --std=c++11 --enable=all --inconclusive --verbose --quiet --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.h --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.cpp --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/parser.cpp --suppress=*:"*yacc.c*" ${PROJECT_SOURCE_DIR}/src)
 
+add_custom_target(memcheck
+    COMMAND ${CMAKE_CTEST_COMMAND} 
+        --force-new-ctest-process --test-action memcheck
+    COMMAND cat "${CMAKE_BINARY_DIR}/Testing/Temporary/MemoryChecker.*.log")
 
 # TESTS
 
 enable_testing()
-
-
  
 file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/tests/examples/test_*")
 set(validator ${CMAKE_CURRENT_SOURCE_DIR}/tests/examples/build_graph.sh)

@@ -1,0 +1,42 @@
+==15418== 9 bytes in 1 blocks are still reachable in loss record 1 of 5
+==15418==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15418==    by 0x11C1A8: ??? (in /bin/dash)
+==15418==    by 0x11FBA5: ??? (in /bin/dash)
+==15418==    by 0x124217: ??? (in /bin/dash)
+==15418==    by 0x1244E9: ??? (in /bin/dash)
+==15418==    by 0x11695B: ??? (in /bin/dash)
+==15418==    by 0x4E5D1C0: (below main) (libc-start.c:308)
+==15418== 
+==15418== 29 bytes in 1 blocks are still reachable in loss record 2 of 5
+==15418==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15418==    by 0x4ECFC99: strdup (strdup.c:42)
+==15418==    by 0x11C1C5: ??? (in /bin/dash)
+==15418==    by 0x121001: ??? (in /bin/dash)
+==15418==    by 0x1245A5: ??? (in /bin/dash)
+==15418==    by 0x11695B: ??? (in /bin/dash)
+==15418==    by 0x4E5D1C0: (below main) (libc-start.c:308)
+==15418== 
+==15418== 32 bytes in 1 blocks are still reachable in loss record 3 of 5
+==15418==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15418==    by 0x11C1A8: ??? (in /bin/dash)
+==15418==    by 0x11FB16: ??? (in /bin/dash)
+==15418==    by 0x12451C: ??? (in /bin/dash)
+==15418==    by 0x11695B: ??? (in /bin/dash)
+==15418==    by 0x4E5D1C0: (below main) (libc-start.c:308)
+==15418== 
+==15418== 33 bytes in 1 blocks are still reachable in loss record 4 of 5
+==15418==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15418==    by 0x11C1A8: ??? (in /bin/dash)
+==15418==    by 0x11FBA5: ??? (in /bin/dash)
+==15418==    by 0x1245A5: ??? (in /bin/dash)
+==15418==    by 0x11695B: ??? (in /bin/dash)
+==15418==    by 0x4E5D1C0: (below main) (libc-start.c:308)
+==15418== 
+==15418== 2,240 bytes in 70 blocks are still reachable in loss record 5 of 5
+==15418==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15418==    by 0x11C1A8: ??? (in /bin/dash)
+==15418==    by 0x11FB16: ??? (in /bin/dash)
+==15418==    by 0x1244CA: ??? (in /bin/dash)
+==15418==    by 0x11695B: ??? (in /bin/dash)
+==15418==    by 0x4E5D1C0: (below main) (libc-start.c:308)
+==15418== 
