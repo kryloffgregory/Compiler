@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <SymbolTable/SymbolTableBuilder.h>
 #include <IRT/Translator.h>
 #include "RuleClasses/RuleClasses.h"
@@ -30,7 +31,7 @@ int main(int argc, char *argv[]) {
 
     STBuilder stBuilder;
     stBuilder.Visit(dynamic_cast<CProgram * >(root));
-    auto table = stBuilder.GetSymbolsTable();
+    auto table = std::shared_ptr<CTable>(stBuilder.GetSymbolsTable());
     for (auto error : stBuilder.GetErrorStorage().GetAllErrors()) {
         std::cout << error << std::endl;
     }
@@ -45,12 +46,16 @@ int main(int argc, char *argv[]) {
     CTranslator irBuilder(table);
     irBuilder.Visit(dynamic_cast<CProgram * >(root));
     auto frames = irBuilder.GetFrames();
-    for( const auto& frame : irBuilder.GetFrames() ) {
+    for( auto frame : irBuilder.GetFrames() ) {
 
-        std::shared_ptr<IRTree::IRTreePrinter> printer(
-                new IRTree::IRTreePrinter(std::string(argv[3]) + std::string("/") + frame.GetName()->GetString() + std::string( ".dot" ) ) );
-        frame.GetRootStm()->Accept( printer.get() );
-        printer->Flush();
+        std::shared_ptr<IRTree::IRTreePrinter> irPrinter(
+                new IRTree::IRTreePrinter(
+                        std::string(argv[3]) +
+                        std::string("/") +
+                        frame.GetName()->GetString() +
+                        std::string( ".dot" ) ));
+        frame.GetRootStm()->Accept( irPrinter.get() );
+        irPrinter->Flush();
     }
     return 0;
 }

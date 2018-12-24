@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by gregory on 23.12.18.
 //
@@ -22,7 +24,7 @@ public:
 
 	const std::string& GetString() const { return string_key; };
 private:
-	CSymbol(const std::string& s) : string_key(s) {};
+	explicit CSymbol(std::string s) : string_key(std::move(s)) {};
 	const std::string string_key;
 	static std::unordered_map<std::string, CSymbol*> mapping;
 };

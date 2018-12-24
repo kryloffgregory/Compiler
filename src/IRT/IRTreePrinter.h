@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by gregory on 24.12.18.
 //
@@ -18,11 +20,18 @@ namespace IRTree {
 
     class IRTreePrinter : public IIRTreeVisitor {
     public:
-        IRTreePrinter( const std::string &treeFileName ) : filename( treeFileName ), minId( 0 ), data( "digraph {\n" ) {}
+        explicit IRTreePrinter(std::string treeFileName ) :
+            minId( 0 ),
+            filename(std::move(treeFileName)),
+            data( "digraph {\n" ),
+            isFlushed(true) {}
 
-        ~IRTreePrinter() {if (!isFlushed)Flush();}
-        void LinkedVisit( const IStm* node );
-        void LinkedVisit( const IExpr* node );
+        ~IRTreePrinter() override {
+            if (!isFlushed)
+                Flush();
+        }
+        //void LinkedVisit( const IStm* node );
+        //void LinkedVisit( const IExpr* node );
 
         void Visit( const CMove* node ) override;
 
@@ -67,7 +76,7 @@ namespace IRTree {
 
         void AddEdge( std::string from, std::string to );
         void AddEdge( std::string from, std::string to, std::string edgeName );
-        void decorateName(std::string &stringToDecorate);
+        static void decorateName(std::string &stringToDecorate);
 
         void nextNameWithId( std::string label );
     };

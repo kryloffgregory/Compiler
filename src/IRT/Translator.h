@@ -13,7 +13,7 @@
 
 class CTranslator : public IVisitor {
 public:
-    explicit CTranslator( SymbolsTable::CTable* table );
+    explicit CTranslator( std::shared_ptr<SymbolsTable::CTable> table );
 
     void Visit( const CProgram* program ) override;
     void Visit( const CMainClass* mainClass ) override;
@@ -50,7 +50,7 @@ private:
 
     std::vector<Frame::CFrame> frames;
 
-    SymbolsTable::CTable* symbolsTable;
+    std::shared_ptr<SymbolsTable::CTable> symbolsTable;
     SymbolsTable::CClassInfo* curClass = nullptr;
     SymbolsTable::CMethodInfo* curMethod = nullptr;
 };

@@ -5,9 +5,9 @@
 #include <RuleClasses/RuleClasses.h>
 #include <set>
 #include "TypeChecker.h"
-CTypeCheckerVisitor::CTypeCheckerVisitor( SymbolsTable::CTable* table )
+
+CTypeCheckerVisitor::CTypeCheckerVisitor( std::shared_ptr<SymbolsTable::CTable> table ) : symbolsTable(table)
 {
-    symbolsTable = table;
 }
 
 void CTypeCheckerVisitor::Visit( const CProgram* program )
@@ -150,7 +150,7 @@ void CTypeCheckerVisitor::Visit( const CArrayAssignStatement* statement )
         return;
     }
 
-    SymbolsTable::CVarInfo* var = curMethod->GetVar( statement->arrayId);
+    //SymbolsTable::CVarInfo* var = curMethod->GetVar( statement->arrayId);
     //var->GetType()->Accept( this );
     //std::string leftType = lastTypeValueStack.back();
 //lastTypeValueStack.pop_back();
@@ -549,7 +549,7 @@ const CErrorStorage& CTypeCheckerVisitor::GetErrorStorage() const
     return errorStorage;
 }
 
-bool CTypeCheckerVisitor::isPODType( const std::string& type ) const
+ bool CTypeCheckerVisitor::isPODType( const std::string& type )
 {
     return  type == "int" || type == "boolean" || type == "int[]";
 }

@@ -30,8 +30,13 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
+<<<<<<< Updated upstream
 #ifndef YY_YY_HOME_TNA0Y_DESKTOP_KRYLOFF_COMPILER_PARSER_HPP_INCLUDED
 # define YY_YY_HOME_TNA0Y_DESKTOP_KRYLOFF_COMPILER_PARSER_HPP_INCLUDED
+=======
+#ifndef YY_YY_HOME_GREGORY_COMPILER_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_GREGORY_COMPILER_PARSER_HPP_INCLUDED
+>>>>>>> Stashed changes
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -48,7 +53,11 @@ extern int yydebug;
 	#include <deque>
 	//#include "Visitors/PrettyPrinterVisitor.h"
 
+<<<<<<< Updated upstream
 #line 52 "/home/tna0y/Desktop/kryloff/Compiler/parser.hpp" /* yacc.c:1909  */
+=======
+#line 52 "/home/gregory/Compiler/parser.hpp" /* yacc.c:1909  */
+>>>>>>> Stashed changes
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -108,7 +117,11 @@ union YYSTYPE
     std::vector<IExp*>* expressionListVal;
     std::deque<IStatement*>* statementListVal;
 
+<<<<<<< Updated upstream
 #line 112 "/home/tna0y/Desktop/kryloff/Compiler/parser.hpp" /* yacc.c:1909  */
+=======
+#line 112 "/home/gregory/Compiler/parser.hpp" /* yacc.c:1909  */
+>>>>>>> Stashed changes
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -135,4 +148,8 @@ extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
 int yyparse (IProgram*& root);
 
+<<<<<<< Updated upstream
 #endif /* !YY_YY_HOME_TNA0Y_DESKTOP_KRYLOFF_COMPILER_PARSER_HPP_INCLUDED  */
+=======
+#endif /* !YY_YY_HOME_GREGORY_COMPILER_PARSER_HPP_INCLUDED  */
+>>>>>>> Stashed changes

@@ -24,7 +24,7 @@ namespace IRTree
             EQ=8, NE, LT, GT, LE, GE, ULT, ULE, UGT, UGE
         };
 
-        virtual ~IExpr() {};
+        virtual ~IExpr() = default;;
 
         virtual void Accept( IIRTreeVisitor* visitor ) const = 0;
     };
@@ -34,7 +34,7 @@ namespace IRTree
     // Const expression
     class CConst : public IExpr {
     public:
-        CConst( int value );
+        explicit CConst( int value );
         int GetValue() const;
 
         void Accept( IIRTreeVisitor* visitor ) const override;
@@ -45,7 +45,7 @@ namespace IRTree
     // Name for jumps
     class CName : public IExpr {
     public:
-        CName( std::shared_ptr<const Temp::CLabel> name );
+        explicit CName( std::shared_ptr<const Temp::CLabel> name );
         std::shared_ptr<const Temp::CLabel> GetName() const;
 
         void Accept( IIRTreeVisitor* visitor ) const override;
@@ -56,7 +56,7 @@ namespace IRTree
     // Temprorary variable
     class CTemp : public IExpr {
     public:
-        CTemp( const std::shared_ptr<Temp::CTemp> temp );
+        explicit CTemp(std::shared_ptr<Temp::CTemp> temp );
         std::shared_ptr<Temp::CTemp> GetTemp( ) const;
 
         void Accept( IIRTreeVisitor* visitor ) const override;
@@ -83,7 +83,7 @@ namespace IRTree
     // Reading memory with address returned by expression
     class CMem : public IExpr {
     public:
-        CMem( CExprPtr mem );
+        explicit CMem( CExprPtr mem );
         const CExprPtr GetMem() const;
 
         void Accept( IIRTreeVisitor* visitor ) const override;

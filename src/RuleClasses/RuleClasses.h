@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <tr1/memory>
 #include <deque>
 #include "../Visitor.h"
 #include "../Location/Location.h"
@@ -50,7 +51,7 @@ public:
     void Accept( IVisitor* visitor ) const override;
 
 
-    const std::shared_ptr<IType> type;
+    std::unique_ptr<IType> type;
     const std::string methodName;
     const std::vector<IArg*>argList;
     const std::vector<IVarDecl*> varList;
@@ -60,7 +61,8 @@ public:
 
 class CClassDecl : public IClassDecl{
 public:
-    CClassDecl(const std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList, bool isDerived,const  std::string baseClass,
+    CClassDecl(std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList, const bool isDerived,
+               std::string baseClass,
             CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
@@ -81,7 +83,7 @@ public:
     void Accept( IVisitor* visitor ) const override;
 
 
-    const std::shared_ptr<IType> type;
+    const std::unique_ptr<IType> type;
     const std::string identifier;
 };
 
@@ -92,7 +94,7 @@ public:
 
     CStandardType( StandardType _type, CLocation &location);
 
-    CStandardType( const CStandardType* other );
+    explicit CStandardType( const CStandardType* other );
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -268,7 +270,7 @@ public:
 
 class CThisExpression : public IExp{
 public:
-    CThisExpression(CLocation &location);
+    explicit CThisExpression(CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 };

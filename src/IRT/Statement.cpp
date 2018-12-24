@@ -29,7 +29,7 @@ namespace IRTree
     }
 
     CExpr::CExpr( std::shared_ptr<const IExpr> _exp ) :
-            exp( _exp )
+            exp(std::move(_exp))
     {}
 
     std::shared_ptr<const IExpr> CExpr::GetExp() const
@@ -43,7 +43,7 @@ namespace IRTree
     }
 
     CJump::CJump( std::shared_ptr<const IExpr> _exp, const std::vector<std::shared_ptr<const Temp::CLabel>>& _labels ) :
-            jmpExpr( _exp ),
+            jmpExpr(std::move(_exp)),
             labels( _labels )
     {}
 
@@ -71,11 +71,11 @@ namespace IRTree
 
     CCondJump::CCondJump( int _binOp, std::shared_ptr<const IExpr> _left, std::shared_ptr<const IExpr> _right,
                           std::shared_ptr<const Temp::CLabel> _ifTrueLabel, std::shared_ptr<const Temp::CLabel> _ifFalseLabel ) :
+            leftExpr(std::move(_left)),
+            rightExpr(std::move(_right)),
             binOp( _binOp ),
-            leftExpr( _left ),
-            rightExpr( _right ),
-            ifTrueLabel( _ifTrueLabel ),
-            ifFalseLabel( _ifFalseLabel )
+            ifTrueLabel(std::move(_ifTrueLabel)),
+            ifFalseLabel(std::move(_ifFalseLabel))
     {}
 
     std::shared_ptr<const IExpr> CCondJump::GetLeftExpr() const
@@ -109,8 +109,8 @@ namespace IRTree
     }
 
     CSeq::CSeq( std::shared_ptr<const IStm> left, std::shared_ptr<const IStm> right ) :
-            leftStm( left ),
-            rightStm( right )
+            leftStm(std::move(left)),
+            rightStm(std::move(right))
     {}
 
     std::shared_ptr<const IStm> CSeq::GetLeftStm() const
@@ -129,7 +129,7 @@ namespace IRTree
     }
 
     CLabel::CLabel( std::shared_ptr<const Temp::CLabel> _label ) :
-            label( _label )
+            label(std::move(_label))
     {}
 
     std::shared_ptr<const Temp::CLabel> CLabel::GetLabel() const

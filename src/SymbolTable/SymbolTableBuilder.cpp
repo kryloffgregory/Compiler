@@ -6,9 +6,7 @@
 #include <iostream>
 #include <RuleClasses/RuleClasses.h>
 
-STBuilder::STBuilder()
-{
-    symbolsTable = new CTable();
+STBuilder::STBuilder() : symbolsTable(new CTable()) {
 }
 
 void STBuilder::Visit(const CProgram *program) {
@@ -19,7 +17,7 @@ void STBuilder::Visit(const CProgram *program) {
 }
 
 void STBuilder::Visit(const CMainClass *mainClass) {
-    if( !symbolsTable->AddClass( mainClass->identifier ) ) {
+    if( !(symbolsTable->AddClass( mainClass->identifier ) )) {
         errorStorage.PutError( std::string( "[Table builder] Node type - CMainClass. " ) +
                                mainClass->identifier + " redefined. " + mainClass->location.ToString());
     }
@@ -85,7 +83,7 @@ void STBuilder::Visit(const CVarDecl *varDecl) {
 }
 
 void STBuilder::Visit(const CMethodDecl *methodDecl) {
-    methodDecl->type->Accept( this );
+    methodDecl->type->Accept(this);
     std::string returnType = lastTypeValue;
 
     if( curClass == nullptr ) {

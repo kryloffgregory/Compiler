@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by gregory on 23.12.18.
 //
@@ -21,7 +23,7 @@ namespace IRTree
     }
 
     CName::CName( std::shared_ptr<const Temp::CLabel> _name ) :
-            name( _name )
+            name(std::move(_name))
     {}
 
     std::shared_ptr<const Temp::CLabel> CName::GetName() const

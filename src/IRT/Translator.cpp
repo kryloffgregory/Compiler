@@ -1,3 +1,7 @@
+#include <utility>
+
+#include <utility>
+
 //
 // Created by gregory on 23.12.18.
 //
@@ -6,9 +10,8 @@
 #include "IIRVisitor.h"
 #include "RuleClasses/RuleClasses.h"
 
-CTranslator::CTranslator( SymbolsTable::CTable* _table )
+CTranslator::CTranslator( std::shared_ptr<SymbolsTable::CTable> _table ) : symbolsTable(std::move(_table))
 {
-    symbolsTable = _table;
 }
 
 void CTranslator::Visit( const CProgram* program )
@@ -26,7 +29,7 @@ void CTranslator::Visit( const CMainClass* mainClass )
     curClass = symbolsTable->GetClass( mainClass->identifier );
     curMethod = curClass->GetMethod( "main" );
 
-    frames.emplace_back( curClass, curMethod, symbolsTable );
+    frames.emplace_back( Frame::CFrame(curClass, curMethod, symbolsTable.get()) );
 
     std::shared_ptr<const IRTree::IStm> statements = nullptr;
     if( !(mainClass->statements.empty() ) ) {
@@ -60,7 +63,7 @@ void CTranslator::Visit( const CMethodDecl* methodDecl )
 {
     curMethod = curClass->GetMethod( methodDecl->methodName  );
 
-    frames.emplace_back( curClass, curMethod, symbolsTable );
+    frames.emplace_back( curClass, curMethod, symbolsTable.get() );
 
     std::shared_ptr<const IRTree::IStm> statements;
     if( !(methodDecl->statementList.empty())  ) {

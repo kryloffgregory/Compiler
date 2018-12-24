@@ -141,16 +141,16 @@ namespace IRTree {
     void IRTreePrinter::Visit( const CCall* node )
     {
         string funcString = node->GetFunctionName();
-        string argsString;
+        //string argsString;
         std::vector<string> nodes;
-        for( auto arg : node->GetArguments() ) {
+        for(const auto &arg : node->GetArguments() ) {
             arg->Accept( this );
             nodes.push_back( lastNodeName );
         }
         nextNameWithId( "call" );
         AddEdge( lastNodeName, funcString, "func" );
-        for( int i = 0; i < nodes.size(); ++i ) {
-            AddEdge( lastNodeName, nodes[i], "arg" );
+        for (const auto &node : nodes) {
+            AddEdge( lastNodeName, node, "arg" );
         }
 
     }
@@ -177,7 +177,7 @@ namespace IRTree {
         SetNodeLabel( lastNodeName, label );
     }
 
-    void IRTreePrinter::LinkedVisit( const IStm* node )
+    /*void IRTreePrinter::LinkedVisit( const IStm* node )
     {
         string fromName = lastNodeName;
         node->Accept( this );
@@ -195,7 +195,7 @@ namespace IRTree {
         if( !fromName.empty() ) {
             AddEdge( fromName, toName, "next" );
         }
-    }
+    }*/
 
     void IRTreePrinter::AddEdge( std::string from, std::string to )
     {

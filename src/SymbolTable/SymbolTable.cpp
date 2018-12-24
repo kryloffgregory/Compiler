@@ -149,7 +149,7 @@ namespace SymbolsTable {
         return nullptr;
     }
 
-    CVarInfo *CMethodInfo::GetReturnType() const {
+    std::shared_ptr<CVarInfo >CMethodInfo::GetReturnType() const {
         return returnType;
     }
 

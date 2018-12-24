@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.5)
 
 set(CMAKE_CXX_STANDARD 14)
 project(Compiler)
@@ -29,7 +29,7 @@ add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParse
 
 
 add_custom_target(cppcheck
-	COMMAND cppcheck --std=c++11 --enable=all --inconclusive --verbose --quiet --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.h --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.cpp --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/parser.cpp --suppress=*:"*yacc.c*" ${PROJECT_SOURCE_DIR}/src)
+	COMMAND cppcheck --std=c++11 --enable=all --inconclusive --verbose --quiet --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.h --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.cpp --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/parser.cpp --suppress=*:"*yacc.c*" --suppress=*:"*grammar.tab.c" ${PROJECT_SOURCE_DIR}/src)
 
 add_custom_target(memcheck
     COMMAND ${CMAKE_CTEST_COMMAND} 

@@ -10,6 +10,8 @@
 #include <Visitor.h>
 #include "SymbolTable.h"
 #include "../ErrorStorage/ErrorStorage.h"
+#include <memory>
+//#include <memory>
 
 using namespace SymbolsTable;
 class CErrorStorage;
@@ -18,7 +20,7 @@ public:
 
     STBuilder();
 
-    CTable* GetSymbolsTable() { return symbolsTable;}
+    CTable* GetSymbolsTable() { return symbolsTable.get();}
     CErrorStorage GetErrorStorage() { return errorStorage;}
 
     void Visit( const CProgram* program ) override;
@@ -53,7 +55,7 @@ private:
 
     CClassInfo* curClass = nullptr;
     CMethodInfo* curMethod = nullptr;
-    CTable* symbolsTable;
+    std::shared_ptr<CTable> symbolsTable;
     std::string lastTypeValue;
     CErrorStorage errorStorage;
 

@@ -11,7 +11,7 @@
 class IType;
 class CTypeCheckerVisitor : public IVisitor {
 public:
-    explicit CTypeCheckerVisitor( SymbolsTable::CTable* table );
+    explicit CTypeCheckerVisitor( std::shared_ptr<SymbolsTable::CTable> table );
 
     void Visit( const CProgram* program ) override;
 
@@ -44,11 +44,11 @@ public:
     const CErrorStorage& GetErrorStorage() const;
 
 private:
-    bool isPODType( const std::string& type ) const;
+    static bool isPODType( const std::string& type ) ;
 
     SymbolsTable::CClassInfo* curClass = nullptr;
     SymbolsTable::CMethodInfo* curMethod = nullptr;
-    SymbolsTable::CTable* symbolsTable;
+    std::shared_ptr<SymbolsTable::CTable> symbolsTable;
     std::vector<std::string> lastTypeValueStack;
 
     CErrorStorage errorStorage;

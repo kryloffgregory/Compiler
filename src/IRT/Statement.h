@@ -15,7 +15,7 @@ namespace IRTree
 
     class IStm {
     public:
-        virtual ~IStm() {}
+        virtual ~IStm() = default;
 
         virtual void Accept( IIRTreeVisitor* visitor ) const = 0;
     };
@@ -39,7 +39,7 @@ namespace IRTree
     // Calculate exp and forget about result
     class CExpr : public IStm {
     public:
-        CExpr( std::shared_ptr<const IExpr> exp );
+        explicit CExpr( std::shared_ptr<const IExpr> exp );
 
         std::shared_ptr<const IExpr> GetExp( ) const;
 
@@ -102,7 +102,7 @@ namespace IRTree
 
     class CLabel : public IStm {
     public:
-        CLabel( std::shared_ptr<const Temp::CLabel> label );
+        explicit CLabel( std::shared_ptr<const Temp::CLabel> label );
 
         std::shared_ptr<const Temp::CLabel> GetLabel( ) const;
 

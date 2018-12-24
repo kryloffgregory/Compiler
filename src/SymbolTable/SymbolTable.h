@@ -1,3 +1,7 @@
+#include <utility>
+
+
+
 //
 // Created by gregory on 10.12.18.
 //
@@ -6,11 +10,13 @@
 
 #include <string>
 #include <vector>
+#include <tr1/memory>
+
 namespace SymbolsTable {
     class CVarInfo {
     public:
-        CVarInfo(const std::string &_name, const std::string &_type) :
-                varName(_name), type(_type) {
+        CVarInfo(std::string _name, std::string _type) :
+                varName(std::move(_name)), type(std::move(_type)) {
         }
 
         std::string GetName() const;
@@ -26,8 +32,8 @@ namespace SymbolsTable {
 
     class CMethodInfo {
     public:
-        CMethodInfo(const std::string &name, const std::string &type, CClassInfo *_curClass) :
-                methodName(name),
+        CMethodInfo(std::string name, const std::string &type, CClassInfo *_curClass) :
+                methodName(std::move(name)),
                 returnType(new CVarInfo("", type)),
                 curClass(_curClass) {}
 
@@ -39,7 +45,7 @@ namespace SymbolsTable {
 
         CVarInfo *GetVar(const std::string &varName) const;
 
-        CVarInfo *GetReturnType() const;
+        std::shared_ptr<CVarInfo >GetReturnType() const;
 
         std::vector<CVarInfo *> GetParams() const;
 
@@ -47,15 +53,15 @@ namespace SymbolsTable {
 
     private:
         std::string methodName;
-        CVarInfo *returnType;
+        std::shared_ptr<CVarInfo > returnType;
         std::vector<CVarInfo *> params;
         std::vector<CVarInfo *> locals;
-        CClassInfo *curClass;
+        std::shared_ptr<CClassInfo >curClass;
     };
 
     class CClassInfo {
     public:
-        CClassInfo(const std::string &name) : className(name) {}
+        explicit CClassInfo(std::string name) : className(std::move(name)), baseClass() {}
 
         bool AddVar(const std::string &varName, const std::string &type);
 
@@ -67,7 +73,7 @@ namespace SymbolsTable {
 
         CMethodInfo *GetMethod(const std::string &methodName) const;
 
-        CVarInfo *GetVar(const std::string varName) const;
+        CVarInfo *GetVar(std::string varName) const;
 
         CClassInfo *GetBaseClass() const;
 

@@ -49,9 +49,10 @@ private:
 
     void PrintLeaf(int prevNode, const std::string& label, const std::string& name);
 
-    int nodeNumber;
 
     std::ofstream file;
+
+    int nodeNumber;
 
 };
 
