@@ -1,4 +1,5 @@
 /home/tna0y/Desktop/Compiler/CMakeFiles/rebuild_cache.dir
 /home/tna0y/Desktop/Compiler/CMakeFiles/edit_cache.dir
-/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir
 /home/tna0y/Desktop/Compiler/CMakeFiles/test.dir
+/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir
+/home/tna0y/Desktop/Compiler/CMakeFiles/cppcheck.dir

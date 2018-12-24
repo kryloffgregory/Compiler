@@ -134,6 +134,19 @@ Compiler/fast:
 	$(MAKE) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/build
 .PHONY : Compiler/fast
 
+#=============================================================================
+# Target rules for targets named cppcheck
+
+# Build rule for target.
+cppcheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cppcheck
+.PHONY : cppcheck
+
+# fast build rule for target.
+cppcheck/fast:
+	$(MAKE) -f CMakeFiles/cppcheck.dir/build.make CMakeFiles/cppcheck.dir/build
+.PHONY : cppcheck/fast
+
 lexer.o: lexer.cpp.o
 
 .PHONY : lexer.o
@@ -817,8 +830,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Compiler"
 	@echo "... test"
+	@echo "... Compiler"
+	@echo "... cppcheck"
 	@echo "... lexer.o"
 	@echo "... lexer.i"
 	@echo "... lexer.s"

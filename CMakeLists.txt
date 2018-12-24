@@ -26,11 +26,16 @@ set(EXECUTABLE_OUTPUT_PATH bin)
 
 add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/SymbolTable/TypeChecker.h src/SymbolTable/TypeChecker.cpp src/IRT/Expression.h src/IRT/Statement.h src/IRT/IIRVisitor.h src/IRT/Label.h src/IRT/Expression.cpp src/IRT/Statement.cpp src/IRT/Translator.h src/ActivationRecords/IFrame.h src/ActivationRecords/IAccess.h src/IRT/Translator.cpp src/IRT/Label.cpp src/IRT/Frame.h src/SymbolTable/Symbol.h src/SymbolTable/Symbol.cpp src/IRT/Frame.cpp src/IRT/IRTreePrinter.h src/IRT/IRTreePrinter.cpp)
 
+
+add_custom_target(cppcheck
+	COMMAND cppcheck --std=c++11 --enable=all --inconclusive --verbose --quiet --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.h --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/lexer.cpp --suppress=*:${CMAKE_CURRENT_BINARY_DIR}/parser.cpp --suppress=*:"*yacc.c*" ${PROJECT_SOURCE_DIR}/src)
+
+
+# TESTS
+
 enable_testing()
 
-add_test(example_test ls)
 
-enable_testing()
  
 file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/tests/examples/test_*")
 set(validator ${CMAKE_CURRENT_SOURCE_DIR}/tests/examples/build_graph.sh)

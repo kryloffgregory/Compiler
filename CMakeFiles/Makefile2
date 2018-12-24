@@ -102,6 +102,38 @@ clean: CMakeFiles/Compiler.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/cppcheck.dir
+
+# All Build rule for target.
+CMakeFiles/cppcheck.dir/all:
+	$(MAKE) -f CMakeFiles/cppcheck.dir/build.make CMakeFiles/cppcheck.dir/depend
+	$(MAKE) -f CMakeFiles/cppcheck.dir/build.make CMakeFiles/cppcheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tna0y/Desktop/Compiler/CMakeFiles --progress-num= "Built target cppcheck"
+.PHONY : CMakeFiles/cppcheck.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cppcheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tna0y/Desktop/Compiler/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cppcheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tna0y/Desktop/Compiler/CMakeFiles 0
+.PHONY : CMakeFiles/cppcheck.dir/rule
+
+# Convenience name for target.
+cppcheck: CMakeFiles/cppcheck.dir/rule
+
+.PHONY : cppcheck
+
+# clean rule for target.
+CMakeFiles/cppcheck.dir/clean:
+	$(MAKE) -f CMakeFiles/cppcheck.dir/build.make CMakeFiles/cppcheck.dir/clean
+.PHONY : CMakeFiles/cppcheck.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/cppcheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

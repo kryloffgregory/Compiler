@@ -4,7 +4,6 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-add_test(example_test "ls")
 add_test(graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_factorial")
 add_test(graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list")
 add_test(graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch")
