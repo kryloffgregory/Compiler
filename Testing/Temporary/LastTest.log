@@ -1,10 +1,10 @@
-Start testing: Dec 24 05:05 MSK
+Start testing: Dec 24 05:19 MSK
 ----------------------------------------------------------
 1/32 Testing: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial
 1/32 Test: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial
 Command: "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_factorial"
 Directory: /home/tna0y/Desktop/Compiler
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial" start time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 mkdir: cannot create directory ‘/home/tna0y/Desktop/Compiler/tests/examples/test_factorial/IR’: File exists
@@ -130,11 +130,14 @@ unknown symbol: }
 unknown symbol: }
 
 TableBuilder:
+Warning: syntax ambiguity - badly delimited number '0_' in line 24 of /home/tna0y/Desktop/Compiler/tests/examples/test_factorial/IR/Fac__ComputeFac.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '1_' in line 48 of /home/tna0y/Desktop/Compiler/tests/examples/test_factorial/IR/Fac__ComputeFac.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '2_' in line 113 of /home/tna0y/Desktop/Compiler/tests/examples/test_factorial/IR/Fac__ComputeFac.dot splits into two tokens
 <end of output>
-Test time =   0.02 sec
+Test time =   0.24 sec
 ----------------------------------------------------------
 Test Passed.
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial" end time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial" end time: Dec 24 05:19 MSK
 "graph_/home/tna0y/Desktop/Compiler/tests/examples/test_factorial" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -142,7 +145,7 @@ Test Passed.
 2/32 Test: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list
 Command: "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list"
 Directory: /home/tna0y/Desktop/Compiler
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list" start time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 mkdir: cannot create directory ‘/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR’: File exists
@@ -2395,19 +2398,52 @@ space
 unknown symbol: }
 
 TableBuilder:
+Warning: syntax ambiguity - badly delimited number '15_' in line 34 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Compare.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '16_' in line 58 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Compare.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '18_' in line 95 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Compare.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '19_' in line 119 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Compare.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '20_' in line 143 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Compare.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '17_' in line 161 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Compare.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '30_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Delete.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '31_' in line 43 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Delete.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '27_' in line 66 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Delete.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '28_' in line 90 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Delete.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '29_' in line 114 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Delete.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '32_' in line 138 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Delete.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '0_' in line 49 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '1_' in line 73 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '3_' in line 121 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '4_' in line 145 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '6_' in line 164 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '9_' in line 198 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '10_' in line 222 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '11_' in line 246 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '7_' in line 264 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '12_' in line 294 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '13_' in line 318 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '14_' in line 342 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '8_' in line 360 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '5_' in line 378 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '2_' in line 396 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/Element__Equal.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '39_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '40_' in line 25 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '41_' in line 76 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '36_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '37_' in line 25 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '38_' in line 76 of /home/tna0y/Desktop/Compiler/tests/examples/test_linked_list/IR/List__Search.dot splits into two tokens
 <end of output>
-Test time =   0.05 sec
+Test time =   1.16 sec
 ----------------------------------------------------------
 Test Passed.
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list" end time: Dec 24 05:05 MSK
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list" time elapsed: 00:00:00
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list" end time: Dec 24 05:19 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linked_list" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 3/32 Testing: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch
 3/32 Test: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch
 Command: "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch"
 Directory: /home/tna0y/Desktop/Compiler
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch" start time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 mkdir: cannot create directory ‘/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR’: File exists
@@ -3142,11 +3178,29 @@ space
 unknown symbol: }
 
 TableBuilder:
+Warning: syntax ambiguity - badly delimited number '9_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '10_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '11_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '0_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '1_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '2_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '12_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Init.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '13_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Init.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '14_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IR/LS__Init.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '9_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '10_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '11_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Search.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '0_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '1_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '2_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '12_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Init.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '13_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Init.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '14_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_linsearch/IRLS__Init.dot splits into two tokens
 <end of output>
-Test time =   0.03 sec
+Test time =   0.61 sec
 ----------------------------------------------------------
 Test Passed.
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch" end time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch" end time: Dec 24 05:19 MSK
 "graph_/home/tna0y/Desktop/Compiler/tests/examples/test_linsearch" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -3154,7 +3208,7 @@ Test Passed.
 4/32 Test: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort
 Command: "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort"
 Directory: /home/tna0y/Desktop/Compiler
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort" start time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 mkdir: cannot create directory ‘/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR’: File exists
@@ -4140,11 +4194,17 @@ space
 unknown symbol: }
 
 TableBuilder:
+Warning: syntax ambiguity - badly delimited number '21_' in line 2 of /home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR/QS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '22_' in line 35 of /home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR/QS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '23_' in line 79 of /home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR/QS__Print.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '0_' in line 34 of /home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR/QS__Sort.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '1_' in line 97 of /home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR/QS__Sort.dot splits into two tokens
+Warning: syntax ambiguity - badly delimited number '2_' in line 121 of /home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort/IR/QS__Sort.dot splits into two tokens
 <end of output>
-Test time =   0.03 sec
+Test time =   0.45 sec
 ----------------------------------------------------------
 Test Passed.
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort" end time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort" end time: Dec 24 05:19 MSK
 "graph_/home/tna0y/Desktop/Compiler/tests/examples/test_quick_sort" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -4152,7 +4212,7 @@ Test Passed.
 5/32 Test: graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor
 Command: "/home/tna0y/Desktop/Compiler/tests/examples/build_graph.sh" "/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor"
 Directory: /home/tna0y/Desktop/Compiler
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor" start time: Dec 24 05:05 MSK
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 mkdir: cannot create directory ‘/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor/IR’: File exists
@@ -7218,11 +7278,12 @@ unknown symbol: }
 TableBuilder:
 [Table builder] Node type - CMethodDecl. Method visit already defined in base class visit. Line: 372  Columns: 5-5
 Segmentation fault (core dumped)
+Error: /home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor/ast.dot: syntax error in line 1754 near ''
 <end of output>
-Test time =   0.37 sec
+Test time =   0.36 sec
 ----------------------------------------------------------
-Test Failed.
-"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor" end time: Dec 24 05:05 MSK
+Test Passed.
+"graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor" end time: Dec 24 05:19 MSK
 "graph_/home/tna0y/Desktop/Compiler/tests/examples/test_tree_visitor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7230,14 +7291,14 @@ Test Failed.
 6/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.32 sec
+Test time =   0.34 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/lc-1.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7245,14 +7306,14 @@ Test Passed.
 7/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.31 sec
+Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-001.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7260,14 +7321,14 @@ Test Passed.
 8/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.30 sec
+Test time =   0.32 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-002.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7275,14 +7336,14 @@ Test Passed.
 9/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.29 sec
+Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-003.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7290,14 +7351,14 @@ Test Passed.
 10/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.30 sec
+Test time =   0.37 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-004.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7305,14 +7366,14 @@ Test Passed.
 11/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-005.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7320,14 +7381,14 @@ Test Passed.
 12/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.31 sec
+Test time =   0.34 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-006.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7335,14 +7396,14 @@ Test Passed.
 13/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.31 sec
+Test time =   0.28 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-007.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7350,14 +7411,14 @@ Test Passed.
 14/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.32 sec
+Test time =   0.37 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-008.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7365,14 +7426,14 @@ Test Passed.
 15/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.31 sec
+Test time =   0.33 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-009.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7380,14 +7441,14 @@ Test Passed.
 16/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.30 sec
+Test time =   0.29 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-010.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7395,14 +7456,14 @@ Test Passed.
 17/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.29 sec
+Test time =   0.34 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-011.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7410,14 +7471,14 @@ Test Passed.
 18/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.34 sec
+Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-012.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7425,14 +7486,14 @@ Test Passed.
 19/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.29 sec
+Test time =   0.35 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-013.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7440,14 +7501,14 @@ Test Passed.
 20/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-014.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7455,14 +7516,14 @@ Test Passed.
 21/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.30 sec
+Test time =   0.33 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-015.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7470,14 +7531,14 @@ Test Passed.
 22/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.39 sec
+Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-11a.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7485,14 +7546,14 @@ Test Passed.
 23/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.34 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-13a.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7500,14 +7561,14 @@ Test Passed.
 24/32 Test: bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" "1"
 Directory: /home/tna0y/Desktop/Compiler
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" start time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.34 sec
+Test time =   0.44 sec
 ----------------------------------------------------------
 Test Passed.
-"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" end time: Dec 24 05:05 MSK
+"bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" end time: Dec 24 05:19 MSK
 "bad_/home/tna0y/Desktop/Compiler/tests/bad/tc-2a.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7515,14 +7576,14 @@ Test Passed.
 25/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.03 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/binary-search.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7530,14 +7591,14 @@ Test Passed.
 26/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.04 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/binary-tree.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7545,14 +7606,14 @@ Test Passed.
 27/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/bubble-sort.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7560,14 +7621,14 @@ Test Passed.
 28/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/factorial.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/factorial.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7575,14 +7636,14 @@ Test Passed.
 29/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/linear-search.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7590,14 +7651,14 @@ Test Passed.
 30/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/linked-list.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7605,14 +7666,14 @@ Test Passed.
 31/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/quick-sort.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -7620,15 +7681,15 @@ Test Passed.
 32/32 Test: good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java
 Command: "/home/tna0y/Desktop/Compiler/tests/test.sh" "/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" "0"
 Directory: /home/tna0y/Desktop/Compiler
-"good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" start time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" start time: Dec 24 05:19 MSK
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.38 sec
+Test time =   0.35 sec
 ----------------------------------------------------------
 Test Failed.
-"good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" end time: Dec 24 05:05 MSK
+"good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" end time: Dec 24 05:19 MSK
 "good_/home/tna0y/Desktop/Compiler/tests/good/tree-visitor.java" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 24 05:05 MSK
+End testing: Dec 24 05:19 MSK
