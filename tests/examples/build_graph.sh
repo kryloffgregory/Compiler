@@ -15,3 +15,11 @@ IR=$DIR/IR
 mkdir $IR
 
 $JC $CODE $AST_DOT $IR
+
+for file in $(find $DIR -name "*.dot")
+do
+	dot -Tpdf $file > $file.pdf
+	rm $file
+done
+
+
