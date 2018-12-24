@@ -1,4 +1,5 @@
 # Compiler
+[![Build Status](https://travis-ci.com/kryloffgregory/Compiler.svg?branch=master)](https://travis-ci.com/kryloffgregory/Compiler)
 
 ## build
 
