@@ -1,5 +1,5 @@
 class TestCase {
-    public static void main(String[] args) {
+    publlc static void main(String[] args) {
         System.out.println(0);
     }
 }

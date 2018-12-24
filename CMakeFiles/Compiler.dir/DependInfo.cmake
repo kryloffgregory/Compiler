@@ -4,31 +4,31 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gregory/Compiler/lexer.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/lexer.cpp.o"
-  "/home/gregory/Compiler/parser.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/parser.cpp.o"
-  "/home/gregory/Compiler/src/AST/ASTPrinter.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o"
-  "/home/gregory/Compiler/src/ErrorStorage/ErrorStorage.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o"
-  "/home/gregory/Compiler/src/IRT/Expression.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o"
-  "/home/gregory/Compiler/src/IRT/Frame.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o"
-  "/home/gregory/Compiler/src/IRT/IRTreePrinter.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o"
-  "/home/gregory/Compiler/src/IRT/Label.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o"
-  "/home/gregory/Compiler/src/IRT/Statement.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o"
-  "/home/gregory/Compiler/src/IRT/Translator.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o"
-  "/home/gregory/Compiler/src/Location/Location.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/Location/Location.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Arg.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Class.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Expression.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/MainClass.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Method.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Program.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Statement.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Type.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o"
-  "/home/gregory/Compiler/src/RuleClasses/Var.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o"
-  "/home/gregory/Compiler/src/SymbolTable/Symbol.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o"
-  "/home/gregory/Compiler/src/SymbolTable/SymbolTable.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
-  "/home/gregory/Compiler/src/SymbolTable/SymbolTableBuilder.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
-  "/home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o"
-  "/home/gregory/Compiler/src/main.cpp" "/home/gregory/Compiler/CMakeFiles/Compiler.dir/src/main.cpp.o"
+  "/home/tna0y/Desktop/Compiler/lexer.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/lexer.cpp.o"
+  "/home/tna0y/Desktop/Compiler/parser.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/parser.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/AST/ASTPrinter.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/AST/ASTPrinter.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/ErrorStorage/ErrorStorage.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/ErrorStorage/ErrorStorage.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/IRT/Expression.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/IRT/Expression.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/IRT/Frame.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/IRT/Frame.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/IRT/IRTreePrinter.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/IRT/IRTreePrinter.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/IRT/Label.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/IRT/Label.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/IRT/Statement.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/IRT/Statement.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/IRT/Translator.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/IRT/Translator.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/Location/Location.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/Location/Location.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Arg.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Arg.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Class.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Class.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Expression.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Expression.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/MainClass.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/MainClass.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Method.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Method.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Program.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Program.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Statement.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Statement.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Type.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Type.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/RuleClasses/Var.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/RuleClasses/Var.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/SymbolTable/Symbol.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/Symbol.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/SymbolTable/SymbolTable.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTable.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/SymbolTable/SymbolTableBuilder.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/SymbolTableBuilder.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/SymbolTable/TypeChecker.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/SymbolTable/TypeChecker.cpp.o"
+  "/home/tna0y/Desktop/Compiler/src/main.cpp" "/home/tna0y/Desktop/Compiler/CMakeFiles/Compiler.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -39,7 +39,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/gregory/Compiler/parser.hpp" "/home/gregory/Compiler/parser.cpp"
+  "/home/tna0y/Desktop/Compiler/parser.hpp" "/home/tna0y/Desktop/Compiler/parser.cpp"
   )
 
 

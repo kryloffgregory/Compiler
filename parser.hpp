@@ -30,8 +30,8 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-#ifndef YY_YY_HOME_GREGORY_COMPILER_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_GREGORY_COMPILER_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_TNA0Y_DESKTOP_COMPILER_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_TNA0Y_DESKTOP_COMPILER_PARSER_HPP_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -48,7 +48,7 @@ extern int yydebug;
 	#include <deque>
 	//#include "Visitors/PrettyPrinterVisitor.h"
 
-#line 52 "/home/gregory/Compiler/parser.hpp" /* yacc.c:1909  */
+#line 52 "/home/tna0y/Desktop/Compiler/parser.hpp" /* yacc.c:1909  */
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -108,7 +108,7 @@ union YYSTYPE
     std::vector<IExp*>* expressionListVal;
     std::deque<IStatement*>* statementListVal;
 
-#line 112 "/home/gregory/Compiler/parser.hpp" /* yacc.c:1909  */
+#line 112 "/home/tna0y/Desktop/Compiler/parser.hpp" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -135,4 +135,4 @@ extern YYSTYPE yylval;
 extern YYLTYPE yylloc;
 int yyparse (IProgram*& root);
 
-#endif /* !YY_YY_HOME_GREGORY_COMPILER_PARSER_HPP_INCLUDED  */
+#endif /* !YY_YY_HOME_TNA0Y_DESKTOP_COMPILER_PARSER_HPP_INCLUDED  */
