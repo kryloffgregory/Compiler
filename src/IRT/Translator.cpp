@@ -99,8 +99,21 @@ void CTranslator::Visit( const CUserType* type )
 
 void CTranslator::Visit( const CStatementListStatement* statement )
 {
+    bool any = false;
+    IRTree::CStmPtr recStm, lastStm;
     for(const auto& st : statement->statementList) {
         st->Accept(this);
+        lastStm = parsedStatements.top();
+        parsedStatements.pop();
+        if (!any) {
+            recStm = lastStm;
+            any = true;
+        }
+        recStm = IRTree::CStmPtr( new IRTree::CSeq( recStm,
+                                                    lastStm) );
+    }
+    if (any) {
+        parsedStatements.push(myStm);
     }
 }
 
