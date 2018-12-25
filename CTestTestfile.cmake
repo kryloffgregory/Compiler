@@ -35,4 +35,3 @@ add_test(good_/home/gregory/Compiler/tests/good/factorial.java "/home/gregory/Co
 add_test(good_/home/gregory/Compiler/tests/good/linear-search.java "/home/gregory/Compiler/tests/test.sh" "/home/gregory/Compiler/tests/good/linear-search.java" "0")
 add_test(good_/home/gregory/Compiler/tests/good/linked-list.java "/home/gregory/Compiler/tests/test.sh" "/home/gregory/Compiler/tests/good/linked-list.java" "0")
 add_test(good_/home/gregory/Compiler/tests/good/quick-sort.java "/home/gregory/Compiler/tests/test.sh" "/home/gregory/Compiler/tests/good/quick-sort.java" "0")
-add_test(good_/home/gregory/Compiler/tests/good/tree-visitor.java "/home/gregory/Compiler/tests/test.sh" "/home/gregory/Compiler/tests/good/tree-visitor.java" "0")
