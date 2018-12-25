@@ -113,7 +113,7 @@ void CTranslator::Visit( const CStatementListStatement* statement )
                                                     lastStm) );
     }
     if (any) {
-        parsedStatements.push(myStm);
+        parsedStatements.push(recStm);
     }
 }
 
