@@ -18,3 +18,4 @@ CMakeFiles/*
 parser.*
 lexer.cpp
 src/lexer.cpp
+
