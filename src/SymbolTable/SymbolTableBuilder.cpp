@@ -12,7 +12,7 @@ STBuilder::STBuilder() : symbolsTable(new CTable()) {
 void STBuilder::Visit(const CProgram *program) {
     std::cout << std::endl << "TableBuilder:" << std::endl;
     program->mainClass->Accept(this);
-    for(auto classDecl : program->classList)
+    for(const auto & classDecl : program->classList)
         classDecl->Accept(this);
 }
 
@@ -29,7 +29,7 @@ void STBuilder::Visit(const CMainClass *mainClass) {
                               + mainClass->location.ToString());
     }
     curMethod = curClass->GetMethod( "main" );
-    for(auto statement : mainClass->statements) {
+    for(const auto & statement : mainClass->statements) {
         statement->Accept(this);
     }
 
@@ -49,11 +49,11 @@ void STBuilder::Visit(const CClassDecl *classDecl) {
     if(classDecl->isDerived) {
         curClass->SetBaseClass( symbolsTable->GetClass( classDecl->baseClass) );
     }
-    for(auto varDecl : classDecl->varList) {
+    for(const auto & varDecl : classDecl->varList) {
         varDecl->Accept(this);
     }
 
-    for(auto methodDecl : classDecl->methodList) {
+    for(const auto & methodDecl : classDecl->methodList) {
         methodDecl->Accept(this);
     }
 
@@ -93,7 +93,7 @@ void STBuilder::Visit(const CMethodDecl *methodDecl) {
         return;
     }
     if( curClass->GetBaseClass() != nullptr ) {
-        for( auto method : curClass->GetBaseClass()->GetMethods() ) {
+        for( const auto &method : curClass->GetBaseClass()->GetMethods() ) {
             if( method->GetName() == methodDecl->methodName ) {
                 errorStorage.PutError( std::string( "[Table builder] Node type - CMethodDecl. " ) +
                                        "Method " + methodDecl->methodName + " already defined in base class " + methodDecl->methodName + ". " +
@@ -109,10 +109,10 @@ void STBuilder::Visit(const CMethodDecl *methodDecl) {
     } else {
 
         curMethod = curClass->GetMethod( methodDecl->methodName);
-        for(auto arg : methodDecl->argList) {
+        for(const auto & arg : methodDecl->argList) {
             arg->Accept(this);
         }
-        for(auto var: methodDecl->varList) {
+        for(const auto & var: methodDecl->varList) {
             var->Accept(this);
         }
         curMethod = nullptr;

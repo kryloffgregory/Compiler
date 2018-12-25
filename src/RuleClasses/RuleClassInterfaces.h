@@ -6,6 +6,7 @@
 
 #include "../Visitor.h"
 #include "../Location/Location.h"
+#  include <bits/unique_ptr.h>
 
 class IItem {
 public:
@@ -25,7 +26,7 @@ public:
 // Главный класс
 class IMainClass : public IItem {
 public:
-    virtual ~IMainClass() {}
+    virtual ~IMainClass() = default;
 };
 
 

@@ -13,7 +13,7 @@ CTypeCheckerVisitor::CTypeCheckerVisitor( std::shared_ptr<SymbolsTable::CTable> 
 void CTypeCheckerVisitor::Visit( const CProgram* program )
 {
     program->mainClass->Accept( this );
-    for(auto classDecl : program->classList)
+    for(const auto & classDecl : program->classList)
         classDecl->Accept( this );
 
 }
@@ -23,7 +23,7 @@ void CTypeCheckerVisitor::Visit( const CMainClass* mainClass )
     curClass = symbolsTable->GetClass( mainClass->identifier );
     curMethod = curClass->GetMethod( "main" );
 
-    for(auto statement : mainClass->statements)
+    for(const auto & statement : mainClass->statements)
         statement->Accept( this );
 
 
@@ -48,10 +48,10 @@ void CTypeCheckerVisitor::Visit( const CClassDecl* classDecl ) {
             hierarchy.insert(base->GetName());
         }
     }
-    for(auto varDecl : classDecl->varList)
+    for(const auto & varDecl : classDecl->varList)
         varDecl->Accept( this );
 
-    for(auto methodDecl : classDecl ->methodList)
+    for(const auto & methodDecl : classDecl ->methodList)
         methodDecl->Accept( this );
 
 
@@ -93,13 +93,13 @@ void CTypeCheckerVisitor::Visit( const CMethodDecl* methodDecl )
                                        methodDecl->location.ToString());
     }
 
-    for(auto arg : methodDecl -> argList) {
+    for(const auto & arg : methodDecl -> argList) {
         arg->Accept( this );
     }
-    for(auto var : methodDecl -> varList) {
+    for(const auto & var : methodDecl -> varList) {
         var->Accept( this );
     }
-    for(auto statement : methodDecl -> statementList) {
+    for(const auto & statement : methodDecl -> statementList) {
         statement->Accept( this );
     }
     if( methodDecl->returnExpr!= nullptr ) {
@@ -138,7 +138,7 @@ void CTypeCheckerVisitor::Visit( const CStatementListStatement* statement )
         return;
     }
 
-    for(auto statement1 : statement->statementList)
+    for(const auto & statement1 : statement->statementList)
         statement1->Accept( this );
 
 }
@@ -360,7 +360,7 @@ void CTypeCheckerVisitor::Visit( const CMethodExpression* expr )
         }
         if(!expr->expList.empty()) {
             int typeValuePointer = static_cast<int>(lastTypeValueStack.size());
-            for(auto arg : expr->expList)
+            for(const auto & arg : expr->expList)
                 arg->Accept( this );
 
             auto params = usedMethod->GetParams();

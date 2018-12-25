@@ -19,7 +19,7 @@ void CTranslator::Visit( const CProgram* program )
     if( program->mainClass != nullptr ) {
         program->mainClass->Accept( this );
     }
-    for(auto classDecl : program->classList) {
+    for(const auto& classDecl : program->classList) {
         classDecl->Accept(this);
     }
 }
@@ -33,7 +33,7 @@ void CTranslator::Visit( const CMainClass* mainClass )
 
     std::shared_ptr<const IRTree::IStm> statements = nullptr;
     if( !(mainClass->statements.empty() ) ) {
-        for(auto st : mainClass->statements) {
+        for(const auto& st : mainClass->statements) {
             st->Accept(this);
         }
         statements = parsedStatements.top();
@@ -47,7 +47,7 @@ void CTranslator::Visit( const CClassDecl* classDecl )
 {
     curClass = symbolsTable->GetClass( classDecl->className  );
 
-    for(auto methodDecl : classDecl->methodList) {
+    for(const auto& methodDecl : classDecl->methodList) {
         methodDecl->Accept(this);
     }
 
@@ -67,7 +67,7 @@ void CTranslator::Visit( const CMethodDecl* methodDecl )
 
     std::shared_ptr<const IRTree::IStm> statements;
     if( !(methodDecl->statementList.empty())  ) {
-        for(auto st : methodDecl->statementList) {
+        for(const auto& st : methodDecl->statementList) {
             st->Accept(this);
         }
         statements = parsedStatements.top();
@@ -99,7 +99,7 @@ void CTranslator::Visit( const CUserType* type )
 
 void CTranslator::Visit( const CStatementListStatement* statement )
 {
-    for(auto st : statement->statementList) {
+    for(const auto& st : statement->statementList) {
         st->Accept(this);
     }
 }
@@ -258,7 +258,6 @@ void CTranslator::Visit( const CIndexExpression* expr )
     expr->indexExp->Accept( this );
     IRTree::CExprPtr index = parsedExpressions.top();
     parsedExpressions.pop();
-    // index ñìåùåí íà 1, ò.ê. â ïåðâîé ÿ÷åéêå ëåæèò äëèíà ìàññèâà
     index = IRTree::CExprPtr( new IRTree::CBinop( IRTree::IExpr::PLUS, index, IRTree::CExprPtr( new IRTree::CConst( 1 ) ) ) );
 
     IRTree::CExprPtr offset( new IRTree::CBinop( IRTree::IExpr::MUL, index, IRTree::CExprPtr( new IRTree::CConst( Frame::CFrame::WORD_SIZE ) ) ) );
@@ -287,7 +286,7 @@ void CTranslator::Visit( const CMethodExpression* expr )
     arguments.push_back(object);
     if( !(expr->expList.empty()) ) {
         auto expresionsStackSize = parsedExpressions.size();
-        for(auto arg : expr->expList) {
+        for(const auto& arg : expr->expList) {
             arg->Accept(this);
         }
         auto newExpressionsStackSize = parsedExpressions.size();
@@ -358,7 +357,7 @@ void CTranslator::Visit( const CNewExpression* expr )
     IRTree::CExprPtr temp( new IRTree::CTemp( std::shared_ptr<Temp::CTemp>( new Temp::CTemp() ) ) );
     IRTree::CExprPtr mallocCall( new IRTree::CCall(  "__malloc" , { allocationSize } ) );
     IRTree::CStmPtr allocateMemory( new IRTree::CMove( temp, mallocCall ) );
-    // TODO: êàê ñäåëàòü ïî-íîðìàëüíîìó
+
     IRTree::CStmPtr clearMemory( new IRTree::CExpr( IRTree::CExprPtr( new IRTree::CCall(  "__memset" ,
                                                                                          { temp, IRTree::CExprPtr(new IRTree::CConst(0)) } ) ) ) );
 

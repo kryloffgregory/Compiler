@@ -39,11 +39,12 @@ namespace Frame {
 	}
 
 	CFrame::CFrame( const SymbolsTable::CClassInfo* classInfo, const SymbolsTable::CMethodInfo* methodInfo,
-		const SymbolsTable::CTable* table )
+		const SymbolsTable::CTable* table ) :
+		frameName(CSymbol::GetSymbol( classInfo->GetName() + "__" + methodInfo->GetName() ))
 	{
-		frameName = CSymbol::GetSymbol( classInfo->GetName() + "__" + methodInfo->GetName() );
+
 		do {
-			// Ïîëÿ êëàññà
+
 			for( int i = 0; i < classInfo->GerVars().size(); ++i ) {
 				locals[classInfo->GerVars()[i]->GetName()] = std::shared_ptr<IAccess>( new CInObject( i ) );
 			}
@@ -94,7 +95,7 @@ namespace Frame {
 		return returnPtr;
 	}
 
-	const CSymbol* CFrame::GetName() const
+	const std::shared_ptr<CSymbol> CFrame::GetName() const
 	{
 		return frameName;
 	}

@@ -4,9 +4,9 @@
 
 #include "RuleClasses.h"
 
-CProgram::CProgram( IMainClass* _mainClass, std::vector<IClassDecl*>& _classList, CLocation &_location) :
-        mainClass( _mainClass ),
-        classList( _classList )
+CProgram::CProgram( std::unique_ptr<IMainClass> _mainClass, std::vector<std::unique_ptr<IClassDecl>>& _classList, CLocation &_location) :
+        mainClass{ std::move( _mainClass) },
+        classList{std::move( _classList )}
 {
     location = _location;
 }

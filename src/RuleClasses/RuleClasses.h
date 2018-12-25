@@ -6,45 +6,44 @@
 #include "RuleClassInterfaces.h"
 #include <string>
 #include <vector>
-#include <memory>
-#include <tr1/memory>
+#  include <bits/unique_ptr.h>
 #include <deque>
 #include "../Visitor.h"
 #include "../Location/Location.h"
 
 class CProgram : public IProgram{
 public:
-    CProgram( IMainClass* _mainClass, std::vector<IClassDecl*>& _classList, CLocation &location);
+    CProgram( std::unique_ptr<IMainClass> _mainClass, std::vector<std::unique_ptr<IClassDecl>>& _classList, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
 
-    const IMainClass* mainClass;
-    const std::vector<IClassDecl*> classList;
+    std::unique_ptr<IMainClass> mainClass;
+    const std::vector<std::unique_ptr<IClassDecl>> classList;
 };
 
 class CMainClass : public IMainClass {
 public:
-    CMainClass( std::string &_identifier, std::string &_arsId, std::deque<IStatement*>& _statements, CLocation &location);
+    CMainClass( std::string &_identifier, std::string &_arsId, std::deque<std::unique_ptr<IStatement>>& _statements, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
     const std::string identifier;
     const std::string argsIdentifier;
-    const std::deque<IStatement*> statements;
+    const std::deque<std::unique_ptr<IStatement>> statements;
 };
 
 class CMethodDecl : public IMethodDecl {
 public:
     CMethodDecl(
-            IType* _type,
+            std::unique_ptr<IType> _type,
             const std::string& _methodName,
-            std::vector<IArg*>& _argList,
-            std::vector<IVarDecl*>& _varList,
-            std::deque<IStatement*>& _statementList,
-            IExp* _returnExpr,
+            std::vector<std::unique_ptr<IArg>>& _argList,
+            std::vector<std::unique_ptr<IVarDecl>>& _varList,
+            std::deque<std::unique_ptr<IStatement>>& _statementList,
+            std::unique_ptr<IExp> _returnExpr,
             CLocation &location
             );
 
@@ -53,32 +52,36 @@ public:
 
     std::unique_ptr<IType> type;
     const std::string methodName;
-    const std::vector<IArg*>argList;
-    const std::vector<IVarDecl*> varList;
-    const std::deque<IStatement*> statementList;
-    const IExp* returnExpr;
+    const std::vector<std::unique_ptr<IArg>>argList;
+    const std::vector<std::unique_ptr<IVarDecl>> varList;
+    const std::deque<std::unique_ptr<IStatement>> statementList;
+    const std::unique_ptr<IExp> returnExpr;
 };
 
 class CClassDecl : public IClassDecl{
 public:
-    CClassDecl(std::string _className, std::vector<IVarDecl*>& _varList, std::vector<IMethodDecl*>& _methodList, const bool isDerived,
-               std::string baseClass,
+    CClassDecl(const std::string &_className,
+            std::vector<std::unique_ptr<IVarDecl>>& _varList,
+            std::vector<std::unique_ptr<IMethodDecl>>& _methodList,
+            const bool isDerived,
+            const std::string &baseClass,
             CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
+
+    const std::string className;
+    const std::vector<std::unique_ptr<IVarDecl>> varList;
+    const std::vector<std::unique_ptr<IMethodDecl>>  methodList;
     bool isDerived;
     const std::string baseClass;
-    const std::string className;
-    const std::vector<IVarDecl*> varList;
-    const std::vector<IMethodDecl*>  methodList;
 };
 
 
 
 class CVarDecl : public IVarDecl{
 public:
-    CVarDecl( IType* _type, const std::string& _identifier, CLocation &location);
+    CVarDecl( std::unique_ptr<IType> _type, const std::string& _identifier, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
@@ -116,125 +119,131 @@ public:
 
 class CArg : public IArg {
 public:
-    CArg(IType* _type, const std::string& _id, CLocation &location);
+    CArg(std::unique_ptr<IType> _type, const std::string& _id, CLocation &location);
     void Accept( IVisitor*  visitor ) const override;
 
 
-    IType* type;
+    std::unique_ptr<IType> type;
     const std::string id;
 
 };
 
 class CStatementListStatement : public IStatement{
 public:
-    CStatementListStatement( std::deque<IStatement*>& _statementList, CLocation &location);
+    CStatementListStatement( std::deque<std::unique_ptr<IStatement>>& _statementList, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
-    const std::deque<IStatement*>  statementList;
+    const std::deque<std::unique_ptr<IStatement>>  statementList;
 };
 
 class CIfStatement : public IStatement{
 public:
-    CIfStatement( IExp* _condition, IStatement* _statementIfTrue, IStatement* _statementIfFalse, CLocation &location);
+    CIfStatement( std::unique_ptr<IExp> _condition,
+            std::unique_ptr<IStatement> _statementIfTrue,
+            std::unique_ptr<IStatement> _statementIfFalse,
+            CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
-    const std::shared_ptr<IExp> condition;
-    const std::shared_ptr<IStatement> statementIfTrue;
-    const std::shared_ptr<IStatement> statementIfFalse;
+    const std::unique_ptr<IExp> condition;
+    const std::unique_ptr<IStatement> statementIfTrue;
+    const std::unique_ptr<IStatement> statementIfFalse;
 };
 
 class CWhileStatement : public IStatement{
 public:
-    CWhileStatement( IExp* _condition, IStatement* _cycleBody, CLocation &location);
+    CWhileStatement( std::unique_ptr<IExp> _condition, std::unique_ptr<IStatement> _cycleBody, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
-    const std::shared_ptr<IExp> condition;
-    const std::shared_ptr<IStatement> cycleBody;
+    const std::unique_ptr<IExp> condition;
+    const std::unique_ptr<IStatement> cycleBody;
 };
 
 class CPrintStatement : public IStatement {
 public:
-    CPrintStatement( IExp* _expression, CLocation &location);
+    CPrintStatement( std::unique_ptr<IExp> _expression, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
-    const std::shared_ptr<IExp> expression;
+    const std::unique_ptr<IExp> expression;
 };
 
 class CAssignStatement : public IStatement {
 public:
-    CAssignStatement( const std::string& _left, IExp* _right, CLocation &location);
+    CAssignStatement( const std::string& _left, std::unique_ptr<IExp> _right, CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
     const std::string left;
-    const std::shared_ptr<IExp> right;
+    const std::unique_ptr<IExp> right;
 };
 
 class CArrayAssignStatement : public IStatement{
 public:
-    CArrayAssignStatement( const std::string& _arrayId, IExp* _elementNumber, IExp* _rightPart, CLocation &location);
+    CArrayAssignStatement( const std::string& _arrayId,
+            std::unique_ptr<IExp> _elementNumber,
+            std::unique_ptr<IExp> _rightPart,
+            CLocation &location);
 
     void Accept( IVisitor* visitor ) const override;
 
 
     const std::string arrayId;
-    const std::shared_ptr<IExp> elementNumber;
-    const std::shared_ptr<IExp> rightPart;
+    const std::unique_ptr<IExp> elementNumber;
+    const std::unique_ptr<IExp> rightPart;
 };
 
 class CBinOpExpression : public IExp{
 public:
     enum BinOp { AND, LESS, PLUS, MINUS, TIMES, DIVIDE };
 
-    CBinOpExpression( IExp* _leftExp, BinOp _binOp, IExp* _rightExp, CLocation &location);
+    CBinOpExpression( std::unique_ptr<IExp> _leftExp, BinOp _binOp, std::unique_ptr<IExp> _rightExp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
 
-    const std::shared_ptr<IExp> leftExp;
-    const std::shared_ptr<IExp> rightExp;
+    const std::unique_ptr<IExp> leftExp;
+    const std::unique_ptr<IExp> rightExp;
     BinOp binOp;
 };
 
 class CIndexExpression : public IExp{
 public:
-    CIndexExpression( IExp* _exp, IExp* _indexExp, CLocation &location);
+    CIndexExpression( std::unique_ptr<IExp> _exp, std::unique_ptr<IExp> _indexExp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
 
-    const std::shared_ptr<IExp> exp;
-    const std::shared_ptr<IExp> indexExp;
+    const std::unique_ptr<IExp> exp;
+    const std::unique_ptr<IExp> indexExp;
 };
 
 class CLenghtExpression : public IExp{
 public:
-    CLenghtExpression( IExp* _exp, CLocation &location);
+    CLenghtExpression( std::unique_ptr<IExp> _exp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
 
-    const std::shared_ptr<IExp> exp;
+    const std::unique_ptr<IExp> exp;
 };
 
 class CMethodExpression : public IExp{
 public:
-    CMethodExpression( IExp* _exp, const std::string& _identifier, std::vector<IExp*>& _expList, CLocation &location);
+    CMethodExpression( std::unique_ptr<IExp> _exp, const std::string& _identifier, std::vector<std::unique_ptr<IExp>>& _expList, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
 
-    const std::shared_ptr<IExp> exp;
-    const std::vector<IExp*> expList;
+    const std::unique_ptr<IExp> exp;
+    const std::vector<std::unique_ptr<IExp> > expList;
     const std::string identifier;
 };
 
@@ -277,12 +286,12 @@ public:
 
 class CNewIntArrayExpression : public IExp{
 public:
-    CNewIntArrayExpression( IExp* _exp,CLocation &location);
+    CNewIntArrayExpression( std::unique_ptr<IExp> _exp,CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
 
-    const std::shared_ptr<IExp> exp;
+    const std::unique_ptr<IExp> exp;
 };
 
 class CNewExpression : public IExp{
@@ -298,20 +307,20 @@ class CUnaryOpExpression : public IExp{
 public:
     enum UnaryOp { MINUS, NOT };
 
-    CUnaryOpExpression( UnaryOp _op, IExp* _exp, CLocation &location);
+    CUnaryOpExpression( UnaryOp _op, std::unique_ptr<IExp> _exp, CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
 
-    const std::shared_ptr<IExp> exp;
+    const std::unique_ptr<IExp> exp;
     UnaryOp op;
 };
 
 class CBracesExpression : public IExp {
 public:
-    CBracesExpression( IExp* _exp , CLocation &location);
+    CBracesExpression( std::unique_ptr<IExp> _exp , CLocation &location);
 
     void Accept( IVisitor*  visitor ) const override;
 
-    const std::shared_ptr<IExp> exp;
+    const std::unique_ptr<IExp> exp;
 };

@@ -4,4 +4,4 @@
 
 #include "Symbol.h"
 
-std::unordered_map<std::string, CSymbol*> CSymbol::mapping;
+std::unordered_map<std::string, std::shared_ptr<CSymbol> > CSymbol::mapping;

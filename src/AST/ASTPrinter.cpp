@@ -21,7 +21,7 @@ void ASTPrinter::Visit(const CProgram *program) {
     nodeNumber++;
     PrintEdge(head);
     program->mainClass->Accept(this);
-    for(auto classDecl : program->classList) {
+    for(const auto & classDecl : program->classList) {
         PrintEdge(head);
         classDecl->Accept(this);
     }
@@ -34,11 +34,11 @@ void ASTPrinter::Visit(const CClassDecl* classDecl) {
         PrintEdge(head);
         PrintLeaf(head, "extends: ", classDecl->baseClass);
     }
-    for(auto varDecl : classDecl -> varList) {
+    for(const auto &varDecl : classDecl -> varList) {
         PrintEdge(head);
         varDecl->Accept(this);
     }
-    for(auto methodDecl : classDecl->methodList) {
+    for(const auto & methodDecl : classDecl->methodList) {
         PrintEdge(head);
         methodDecl->Accept(this);
     }
@@ -57,15 +57,15 @@ void ASTPrinter::Visit(const CMethodDecl *methodDecl) {
     PrintHead(head, "Method: " + methodDecl->methodName);
     PrintEdge(head);
     methodDecl->type->Accept(this);
-    for(auto arg : methodDecl-> argList) {
+    for(const auto & arg : methodDecl-> argList) {
         PrintEdge(head);
         arg->Accept(this);
     }
-    for(auto var : methodDecl->varList) {
+    for(const auto & var : methodDecl->varList) {
         PrintEdge(head);
         var->Accept(this);
     }
-    for(auto statement : methodDecl->statementList) {
+    for(const auto & statement : methodDecl->statementList) {
         PrintEdge(head);
         statement->Accept(this);
     }
@@ -78,7 +78,7 @@ void ASTPrinter::Visit(const CMainClass *mainClass) {
     PrintHead(head, "MainClass:" + mainClass->identifier);
     PrintEdge(head);
     PrintLeaf(head, "String[]", mainClass->argsIdentifier);
-    for(auto statement : mainClass -> statements) {
+    for(const auto & statement : mainClass -> statements) {
         PrintEdge(head);
         statement->Accept(this);
     }
@@ -126,7 +126,7 @@ void ASTPrinter::Visit(const CStandardType *type) {
 void ASTPrinter::Visit(const CStatementListStatement *statement) {
     int head = nodeNumber;
     PrintHead(head, "{   }");
-    for(auto innStatement : statement->statementList) {
+    for(const auto & innStatement : statement->statementList) {
 
         PrintEdge(head);
         innStatement->Accept(this);
@@ -199,7 +199,7 @@ void ASTPrinter::Visit(const CMethodExpression *expr) {
     PrintEdge(head);
     expr->exp->Accept(this);
     PrintLeaf(head, "method", expr->identifier);
-    for(auto arg : expr->expList) {
+    for(const auto & arg : expr->expList) {
         PrintEdge(head);
         arg->Accept(this);
     }

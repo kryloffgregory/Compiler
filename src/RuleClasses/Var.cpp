@@ -4,8 +4,8 @@
 
 #include "RuleClasses.h"
 
-CVarDecl::CVarDecl( IType* _type, const std::string& _identifier, CLocation &_location) :
-        type( _type ),
+CVarDecl::CVarDecl( std::unique_ptr<IType> _type, const std::string& _identifier, CLocation &_location) :
+        type{ std::move( _type )},
         identifier( _identifier )
 {
     location = _location;

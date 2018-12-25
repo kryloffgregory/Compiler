@@ -5,20 +5,20 @@
 #include "RuleClasses.h"
 
 CMethodDecl::CMethodDecl(
-        IType* _type,
+        std::unique_ptr<IType> _type,
         const std::string& _methodName,
-        std::vector<IArg*>& _argList,
-        std::vector<IVarDecl*>& _varList,
-        std::deque<IStatement*>& _statementList,
-        IExp* _returnExpr,
+        std::vector<std::unique_ptr<IArg>>& _argList,
+        std::vector<std::unique_ptr<IVarDecl>>& _varList,
+        std::deque<std::unique_ptr<IStatement>>& _statementList,
+        std::unique_ptr<IExp> _returnExpr,
         CLocation &_location
 ) :
-        type( _type ),
+        type{std::move( _type )},
         methodName( _methodName),
-        argList( _argList ),
-        varList( _varList ),
-        statementList( _statementList ),
-        returnExpr( _returnExpr )
+        argList{std::move( _argList )},
+        varList{std::move( _varList )},
+        statementList{std::move( _statementList )},
+        returnExpr{std::move( _returnExpr )}
 {
     location = _location;
 }
@@ -29,4 +29,5 @@ void CMethodDecl::Accept( IVisitor* visitor ) const
 {
     visitor->Visit( this );
 }
+
 

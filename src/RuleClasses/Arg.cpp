@@ -4,8 +4,8 @@
 
 #include "RuleClasses.h"
 
-CArg::CArg( IType* _type, const std::string& _identifier, CLocation &_location) :
-    type(_type),
+CArg::CArg( std::unique_ptr<IType> _type, const std::string& _identifier, CLocation &_location) :
+    type{std::move(_type)},
     id(  _identifier  )
 {
     location = _location;

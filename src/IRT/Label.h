@@ -4,6 +4,7 @@
 
 #include <string>
 #include "../SymbolTable/Symbol.h"
+#include <tr1/memory>
 
 namespace Temp {
 
@@ -13,13 +14,13 @@ namespace Temp {
         CTemp();
 
 
-        explicit CTemp( const CSymbol* _symbol );
+        explicit CTemp(std::shared_ptr<CSymbol> _symbol );
 
-        const CSymbol* GetName() const;
+        const std::shared_ptr<CSymbol> GetName() const;
     private:
 
         static int nextUniqueId;
-        const CSymbol* name;
+        std::shared_ptr<CSymbol> name;
     };
 
 
@@ -29,12 +30,12 @@ namespace Temp {
         CLabel();
 
 
-        explicit CLabel( const CSymbol* label );
+        explicit CLabel(std::shared_ptr<CSymbol> label );
 
-        const CSymbol* GetName() const;
+        const std::shared_ptr<CSymbol> GetName() const;
 
     private:
         static int nextUniqueId;
-        const CSymbol* name;
+        std::shared_ptr<CSymbol> name;
     };
 }

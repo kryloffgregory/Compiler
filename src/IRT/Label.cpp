@@ -11,11 +11,11 @@ namespace Temp {
 		name = CSymbol::GetSymbol( std::to_string( nextUniqueId++ ) );
 	}
 
-	CLabel::CLabel( const CSymbol* label ) :
+	CLabel::CLabel( const std::shared_ptr<CSymbol> label ) :
 			name( label )
 	{}
 
-	const CSymbol* CLabel::GetName() const
+	const std::shared_ptr<CSymbol> CLabel::GetName() const
 	{
 		return name;
 	}
@@ -27,11 +27,11 @@ namespace Temp {
 		name = CSymbol::GetSymbol( std::to_string( nextUniqueId++ ) );
 	}
 
-	CTemp::CTemp( const CSymbol* symbol ) :
+	CTemp::CTemp( const std::shared_ptr<CSymbol> symbol ) :
 			name( symbol )
 	{}
 
-	const CSymbol* CTemp::GetName() const
+	const std::shared_ptr<CSymbol> CTemp::GetName() const
 	{
 		return name;
 	}

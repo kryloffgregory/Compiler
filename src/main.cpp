@@ -1,5 +1,5 @@
 #include <iostream>
-#include <memory>
+#include <tr1/memory>
 #include <SymbolTable/SymbolTableBuilder.h>
 #include <IRT/Translator.h>
 #include "RuleClasses/RuleClasses.h"
@@ -7,7 +7,7 @@
 #include "SymbolTable/TypeChecker.h"
 #include "IRT/IRTreePrinter.h"
 
-extern int yyparse(IProgram* &);
+extern int yyparse(std::unique_ptr<IProgram> &);
 extern FILE* yyin;
 
 int main(int argc, char *argv[]) {
@@ -24,31 +24,32 @@ int main(int argc, char *argv[]) {
 
     yyin = input;
 
-    IProgram *root;
+    std::unique_ptr<IProgram> root;
     yyparse(root);
-    ASTPrinter printer(argv[2]);
-    printer.Visit(dynamic_cast<CProgram * >(root));
+    auto printer = std::make_unique<ASTPrinter>(argv[2]);
+    root->Accept(printer.get());
 
-    STBuilder stBuilder;
-    stBuilder.Visit(dynamic_cast<CProgram * >(root));
-    auto table = stBuilder.GetSymbolsTable();
-    for (auto error : stBuilder.GetErrorStorage().GetAllErrors()) {
+
+    auto stBuilder = std::make_unique<STBuilder>(STBuilder());
+    root->Accept(stBuilder.get());
+    auto table = stBuilder->GetSymbolsTable();
+    for (auto error : stBuilder->GetErrorStorage().GetAllErrors()) {
         std::cout << error << std::endl;
     }
-    if (stBuilder.GetErrorStorage().GetAllErrors().empty()) {
-        CTypeCheckerVisitor typeChecker(table);
-        typeChecker.Visit(dynamic_cast<CProgram * >(root));
-        for (auto error : typeChecker.GetErrorStorage().GetAllErrors()) {
+    if (stBuilder->GetErrorStorage().GetAllErrors().empty()) {
+        auto typeChecker = std::make_unique<CTypeCheckerVisitor>(CTypeCheckerVisitor(table)) ;
+        root->Accept(typeChecker.get());
+        for (auto error : typeChecker->GetErrorStorage().GetAllErrors()) {
             std::cout << error << std::endl;
         }
     }
 
-    CTranslator irBuilder(table);
-    irBuilder.Visit(dynamic_cast<CProgram * >(root));
-    auto frames = irBuilder.GetFrames();
-    for( auto frame : irBuilder.GetFrames() ) {
+    auto irBuilder = std::make_unique<CTranslator>(CTranslator(table));
+    root->Accept(irBuilder.get());
+    auto frames = irBuilder->GetFrames();
+    for( auto frame : irBuilder->GetFrames() ) {
 
-        std::shared_ptr<IRTree::IRTreePrinter> irPrinter(
+        std::unique_ptr<IRTree::IRTreePrinter> irPrinter(
                 new IRTree::IRTreePrinter(
                         std::string(argv[3]) +
                         std::string("/") +
@@ -57,5 +58,8 @@ int main(int argc, char *argv[]) {
         frame.GetRootStm()->Accept( irPrinter.get() );
         irPrinter->Flush();
     }
+
+
+
     return 0;
 }

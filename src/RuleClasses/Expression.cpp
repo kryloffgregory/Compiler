@@ -4,9 +4,10 @@
 
 #include "RuleClasses.h"
 
-CBinOpExpression::CBinOpExpression( IExp* _leftExp, BinOp _binOp, IExp* _rightExp, CLocation &_location) :
-        leftExp( _leftExp ),
-        rightExp( _rightExp ),
+CBinOpExpression::CBinOpExpression( std::unique_ptr<IExp> _leftExp, BinOp _binOp,
+        std::unique_ptr<IExp> _rightExp, CLocation &_location) :
+        leftExp{std::move( _leftExp )},
+        rightExp{std::move( _rightExp )},
         binOp( _binOp )
 {
     location = _location;
@@ -20,9 +21,9 @@ void CBinOpExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CIndexExpression::CIndexExpression( IExp* _exp, IExp* _indexExp , CLocation &_location) :
-        exp( _exp ),
-        indexExp( _indexExp )
+CIndexExpression::CIndexExpression( std::unique_ptr<IExp> _exp, std::unique_ptr<IExp> _indexExp , CLocation &_location) :
+        exp{std::move( _exp )},
+        indexExp{std::move( _indexExp )}
 {
     location = _location;
 }
@@ -34,8 +35,8 @@ void CIndexExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CLenghtExpression::CLenghtExpression( IExp* _exp, CLocation &_location) :
-        exp( _exp )
+CLenghtExpression::CLenghtExpression( std::unique_ptr<IExp> _exp, CLocation &_location) :
+        exp{std::move( _exp )}
 {
     location = _location;
 }
@@ -47,11 +48,16 @@ void CLenghtExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CMethodExpression::CMethodExpression( IExp* _exp, const std::string& _identifier, std::vector<IExp*>& _expList, CLocation &_location) :
+CMethodExpression::CMethodExpression( std::unique_ptr<IExp> _exp,
+        const std::string& _identifier,
+        std::vector<std::unique_ptr<IExp>>& _expList,
+        CLocation &_location) :
 
-        exp( _exp ),
-        expList( _expList ),
-        identifier( _identifier )
+        exp{std::move( _exp )},
+        expList{ std::move(_expList) },
+
+
+        identifier{_identifier }
 {
     location = _location;
 }
@@ -113,8 +119,8 @@ void CThisExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CNewIntArrayExpression::CNewIntArrayExpression( IExp* _exp, CLocation &_location) :
-        exp( _exp )
+CNewIntArrayExpression::CNewIntArrayExpression( std::unique_ptr<IExp> _exp, CLocation &_location) :
+        exp{std::move( _exp )}
 {
     location = _location;
 }
@@ -138,9 +144,9 @@ void CNewExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CUnaryOpExpression::CUnaryOpExpression( UnaryOp _op, IExp* _exp, CLocation &_location) :
-        exp( _exp ),
-        op( _op )
+CUnaryOpExpression::CUnaryOpExpression( UnaryOp _op, std::unique_ptr<IExp> _exp, CLocation &_location) :
+        exp{std::move( _exp )},
+        op{_op}
 {
     location = _location;
 }
@@ -152,8 +158,8 @@ void CUnaryOpExpression::Accept( IVisitor* visitor ) const
     visitor->Visit( this );
 }
 
-CBracesExpression::CBracesExpression( IExp* _exp, CLocation &_location) :
-        exp( _exp )
+CBracesExpression::CBracesExpression( std::unique_ptr<IExp> _exp, CLocation &_location) :
+        exp{std::move( _exp )}
 {
 }
 

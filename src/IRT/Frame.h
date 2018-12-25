@@ -25,7 +25,7 @@ namespace Frame {
         std::shared_ptr<Temp::CTemp> GetThisPtr() const;
         std::shared_ptr<Temp::CTemp> GetReturnPtr() const;
 
-        const CSymbol* GetName() const;
+        const std::shared_ptr<CSymbol> GetName() const;
 
         std::shared_ptr<const IRTree::IStm> GetRootStm() const;
 
@@ -34,7 +34,7 @@ namespace Frame {
         std::map<std::string, std::shared_ptr<IAccess>> formals;
         std::map<std::string, std::shared_ptr<IAccess>> locals;
 
-        const CSymbol* frameName;
+        std::shared_ptr<CSymbol> frameName;
 
         std::shared_ptr<const IRTree::IStm> root;
 
@@ -47,7 +47,7 @@ namespace Frame {
     class IAccess {
     public:
         virtual const IRTree::CExprPtr GetExp( const Frame::CFrame& framePtr ) const = 0;
-        virtual ~IAccess() {}
+        virtual ~IAccess() = default;
     };
 
     // Ðåàëèçàöèÿ äëÿ ïåðåìåííûõ íà ñòåêå
