@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
     STBuilder stBuilder;
     stBuilder.Visit(dynamic_cast<CProgram * >(root));
-    auto table = std::shared_ptr<CTable>(stBuilder.GetSymbolsTable());
+    auto table = stBuilder.GetSymbolsTable();
     for (auto error : stBuilder.GetErrorStorage().GetAllErrors()) {
         std::cout << error << std::endl;
     }

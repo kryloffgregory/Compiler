@@ -34,12 +34,10 @@ void yyerror(char *s);
 \/\/.* {
 }
 class   {
-    std::cerr<<"class";
     return T_CLASS;
 }
 
 public   {
-    std::cerr<<"public";
 
     return T_PUBLIC;
 }
@@ -50,11 +48,9 @@ void {
     return T_VOID;
 }
 main {
-    std::cerr<<"main\n";
     return T_MAIN;
 }
 int {
-    std::cerr<<"int";
     return T_INT;
 }
 boolean {
@@ -101,18 +97,15 @@ this {
 
 [a-zA-Z_][a-zA-Z_0-9]* {
     yylval.val= new std::string(yytext);
-    std::cerr<<"id: "<<yytext<<"\n";
     return T_ID;
 }
 
 [ \t\n\v\r\f]+ {
-    std::cerr<<"space\n";
 
 }
 
 0|[1-9][0-9]* {
     yylval.intVal = std::atoi(yytext);
-    std::cerr<<"num: "<<yytext<<"\n";
     return T_NUMBER;
 }
 
@@ -120,8 +113,6 @@ this {
 
 . {
 
-    std::cerr << "unknown symbol: " <<  yytext <<"\n";
-    //printf("Unknown symbol:\n");
     return (int) yytext[0];
 }
 %%

@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
-#line 2 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
-
-#line 4 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
-=======
 #line 2 "/home/gregory/Compiler/lexer.cpp"
 
 #line 4 "/home/gregory/Compiler/lexer.cpp"
->>>>>>> Stashed changes
 
 #define  YY_INT_ALIGNED short int
 
@@ -595,11 +589,7 @@ CLocation location;
 }
 
 void yyerror(char *s);
-<<<<<<< Updated upstream
-#line 578 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
-=======
 #line 593 "/home/gregory/Compiler/lexer.cpp"
->>>>>>> Stashed changes
 
 #define INITIAL 0
 
@@ -819,11 +809,7 @@ YY_DECL
 	{
 #line 30 "src/lexer.l"
 
-<<<<<<< Updated upstream
-#line 798 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
-=======
 #line 813 "/home/gregory/Compiler/lexer.cpp"
->>>>>>> Stashed changes
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -908,193 +894,180 @@ case 3:
 YY_RULE_SETUP
 #line 36 "src/lexer.l"
 {
-    std::cerr<<"class";
     return T_CLASS;
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 41 "src/lexer.l"
+#line 40 "src/lexer.l"
 {
-    std::cerr<<"public";
 
     return T_PUBLIC;
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 46 "src/lexer.l"
+#line 44 "src/lexer.l"
 {
     return T_STATIC;
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 49 "src/lexer.l"
+#line 47 "src/lexer.l"
 {
     return T_VOID;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 52 "src/lexer.l"
+#line 50 "src/lexer.l"
 {
-    std::cerr<<"main\n";
     return T_MAIN;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 56 "src/lexer.l"
+#line 53 "src/lexer.l"
 {
-    std::cerr<<"int";
     return T_INT;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 60 "src/lexer.l"
+#line 56 "src/lexer.l"
 {
     return T_BOOL;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 63 "src/lexer.l"
+#line 59 "src/lexer.l"
 {
     return T_STRING;
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 66 "src/lexer.l"
+#line 62 "src/lexer.l"
 {
     return T_EXTENDS;
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 69 "src/lexer.l"
+#line 65 "src/lexer.l"
 {
     return T_IF;
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 72 "src/lexer.l"
+#line 68 "src/lexer.l"
 {
     return T_ELSE;
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 75 "src/lexer.l"
+#line 71 "src/lexer.l"
 {
     return T_RETURN;
 }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 78 "src/lexer.l"
+#line 74 "src/lexer.l"
 {
     return T_AND;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 80 "src/lexer.l"
+#line 76 "src/lexer.l"
 {
     return T_LENGTH;
 }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 83 "src/lexer.l"
+#line 79 "src/lexer.l"
 {
     return T_WHILE;
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 86 "src/lexer.l"
+#line 82 "src/lexer.l"
 {
     return T_PRINTLN;
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 89 "src/lexer.l"
+#line 85 "src/lexer.l"
 {
     return T_NEW;
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 92 "src/lexer.l"
+#line 88 "src/lexer.l"
 {
     return T_FALSE;
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 95 "src/lexer.l"
+#line 91 "src/lexer.l"
 {
     return T_TRUE;
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 98 "src/lexer.l"
+#line 94 "src/lexer.l"
 {
     return T_THIS;
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 102 "src/lexer.l"
+#line 98 "src/lexer.l"
 {
     yylval.val= new std::string(yytext);
-    std::cerr<<"id: "<<yytext<<"\n";
     return T_ID;
 }
 	YY_BREAK
 case 24:
 /* rule 24 can match eol */
 YY_RULE_SETUP
-#line 108 "src/lexer.l"
+#line 103 "src/lexer.l"
 {
-    std::cerr<<"space\n";
 
 }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 113 "src/lexer.l"
+#line 107 "src/lexer.l"
 {
     yylval.intVal = std::atoi(yytext);
-    std::cerr<<"num: "<<yytext<<"\n";
     return T_NUMBER;
 }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 121 "src/lexer.l"
+#line 114 "src/lexer.l"
 {
 
-    std::cerr << "unknown symbol: " <<  yytext <<"\n";
-    //printf("Unknown symbol:\n");
     return (int) yytext[0];
 }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 127 "src/lexer.l"
+#line 118 "src/lexer.l"
 ECHO;
 	YY_BREAK
-<<<<<<< Updated upstream
-#line 1065 "/home/tna0y/Desktop/kryloff/Compiler/lexer.cpp"
-=======
-#line 1080 "/home/gregory/Compiler/lexer.cpp"
->>>>>>> Stashed changes
+#line 1071 "/home/gregory/Compiler/lexer.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2107,7 +2080,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 127 "src/lexer.l"
+#line 118 "src/lexer.l"
 
 
 

@@ -4,13 +4,8 @@
 
 
 # Configuration directories and files
-<<<<<<< Updated upstream
-SourceDirectory: /home/tna0y/Desktop/kryloff/Compiler
-BuildDirectory: /home/tna0y/Desktop/kryloff/Compiler
-=======
 SourceDirectory: /home/gregory/Compiler
 BuildDirectory: /home/gregory/Compiler
->>>>>>> Stashed changes
 
 # Where to place the cost data store
 CostDataFile: 
@@ -38,13 +33,8 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-<<<<<<< Updated upstream
-ConfigureCommand: "/home/tna0y/Desktop/cmake-3.13.2-Linux-x86_64/bin/cmake" "/home/tna0y/Desktop/kryloff/Compiler"
-MakeCommand: /home/tna0y/Desktop/cmake-3.13.2-Linux-x86_64/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
-=======
 ConfigureCommand: "/usr/bin/cmake" "/home/gregory/Compiler"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
->>>>>>> Stashed changes
 DefaultCTestConfigurationType: Release
 
 # version control

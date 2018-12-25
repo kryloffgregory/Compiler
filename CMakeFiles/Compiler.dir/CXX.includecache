@@ -331,7 +331,7 @@ SymbolTable.h
 /home/gregory/Compiler/src/SymbolTable/SymbolTable.h
 ../ErrorStorage/ErrorStorage.h
 /home/gregory/Compiler/src/ErrorStorage/ErrorStorage.h
-memory
+tr1/memory
 -
 
 /home/gregory/Compiler/src/SymbolTable/TypeChecker.cpp
@@ -487,7 +487,7 @@ SymbolTable.h
 src/SymbolTable/SymbolTable.h
 ../ErrorStorage/ErrorStorage.h
 src/ErrorStorage/ErrorStorage.h
-memory
+tr1/memory
 -
 
 src/Visitor.h

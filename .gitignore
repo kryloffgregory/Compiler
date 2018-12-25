@@ -12,3 +12,9 @@ cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
+grammar.output
+grammar.tab.c
+tests/parser.hpp
+tests/parser.cpp
+CMakeFiles/*
+
