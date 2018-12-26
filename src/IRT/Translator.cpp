@@ -108,9 +108,10 @@ void CTranslator::Visit( const CStatementListStatement* statement )
         if (!any) {
             recStm = lastStm;
             any = true;
-        }
-        recStm = IRTree::CStmPtr( new IRTree::CSeq( recStm,
+        } else {
+            recStm = IRTree::CStmPtr( new IRTree::CSeq( recStm,
                                                     lastStm) );
+        }
     }
     if (any) {
         parsedStatements.push(recStm);
