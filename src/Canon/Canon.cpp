@@ -19,7 +19,6 @@ IRTree::CExprList* CMoveCall::Kids() const
 
 IRTree::IStm* CMoveCall::Build(const IRTree::CExprList* kids) const
 {
-    // ����� ������ ������ ���������� ������?
     return new IRTree::CMove( dst, IRTree::CExprPtr( src->Build( kids ) ) );
 }
 
@@ -35,7 +34,6 @@ IRTree::CExprList* CExprCall::Kids() const
 
 IRTree::IStm* CExprCall::Build(const IRTree::CExprList* kids) const
 {
-    // ������! ����� new
     return new IRTree::CExpr( IRTree::CExprPtr( call->Build( kids ) ) );
 }
 

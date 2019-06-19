@@ -25,6 +25,8 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
+    printf("start");
+
     yyin = input;
 
     std::unique_ptr<IProgram> root;
@@ -70,7 +72,7 @@ int main(int argc, char *argv[]) {
 
         auto linearizedFrameStmList = CCanon::Linearize( frame.GetRootStm() );
 
-
+        printf ("1");
         /*auto stm = linearizedFrameStmList->GetHead();
         stm->Accept( irPrinter2.get( ) );
         irPrinter2->Flush();*/

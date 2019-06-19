@@ -192,7 +192,7 @@ namespace IRTree
             arguments.push_back(tcurrent->GetHead());
             tcurrent = tcurrent->GetTail();
         }
-        return new CCall( "STRING_NAME_CALL", arguments);
+        return new CCall( funcName, arguments);
 
     }
 

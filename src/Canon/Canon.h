@@ -69,9 +69,7 @@ public:
 private:
     static CStmExprList nopNull;
 
-    // ����������� ��������������� �����
     static bool isCommute( IRTree::CStmPtr a, IRTree::CExprPtr b );
-    // �������� �� ��� ����������� � ����������� ���������
     static bool isNop( IRTree::CStmPtr a );
 
     static IRTree::CStmPtr createSeq( IRTree::CStmPtr firstStm, IRTree::CStmPtr secondStm );
