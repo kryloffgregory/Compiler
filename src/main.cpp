@@ -2,6 +2,7 @@
 #include <tr1/memory>
 #include <SymbolTable/SymbolTableBuilder.h>
 #include <IRT/Translator.h>
+#include <Canon/Canon.h>
 #include "RuleClasses/RuleClasses.h"
 #include "AST/ASTPrinter.h"
 #include "SymbolTable/TypeChecker.h"
@@ -9,6 +10,8 @@
 
 extern int yyparse(std::unique_ptr<IProgram> &);
 extern FILE* yyin;
+
+
 
 int main(int argc, char *argv[]) {
     if (argc != 4) {
@@ -21,6 +24,8 @@ int main(int argc, char *argv[]) {
         printf("Can not open file!\n");
         exit(1);
     }
+
+    printf("start");
 
     yyin = input;
 
@@ -57,6 +62,29 @@ int main(int argc, char *argv[]) {
                         std::string( ".dot" ) ));
         frame.GetRootStm()->Accept( irPrinter.get() );
         irPrinter->Flush();
+
+        std::unique_ptr<IRTree::IRTreePrinter> irPrinter2(
+                new IRTree::IRTreePrinter(
+                        std::string(argv[3]) +
+                        std::string("/") +
+                        frame.GetName()->GetString() +
+                        std::string( "Linearizer.dot" ) ));
+
+        auto linearizedFrameStmList = CCanon::Linearize( frame.GetRootStm() );
+
+        printf ("1");
+        /*auto stm = linearizedFrameStmList->GetHead();
+        stm->Accept( irPrinter2.get( ) );
+        irPrinter2->Flush();*/
+        auto tail = linearizedFrameStmList;
+        for( auto stm = tail->GetHead( );
+             tail != nullptr;
+             tail = tail->GetTail( ),
+                     stm = ( tail != nullptr ) ? tail->GetHead( ) : nullptr ) {
+            stm->Accept( irPrinter2.get( ) );
+        }
+        irPrinter2->Flush();
+
     }
 
 

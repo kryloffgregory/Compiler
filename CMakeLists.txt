@@ -25,7 +25,7 @@ FILE(GLOB SRCFILES "*.cpp" "*.h" "src/*.cpp" "src/*.h"
 
 set(EXECUTABLE_OUTPUT_PATH bin)
 
-add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/SymbolTable/TypeChecker.h src/SymbolTable/TypeChecker.cpp src/IRT/Expression.h src/IRT/Statement.h src/IRT/IIRVisitor.h src/IRT/Label.h src/IRT/Expression.cpp src/IRT/Statement.cpp src/IRT/Translator.h src/ActivationRecords/IFrame.h src/ActivationRecords/IAccess.h src/IRT/Translator.cpp src/IRT/Label.cpp src/IRT/Frame.h src/SymbolTable/Symbol.h src/SymbolTable/Symbol.cpp src/IRT/Frame.cpp src/IRT/IRTreePrinter.h src/IRT/IRTreePrinter.cpp)
+add_executable(Compiler ${SRCFILES} ${FLEX_FlexLexer_OUTPUTS} ${BISON_BisonParser_OUTPUTS} src/Canon/Canon.h src/Canon/Canon.cpp src/SymbolTable/TypeChecker.h src/SymbolTable/TypeChecker.cpp src/IRT/Expression.h src/IRT/Statement.h src/IRT/IIRVisitor.h src/IRT/Label.h src/IRT/Expression.cpp src/IRT/Statement.cpp src/IRT/Translator.h src/ActivationRecords/IFrame.h src/ActivationRecords/IAccess.h src/IRT/Translator.cpp src/IRT/Label.cpp src/IRT/Frame.h src/SymbolTable/Symbol.h src/SymbolTable/Symbol.cpp src/IRT/Frame.cpp src/IRT/IRTreePrinter.h src/IRT/IRTreePrinter.cpp)
 
 
 add_custom_target(cppcheck
